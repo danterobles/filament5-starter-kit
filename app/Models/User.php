@@ -10,9 +10,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-#[Fillable(['name', 'email', 'password'])]
+// Integracion de FilamentUser
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Models\Contracts\HasAvatar;
+
+
+#[Fillable(['name', 'last', 'email', 'phone', 'avatar_url', 'password', 'active'])]
 #[Hidden(['password', 'remember_token'])]
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser, HasAvatar
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
@@ -28,5 +33,41 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+     /**
+     * Obtiene la URL del avatar que Filament debe mostrar para el usuario.
+     *
+     * @return string|null URL pública absoluta o null si no existe avatar configurado.
+     */
+    public function getFilamentAvatarUrl(): ?string
+    {
+        return $this->avatar_url ? Storage::url($this->avatar_url) : null;
+    }
+
+    /**
+     * Determina si el usuario puede acceder al panel de Filament indicado.
+     *
+     * @param  Panel  $panel  Instancia del panel solicitada.
+     * @return bool true cuando la cuenta se encuentra activa.
+     */
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return $this->active;
+        
+        /*if ($panel->getId() === 'admin' && $this->active) {
+            return $this->hasRole('super_admin');
+        }*/
+        //return false;
+    }
+
+    /**
+     * Calcula el nombre completo concatenando nombre y apellido.
+     *
+     * @return string Nombre completo sin espacios sobrantes.
+     */
+    public function getFullNameAttribute(): string
+    {
+        return trim("{$this->name} {$this->last}");
     }
 }
