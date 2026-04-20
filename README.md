@@ -15,6 +15,12 @@ se utlizarán varios plugins de filament para mejorar el uso del starterkit y se
 | Testing | [Pest PHP](https://pestphp.com) | 4.x |
 | Code Style | [Laravel Pint](https://laravel.com/docs/pint) | 1.x |
 
+## Plugins de Filament PHP 
+| Plugin | Descripcion | Version |
+|------|------|------|
+| Filament Logger | [Logger](https://filamentphp.com/plugins/jacobtims-logger) | 1.2.0 |
+
+
 ## Requerimientos Mínimos
 
 - **PHP** 8.3+
