@@ -2,7 +2,7 @@
 
 Boilerplate para iniciar proyectos con **Laravel 13** y **Filament PHP 5**. Incluye configuración base, modelo de usuario extendido y panel de administración listo para usar.
 
-se utlizarqn varios plugins de filament para mejorar
+se utlizarán varios plugins de filament para mejorar el uso del starterkit y se enumerarán como se implementen
 
 ## Stack
 
