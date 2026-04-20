@@ -19,7 +19,7 @@ se utlizarán varios plugins de filament para mejorar el uso del starterkit y se
 | Plugin | Descripcion | Version |
 |------|------|------|
 | Filament Logger | [Logger](https://filamentphp.com/plugins/jacobtims-logger) | 1.2.0 |
-
+| Filament Breezy | [Breezy](https://filamentphp.com/plugins/jeffgreco-breezy) | 3.2.5 |
 
 ## Requerimientos Mínimos
 
