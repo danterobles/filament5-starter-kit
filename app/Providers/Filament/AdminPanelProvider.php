@@ -21,6 +21,8 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 //Custom Plugins
 use Jacobtims\FilamentLogger\FilamentLoggerPlugin;
+use Jeffgreco13\FilamentBreezy\BreezyCore;
+use App\Livewire\CustomPersonalInfo;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -30,6 +32,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->viteTheme('resources/css/filament/admin/theme.css')
             ->login()
             ->colors([
                 'primary' => Color::Sky,
@@ -67,6 +70,25 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                FilamentLoggerPlugin::make(),
+               BreezyCore::make()
+                    ->avatarUploadComponent(
+                        fn($fileUpload) => $fileUpload->disableLabel(),
+                    )
+                    ->myProfile(
+                        shouldRegisterUserMenu: true, // Sets the 'account' link in the panel User Menu (default = true)
+                        userMenuLabel: "Mi Perfil", // Customizes the 'account' link label in the panel User Menu (default = null)
+                        shouldRegisterNavigation: true, // Adds a main navigation item for the My Profile page (default = false)
+                        navigationGroup: "Configuración", // Sets the navigation group for the My Profile page (default = null)
+                        hasAvatars: true, // Enables the avatar upload form component (default = false)
+                        slug: "my-profile", // Sets the slug for the profile page (default = 'my-profile')
+                    )
+                    ->myProfileComponents([
+                        "personal_info" => CustomPersonalInfo::class,
+                    ])
+                    ->enableBrowserSessions(condition: true)
+                    ->enableTwoFactorAuthentication(
+                        force: false, // force the user to enable 2FA before they can use the application (default = false)
+                    ),
             ]);
     }
 }
