@@ -1,5 +1,12 @@
 <?php
 
+/********************************
+* CustomPersonalInfo.php
+* Clase para extender propiedades
+* de Model User y personalizar
+* Breezy
+********************************/
+
 namespace App\Livewire;
 
 use Filament\Forms;
