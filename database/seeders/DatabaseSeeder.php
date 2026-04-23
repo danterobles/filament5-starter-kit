@@ -21,5 +21,15 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+        
+        User::creat([
+            'name' => 'Administrator',
+            'last' => 'Starterkit',
+            'phone' => '+528100000000',
+            'password' => 'demo',
+            'active' => true,
+            'email' => 'starterkit@mailinator.com'
+
+        ]);
     }
 }
