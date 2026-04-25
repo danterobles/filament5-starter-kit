@@ -20,6 +20,7 @@ se utlizarán varios plugins de filament para mejorar el uso del starterkit y se
 |------|------|------|
 | Filament Logger | [Logger](https://filamentphp.com/plugins/jacobtims-logger) | 1.2.0 |
 | Filament Breezy | [Breezy](https://filamentphp.com/plugins/jeffgreco-breezy) | 3.2.5 |
+| Filament Shield | [Shield](https://filamentphp.com/plugins/bezhansalleh-shield) | 4.2.0 |
 
 ## Requerimientos Mínimos
 
@@ -41,6 +42,8 @@ cp .env.example .env
 php artisan key:generate
 
 php artisan migrate
+php artisan db:seed --class=ShieldSeeder
+php artisan db:seed
 npm run build
 ```
 

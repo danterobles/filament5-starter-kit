@@ -13,6 +13,10 @@ use Illuminate\Notifications\Notifiable;
 // Integracion de FilamentUser
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasAvatar;
+use Filament\Panel;
+
+use Spatie\Permission\Traits\HasRoles;
+use Jeffgreco13\FilamentBreezy\Traits\TwoFactorAuthenticatable;
 
 
 #[Fillable(['name', 'last', 'email', 'phone', 'avatar_url', 'password', 'active'])]
@@ -20,7 +24,7 @@ use Filament\Models\Contracts\HasAvatar;
 class User extends Authenticatable implements FilamentUser, HasAvatar
 {
     /** @use HasFactory<UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasRoles, TwoFactorAuthenticatable;
 
     /**
      * Get the attributes that should be cast.
