@@ -40,7 +40,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->passwordReset()
             ->databaseNotifications()
-            ->brandName('StarterKit')
+            ->brandName('StarterKit_V1')
             ->sidebarCollapsibleOnDesktop()
             ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
             ->globalSearchFieldKeyBindingSuffix()
@@ -70,7 +70,7 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-                FilamentShieldPlugin::make(),
+               FilamentShieldPlugin::make(),
                FilamentLoggerPlugin::make(),
                BreezyCore::make()
                     ->avatarUploadComponent(
