@@ -25,6 +25,7 @@ use Jacobtims\FilamentLogger\FilamentLoggerPlugin;
 use Jeffgreco13\FilamentBreezy\BreezyCore;
 use App\Livewire\CustomPersonalInfo;
 use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
+use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
 
 
 class AdminPanelProvider extends PanelProvider
@@ -72,6 +73,7 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
+               FilamentApexChartsPlugin::make(), 
                AuthUIEnhancerPlugin::make()
                     ->formPanelPosition('left')
                     ->formPanelWidth('35%')
