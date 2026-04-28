@@ -143,7 +143,7 @@ class UsersTable
                     ->iconButton()
                     ->tooltip('Eliminar usuario'),
             ])
-            ->bulkActions([
+            ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                     RestoreBulkAction::make(),
