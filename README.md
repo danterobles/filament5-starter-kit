@@ -24,7 +24,7 @@ se utlizarán varios plugins de filament para mejorar el uso del starterkit y se
 
 ## Requerimientos Mínimos
 
-- **PHP** 8.3+
+- **PHP** 8.3+ ideal 8.4
 - **Composer** 2.x
 - **Node.js** 20+ y **npm** 10+
 - **Base de datos**: MySQL 8+ / PostgreSQL 15+ / SQLite 3.35+
