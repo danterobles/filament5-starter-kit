@@ -24,6 +24,8 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Jacobtims\FilamentLogger\FilamentLoggerPlugin;
 use Jeffgreco13\FilamentBreezy\BreezyCore;
 use App\Livewire\CustomPersonalInfo;
+use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
+
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -70,6 +72,10 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
+               AuthUIEnhancerPlugin::make()
+                    ->formPanelPosition('left')
+                    ->formPanelWidth('35%')
+                    ->emptyPanelBackgroundImageUrl(asset('img/image_nl_mty.jpg')),
                FilamentShieldPlugin::make(),
                FilamentLoggerPlugin::make(),
                BreezyCore::make()
