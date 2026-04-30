@@ -4,7 +4,7 @@ Boilerplate para iniciar proyectos con **Laravel 13** y **Filament PHP 5**. Incl
 
 se utlizarán varios plugins de filament para mejorar el uso del starterkit y se enumerarán como se implementen
 
-El objetivo principal es tener una base lista para desorrollo acelarado
+El objetivo principal es tener una base lista para desorrollo acelarado, y que los inicios de proyectos nuevos vengan con sus herramientas
 
 ## Stack
 
