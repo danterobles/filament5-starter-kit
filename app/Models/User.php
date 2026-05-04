@@ -4,27 +4,25 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Database\Factories\UserFactory;
-use Illuminate\Database\Eloquent\Attributes\Fillable;
-use Illuminate\Database\Eloquent\Attributes\Hidden;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-
-// Integracion de FilamentUser
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasAvatar;
 use Filament\Panel;
-
-use Spatie\Permission\Traits\HasRoles;
+use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Attributes\Hidden;
+// Integracion de FilamentUser
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Storage;
 use Jeffgreco13\FilamentBreezy\Traits\TwoFactorAuthenticatable;
-
+use Spatie\Permission\Traits\HasRoles;
 
 #[Fillable(['name', 'last', 'email', 'phone', 'avatar_url', 'password', 'active'])]
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable implements FilamentUser, HasAvatar
 {
     /** @use HasFactory<UserFactory> */
-    use HasFactory, Notifiable, HasRoles, TwoFactorAuthenticatable;
+    use HasFactory, HasRoles, Notifiable, TwoFactorAuthenticatable;
 
     /**
      * Get the attributes that should be cast.
@@ -39,7 +37,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
         ];
     }
 
-     /**
+    /**
      * Obtiene la URL del avatar que Filament debe mostrar para el usuario.
      *
      * @return string|null URL pública absoluta o null si no existe avatar configurado.
@@ -58,11 +56,11 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
     public function canAccessPanel(Panel $panel): bool
     {
         return $this->active;
-        
+
         /*if ($panel->getId() === 'admin' && $this->active) {
             return $this->hasRole('super_admin');
         }*/
-        //return false;
+        // return false;
     }
 
     /**

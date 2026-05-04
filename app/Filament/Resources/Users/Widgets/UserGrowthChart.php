@@ -69,24 +69,25 @@ class UserGrowthChart extends ChartWidget
 
     private function getUsersPerMonth(): array
     {
-        $now = Carbon::now();
-        $months = collect();
+        $startDate = Carbon::now()->subMonths(5)->startOfMonth();
+
+        $results = User::selectRaw("DATE_FORMAT(created_at, '%Y-%m') as month_key, COUNT(*) as count")
+            ->where('created_at', '>=', $startDate)
+            ->groupByRaw("DATE_FORMAT(created_at, '%Y-%m')")
+            ->orderByRaw("DATE_FORMAT(created_at, '%Y-%m')")
+            ->pluck('count', 'month_key');
+
+        $labels = collect();
         $counts = collect();
 
-        // Obtener los últimos 6 meses
         for ($i = 5; $i >= 0; $i--) {
-            $date = $now->copy()->subMonths($i);
-            $monthStart = $date->startOfMonth();
-            $monthEnd = $date->copy()->endOfMonth();
-
-            $count = User::whereBetween('created_at', [$monthStart, $monthEnd])->count();
-
-            $months->push($date->translatedFormat('M Y'));
-            $counts->push($count);
+            $date = Carbon::now()->subMonths($i);
+            $labels->push($date->translatedFormat('M Y'));
+            $counts->push((int) $results->get($date->format('Y-m'), 0));
         }
 
         return [
-            'labels' => $months->toArray(),
+            'labels' => $labels->toArray(),
             'counts' => $counts->toArray(),
         ];
     }
