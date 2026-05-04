@@ -13,15 +13,21 @@ class UserStatsOverview extends StatsOverviewWidget
 
     protected function getStats(): array
     {
-        $totalUsers = User::count();
-        $activeUsers = User::where('active', true)->count();
-        $inactiveUsers = User::where('active', false)->count();
-        $newUsersThisMonth = User::whereMonth('created_at', now()->month)->count();
+        $stats = User::selectRaw('
+            COUNT(*) as total,
+            SUM(CASE WHEN active = 1 THEN 1 ELSE 0 END) as active_count,
+            SUM(CASE WHEN MONTH(created_at) = ? AND YEAR(created_at) = ? THEN 1 ELSE 0 END) as new_this_month
+        ', [now()->month, now()->year])->first();
+
+        $totalUsers = (int) $stats->total;
+        $activeUsers = (int) $stats->active_count;
+        $inactiveUsers = $totalUsers - $activeUsers;
+        $newUsersThisMonth = (int) $stats->new_this_month;
+
         $usersWithRoles = DB::table('model_has_roles')
             ->distinct('model_id')
             ->count('model_id');
 
-        // Datos para gráficos (últimos 7 días)
         $userGrowthData = User::selectRaw('DATE(created_at) as date, COUNT(*) as count')
             ->where('created_at', '>=', now()->subDays(7))
             ->groupBy('date')
