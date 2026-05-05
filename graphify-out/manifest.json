@@ -1,0 +1,306 @@
+{
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/vite.config.js": {
+    "mtime": 1776714647.693452,
+    "hash": "f14d135d7fee9e462d362f49733801de"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/artisan": {
+    "mtime": 1776455324.6283534,
+    "hash": "e66bb13691f6184c762c196427d8e685"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_04_20_194024_create_breezy_sessions_table.php": {
+    "mtime": 1776714647.6853793,
+    "hash": "ded13d00853f176352ef4aab98c21a36"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php": {
+    "mtime": 1776712669.7418869,
+    "hash": "12975c78457263485cfd548f60bd79ed"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/0001_01_01_000000_create_users_table.php": {
+    "mtime": 1776455324.6306615,
+    "hash": "534bb0e525660b485bbca9af4c6180b3"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/0001_01_01_000001_create_cache_table.php": {
+    "mtime": 1776455324.6307337,
+    "hash": "6952fb360e8d8b84e6f47573e4459d48"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_04_20_191121_add_event_column_to_activity_log_table.php": {
+    "mtime": 1776712669.7417476,
+    "hash": "3f18b838909be7ffc3e3bfba3ab59a8e"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/0001_01_01_000002_create_jobs_table.php": {
+    "mtime": 1776455324.6308157,
+    "hash": "ead9cce2650b36345454f85e8c0214a0"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_05_04_191717_add_position_to_tasks_table.php": {
+    "mtime": 1777922552.6797078,
+    "hash": "34796fce3dc3fb87ab7ade3f972745d9"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_04_20_194026_create_passkeys_table.php": {
+    "mtime": 1776714647.6857991,
+    "hash": "1c20e8cb57d9ff3ab463ec475ef5db96"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_04_25_220238_create_permission_tables.php": {
+    "mtime": 1777155063.7676198,
+    "hash": "d0ce4624021f5b3121a91c406a5f79f2"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_05_04_232920_fix_tasks_table_schema.php": {
+    "mtime": 1777938825.3752153,
+    "hash": "4bf126eb97e68803c92eb8241bed2ff1"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_04_20_194025_alter_breezy_sessions_table.php": {
+    "mtime": 1776714647.6855962,
+    "hash": "7d913a45e30bb6712ec1959731d9ccca"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_05_04_185058_create_tasks_table.php": {
+    "mtime": 1777922552.6795213,
+    "hash": "1e0d4a6620893dd54670bdaac443f546"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_04_20_191120_create_activity_log_table.php": {
+    "mtime": 1776712669.7416112,
+    "hash": "045a59cf1093b4b6f1347c7f42ca72f2"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/seeders/ShieldSeeder.php": {
+    "mtime": 1777155063.7680058,
+    "hash": "eeaacc5d8fac3768cd3817d4d7b0e9ea"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/seeders/DatabaseSeeder.php": {
+    "mtime": 1777938825.3756998,
+    "hash": "4e4dd59bbb15a1463fc4e6d0596af0e6"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/factories/TaskFactory.php": {
+    "mtime": 1777938825.3749838,
+    "hash": "f032f8412f6fc42909e62287d56b3db0"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/factories/UserFactory.php": {
+    "mtime": 1776455324.630535,
+    "hash": "1c9f381f9c2bc3027971a3bfdbe99164"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/bootstrap/app.php": {
+    "mtime": 1776455324.6285443,
+    "hash": "d98cb8343b14d080523decff545f5fc8"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/bootstrap/providers.php": {
+    "mtime": 1776455324.6287465,
+    "hash": "607aa0bfa40bdaba26371d1dbc4d3219"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/bootstrap/cache/services.php": {
+    "mtime": 1777920603.5995095,
+    "hash": "5b21a9293b4f1390257e853c193341c9"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/bootstrap/cache/packages.php": {
+    "mtime": 1777920603.6911829,
+    "hash": "cc46e0030f39c53da521c219bc796928"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Providers/AppServiceProvider.php": {
+    "mtime": 1776455324.6281645,
+    "hash": "c0094f35cad6bba7636002a62186dae4"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Providers/Filament/AdminPanelProvider.php": {
+    "mtime": 1777922552.677773,
+    "hash": "68efcca18e6ce1e24f9ceafa3b07704a"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Models/User.php": {
+    "mtime": 1777938825.3745513,
+    "hash": "6d57cc58389249e3939470e3b8c78903"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Models/Task.php": {
+    "mtime": 1777938825.3743522,
+    "hash": "8fa987f55407db0c82ca5760269d640d"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Policies/RolePolicy.php": {
+    "mtime": 1777155063.76554,
+    "hash": "2f9760438712573e77119c0328647742"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Policies/ActivityPolicy.php": {
+    "mtime": 1777155063.765393,
+    "hash": "be782b1e5dce5ae055dcd616eb7bf3f0"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Livewire/CustomPersonalInfo.php": {
+    "mtime": 1776896807.2637038,
+    "hash": "fb5f56049d6dd6c9bf71d32db6ff290d"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/UserResource.php": {
+    "mtime": 1777406207.0461698,
+    "hash": "49a1e67252b3350cf578aad0c7679027"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Tables/UsersTable.php": {
+    "mtime": 1777406748.019573,
+    "hash": "4f2196cac5aac396dcc688d0d272063d"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Schemas/UserForm.php": {
+    "mtime": 1777406207.0457547,
+    "hash": "357137ecf92bd32232bdccb6343f8a9b"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Pages/ListUsers.php": {
+    "mtime": 1777406207.0454795,
+    "hash": "1c98c65b8fe3abbc29aecf470988c381"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Pages/EditUser.php": {
+    "mtime": 1777406207.0453372,
+    "hash": "87d7e750563df8d8fd5abe09ecdb4cf1"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Pages/CreateUser.php": {
+    "mtime": 1777406207.0451822,
+    "hash": "594a021d26ce3d7c95ed7a589f2a1143"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Widgets/UserGrowthChart.php": {
+    "mtime": 1777938825.3737907,
+    "hash": "d3fadbff36e5e13d181328b94eba5e50"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Widgets/LatestUsersTable.php": {
+    "mtime": 1777406207.046367,
+    "hash": "69ee0692aefe990c4b189f670c33fd2d"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Widgets/UserStatsOverview.php": {
+    "mtime": 1777938825.3741312,
+    "hash": "08e132d2cd5ac86622221aa423452682"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Pages/TaskBoard.php": {
+    "mtime": 1777922552.676684,
+    "hash": "a17436f6781f0f3459858e0e1847ba65"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Http/Controllers/Controller.php": {
+    "mtime": 1776455324.627926,
+    "hash": "25a307335c0719bc9a91b3f7babd186d"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/filament-shield.php": {
+    "mtime": 1777155063.7672582,
+    "hash": "5fe7847b37e9d85664fb44c6167c8007"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/auth.php": {
+    "mtime": 1776455324.6296566,
+    "hash": "26354511ab860b301f2a3554bc388b91"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/app.php": {
+    "mtime": 1776455324.629584,
+    "hash": "276578ad68424be59d0998379ae7d4cb"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/filament-logger.php": {
+    "mtime": 1776712669.7414582,
+    "hash": "7e0d9bf8fcc19f9d62d10512a56eb0ef"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/mail.php": {
+    "mtime": 1776455324.6300514,
+    "hash": "18601a927b48d38337ba2077426a7d60"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/services.php": {
+    "mtime": 1776455324.6302052,
+    "hash": "534a1b7af7009c373ea4ebfa18823d57"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/database.php": {
+    "mtime": 1776455324.6298318,
+    "hash": "3cd69c7ecc842e4552e44eade546d91f"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/cache.php": {
+    "mtime": 1776455324.6297436,
+    "hash": "c4c6c3d814db6eabf0e3f2a2985d7eab"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/session.php": {
+    "mtime": 1776455324.6303082,
+    "hash": "5ea7169252ec3cc7fad471f5cd0d7678"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/queue.php": {
+    "mtime": 1776455324.6301317,
+    "hash": "f98ce92e7bf51db1fabaf8a30e12fc5a"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/logging.php": {
+    "mtime": 1776455324.6299818,
+    "hash": "d8255a5c07d3da72c7c9363f0c44bddd"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/permission.php": {
+    "mtime": 1777155063.7674394,
+    "hash": "2c22b31b90f33cec4c786aa536f17a44"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/config/filesystems.php": {
+    "mtime": 1776455324.629902,
+    "hash": "bde1aa1027f0448f17348dbd93f3d7ea"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/js/app.js": {
+    "mtime": 1776455324.6435373,
+    "hash": "b519d08ef66fd54910edbedba6181ec2"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/welcome.blade.php": {
+    "mtime": 1776455324.6437604,
+    "hash": "bbb40394c60b6f7adf7a73e7379ed209"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/components/browser-sessions-list.blade.php": {
+    "mtime": 1776714647.6877737,
+    "hash": "93f75b2f20cf2004e38d7649ed60f391"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/components/clipboard-link.blade.php": {
+    "mtime": 1776714647.688398,
+    "hash": "4514cd0c1a8655c4a4b81fc2aa215bfa"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/livewire/browser-sessions.blade.php": {
+    "mtime": 1776714647.6902928,
+    "hash": "ece66332f000b316b15f3174b4fcfcca"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/livewire/two-factor-authentication.blade.php": {
+    "mtime": 1776714647.692905,
+    "hash": "0893121ace30a96f564a48a870749160"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/livewire/passkeys.blade.php": {
+    "mtime": 1776714647.6909175,
+    "hash": "1b0932f12d41f9e2f86e88e6df966e29"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/livewire/passkey-action.blade.php": {
+    "mtime": 1776714647.6905596,
+    "hash": "12fa3905d8437f89c3ae940304e5bd32"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/livewire/personal-info.blade.php": {
+    "mtime": 1776714647.692152,
+    "hash": "4d5b2ac9481548e7ed26ce79ea295a07"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/livewire/passkeys/create-script.blade.php": {
+    "mtime": 1776714647.6917896,
+    "hash": "a414f2b7e51480c2139c447d2410b84b"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/livewire/passkeys/authenticate-script.blade.php": {
+    "mtime": 1776714647.6912718,
+    "hash": "13336d2eaed1a364d213322319b63f49"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/filament/forms/action.blade.php": {
+    "mtime": 1776714647.6887708,
+    "hash": "9eeb6302d17a7ca4d0f910a8430e0da2"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/filament/pages/two-factor.blade.php": {
+    "mtime": 1776714647.6893759,
+    "hash": "60deeca2fac440575fb2f965b6b8fdd3"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/resources/views/vendor/filament-breezy/filament/pages/my-profile.blade.php": {
+    "mtime": 1776714647.6890929,
+    "hash": "754d1835cd586bb5af9bde88952fcfe8"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Pest.php": {
+    "mtime": 1777938825.375956,
+    "hash": "a63701f45ee36ebd7e9105970941366d"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/TestCase.php": {
+    "mtime": 1776455324.6455047,
+    "hash": "7e567dc27e68d5b57bae16af07f68907"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Unit/ExampleTest.php": {
+    "mtime": 1776455324.6456134,
+    "hash": "2bc41f1156dead26b2a3082f9634b041"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Feature/ExampleTest.php": {
+    "mtime": 1776455324.645368,
+    "hash": "ae3435cba767f333cd40212d368cbc53"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/routes/console.php": {
+    "mtime": 1776455324.6439002,
+    "hash": "3c6ce2e6d16444282b24a9aa63885563"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/routes/web.php": {
+    "mtime": 1776455324.6439745,
+    "hash": "84625c52e743b1a4178bb27b7afb3615"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/README.md": {
+    "mtime": 1777924202.1394525,
+    "hash": "6e01f784efbdbc44fe435fac7137e8ed"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/CLAUDE.md": {
+    "mtime": 1777920605.6406472,
+    "hash": "b162cf028ad2dd6ca3984fdf15ef8ff0"
+  }
+}
