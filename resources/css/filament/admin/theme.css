@@ -7,3 +7,4 @@
 @source "../../../../vendor/relaticle/flowforge/resources/views/**/*.blade.php";
 @import '../../../../vendor/saade/filament-fullcalendar/resources/css/filament-fullcalendar.css';
 @source '../../../../vendor/saade/filament-fullcalendar/resources/views/**/*.blade.php';
+@source '../../../../vendor/guava/filament-icon-picker/resources/**/*';
