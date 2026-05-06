@@ -5,3 +5,5 @@
 @source '../../../../vendor/jeffgreco13/filament-breezy/resources/**/*';
 @source '../../../../vendor/diogogpinto/filament-auth-ui-enhancer/resources/**/*.blade.php';
 @source "../../../../vendor/relaticle/flowforge/resources/views/**/*.blade.php";
+@import '../../../../vendor/saade/filament-fullcalendar/resources/css/filament-fullcalendar.css';
+@source '../../../../vendor/saade/filament-fullcalendar/resources/views/**/*.blade.php';
