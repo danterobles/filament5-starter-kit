@@ -1,0 +1,751 @@
+{
+  "communities": {
+    "0": [
+      "app_filament_resources_users_pages_createuser_php",
+      "app_filament_resources_users_pages_edituser_php",
+      "app_filament_resources_users_pages_listusers_php",
+      "pages_createuser_createuser",
+      "pages_createuser_createuser_aftercreate",
+      "pages_createuser_createuser_getcreatednotification",
+      "pages_createuser_createuser_getformactions",
+      "pages_createuser_createuser_getredirecturl",
+      "pages_createuser_createuser_mutateformdatabeforecreate",
+      "pages_edituser_edituser",
+      "pages_edituser_edituser_aftersave",
+      "pages_edituser_edituser_getheaderactions",
+      "pages_edituser_edituser_getredirecturl",
+      "pages_edituser_edituser_getsavednotification",
+      "pages_edituser_edituser_mutateformdatabeforesave",
+      "pages_listusers_listusers",
+      "pages_listusers_listusers_getfooterwidgets",
+      "pages_listusers_listusers_getheaderactions",
+      "pages_listusers_listusers_getheaderwidgets",
+      "pages_listusers_listusers_getheaderwidgetscolumns",
+      "users_userresource_userresource_getpages"
+    ],
+    "1": [
+      "activitypolicy_activitypolicy",
+      "adminpanelprovider_adminpanelprovider",
+      "appserviceprovider_appserviceprovider",
+      "bootstrap_app",
+      "bootstrap_providers",
+      "createuser_createuser",
+      "custompersonalinfo_custompersonalinfo",
+      "edituser_edituser",
+      "filament_panel_access_control",
+      "latestusetstable_latestuserstable",
+      "listusers_listusers",
+      "role_sync_pattern",
+      "rolepolicy_rolepolicy",
+      "task_task",
+      "user_user",
+      "userfactory_userfactory",
+      "userform_userform",
+      "usergrowthchart_usergrowthchart",
+      "userresource_userresource",
+      "userstable_userstable"
+    ],
+    "2": [
+      "app_filament_resources_users_schemas_userform_php",
+      "app_filament_resources_users_tables_userstable_php",
+      "app_filament_resources_users_userresource_php",
+      "schemas_userform_userform",
+      "schemas_userform_userform_configure",
+      "tables_userstable_userstable",
+      "tables_userstable_userstable_configure",
+      "users_userresource_userresource",
+      "users_userresource_userresource_form",
+      "users_userresource_userresource_getgloballysearchableattributes",
+      "users_userresource_userresource_getglobalsearcheloquentquery",
+      "users_userresource_userresource_getglobalsearchresultdetails",
+      "users_userresource_userresource_getglobalsearchresulttitle",
+      "users_userresource_userresource_getnavigationbadge",
+      "users_userresource_userresource_getnavigationbadgecolor",
+      "users_userresource_userresource_getrelations",
+      "users_userresource_userresource_getwidgets",
+      "users_userresource_userresource_table"
+    ],
+    "3": [
+      "app_policies_rolepolicy_php",
+      "policies_rolepolicy_rolepolicy",
+      "policies_rolepolicy_rolepolicy_create",
+      "policies_rolepolicy_rolepolicy_delete",
+      "policies_rolepolicy_rolepolicy_deleteany",
+      "policies_rolepolicy_rolepolicy_forcedelete",
+      "policies_rolepolicy_rolepolicy_forcedeleteany",
+      "policies_rolepolicy_rolepolicy_reorder",
+      "policies_rolepolicy_rolepolicy_replicate",
+      "policies_rolepolicy_rolepolicy_restore",
+      "policies_rolepolicy_rolepolicy_restoreany",
+      "policies_rolepolicy_rolepolicy_update",
+      "policies_rolepolicy_rolepolicy_view",
+      "policies_rolepolicy_rolepolicy_viewany"
+    ],
+    "4": [
+      "app_policies_activitypolicy_php",
+      "policies_activitypolicy_activitypolicy",
+      "policies_activitypolicy_activitypolicy_create",
+      "policies_activitypolicy_activitypolicy_delete",
+      "policies_activitypolicy_activitypolicy_deleteany",
+      "policies_activitypolicy_activitypolicy_forcedelete",
+      "policies_activitypolicy_activitypolicy_forcedeleteany",
+      "policies_activitypolicy_activitypolicy_reorder",
+      "policies_activitypolicy_activitypolicy_replicate",
+      "policies_activitypolicy_activitypolicy_restore",
+      "policies_activitypolicy_activitypolicy_restoreany",
+      "policies_activitypolicy_activitypolicy_update",
+      "policies_activitypolicy_activitypolicy_view",
+      "policies_activitypolicy_activitypolicy_viewany"
+    ],
+    "5": [
+      "artisan_entrypoint",
+      "factory_task",
+      "migration_add_position_tasks",
+      "migration_alter_breezy_sessions",
+      "migration_breezy_sessions",
+      "migration_create_tasks",
+      "migration_fix_tasks_schema",
+      "migration_passkeys",
+      "migration_users_table",
+      "plugin_filament_breezy",
+      "plugin_flowforge",
+      "seeder_database",
+      "task_status_states"
+    ],
+    "6": [
+      "browser_sessions_blade",
+      "my_profile_component_registry",
+      "my_profile_page_blade",
+      "passkey_action_blade",
+      "passkeys_authenticate_script",
+      "passkeys_blade",
+      "passkeys_create_script",
+      "personal_info_blade",
+      "two_factor_auth_pattern",
+      "two_factor_authentication_blade",
+      "two_factor_page_blade",
+      "webauthn_authentication_flow",
+      "webauthn_registration_flow"
+    ],
+    "7": [
+      "config_auth",
+      "config_filament_shield",
+      "config_permission",
+      "filament_shield_role_resource",
+      "model_user",
+      "permission_cache_24h",
+      "spatie_permission_model",
+      "spatie_role_model",
+      "userstatsoverview_widget"
+    ],
+    "8": [
+      "app_filament_widgets_agendacalendarwidget_php",
+      "app_models_agenda_php",
+      "models_agenda_agenda",
+      "models_agenda_agenda_casts",
+      "widgets_agendacalendarwidget_agendacalendarwidget",
+      "widgets_agendacalendarwidget_agendacalendarwidget_fetchevents",
+      "widgets_agendacalendarwidget_agendacalendarwidget_getformschema",
+      "widgets_agendacalendarwidget_agendacalendarwidget_headeractions",
+      "widgets_agendacalendarwidget_agendacalendarwidget_modalactions"
+    ],
+    "9": [
+      "database_seeders_shieldseeder_php",
+      "seeders_shieldseeder_shieldseeder",
+      "seeders_shieldseeder_shieldseeder_makedirectpermissions",
+      "seeders_shieldseeder_shieldseeder_makeroleswithpermissions",
+      "seeders_shieldseeder_shieldseeder_run",
+      "seeders_shieldseeder_shieldseeder_seedtenants",
+      "seeders_shieldseeder_shieldseeder_seedusers",
+      "seeders_shieldseeder_shieldseeder_seedusertenantpivot"
+    ],
+    "10": [
+      "app_livewire_custompersonalinfo_php",
+      "livewire_custompersonalinfo_custompersonalinfo",
+      "livewire_custompersonalinfo_custompersonalinfo_getemailcomponent",
+      "livewire_custompersonalinfo_custompersonalinfo_getlastcomponent",
+      "livewire_custompersonalinfo_custompersonalinfo_getnamecomponent",
+      "livewire_custompersonalinfo_custompersonalinfo_getphonecomponent",
+      "livewire_custompersonalinfo_custompersonalinfo_getprofileformschema",
+      "livewire_custompersonalinfo_custompersonalinfo_sendnotification"
+    ],
+    "11": [
+      "app_filament_pages_taskboard_php",
+      "app_models_task_php",
+      "models_task_task",
+      "models_task_task_user",
+      "pages_taskboard_taskboard",
+      "pages_taskboard_taskboard_board",
+      "pages_taskboard_taskboard_geteloquentquery"
+    ],
+    "12": [
+      "browser_sessions_list_view",
+      "clipboard_link_view",
+      "config_cache",
+      "config_database",
+      "config_queue",
+      "config_session",
+      "db_driver_database_cache"
+    ],
+    "13": [
+      "database_factories_taskfactory_php",
+      "factories_taskfactory_taskfactory",
+      "factories_taskfactory_taskfactory_completed",
+      "factories_taskfactory_taskfactory_definition",
+      "factories_taskfactory_taskfactory_inprogress",
+      "factories_taskfactory_taskfactory_todo"
+    ],
+    "14": [
+      "app_models_user_php",
+      "models_user_user",
+      "models_user_user_canaccesspanel",
+      "models_user_user_casts",
+      "models_user_user_getfilamentavatarurl",
+      "models_user_user_getfullnameattribute"
+    ],
+    "15": [
+      "app_filament_resources_users_widgets_usergrowthchart_php",
+      "widgets_usergrowthchart_usergrowthchart",
+      "widgets_usergrowthchart_usergrowthchart_getdata",
+      "widgets_usergrowthchart_usergrowthchart_getoptions",
+      "widgets_usergrowthchart_usergrowthchart_gettype",
+      "widgets_usergrowthchart_usergrowthchart_getuserspermonth"
+    ],
+    "16": [
+      "database_factories_agendafactory_php",
+      "factories_agendafactory_agendafactory",
+      "factories_agendafactory_agendafactory_allday",
+      "factories_agendafactory_agendafactory_definition",
+      "factories_agendafactory_agendafactory_upcoming"
+    ],
+    "17": [
+      "database_migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_php",
+      "migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_addbatchuuidcolumntoactivitylogtable",
+      "migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_addbatchuuidcolumntoactivitylogtable_down",
+      "migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_addbatchuuidcolumntoactivitylogtable_up"
+    ],
+    "18": [
+      "database_migrations_2026_04_20_191121_add_event_column_to_activity_log_table_php",
+      "migrations_2026_04_20_191121_add_event_column_to_activity_log_table_addeventcolumntoactivitylogtable",
+      "migrations_2026_04_20_191121_add_event_column_to_activity_log_table_addeventcolumntoactivitylogtable_down",
+      "migrations_2026_04_20_191121_add_event_column_to_activity_log_table_addeventcolumntoactivitylogtable_up"
+    ],
+    "19": [
+      "database_migrations_2026_04_20_191120_create_activity_log_table_php",
+      "migrations_2026_04_20_191120_create_activity_log_table_createactivitylogtable",
+      "migrations_2026_04_20_191120_create_activity_log_table_createactivitylogtable_down",
+      "migrations_2026_04_20_191120_create_activity_log_table_createactivitylogtable_up"
+    ],
+    "20": [
+      "database_factories_userfactory_php",
+      "factories_userfactory_userfactory",
+      "factories_userfactory_userfactory_definition",
+      "factories_userfactory_userfactory_unverified"
+    ],
+    "21": [
+      "app_providers_appserviceprovider_php",
+      "providers_appserviceprovider_appserviceprovider",
+      "providers_appserviceprovider_appserviceprovider_boot",
+      "providers_appserviceprovider_appserviceprovider_register"
+    ],
+    "22": [
+      "migration_activity_log",
+      "migration_activity_log_batch_uuid",
+      "migration_activity_log_event",
+      "plugin_filament_logger"
+    ],
+    "23": [
+      "database_migrations_2026_04_20_194024_create_breezy_sessions_table_php",
+      "migrations_2026_04_20_194024_create_breezy_sessions_table_down",
+      "migrations_2026_04_20_194024_create_breezy_sessions_table_up"
+    ],
+    "24": [
+      "database_migrations_0001_01_01_000000_create_users_table_php",
+      "migrations_0001_01_01_000000_create_users_table_down",
+      "migrations_0001_01_01_000000_create_users_table_up"
+    ],
+    "25": [
+      "database_migrations_0001_01_01_000001_create_cache_table_php",
+      "migrations_0001_01_01_000001_create_cache_table_down",
+      "migrations_0001_01_01_000001_create_cache_table_up"
+    ],
+    "26": [
+      "database_migrations_0001_01_01_000002_create_jobs_table_php",
+      "migrations_0001_01_01_000002_create_jobs_table_down",
+      "migrations_0001_01_01_000002_create_jobs_table_up"
+    ],
+    "27": [
+      "database_migrations_2026_05_04_191717_add_position_to_tasks_table_php",
+      "migrations_2026_05_04_191717_add_position_to_tasks_table_down",
+      "migrations_2026_05_04_191717_add_position_to_tasks_table_up"
+    ],
+    "28": [
+      "database_migrations_2026_04_20_194026_create_passkeys_table_php",
+      "migrations_2026_04_20_194026_create_passkeys_table_down",
+      "migrations_2026_04_20_194026_create_passkeys_table_up"
+    ],
+    "29": [
+      "database_migrations_2026_04_25_220238_create_permission_tables_php",
+      "migrations_2026_04_25_220238_create_permission_tables_down",
+      "migrations_2026_04_25_220238_create_permission_tables_up"
+    ],
+    "30": [
+      "database_migrations_2026_05_04_232920_fix_tasks_table_schema_php",
+      "migrations_2026_05_04_232920_fix_tasks_table_schema_down",
+      "migrations_2026_05_04_232920_fix_tasks_table_schema_up"
+    ],
+    "31": [
+      "database_migrations_2026_04_20_194025_alter_breezy_sessions_table_php",
+      "migrations_2026_04_20_194025_alter_breezy_sessions_table_down",
+      "migrations_2026_04_20_194025_alter_breezy_sessions_table_up"
+    ],
+    "32": [
+      "database_migrations_2026_05_04_185058_create_tasks_table_php",
+      "migrations_2026_05_04_185058_create_tasks_table_down",
+      "migrations_2026_05_04_185058_create_tasks_table_up"
+    ],
+    "33": [
+      "database_seeders_databaseseeder_php",
+      "seeders_databaseseeder_databaseseeder",
+      "seeders_databaseseeder_databaseseeder_run"
+    ],
+    "34": [
+      "app_providers_filament_adminpanelprovider_php",
+      "filament_adminpanelprovider_adminpanelprovider",
+      "filament_adminpanelprovider_adminpanelprovider_panel"
+    ],
+    "35": [
+      "app_filament_resources_users_widgets_latestuserstable_php",
+      "widgets_latestuserstable_latestuserstable",
+      "widgets_latestuserstable_latestuserstable_table"
+    ],
+    "36": [
+      "app_filament_resources_users_widgets_userstatsoverview_php",
+      "widgets_userstatsoverview_userstatsoverview",
+      "widgets_userstatsoverview_userstatsoverview_getstats"
+    ],
+    "37": [
+      "authenticatewithpasskey",
+      "filament_breezy_livewire_passkeys_authenticate_script",
+      "resources_views_vendor_filament_breezy_livewire_passkey_action_blade_php"
+    ],
+    "38": [
+      "claude_md_project",
+      "readme_starterkit",
+      "vite_config"
+    ],
+    "39": [
+      "migration_permission_tables",
+      "plugin_filament_shield",
+      "seeder_shield"
+    ],
+    "40": [
+      "config_logging",
+      "config_mail",
+      "config_services"
+    ],
+    "41": [
+      "config_app",
+      "config_filesystems",
+      "welcome_view"
+    ],
+    "42": [
+      "flowforge_boardpage",
+      "model_task",
+      "taskboard_page"
+    ],
+    "43": [
+      "feature_example_test",
+      "pest_bootstrap",
+      "tests_testcase"
+    ],
+    "44": [
+      "database_migrations_2026_05_06_173646_create_agendas_table_php",
+      "migrations_2026_05_06_173646_create_agendas_table_down",
+      "migrations_2026_05_06_173646_create_agendas_table_up"
+    ],
+    "45": [
+      "app_http_controllers_controller_php",
+      "controllers_controller_controller"
+    ],
+    "46": [
+      "filament_breezy_livewire_passkeys_create_script",
+      "resources_views_vendor_filament_breezy_livewire_passkeys_blade_php"
+    ],
+    "47": [
+      "tests_pest_php",
+      "tests_pest_something"
+    ],
+    "48": [
+      "tests_testcase_php",
+      "tests_testcase_testcase"
+    ],
+    "49": [
+      "config_filament_logger",
+      "filament_logger_activity_resource"
+    ],
+    "50": [
+      "routes_console",
+      "routes_web"
+    ],
+    "51": [
+      "vite_config_js"
+    ],
+    "52": [
+      "bootstrap_app_php"
+    ],
+    "53": [
+      "bootstrap_providers_php"
+    ],
+    "54": [
+      "bootstrap_cache_services_php"
+    ],
+    "55": [
+      "bootstrap_cache_packages_php"
+    ],
+    "56": [
+      "config_filament_shield_php"
+    ],
+    "57": [
+      "config_auth_php"
+    ],
+    "58": [
+      "config_app_php"
+    ],
+    "59": [
+      "config_filament_logger_php"
+    ],
+    "60": [
+      "config_mail_php"
+    ],
+    "61": [
+      "config_services_php"
+    ],
+    "62": [
+      "config_database_php"
+    ],
+    "63": [
+      "config_cache_php"
+    ],
+    "64": [
+      "config_session_php"
+    ],
+    "65": [
+      "config_queue_php"
+    ],
+    "66": [
+      "config_logging_php"
+    ],
+    "67": [
+      "config_permission_php"
+    ],
+    "68": [
+      "config_filesystems_php"
+    ],
+    "69": [
+      "resources_js_app_js"
+    ],
+    "70": [
+      "resources_views_welcome_blade_php"
+    ],
+    "71": [
+      "resources_views_vendor_filament_breezy_components_browser_sessions_list_blade_php"
+    ],
+    "72": [
+      "resources_views_vendor_filament_breezy_components_clipboard_link_blade_php"
+    ],
+    "73": [
+      "resources_views_vendor_filament_breezy_livewire_browser_sessions_blade_php"
+    ],
+    "74": [
+      "resources_views_vendor_filament_breezy_livewire_two_factor_authentication_blade_php"
+    ],
+    "75": [
+      "resources_views_vendor_filament_breezy_livewire_personal_info_blade_php"
+    ],
+    "76": [
+      "resources_views_vendor_filament_breezy_livewire_passkeys_create_script_blade_php"
+    ],
+    "77": [
+      "resources_views_vendor_filament_breezy_livewire_passkeys_authenticate_script_blade_php"
+    ],
+    "78": [
+      "resources_views_vendor_filament_breezy_filament_forms_action_blade_php"
+    ],
+    "79": [
+      "resources_views_vendor_filament_breezy_filament_pages_two_factor_blade_php"
+    ],
+    "80": [
+      "resources_views_vendor_filament_breezy_filament_pages_my_profile_blade_php"
+    ],
+    "81": [
+      "tests_unit_exampletest_php"
+    ],
+    "82": [
+      "tests_feature_exampletest_php"
+    ],
+    "83": [
+      "routes_console_php"
+    ],
+    "84": [
+      "routes_web_php"
+    ],
+    "85": [
+      "migration_cache_table"
+    ],
+    "86": [
+      "migration_jobs_table"
+    ],
+    "87": [
+      "controller_base"
+    ],
+    "88": [
+      "db_driver_sqlite"
+    ],
+    "89": [
+      "filament_forms_action_blade"
+    ],
+    "90": [
+      "unit_example_test"
+    ]
+  },
+  "cohesion": {
+    "0": 0.1,
+    "1": 0.16,
+    "2": 0.11,
+    "3": 0.14,
+    "4": 0.14,
+    "5": 0.21,
+    "6": 0.17,
+    "7": 0.25,
+    "8": 0.22,
+    "9": 0.25,
+    "10": 0.39,
+    "11": 0.33,
+    "12": 0.29,
+    "13": 0.33,
+    "14": 0.33,
+    "15": 0.4,
+    "16": 0.4,
+    "17": 0.5,
+    "18": 0.5,
+    "19": 0.5,
+    "20": 0.5,
+    "21": 0.5,
+    "22": 0.5,
+    "23": 0.67,
+    "24": 0.67,
+    "25": 0.67,
+    "26": 0.67,
+    "27": 0.67,
+    "28": 0.67,
+    "29": 0.67,
+    "30": 0.67,
+    "31": 0.67,
+    "32": 0.67,
+    "33": 0.67,
+    "34": 0.67,
+    "35": 0.67,
+    "36": 0.67,
+    "37": 0.67,
+    "38": 0.67,
+    "39": 1.0,
+    "40": 0.67,
+    "41": 0.67,
+    "42": 0.67,
+    "43": 1.0,
+    "44": 0.67,
+    "45": 1.0,
+    "46": 1.0,
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0,
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0,
+    "79": 1.0,
+    "80": 1.0,
+    "81": 1.0,
+    "82": 1.0,
+    "83": 1.0,
+    "84": 1.0,
+    "85": 1.0,
+    "86": 1.0,
+    "87": 1.0,
+    "88": 1.0,
+    "89": 1.0,
+    "90": 1.0
+  },
+  "gods": [
+    {
+      "id": "policies_rolepolicy_rolepolicy",
+      "label": "RolePolicy",
+      "degree": 13
+    },
+    {
+      "id": "policies_activitypolicy_activitypolicy",
+      "label": "ActivityPolicy",
+      "degree": 13
+    },
+    {
+      "id": "user_user",
+      "label": "User Model",
+      "degree": 13
+    },
+    {
+      "id": "users_userresource_userresource",
+      "label": "UserResource",
+      "degree": 12
+    },
+    {
+      "id": "userresource_userresource",
+      "label": "UserResource",
+      "degree": 8
+    },
+    {
+      "id": "seeders_shieldseeder_shieldseeder",
+      "label": "ShieldSeeder",
+      "degree": 7
+    },
+    {
+      "id": "livewire_custompersonalinfo_custompersonalinfo",
+      "label": "CustomPersonalInfo",
+      "degree": 7
+    },
+    {
+      "id": "pages_edituser_edituser",
+      "label": "EditUser",
+      "degree": 7
+    },
+    {
+      "id": "pages_createuser_createuser",
+      "label": "CreateUser",
+      "degree": 7
+    },
+    {
+      "id": "pages_listusers_listusers",
+      "label": "ListUsers",
+      "degree": 6
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Vite Configuration",
+      "target": "Laravel 13 + Filament 5 Starter Kit README",
+      "source_files": [
+        "vite.config.js",
+        "README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code \u2194 doc); connects across different repos/directories"
+    },
+    {
+      "source": "Create Activity Log Table Migration",
+      "target": "Filament Logger Plugin (Activity Log)",
+      "source_files": [
+        "database/migrations/2026_04_20_191120_create_activity_log_table.php",
+        "README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code \u2194 doc); connects across different repos/directories"
+    },
+    {
+      "source": "Create Passkeys Table Migration",
+      "target": "Filament Breezy Plugin (2FA, Sessions, Passkeys)",
+      "source_files": [
+        "database/migrations/2026_04_20_194026_create_passkeys_table.php",
+        "README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code \u2194 doc); connects across different repos/directories"
+    },
+    {
+      "source": "Create Permission Tables Migration (Spatie)",
+      "target": "Filament Shield Plugin (RBAC)",
+      "source_files": [
+        "database/migrations/2026_04_25_220238_create_permission_tables.php",
+        "README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (code \u2194 doc); connects across different repos/directories"
+    },
+    {
+      "source": "Create Breezy Sessions Table Migration",
+      "target": "Filament Breezy Plugin (2FA, Sessions, Passkeys)",
+      "source_files": [
+        "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (code \u2194 doc); connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `UserResource` connect `Community 2` to `Community 0`?",
+      "why": "High betweenness centrality (0.009) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 2 inferred relationships involving `User Model` (e.g. with `CustomPersonalInfo Livewire Component` and `UsersTable`) actually correct?",
+      "why": "`User Model` has 2 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Controller`, `filament-breezy::livewire.passkeys.create-script`, `filament-breezy::livewire.passkeys.authenticate-script` to the rest of the system?",
+      "why": "49 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 3` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.14 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 4` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.14 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

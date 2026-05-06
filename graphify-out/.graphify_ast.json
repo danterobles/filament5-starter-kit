@@ -1,0 +1,754 @@
+{
+  "nodes": [
+    {
+      "id": "database_migrations_2026_05_06_173646_create_agendas_table_php",
+      "label": "2026_05_06_173646_create_agendas_table.php",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "migrations_2026_05_06_173646_create_agendas_table_up",
+      "label": "up()",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
+      "source_location": "L12"
+    },
+    {
+      "id": "migrations_2026_05_06_173646_create_agendas_table_down",
+      "label": "down()",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
+      "source_location": "L30"
+    },
+    {
+      "id": "database_factories_agendafactory_php",
+      "label": "AgendaFactory.php",
+      "file_type": "code",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "factories_agendafactory_agendafactory",
+      "label": "AgendaFactory",
+      "file_type": "code",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L11"
+    },
+    {
+      "id": "factories_agendafactory_agendafactory_definition",
+      "label": ".definition()",
+      "file_type": "code",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L18"
+    },
+    {
+      "id": "factories_agendafactory_agendafactory_allday",
+      "label": ".allDay()",
+      "file_type": "code",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L34"
+    },
+    {
+      "id": "factories_agendafactory_agendafactory_upcoming",
+      "label": ".upcoming()",
+      "file_type": "code",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L42"
+    },
+    {
+      "id": "app_providers_filament_adminpanelprovider_php",
+      "label": "AdminPanelProvider.php",
+      "file_type": "code",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "filament_adminpanelprovider_adminpanelprovider",
+      "label": "AdminPanelProvider",
+      "file_type": "code",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L31"
+    },
+    {
+      "id": "filament_adminpanelprovider_adminpanelprovider_panel",
+      "label": ".panel()",
+      "file_type": "code",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L33"
+    },
+    {
+      "id": "app_models_agenda_php",
+      "label": "Agenda.php",
+      "file_type": "code",
+      "source_file": "app/Models/Agenda.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "models_agenda_agenda",
+      "label": "Agenda",
+      "file_type": "code",
+      "source_file": "app/Models/Agenda.php",
+      "source_location": "L10"
+    },
+    {
+      "id": "models_agenda_agenda_casts",
+      "label": ".casts()",
+      "file_type": "code",
+      "source_file": "app/Models/Agenda.php",
+      "source_location": "L16"
+    },
+    {
+      "id": "app_filament_widgets_agendacalendarwidget_php",
+      "label": "AgendaCalendarWidget.php",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "widgets_agendacalendarwidget_agendacalendarwidget",
+      "label": "AgendaCalendarWidget",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L19"
+    },
+    {
+      "id": "widgets_agendacalendarwidget_agendacalendarwidget_fetchevents",
+      "label": ".fetchEvents()",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L23"
+    },
+    {
+      "id": "widgets_agendacalendarwidget_agendacalendarwidget_getformschema",
+      "label": ".getFormSchema()",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L45"
+    },
+    {
+      "id": "widgets_agendacalendarwidget_agendacalendarwidget_headeractions",
+      "label": ".headerActions()",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L84"
+    },
+    {
+      "id": "widgets_agendacalendarwidget_agendacalendarwidget_modalactions",
+      "label": ".modalActions()",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L91"
+    }
+  ],
+  "edges": [
+    {
+      "source": "database_migrations_2026_05_06_173646_create_agendas_table_php",
+      "target": "migration",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "database_migrations_2026_05_06_173646_create_agendas_table_php",
+      "target": "blueprint",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "database_migrations_2026_05_06_173646_create_agendas_table_php",
+      "target": "schema",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "database_migrations_2026_05_06_173646_create_agendas_table_php",
+      "target": "migrations_2026_05_06_173646_create_agendas_table_up",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "database_migrations_2026_05_06_173646_create_agendas_table_php",
+      "target": "migrations_2026_05_06_173646_create_agendas_table_down",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "database_factories_agendafactory_php",
+      "target": "agenda",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "database_factories_agendafactory_php",
+      "target": "factory",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "database_factories_agendafactory_php",
+      "target": "factories_agendafactory_agendafactory",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "factories_agendafactory_agendafactory",
+      "target": "factories_agendafactory_agendafactory_definition",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "factories_agendafactory_agendafactory",
+      "target": "factories_agendafactory_agendafactory_allday",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "factories_agendafactory_agendafactory",
+      "target": "factories_agendafactory_agendafactory_upcoming",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/AgendaFactory.php",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "agendacalendarwidget",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "custompersonalinfo",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "filamentshieldplugin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "authuienhancerplugin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "authenticate",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "authenticatesession",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "disablebladeiconcomponents",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "dispatchservingfilamentevent",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "dashboard",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "panel",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "panelprovider",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "color",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "accountwidget",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "filamentinfowidget",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "addqueuedcookiestoresponse",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "encryptcookies",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "preventrequestforgery",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "substitutebindings",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "startsession",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "shareerrorsfromsession",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "filamentloggerplugin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "breezycore",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "filamentapexchartsplugin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "filamentfullcalendarplugin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "app_providers_filament_adminpanelprovider_php",
+      "target": "filament_adminpanelprovider_adminpanelprovider",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "filament_adminpanelprovider_adminpanelprovider",
+      "target": "filament_adminpanelprovider_adminpanelprovider_panel",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_agenda_php",
+      "target": "agendafactory",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Models/Agenda.php",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_agenda_php",
+      "target": "fillable",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Models/Agenda.php",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_agenda_php",
+      "target": "hasfactory",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Models/Agenda.php",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_agenda_php",
+      "target": "model",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Models/Agenda.php",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_models_agenda_php",
+      "target": "models_agenda_agenda",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Models/Agenda.php",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "models_agenda_agenda",
+      "target": "models_agenda_agenda_casts",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Models/Agenda.php",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "agenda",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "colorpicker",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "datetimepicker",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "textarea",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "textinput",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "toggle",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "grid",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "model",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "createaction",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "deleteaction",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "editaction",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "eventdata",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "fullcalendarwidget",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_widgets_agendacalendarwidget_php",
+      "target": "widgets_agendacalendarwidget_agendacalendarwidget",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "widgets_agendacalendarwidget_agendacalendarwidget",
+      "target": "widgets_agendacalendarwidget_agendacalendarwidget_fetchevents",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "widgets_agendacalendarwidget_agendacalendarwidget",
+      "target": "widgets_agendacalendarwidget_agendacalendarwidget_getformschema",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "widgets_agendacalendarwidget_agendacalendarwidget",
+      "target": "widgets_agendacalendarwidget_agendacalendarwidget_headeractions",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "widgets_agendacalendarwidget_agendacalendarwidget",
+      "target": "widgets_agendacalendarwidget_agendacalendarwidget_modalactions",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "widgets_agendacalendarwidget_agendacalendarwidget_fetchevents",
+      "target": "models_agenda_agenda",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
+      "source_location": "L25",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
