@@ -4,6 +4,19 @@
   "graph": {
     "hyperedges": [
       {
+        "id": "breezy_auth_schema",
+        "label": "Breezy Authentication Schema (sessions, passkeys, alter)",
+        "nodes": [
+          "migration_breezy_sessions",
+          "migration_alter_breezy_sessions",
+          "migration_passkeys"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php"
+      },
+      {
         "id": "tasks_schema_evolution",
         "label": "Tasks Table Schema Evolution (create, fix, add position)",
         "nodes": [
@@ -30,17 +43,17 @@
         "source_file": "database/migrations/2026_04_20_191120_create_activity_log_table.php"
       },
       {
-        "id": "breezy_auth_schema",
-        "label": "Breezy Authentication Schema (sessions, passkeys, alter)",
+        "id": "admin_panel_plugin_stack",
+        "label": "Admin Panel Plugin Registration Stack",
         "nodes": [
-          "migration_breezy_sessions",
-          "migration_alter_breezy_sessions",
-          "migration_passkeys"
+          "adminpanelprovider_adminpanelprovider",
+          "custompersonalinfo_custompersonalinfo",
+          "userresource_userresource"
         ],
-        "relation": "implement",
+        "relation": "participate_in",
         "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php"
+        "confidence_score": 0.95,
+        "source_file": "app/Providers/Filament/AdminPanelProvider.php"
       },
       {
         "id": "user_resource_crud_pages",
@@ -69,19 +82,6 @@
         "source_file": "app/Filament/Resources/Users/UserResource.php"
       },
       {
-        "id": "admin_panel_plugin_stack",
-        "label": "Admin Panel Plugin Registration Stack",
-        "nodes": [
-          "adminpanelprovider_adminpanelprovider",
-          "custompersonalinfo_custompersonalinfo",
-          "userresource_userresource"
-        ],
-        "relation": "participate_in",
-        "confidence": "EXTRACTED",
-        "confidence_score": 0.95,
-        "source_file": "app/Providers/Filament/AdminPanelProvider.php"
-      },
-      {
         "id": "role_permission_authorization_stack",
         "label": "Role-Permission Authorization Stack",
         "nodes": [
@@ -93,19 +93,6 @@
         "confidence": "INFERRED",
         "confidence_score": 0.95,
         "source_file": "config/filament-shield.php"
-      },
-      {
-        "id": "database_backed_infra",
-        "label": "Database-backed Infrastructure (cache, session, queue)",
-        "nodes": [
-          "config_cache",
-          "config_session",
-          "config_queue"
-        ],
-        "relation": "participate_in",
-        "confidence": "INFERRED",
-        "confidence_score": 0.9,
-        "source_file": "config/database.php"
       },
       {
         "id": "filament_activity_logging",
@@ -121,6 +108,19 @@
         "source_file": "config/filament-logger.php"
       },
       {
+        "id": "database_backed_infra",
+        "label": "Database-backed Infrastructure (cache, session, queue)",
+        "nodes": [
+          "config_cache",
+          "config_session",
+          "config_queue"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.9,
+        "source_file": "config/database.php"
+      },
+      {
         "id": "profile_security_sections",
         "label": "Profile Security Sections (2FA, Passkeys, Browser Sessions)",
         "nodes": [
@@ -134,19 +134,6 @@
         "source_file": "resources/views/vendor/filament-breezy/filament/pages/my-profile.blade.php"
       },
       {
-        "id": "passkey_webauthn_flow",
-        "label": "Passkey WebAuthn Registration and Authentication Flow",
-        "nodes": [
-          "passkeys_create_script",
-          "passkeys_authenticate_script",
-          "passkey_action_blade"
-        ],
-        "relation": "implement",
-        "confidence": "INFERRED",
-        "confidence_score": 0.9,
-        "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys"
-      },
-      {
         "id": "pest_test_infrastructure",
         "label": "Pest Testing Infrastructure",
         "nodes": [
@@ -158,6 +145,51 @@
         "confidence": "EXTRACTED",
         "confidence_score": 1.0,
         "source_file": "tests/Pest.php"
+      },
+      {
+        "id": "filament_plugin_ecosystem",
+        "label": "Filament Plugin Ecosystem",
+        "nodes": [
+          "pkg_filament",
+          "pkg_filament_shield",
+          "pkg_filament_logger",
+          "pkg_filament_breezy",
+          "pkg_auth_ui_enhancer",
+          "pkg_apex_charts",
+          "pkg_filacheck",
+          "pkg_flowforge",
+          "pkg_fullcalendar"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.95,
+        "source_file": "bootstrap/cache/packages.php"
+      },
+      {
+        "id": "laravel_core_providers",
+        "label": "Laravel Core Service Providers",
+        "nodes": [
+          "services_cache",
+          "provider_app_service",
+          "provider_admin_panel"
+        ],
+        "relation": "implement",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "bootstrap/cache/services.php"
+      },
+      {
+        "id": "project_documentation",
+        "label": "Project Documentation and Guidelines",
+        "nodes": [
+          "readme_doc",
+          "claude_md",
+          "concept_starter_kit"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "README.md"
       }
     ]
   },
@@ -204,7 +236,7 @@
       "source_file": "database/migrations/2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php",
       "source_location": "L1",
       "id": "database_migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_php",
-      "community": 15,
+      "community": 16,
       "norm_label": "2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php"
     },
     {
@@ -213,7 +245,7 @@
       "source_file": "database/migrations/2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php",
       "source_location": "L7",
       "id": "migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_addbatchuuidcolumntoactivitylogtable",
-      "community": 15,
+      "community": 16,
       "norm_label": "addbatchuuidcolumntoactivitylogtable"
     },
     {
@@ -222,7 +254,7 @@
       "source_file": "database/migrations/2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php",
       "source_location": "L9",
       "id": "migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_addbatchuuidcolumntoactivitylogtable_up",
-      "community": 15,
+      "community": 16,
       "norm_label": ".up()"
     },
     {
@@ -231,7 +263,7 @@
       "source_file": "database/migrations/2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php",
       "source_location": "L16",
       "id": "migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_addbatchuuidcolumntoactivitylogtable_down",
-      "community": 15,
+      "community": 16,
       "norm_label": ".down()"
     },
     {
@@ -294,7 +326,7 @@
       "source_file": "database/migrations/2026_04_20_191121_add_event_column_to_activity_log_table.php",
       "source_location": "L1",
       "id": "database_migrations_2026_04_20_191121_add_event_column_to_activity_log_table_php",
-      "community": 16,
+      "community": 17,
       "norm_label": "2026_04_20_191121_add_event_column_to_activity_log_table.php"
     },
     {
@@ -303,7 +335,7 @@
       "source_file": "database/migrations/2026_04_20_191121_add_event_column_to_activity_log_table.php",
       "source_location": "L7",
       "id": "migrations_2026_04_20_191121_add_event_column_to_activity_log_table_addeventcolumntoactivitylogtable",
-      "community": 16,
+      "community": 17,
       "norm_label": "addeventcolumntoactivitylogtable"
     },
     {
@@ -312,7 +344,7 @@
       "source_file": "database/migrations/2026_04_20_191121_add_event_column_to_activity_log_table.php",
       "source_location": "L9",
       "id": "migrations_2026_04_20_191121_add_event_column_to_activity_log_table_addeventcolumntoactivitylogtable_up",
-      "community": 16,
+      "community": 17,
       "norm_label": ".up()"
     },
     {
@@ -321,7 +353,7 @@
       "source_file": "database/migrations/2026_04_20_191121_add_event_column_to_activity_log_table.php",
       "source_location": "L16",
       "id": "migrations_2026_04_20_191121_add_event_column_to_activity_log_table_addeventcolumntoactivitylogtable_down",
-      "community": 16,
+      "community": 17,
       "norm_label": ".down()"
     },
     {
@@ -519,7 +551,7 @@
       "source_file": "database/migrations/2026_04_20_191120_create_activity_log_table.php",
       "source_location": "L1",
       "id": "database_migrations_2026_04_20_191120_create_activity_log_table_php",
-      "community": 17,
+      "community": 18,
       "norm_label": "2026_04_20_191120_create_activity_log_table.php"
     },
     {
@@ -528,7 +560,7 @@
       "source_file": "database/migrations/2026_04_20_191120_create_activity_log_table.php",
       "source_location": "L7",
       "id": "migrations_2026_04_20_191120_create_activity_log_table_createactivitylogtable",
-      "community": 17,
+      "community": 18,
       "norm_label": "createactivitylogtable"
     },
     {
@@ -537,7 +569,7 @@
       "source_file": "database/migrations/2026_04_20_191120_create_activity_log_table.php",
       "source_location": "L9",
       "id": "migrations_2026_04_20_191120_create_activity_log_table_createactivitylogtable_up",
-      "community": 17,
+      "community": 18,
       "norm_label": ".up()"
     },
     {
@@ -546,7 +578,7 @@
       "source_file": "database/migrations/2026_04_20_191120_create_activity_log_table.php",
       "source_location": "L23",
       "id": "migrations_2026_04_20_191120_create_activity_log_table_createactivitylogtable_down",
-      "community": 17,
+      "community": 18,
       "norm_label": ".down()"
     },
     {
@@ -555,7 +587,7 @@
       "source_file": "database/seeders/ShieldSeeder.php",
       "source_location": "L1",
       "id": "database_seeders_shieldseeder_php",
-      "community": 8,
+      "community": 9,
       "norm_label": "shieldseeder.php"
     },
     {
@@ -564,7 +596,7 @@
       "source_file": "database/seeders/ShieldSeeder.php",
       "source_location": "L10",
       "id": "seeders_shieldseeder_shieldseeder",
-      "community": 8,
+      "community": 9,
       "norm_label": "shieldseeder"
     },
     {
@@ -573,7 +605,7 @@
       "source_file": "database/seeders/ShieldSeeder.php",
       "source_location": "L12",
       "id": "seeders_shieldseeder_shieldseeder_run",
-      "community": 8,
+      "community": 9,
       "norm_label": ".run()"
     },
     {
@@ -582,7 +614,7 @@
       "source_file": "database/seeders/ShieldSeeder.php",
       "source_location": "L46",
       "id": "seeders_shieldseeder_shieldseeder_seedtenants",
-      "community": 8,
+      "community": 9,
       "norm_label": ".seedtenants()"
     },
     {
@@ -591,7 +623,7 @@
       "source_file": "database/seeders/ShieldSeeder.php",
       "source_location": "L65",
       "id": "seeders_shieldseeder_shieldseeder_seedusers",
-      "community": 8,
+      "community": 9,
       "norm_label": ".seedusers()"
     },
     {
@@ -600,7 +632,7 @@
       "source_file": "database/seeders/ShieldSeeder.php",
       "source_location": "L113",
       "id": "seeders_shieldseeder_shieldseeder_seedusertenantpivot",
-      "community": 8,
+      "community": 9,
       "norm_label": ".seedusertenantpivot()"
     },
     {
@@ -609,7 +641,7 @@
       "source_file": "database/seeders/ShieldSeeder.php",
       "source_location": "L142",
       "id": "seeders_shieldseeder_shieldseeder_makeroleswithpermissions",
-      "community": 8,
+      "community": 9,
       "norm_label": ".makeroleswithpermissions()"
     },
     {
@@ -618,7 +650,7 @@
       "source_file": "database/seeders/ShieldSeeder.php",
       "source_location": "L189",
       "id": "seeders_shieldseeder_shieldseeder_makedirectpermissions",
-      "community": 8,
+      "community": 9,
       "norm_label": ".makedirectpermissions()"
     },
     {
@@ -654,7 +686,7 @@
       "source_file": "database/factories/TaskFactory.php",
       "source_location": "L1",
       "id": "database_factories_taskfactory_php",
-      "community": 12,
+      "community": 13,
       "norm_label": "taskfactory.php"
     },
     {
@@ -663,7 +695,7 @@
       "source_file": "database/factories/TaskFactory.php",
       "source_location": "L12",
       "id": "factories_taskfactory_taskfactory",
-      "community": 12,
+      "community": 13,
       "norm_label": "taskfactory"
     },
     {
@@ -672,7 +704,7 @@
       "source_file": "database/factories/TaskFactory.php",
       "source_location": "L14",
       "id": "factories_taskfactory_taskfactory_definition",
-      "community": 12,
+      "community": 13,
       "norm_label": ".definition()"
     },
     {
@@ -681,7 +713,7 @@
       "source_file": "database/factories/TaskFactory.php",
       "source_location": "L25",
       "id": "factories_taskfactory_taskfactory_todo",
-      "community": 12,
+      "community": 13,
       "norm_label": ".todo()"
     },
     {
@@ -690,7 +722,7 @@
       "source_file": "database/factories/TaskFactory.php",
       "source_location": "L30",
       "id": "factories_taskfactory_taskfactory_inprogress",
-      "community": 12,
+      "community": 13,
       "norm_label": ".inprogress()"
     },
     {
@@ -699,7 +731,7 @@
       "source_file": "database/factories/TaskFactory.php",
       "source_location": "L35",
       "id": "factories_taskfactory_taskfactory_completed",
-      "community": 12,
+      "community": 13,
       "norm_label": ".completed()"
     },
     {
@@ -708,7 +740,7 @@
       "source_file": "database/factories/UserFactory.php",
       "source_location": "L1",
       "id": "database_factories_userfactory_php",
-      "community": 18,
+      "community": 19,
       "norm_label": "userfactory.php"
     },
     {
@@ -717,7 +749,7 @@
       "source_file": "database/factories/UserFactory.php",
       "source_location": "L13",
       "id": "factories_userfactory_userfactory",
-      "community": 18,
+      "community": 19,
       "norm_label": "userfactory"
     },
     {
@@ -726,7 +758,7 @@
       "source_file": "database/factories/UserFactory.php",
       "source_location": "L25",
       "id": "factories_userfactory_userfactory_definition",
-      "community": 18,
+      "community": 19,
       "norm_label": ".definition()"
     },
     {
@@ -735,7 +767,7 @@
       "source_file": "database/factories/UserFactory.php",
       "source_location": "L39",
       "id": "factories_userfactory_userfactory_unverified",
-      "community": 18,
+      "community": 19,
       "norm_label": ".unverified()"
     },
     {
@@ -780,7 +812,7 @@
       "source_file": "app/Providers/AppServiceProvider.php",
       "source_location": "L1",
       "id": "app_providers_appserviceprovider_php",
-      "community": 19,
+      "community": 20,
       "norm_label": "appserviceprovider.php"
     },
     {
@@ -789,7 +821,7 @@
       "source_file": "app/Providers/AppServiceProvider.php",
       "source_location": "L7",
       "id": "providers_appserviceprovider_appserviceprovider",
-      "community": 19,
+      "community": 20,
       "norm_label": "appserviceprovider"
     },
     {
@@ -798,7 +830,7 @@
       "source_file": "app/Providers/AppServiceProvider.php",
       "source_location": "L12",
       "id": "providers_appserviceprovider_appserviceprovider_register",
-      "community": 19,
+      "community": 20,
       "norm_label": ".register()"
     },
     {
@@ -807,7 +839,7 @@
       "source_file": "app/Providers/AppServiceProvider.php",
       "source_location": "L20",
       "id": "providers_appserviceprovider_appserviceprovider_boot",
-      "community": 19,
+      "community": 20,
       "norm_label": ".boot()"
     },
     {
@@ -843,7 +875,7 @@
       "source_file": "app/Models/User.php",
       "source_location": "L1",
       "id": "app_models_user_php",
-      "community": 13,
+      "community": 14,
       "norm_label": "user.php"
     },
     {
@@ -852,7 +884,7 @@
       "source_file": "app/Models/User.php",
       "source_location": "L20",
       "id": "models_user_user",
-      "community": 13,
+      "community": 14,
       "norm_label": "user"
     },
     {
@@ -861,7 +893,7 @@
       "source_file": "app/Models/User.php",
       "source_location": "L32",
       "id": "models_user_user_casts",
-      "community": 13,
+      "community": 14,
       "norm_label": ".casts()"
     },
     {
@@ -870,7 +902,7 @@
       "source_file": "app/Models/User.php",
       "source_location": "L45",
       "id": "models_user_user_getfilamentavatarurl",
-      "community": 13,
+      "community": 14,
       "norm_label": ".getfilamentavatarurl()"
     },
     {
@@ -879,7 +911,7 @@
       "source_file": "app/Models/User.php",
       "source_location": "L56",
       "id": "models_user_user_canaccesspanel",
-      "community": 13,
+      "community": 14,
       "norm_label": ".canaccesspanel()"
     },
     {
@@ -888,7 +920,7 @@
       "source_file": "app/Models/User.php",
       "source_location": "L71",
       "id": "models_user_user_getfullnameattribute",
-      "community": 13,
+      "community": 14,
       "norm_label": ".getfullnameattribute()"
     },
     {
@@ -897,7 +929,7 @@
       "source_file": "app/Models/Task.php",
       "source_location": "L1",
       "id": "app_models_task_php",
-      "community": 10,
+      "community": 11,
       "norm_label": "task.php"
     },
     {
@@ -906,7 +938,7 @@
       "source_file": "app/Models/Task.php",
       "source_location": "L11",
       "id": "models_task_task",
-      "community": 10,
+      "community": 11,
       "norm_label": "task"
     },
     {
@@ -915,7 +947,7 @@
       "source_file": "app/Models/Task.php",
       "source_location": "L17",
       "id": "models_task_task_user",
-      "community": 10,
+      "community": 11,
       "norm_label": ".user()"
     },
     {
@@ -924,7 +956,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L1",
       "id": "app_policies_rolepolicy_php",
-      "community": 3,
+      "community": 4,
       "norm_label": "rolepolicy.php"
     },
     {
@@ -933,7 +965,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L11",
       "id": "policies_rolepolicy_rolepolicy",
-      "community": 3,
+      "community": 4,
       "norm_label": "rolepolicy"
     },
     {
@@ -942,7 +974,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L15",
       "id": "policies_rolepolicy_rolepolicy_viewany",
-      "community": 3,
+      "community": 4,
       "norm_label": ".viewany()"
     },
     {
@@ -951,7 +983,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L20",
       "id": "policies_rolepolicy_rolepolicy_view",
-      "community": 3,
+      "community": 4,
       "norm_label": ".view()"
     },
     {
@@ -960,7 +992,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L25",
       "id": "policies_rolepolicy_rolepolicy_create",
-      "community": 3,
+      "community": 4,
       "norm_label": ".create()"
     },
     {
@@ -969,7 +1001,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L30",
       "id": "policies_rolepolicy_rolepolicy_update",
-      "community": 3,
+      "community": 4,
       "norm_label": ".update()"
     },
     {
@@ -978,7 +1010,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L35",
       "id": "policies_rolepolicy_rolepolicy_delete",
-      "community": 3,
+      "community": 4,
       "norm_label": ".delete()"
     },
     {
@@ -987,7 +1019,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L40",
       "id": "policies_rolepolicy_rolepolicy_deleteany",
-      "community": 3,
+      "community": 4,
       "norm_label": ".deleteany()"
     },
     {
@@ -996,7 +1028,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L45",
       "id": "policies_rolepolicy_rolepolicy_restore",
-      "community": 3,
+      "community": 4,
       "norm_label": ".restore()"
     },
     {
@@ -1005,7 +1037,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L50",
       "id": "policies_rolepolicy_rolepolicy_forcedelete",
-      "community": 3,
+      "community": 4,
       "norm_label": ".forcedelete()"
     },
     {
@@ -1014,7 +1046,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L55",
       "id": "policies_rolepolicy_rolepolicy_forcedeleteany",
-      "community": 3,
+      "community": 4,
       "norm_label": ".forcedeleteany()"
     },
     {
@@ -1023,7 +1055,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L60",
       "id": "policies_rolepolicy_rolepolicy_restoreany",
-      "community": 3,
+      "community": 4,
       "norm_label": ".restoreany()"
     },
     {
@@ -1032,7 +1064,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L65",
       "id": "policies_rolepolicy_rolepolicy_replicate",
-      "community": 3,
+      "community": 4,
       "norm_label": ".replicate()"
     },
     {
@@ -1041,7 +1073,7 @@
       "source_file": "app/Policies/RolePolicy.php",
       "source_location": "L70",
       "id": "policies_rolepolicy_rolepolicy_reorder",
-      "community": 3,
+      "community": 4,
       "norm_label": ".reorder()"
     },
     {
@@ -1050,7 +1082,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L1",
       "id": "app_policies_activitypolicy_php",
-      "community": 4,
+      "community": 5,
       "norm_label": "activitypolicy.php"
     },
     {
@@ -1059,7 +1091,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L11",
       "id": "policies_activitypolicy_activitypolicy",
-      "community": 4,
+      "community": 5,
       "norm_label": "activitypolicy"
     },
     {
@@ -1068,7 +1100,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L15",
       "id": "policies_activitypolicy_activitypolicy_viewany",
-      "community": 4,
+      "community": 5,
       "norm_label": ".viewany()"
     },
     {
@@ -1077,7 +1109,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L20",
       "id": "policies_activitypolicy_activitypolicy_view",
-      "community": 4,
+      "community": 5,
       "norm_label": ".view()"
     },
     {
@@ -1086,7 +1118,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L25",
       "id": "policies_activitypolicy_activitypolicy_create",
-      "community": 4,
+      "community": 5,
       "norm_label": ".create()"
     },
     {
@@ -1095,7 +1127,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L30",
       "id": "policies_activitypolicy_activitypolicy_update",
-      "community": 4,
+      "community": 5,
       "norm_label": ".update()"
     },
     {
@@ -1104,7 +1136,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L35",
       "id": "policies_activitypolicy_activitypolicy_delete",
-      "community": 4,
+      "community": 5,
       "norm_label": ".delete()"
     },
     {
@@ -1113,7 +1145,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L40",
       "id": "policies_activitypolicy_activitypolicy_deleteany",
-      "community": 4,
+      "community": 5,
       "norm_label": ".deleteany()"
     },
     {
@@ -1122,7 +1154,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L45",
       "id": "policies_activitypolicy_activitypolicy_restore",
-      "community": 4,
+      "community": 5,
       "norm_label": ".restore()"
     },
     {
@@ -1131,7 +1163,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L50",
       "id": "policies_activitypolicy_activitypolicy_forcedelete",
-      "community": 4,
+      "community": 5,
       "norm_label": ".forcedelete()"
     },
     {
@@ -1140,7 +1172,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L55",
       "id": "policies_activitypolicy_activitypolicy_forcedeleteany",
-      "community": 4,
+      "community": 5,
       "norm_label": ".forcedeleteany()"
     },
     {
@@ -1149,7 +1181,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L60",
       "id": "policies_activitypolicy_activitypolicy_restoreany",
-      "community": 4,
+      "community": 5,
       "norm_label": ".restoreany()"
     },
     {
@@ -1158,7 +1190,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L65",
       "id": "policies_activitypolicy_activitypolicy_replicate",
-      "community": 4,
+      "community": 5,
       "norm_label": ".replicate()"
     },
     {
@@ -1167,7 +1199,7 @@
       "source_file": "app/Policies/ActivityPolicy.php",
       "source_location": "L70",
       "id": "policies_activitypolicy_activitypolicy_reorder",
-      "community": 4,
+      "community": 5,
       "norm_label": ".reorder()"
     },
     {
@@ -1176,7 +1208,7 @@
       "source_file": "app/Livewire/CustomPersonalInfo.php",
       "source_location": "L1",
       "id": "app_livewire_custompersonalinfo_php",
-      "community": 9,
+      "community": 10,
       "norm_label": "custompersonalinfo.php"
     },
     {
@@ -1185,7 +1217,7 @@
       "source_file": "app/Livewire/CustomPersonalInfo.php",
       "source_location": "L17",
       "id": "livewire_custompersonalinfo_custompersonalinfo",
-      "community": 9,
+      "community": 10,
       "norm_label": "custompersonalinfo"
     },
     {
@@ -1194,7 +1226,7 @@
       "source_file": "app/Livewire/CustomPersonalInfo.php",
       "source_location": "L26",
       "id": "livewire_custompersonalinfo_custompersonalinfo_getnamecomponent",
-      "community": 9,
+      "community": 10,
       "norm_label": ".getnamecomponent()"
     },
     {
@@ -1203,7 +1235,7 @@
       "source_file": "app/Livewire/CustomPersonalInfo.php",
       "source_location": "L34",
       "id": "livewire_custompersonalinfo_custompersonalinfo_getlastcomponent",
-      "community": 9,
+      "community": 10,
       "norm_label": ".getlastcomponent()"
     },
     {
@@ -1212,7 +1244,7 @@
       "source_file": "app/Livewire/CustomPersonalInfo.php",
       "source_location": "L42",
       "id": "livewire_custompersonalinfo_custompersonalinfo_getemailcomponent",
-      "community": 9,
+      "community": 10,
       "norm_label": ".getemailcomponent()"
     },
     {
@@ -1221,7 +1253,7 @@
       "source_file": "app/Livewire/CustomPersonalInfo.php",
       "source_location": "L53",
       "id": "livewire_custompersonalinfo_custompersonalinfo_getphonecomponent",
-      "community": 9,
+      "community": 10,
       "norm_label": ".getphonecomponent()"
     },
     {
@@ -1230,7 +1262,7 @@
       "source_file": "app/Livewire/CustomPersonalInfo.php",
       "source_location": "L62",
       "id": "livewire_custompersonalinfo_custompersonalinfo_getprofileformschema",
-      "community": 9,
+      "community": 10,
       "norm_label": ".getprofileformschema()"
     },
     {
@@ -1239,7 +1271,7 @@
       "source_file": "app/Livewire/CustomPersonalInfo.php",
       "source_location": "L86",
       "id": "livewire_custompersonalinfo_custompersonalinfo_sendnotification",
-      "community": 9,
+      "community": 10,
       "norm_label": ".sendnotification()"
     },
     {
@@ -1248,7 +1280,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L1",
       "id": "app_filament_resources_users_userresource_php",
-      "community": 2,
+      "community": 3,
       "norm_label": "userresource.php"
     },
     {
@@ -1257,7 +1289,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L19",
       "id": "users_userresource_userresource",
-      "community": 2,
+      "community": 3,
       "norm_label": "userresource"
     },
     {
@@ -1266,7 +1298,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L39",
       "id": "users_userresource_userresource_form",
-      "community": 2,
+      "community": 3,
       "norm_label": ".form()"
     },
     {
@@ -1275,7 +1307,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L44",
       "id": "users_userresource_userresource_table",
-      "community": 2,
+      "community": 3,
       "norm_label": ".table()"
     },
     {
@@ -1284,7 +1316,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L49",
       "id": "users_userresource_userresource_getrelations",
-      "community": 2,
+      "community": 3,
       "norm_label": ".getrelations()"
     },
     {
@@ -1293,7 +1325,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L56",
       "id": "users_userresource_userresource_getpages",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getpages()"
     },
     {
@@ -1302,7 +1334,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L65",
       "id": "users_userresource_userresource_getwidgets",
-      "community": 2,
+      "community": 3,
       "norm_label": ".getwidgets()"
     },
     {
@@ -1311,7 +1343,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L73",
       "id": "users_userresource_userresource_getnavigationbadge",
-      "community": 2,
+      "community": 3,
       "norm_label": ".getnavigationbadge()"
     },
     {
@@ -1320,7 +1352,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L78",
       "id": "users_userresource_userresource_getnavigationbadgecolor",
-      "community": 2,
+      "community": 3,
       "norm_label": ".getnavigationbadgecolor()"
     },
     {
@@ -1329,7 +1361,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L83",
       "id": "users_userresource_userresource_getglobalsearchresulttitle",
-      "community": 2,
+      "community": 3,
       "norm_label": ".getglobalsearchresulttitle()"
     },
     {
@@ -1338,7 +1370,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L88",
       "id": "users_userresource_userresource_getgloballysearchableattributes",
-      "community": 2,
+      "community": 3,
       "norm_label": ".getgloballysearchableattributes()"
     },
     {
@@ -1347,7 +1379,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L93",
       "id": "users_userresource_userresource_getglobalsearchresultdetails",
-      "community": 2,
+      "community": 3,
       "norm_label": ".getglobalsearchresultdetails()"
     },
     {
@@ -1356,7 +1388,7 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php",
       "source_location": "L102",
       "id": "users_userresource_userresource_getglobalsearcheloquentquery",
-      "community": 2,
+      "community": 3,
       "norm_label": ".getglobalsearcheloquentquery()"
     },
     {
@@ -1365,7 +1397,7 @@
       "source_file": "app/Filament/Resources/Users/Tables/UsersTable.php",
       "source_location": "L1",
       "id": "app_filament_resources_users_tables_userstable_php",
-      "community": 2,
+      "community": 3,
       "norm_label": "userstable.php"
     },
     {
@@ -1374,7 +1406,7 @@
       "source_file": "app/Filament/Resources/Users/Tables/UsersTable.php",
       "source_location": "L21",
       "id": "tables_userstable_userstable",
-      "community": 2,
+      "community": 3,
       "norm_label": "userstable"
     },
     {
@@ -1383,7 +1415,7 @@
       "source_file": "app/Filament/Resources/Users/Tables/UsersTable.php",
       "source_location": "L23",
       "id": "tables_userstable_userstable_configure",
-      "community": 2,
+      "community": 3,
       "norm_label": ".configure()"
     },
     {
@@ -1392,7 +1424,7 @@
       "source_file": "app/Filament/Resources/Users/Schemas/UserForm.php",
       "source_location": "L1",
       "id": "app_filament_resources_users_schemas_userform_php",
-      "community": 2,
+      "community": 3,
       "norm_label": "userform.php"
     },
     {
@@ -1401,7 +1433,7 @@
       "source_file": "app/Filament/Resources/Users/Schemas/UserForm.php",
       "source_location": "L17",
       "id": "schemas_userform_userform",
-      "community": 2,
+      "community": 3,
       "norm_label": "userform"
     },
     {
@@ -1410,7 +1442,7 @@
       "source_file": "app/Filament/Resources/Users/Schemas/UserForm.php",
       "source_location": "L19",
       "id": "schemas_userform_userform_configure",
-      "community": 2,
+      "community": 3,
       "norm_label": ".configure()"
     },
     {
@@ -1419,7 +1451,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
       "source_location": "L1",
       "id": "app_filament_resources_users_pages_listusers_php",
-      "community": 0,
+      "community": 1,
       "norm_label": "listusers.php"
     },
     {
@@ -1428,7 +1460,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
       "source_location": "L13",
       "id": "pages_listusers_listusers",
-      "community": 0,
+      "community": 1,
       "norm_label": "listusers"
     },
     {
@@ -1437,7 +1469,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
       "source_location": "L19",
       "id": "pages_listusers_listusers_getheaderactions",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getheaderactions()"
     },
     {
@@ -1446,7 +1478,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
       "source_location": "L30",
       "id": "pages_listusers_listusers_getheaderwidgets",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getheaderwidgets()"
     },
     {
@@ -1455,7 +1487,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
       "source_location": "L37",
       "id": "pages_listusers_listusers_getfooterwidgets",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getfooterwidgets()"
     },
     {
@@ -1464,7 +1496,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
       "source_location": "L45",
       "id": "pages_listusers_listusers_getheaderwidgetscolumns",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getheaderwidgetscolumns()"
     },
     {
@@ -1473,7 +1505,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/EditUser.php",
       "source_location": "L1",
       "id": "app_filament_resources_users_pages_edituser_php",
-      "community": 0,
+      "community": 1,
       "norm_label": "edituser.php"
     },
     {
@@ -1482,7 +1514,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/EditUser.php",
       "source_location": "L13",
       "id": "pages_edituser_edituser",
-      "community": 0,
+      "community": 1,
       "norm_label": "edituser"
     },
     {
@@ -1491,7 +1523,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/EditUser.php",
       "source_location": "L21",
       "id": "pages_edituser_edituser_getheaderactions",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getheaderactions()"
     },
     {
@@ -1500,7 +1532,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/EditUser.php",
       "source_location": "L61",
       "id": "pages_edituser_edituser_getsavednotification",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getsavednotification()"
     },
     {
@@ -1509,7 +1541,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/EditUser.php",
       "source_location": "L72",
       "id": "pages_edituser_edituser_getredirecturl",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getredirecturl()"
     },
     {
@@ -1518,7 +1550,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/EditUser.php",
       "source_location": "L77",
       "id": "pages_edituser_edituser_mutateformdatabeforesave",
-      "community": 0,
+      "community": 1,
       "norm_label": ".mutateformdatabeforesave()"
     },
     {
@@ -1527,7 +1559,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/EditUser.php",
       "source_location": "L90",
       "id": "pages_edituser_edituser_aftersave",
-      "community": 0,
+      "community": 1,
       "norm_label": ".aftersave()"
     },
     {
@@ -1536,7 +1568,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
       "source_location": "L1",
       "id": "app_filament_resources_users_pages_createuser_php",
-      "community": 0,
+      "community": 1,
       "norm_label": "createuser.php"
     },
     {
@@ -1545,7 +1577,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
       "source_location": "L10",
       "id": "pages_createuser_createuser",
-      "community": 0,
+      "community": 1,
       "norm_label": "createuser"
     },
     {
@@ -1554,7 +1586,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
       "source_location": "L18",
       "id": "pages_createuser_createuser_getredirecturl",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getredirecturl()"
     },
     {
@@ -1563,7 +1595,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
       "source_location": "L24",
       "id": "pages_createuser_createuser_getcreatednotification",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getcreatednotification()"
     },
     {
@@ -1572,7 +1604,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
       "source_location": "L35",
       "id": "pages_createuser_createuser_mutateformdatabeforecreate",
-      "community": 0,
+      "community": 1,
       "norm_label": ".mutateformdatabeforecreate()"
     },
     {
@@ -1581,7 +1613,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
       "source_location": "L48",
       "id": "pages_createuser_createuser_aftercreate",
-      "community": 0,
+      "community": 1,
       "norm_label": ".aftercreate()"
     },
     {
@@ -1590,7 +1622,7 @@
       "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
       "source_location": "L59",
       "id": "pages_createuser_createuser_getformactions",
-      "community": 0,
+      "community": 1,
       "norm_label": ".getformactions()"
     },
     {
@@ -1599,7 +1631,7 @@
       "source_file": "app/Filament/Resources/Users/Widgets/UserGrowthChart.php",
       "source_location": "L1",
       "id": "app_filament_resources_users_widgets_usergrowthchart_php",
-      "community": 14,
+      "community": 15,
       "norm_label": "usergrowthchart.php"
     },
     {
@@ -1608,7 +1640,7 @@
       "source_file": "app/Filament/Resources/Users/Widgets/UserGrowthChart.php",
       "source_location": "L9",
       "id": "widgets_usergrowthchart_usergrowthchart",
-      "community": 14,
+      "community": 15,
       "norm_label": "usergrowthchart"
     },
     {
@@ -1617,7 +1649,7 @@
       "source_file": "app/Filament/Resources/Users/Widgets/UserGrowthChart.php",
       "source_location": "L19",
       "id": "widgets_usergrowthchart_usergrowthchart_getdata",
-      "community": 14,
+      "community": 15,
       "norm_label": ".getdata()"
     },
     {
@@ -1626,7 +1658,7 @@
       "source_file": "app/Filament/Resources/Users/Widgets/UserGrowthChart.php",
       "source_location": "L42",
       "id": "widgets_usergrowthchart_usergrowthchart_gettype",
-      "community": 14,
+      "community": 15,
       "norm_label": ".gettype()"
     },
     {
@@ -1635,7 +1667,7 @@
       "source_file": "app/Filament/Resources/Users/Widgets/UserGrowthChart.php",
       "source_location": "L47",
       "id": "widgets_usergrowthchart_usergrowthchart_getoptions",
-      "community": 14,
+      "community": 15,
       "norm_label": ".getoptions()"
     },
     {
@@ -1644,7 +1676,7 @@
       "source_file": "app/Filament/Resources/Users/Widgets/UserGrowthChart.php",
       "source_location": "L70",
       "id": "widgets_usergrowthchart_usergrowthchart_getuserspermonth",
-      "community": 14,
+      "community": 15,
       "norm_label": ".getuserspermonth()"
     },
     {
@@ -1707,7 +1739,7 @@
       "source_file": "app/Filament/Pages/TaskBoard.php",
       "source_location": "L1",
       "id": "app_filament_pages_taskboard_php",
-      "community": 10,
+      "community": 11,
       "norm_label": "taskboard.php"
     },
     {
@@ -1716,7 +1748,7 @@
       "source_file": "app/Filament/Pages/TaskBoard.php",
       "source_location": "L11",
       "id": "pages_taskboard_taskboard",
-      "community": 10,
+      "community": 11,
       "norm_label": "taskboard"
     },
     {
@@ -1725,7 +1757,7 @@
       "source_file": "app/Filament/Pages/TaskBoard.php",
       "source_location": "L17",
       "id": "pages_taskboard_taskboard_board",
-      "community": 10,
+      "community": 11,
       "norm_label": ".board()"
     },
     {
@@ -1734,7 +1766,7 @@
       "source_file": "app/Filament/Pages/TaskBoard.php",
       "source_location": "L31",
       "id": "pages_taskboard_taskboard_geteloquentquery",
-      "community": 10,
+      "community": 11,
       "norm_label": ".geteloquentquery()"
     },
     {
@@ -1743,7 +1775,7 @@
       "source_file": "app/Http/Controllers/Controller.php",
       "source_location": "L1",
       "id": "app_http_controllers_controller_php",
-      "community": 42,
+      "community": 41,
       "norm_label": "controller.php"
     },
     {
@@ -1752,7 +1784,7 @@
       "source_file": "app/Http/Controllers/Controller.php",
       "source_location": "L5",
       "id": "controllers_controller_controller",
-      "community": 42,
+      "community": 41,
       "norm_label": "controller"
     },
     {
@@ -1932,7 +1964,7 @@
       "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys.blade.php",
       "source_location": null,
       "id": "resources_views_vendor_filament_breezy_livewire_passkeys_blade_php",
-      "community": 43,
+      "community": 42,
       "norm_label": "passkeys.blade.php"
     },
     {
@@ -1941,7 +1973,7 @@
       "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys.blade.php",
       "source_location": null,
       "id": "filament_breezy_livewire_passkeys_create_script",
-      "community": 43,
+      "community": 42,
       "norm_label": "filament-breezy::livewire.passkeys.create-script"
     },
     {
@@ -2031,7 +2063,7 @@
       "source_file": "tests/Pest.php",
       "source_location": "L1",
       "id": "tests_pest_php",
-      "community": 44,
+      "community": 43,
       "norm_label": "pest.php"
     },
     {
@@ -2040,7 +2072,7 @@
       "source_file": "tests/Pest.php",
       "source_location": "L47",
       "id": "tests_pest_something",
-      "community": 44,
+      "community": 43,
       "norm_label": "something()"
     },
     {
@@ -2049,7 +2081,7 @@
       "source_file": "tests/TestCase.php",
       "source_location": "L1",
       "id": "tests_testcase_php",
-      "community": 45,
+      "community": 44,
       "norm_label": "testcase.php"
     },
     {
@@ -2058,7 +2090,7 @@
       "source_file": "tests/TestCase.php",
       "source_location": "L7",
       "id": "tests_testcase_testcase",
-      "community": 45,
+      "community": 44,
       "norm_label": "testcase"
     },
     {
@@ -2107,7 +2139,7 @@
       "author": null,
       "contributor": null,
       "id": "vite_config",
-      "community": 36,
+      "community": 82,
       "norm_label": "vite configuration"
     },
     {
@@ -2120,34 +2152,34 @@
       "author": null,
       "contributor": null,
       "id": "artisan_entrypoint",
-      "community": 5,
+      "community": 7,
       "norm_label": "artisan cli entrypoint"
     },
     {
-      "label": "Laravel 13 + Filament 5 Starter Kit README",
-      "file_type": "document",
-      "source_file": "README.md",
+      "label": "Create Breezy Sessions Table Migration",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_starterkit",
-      "community": 36,
-      "norm_label": "laravel 13 + filament 5 starter kit readme"
+      "id": "migration_breezy_sessions",
+      "community": 7,
+      "norm_label": "create breezy sessions table migration"
     },
     {
-      "label": "Project CLAUDE.md Guidelines",
-      "file_type": "document",
-      "source_file": "CLAUDE.md",
+      "label": "Add Batch UUID Column to Activity Log Migration",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "claude_md_project",
+      "id": "migration_activity_log_batch_uuid",
       "community": 36,
-      "norm_label": "project claude.md guidelines"
+      "norm_label": "add batch uuid column to activity log migration"
     },
     {
       "label": "Create Users Table Migration",
@@ -2159,7 +2191,7 @@
       "author": null,
       "contributor": null,
       "id": "migration_users_table",
-      "community": 5,
+      "community": 7,
       "norm_label": "create users table migration"
     },
     {
@@ -2172,34 +2204,8 @@
       "author": null,
       "contributor": null,
       "id": "migration_cache_table",
-      "community": 82,
-      "norm_label": "create cache table migration"
-    },
-    {
-      "label": "Create Jobs Table Migration",
-      "file_type": "code",
-      "source_file": "database/migrations/0001_01_01_000002_create_jobs_table.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "migration_jobs_table",
       "community": 83,
-      "norm_label": "create jobs table migration"
-    },
-    {
-      "label": "Create Activity Log Table Migration",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_04_20_191120_create_activity_log_table.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "migration_activity_log",
-      "community": 20,
-      "norm_label": "create activity log table migration"
+      "norm_label": "create cache table migration"
     },
     {
       "label": "Add Event Column to Activity Log Migration",
@@ -2211,47 +2217,34 @@
       "author": null,
       "contributor": null,
       "id": "migration_activity_log_event",
-      "community": 20,
+      "community": 36,
       "norm_label": "add event column to activity log migration"
     },
     {
-      "label": "Add Batch UUID Column to Activity Log Migration",
+      "label": "Create Jobs Table Migration",
       "file_type": "code",
-      "source_file": "database/migrations/2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php",
+      "source_file": "database/migrations/0001_01_01_000002_create_jobs_table.php",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "migration_activity_log_batch_uuid",
-      "community": 20,
-      "norm_label": "add batch uuid column to activity log migration"
+      "id": "migration_jobs_table",
+      "community": 84,
+      "norm_label": "create jobs table migration"
     },
     {
-      "label": "Create Breezy Sessions Table Migration",
+      "label": "Add Position to Tasks Table Migration (Flowforge)",
       "file_type": "code",
-      "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php",
+      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "migration_breezy_sessions",
-      "community": 5,
-      "norm_label": "create breezy sessions table migration"
-    },
-    {
-      "label": "Alter Breezy Sessions Table Migration",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_04_20_194025_alter_breezy_sessions_table.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "migration_alter_breezy_sessions",
-      "community": 5,
-      "norm_label": "alter breezy sessions table migration"
+      "id": "migration_add_position_tasks",
+      "community": 7,
+      "norm_label": "add position to tasks table migration (flowforge)"
     },
     {
       "label": "Create Passkeys Table Migration",
@@ -2263,7 +2256,7 @@
       "author": null,
       "contributor": null,
       "id": "migration_passkeys",
-      "community": 5,
+      "community": 7,
       "norm_label": "create passkeys table migration"
     },
     {
@@ -2276,34 +2269,8 @@
       "author": null,
       "contributor": null,
       "id": "migration_permission_tables",
-      "community": 37,
+      "community": 45,
       "norm_label": "create permission tables migration (spatie)"
-    },
-    {
-      "label": "Create Tasks Table Migration",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_05_04_185058_create_tasks_table.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "migration_create_tasks",
-      "community": 5,
-      "norm_label": "create tasks table migration"
-    },
-    {
-      "label": "Add Position to Tasks Table Migration (Flowforge)",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "migration_add_position_tasks",
-      "community": 5,
-      "norm_label": "add position to tasks table migration (flowforge)"
     },
     {
       "label": "Fix Tasks Table Schema Migration",
@@ -2315,8 +2282,47 @@
       "author": null,
       "contributor": null,
       "id": "migration_fix_tasks_schema",
-      "community": 5,
+      "community": 7,
       "norm_label": "fix tasks table schema migration"
+    },
+    {
+      "label": "Alter Breezy Sessions Table Migration",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_04_20_194025_alter_breezy_sessions_table.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "migration_alter_breezy_sessions",
+      "community": 7,
+      "norm_label": "alter breezy sessions table migration"
+    },
+    {
+      "label": "Create Tasks Table Migration",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_05_04_185058_create_tasks_table.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "migration_create_tasks",
+      "community": 7,
+      "norm_label": "create tasks table migration"
+    },
+    {
+      "label": "Create Activity Log Table Migration",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_04_20_191120_create_activity_log_table.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "migration_activity_log",
+      "community": 36,
+      "norm_label": "create activity log table migration"
     },
     {
       "label": "ShieldSeeder - Filament Shield Roles/Permissions Seeder",
@@ -2328,7 +2334,7 @@
       "author": null,
       "contributor": null,
       "id": "seeder_shield",
-      "community": 37,
+      "community": 45,
       "norm_label": "shieldseeder - filament shield roles/permissions seeder"
     },
     {
@@ -2341,7 +2347,7 @@
       "author": null,
       "contributor": null,
       "id": "seeder_database",
-      "community": 5,
+      "community": 7,
       "norm_label": "databaseseeder - main application seeder"
     },
     {
@@ -2354,60 +2360,8 @@
       "author": null,
       "contributor": null,
       "id": "factory_task",
-      "community": 5,
+      "community": 7,
       "norm_label": "taskfactory - task model factory"
-    },
-    {
-      "label": "Filament Breezy Plugin (2FA, Sessions, Passkeys)",
-      "file_type": "rationale",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "plugin_filament_breezy",
-      "community": 5,
-      "norm_label": "filament breezy plugin (2fa, sessions, passkeys)"
-    },
-    {
-      "label": "Filament Shield Plugin (RBAC)",
-      "file_type": "rationale",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "plugin_filament_shield",
-      "community": 37,
-      "norm_label": "filament shield plugin (rbac)"
-    },
-    {
-      "label": "Flowforge Plugin (Kanban Board with Position)",
-      "file_type": "rationale",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "plugin_flowforge",
-      "community": 5,
-      "norm_label": "flowforge plugin (kanban board with position)"
-    },
-    {
-      "label": "Filament Logger Plugin (Activity Log)",
-      "file_type": "rationale",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "plugin_filament_logger",
-      "community": 20,
-      "norm_label": "filament logger plugin (activity log)"
     },
     {
       "label": "Task Status State Machine (todo, in_progress, completed)",
@@ -2419,7 +2373,7 @@
       "author": null,
       "contributor": null,
       "id": "task_status_states",
-      "community": 5,
+      "community": 7,
       "norm_label": "task status state machine (todo, in_progress, completed)"
     },
     {
@@ -2432,7 +2386,7 @@
       "author": null,
       "contributor": null,
       "id": "userfactory_userfactory",
-      "community": 1,
+      "community": 2,
       "norm_label": "userfactory"
     },
     {
@@ -2445,7 +2399,7 @@
       "author": null,
       "contributor": null,
       "id": "bootstrap_app",
-      "community": 1,
+      "community": 2,
       "norm_label": "application bootstrap"
     },
     {
@@ -2458,7 +2412,7 @@
       "author": null,
       "contributor": null,
       "id": "bootstrap_providers",
-      "community": 1,
+      "community": 2,
       "norm_label": "providers bootstrap"
     },
     {
@@ -2471,7 +2425,7 @@
       "author": null,
       "contributor": null,
       "id": "appserviceprovider_appserviceprovider",
-      "community": 1,
+      "community": 2,
       "norm_label": "appserviceprovider"
     },
     {
@@ -2484,7 +2438,7 @@
       "author": null,
       "contributor": null,
       "id": "adminpanelprovider_adminpanelprovider",
-      "community": 1,
+      "community": 2,
       "norm_label": "adminpanelprovider"
     },
     {
@@ -2497,164 +2451,8 @@
       "author": null,
       "contributor": null,
       "id": "user_user",
-      "community": 1,
+      "community": 2,
       "norm_label": "user model"
-    },
-    {
-      "label": "Task Model",
-      "file_type": "code",
-      "source_file": "app/Models/Task.php",
-      "source_location": "class Task",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "task_task",
-      "community": 1,
-      "norm_label": "task model"
-    },
-    {
-      "label": "RolePolicy",
-      "file_type": "code",
-      "source_file": "app/Policies/RolePolicy.php",
-      "source_location": "class RolePolicy",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "rolepolicy_rolepolicy",
-      "community": 1,
-      "norm_label": "rolepolicy"
-    },
-    {
-      "label": "ActivityPolicy",
-      "file_type": "code",
-      "source_file": "app/Policies/ActivityPolicy.php",
-      "source_location": "class ActivityPolicy",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "activitypolicy_activitypolicy",
-      "community": 1,
-      "norm_label": "activitypolicy"
-    },
-    {
-      "label": "CustomPersonalInfo Livewire Component",
-      "file_type": "code",
-      "source_file": "app/Livewire/CustomPersonalInfo.php",
-      "source_location": "class CustomPersonalInfo",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "custompersonalinfo_custompersonalinfo",
-      "community": 1,
-      "norm_label": "custompersonalinfo livewire component"
-    },
-    {
-      "label": "UserResource",
-      "file_type": "code",
-      "source_file": "app/Filament/Resources/Users/UserResource.php",
-      "source_location": "class UserResource",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "userresource_userresource",
-      "community": 1,
-      "norm_label": "userresource"
-    },
-    {
-      "label": "UsersTable",
-      "file_type": "code",
-      "source_file": "app/Filament/Resources/Users/Tables/UsersTable.php",
-      "source_location": "class UsersTable",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "userstable_userstable",
-      "community": 1,
-      "norm_label": "userstable"
-    },
-    {
-      "label": "UserForm Schema",
-      "file_type": "code",
-      "source_file": "app/Filament/Resources/Users/Schemas/UserForm.php",
-      "source_location": "class UserForm",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "userform_userform",
-      "community": 1,
-      "norm_label": "userform schema"
-    },
-    {
-      "label": "ListUsers Page",
-      "file_type": "code",
-      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
-      "source_location": "class ListUsers",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "listusers_listusers",
-      "community": 1,
-      "norm_label": "listusers page"
-    },
-    {
-      "label": "EditUser Page",
-      "file_type": "code",
-      "source_file": "app/Filament/Resources/Users/Pages/EditUser.php",
-      "source_location": "class EditUser",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "edituser_edituser",
-      "community": 1,
-      "norm_label": "edituser page"
-    },
-    {
-      "label": "CreateUser Page",
-      "file_type": "code",
-      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
-      "source_location": "class CreateUser",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "createuser_createuser",
-      "community": 1,
-      "norm_label": "createuser page"
-    },
-    {
-      "label": "UserGrowthChart Widget",
-      "file_type": "code",
-      "source_file": "app/Filament/Resources/Users/Widgets/UserGrowthChart.php",
-      "source_location": "class UserGrowthChart",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "usergrowthchart_usergrowthchart",
-      "community": 1,
-      "norm_label": "usergrowthchart widget"
-    },
-    {
-      "label": "LatestUsersTable Widget",
-      "file_type": "code",
-      "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
-      "source_location": "class LatestUsersTable",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "latestusetstable_latestuserstable",
-      "community": 1,
-      "norm_label": "latestuserstable widget"
     },
     {
       "label": "Filament Panel Access Control via active flag",
@@ -2667,8 +2465,164 @@
       "contributor": null,
       "rationale": "Access to the Filament admin panel is gated by the `active` boolean field on User, rather than by role check alone, to allow quick account suspension without revoking roles.",
       "id": "filament_panel_access_control",
-      "community": 1,
+      "community": 2,
       "norm_label": "filament panel access control via active flag"
+    },
+    {
+      "label": "User Model",
+      "file_type": "code",
+      "source_file": "app/Models/User.php",
+      "source_location": "class User",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "model_user",
+      "community": 8,
+      "norm_label": "user model"
+    },
+    {
+      "label": "Task Model",
+      "file_type": "code",
+      "source_file": "app/Models/Task.php",
+      "source_location": "class Task",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "task_task",
+      "community": 2,
+      "norm_label": "task model"
+    },
+    {
+      "label": "Task Model",
+      "file_type": "code",
+      "source_file": "app/Models/Task.php",
+      "source_location": "class Task",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "model_task",
+      "community": 37,
+      "norm_label": "task model"
+    },
+    {
+      "label": "RolePolicy",
+      "file_type": "code",
+      "source_file": "app/Policies/RolePolicy.php",
+      "source_location": "class RolePolicy",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "rolepolicy_rolepolicy",
+      "community": 2,
+      "norm_label": "rolepolicy"
+    },
+    {
+      "label": "ActivityPolicy",
+      "file_type": "code",
+      "source_file": "app/Policies/ActivityPolicy.php",
+      "source_location": "class ActivityPolicy",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "activitypolicy_activitypolicy",
+      "community": 2,
+      "norm_label": "activitypolicy"
+    },
+    {
+      "label": "CustomPersonalInfo Livewire Component",
+      "file_type": "code",
+      "source_file": "app/Livewire/CustomPersonalInfo.php",
+      "source_location": "class CustomPersonalInfo",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "custompersonalinfo_custompersonalinfo",
+      "community": 2,
+      "norm_label": "custompersonalinfo livewire component"
+    },
+    {
+      "label": "UserResource",
+      "file_type": "code",
+      "source_file": "app/Filament/Resources/Users/UserResource.php",
+      "source_location": "class UserResource",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "userresource_userresource",
+      "community": 2,
+      "norm_label": "userresource"
+    },
+    {
+      "label": "UsersTable",
+      "file_type": "code",
+      "source_file": "app/Filament/Resources/Users/Tables/UsersTable.php",
+      "source_location": "class UsersTable",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "userstable_userstable",
+      "community": 2,
+      "norm_label": "userstable"
+    },
+    {
+      "label": "UserForm Schema",
+      "file_type": "code",
+      "source_file": "app/Filament/Resources/Users/Schemas/UserForm.php",
+      "source_location": "class UserForm",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "userform_userform",
+      "community": 2,
+      "norm_label": "userform schema"
+    },
+    {
+      "label": "ListUsers Page",
+      "file_type": "code",
+      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
+      "source_location": "class ListUsers",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "listusers_listusers",
+      "community": 2,
+      "norm_label": "listusers page"
+    },
+    {
+      "label": "EditUser Page",
+      "file_type": "code",
+      "source_file": "app/Filament/Resources/Users/Pages/EditUser.php",
+      "source_location": "class EditUser",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "edituser_edituser",
+      "community": 2,
+      "norm_label": "edituser page"
+    },
+    {
+      "label": "CreateUser Page",
+      "file_type": "code",
+      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
+      "source_location": "class CreateUser",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "createuser_createuser",
+      "community": 2,
+      "norm_label": "createuser page"
     },
     {
       "label": "Role Sync on User Create/Edit Pattern",
@@ -2681,8 +2635,34 @@
       "contributor": null,
       "rationale": "Role assignment is extracted from form data before save and applied via syncRoles() in afterCreate/afterSave hooks because Filament form saves the model directly and the role_id is not a real column \u2014 it must be handled as a relationship side-effect.",
       "id": "role_sync_pattern",
-      "community": 1,
+      "community": 2,
       "norm_label": "role sync on user create/edit pattern"
+    },
+    {
+      "label": "UserGrowthChart Widget",
+      "file_type": "code",
+      "source_file": "app/Filament/Resources/Users/Widgets/UserGrowthChart.php",
+      "source_location": "class UserGrowthChart",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "usergrowthchart_usergrowthchart",
+      "community": 2,
+      "norm_label": "usergrowthchart widget"
+    },
+    {
+      "label": "LatestUsersTable Widget",
+      "file_type": "code",
+      "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
+      "source_location": "class LatestUsersTable",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "latestusetstable_latestuserstable",
+      "community": 2,
+      "norm_label": "latestuserstable widget"
     },
     {
       "label": "UserStatsOverview Widget",
@@ -2694,7 +2674,7 @@
       "author": null,
       "contributor": null,
       "id": "userstatsoverview_widget",
-      "community": 7,
+      "community": 8,
       "norm_label": "userstatsoverview widget"
     },
     {
@@ -2707,8 +2687,21 @@
       "author": null,
       "contributor": null,
       "id": "taskboard_page",
-      "community": 38,
+      "community": 37,
       "norm_label": "taskboard page"
+    },
+    {
+      "label": "Relaticle Flowforge BoardPage",
+      "file_type": "code",
+      "source_file": "app/Filament/Pages/TaskBoard.php",
+      "source_location": "Relaticle\\Flowforge\\BoardPage",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "flowforge_boardpage",
+      "community": 37,
+      "norm_label": "relaticle flowforge boardpage"
     },
     {
       "label": "Base Controller",
@@ -2720,7 +2713,7 @@
       "author": null,
       "contributor": null,
       "id": "controller_base",
-      "community": 84,
+      "community": 85,
       "norm_label": "base controller"
     },
     {
@@ -2733,8 +2726,21 @@
       "author": null,
       "contributor": null,
       "id": "config_filament_shield",
-      "community": 7,
+      "community": 8,
       "norm_label": "filament shield config"
+    },
+    {
+      "label": "FilamentShield RoleResource",
+      "file_type": "code",
+      "source_file": "config/filament-shield.php",
+      "source_location": "BezhanSalleh\\FilamentShield\\Resources\\Roles\\RoleResource",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "filament_shield_role_resource",
+      "community": 8,
+      "norm_label": "filamentshield roleresource"
     },
     {
       "label": "Auth Config",
@@ -2746,7 +2752,7 @@
       "author": null,
       "contributor": null,
       "id": "config_auth",
-      "community": 7,
+      "community": 8,
       "norm_label": "auth config"
     },
     {
@@ -2759,7 +2765,7 @@
       "author": null,
       "contributor": null,
       "id": "config_app",
-      "community": 39,
+      "community": 38,
       "norm_label": "app config"
     },
     {
@@ -2776,227 +2782,6 @@
       "norm_label": "filament logger config"
     },
     {
-      "label": "Mail Config",
-      "file_type": "code",
-      "source_file": "config/mail.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "config_mail",
-      "community": 40,
-      "norm_label": "mail config"
-    },
-    {
-      "label": "Services Config",
-      "file_type": "code",
-      "source_file": "config/services.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "config_services",
-      "community": 40,
-      "norm_label": "services config"
-    },
-    {
-      "label": "Database Config",
-      "file_type": "code",
-      "source_file": "config/database.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "config_database",
-      "community": 11,
-      "norm_label": "database config"
-    },
-    {
-      "label": "Cache Config",
-      "file_type": "code",
-      "source_file": "config/cache.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "config_cache",
-      "community": 11,
-      "norm_label": "cache config"
-    },
-    {
-      "label": "Session Config",
-      "file_type": "code",
-      "source_file": "config/session.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "config_session",
-      "community": 11,
-      "norm_label": "session config"
-    },
-    {
-      "label": "Queue Config",
-      "file_type": "code",
-      "source_file": "config/queue.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "config_queue",
-      "community": 11,
-      "norm_label": "queue config"
-    },
-    {
-      "label": "Logging Config",
-      "file_type": "code",
-      "source_file": "config/logging.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "config_logging",
-      "community": 40,
-      "norm_label": "logging config"
-    },
-    {
-      "label": "Spatie Permission Config",
-      "file_type": "code",
-      "source_file": "config/permission.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "config_permission",
-      "community": 7,
-      "norm_label": "spatie permission config"
-    },
-    {
-      "label": "Filesystems Config",
-      "file_type": "code",
-      "source_file": "config/filesystems.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "config_filesystems",
-      "community": 39,
-      "norm_label": "filesystems config"
-    },
-    {
-      "label": "Welcome Blade View",
-      "file_type": "code",
-      "source_file": "resources/views/welcome.blade.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "welcome_view",
-      "community": 39,
-      "norm_label": "welcome blade view"
-    },
-    {
-      "label": "Filament-Breezy Browser Sessions List Component",
-      "file_type": "code",
-      "source_file": "resources/views/vendor/filament-breezy/components/browser-sessions-list.blade.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "browser_sessions_list_view",
-      "community": 11,
-      "norm_label": "filament-breezy browser sessions list component"
-    },
-    {
-      "label": "Filament-Breezy Clipboard Link Component",
-      "file_type": "code",
-      "source_file": "resources/views/vendor/filament-breezy/components/clipboard-link.blade.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "clipboard_link_view",
-      "community": 11,
-      "norm_label": "filament-breezy clipboard link component"
-    },
-    {
-      "label": "User Model",
-      "file_type": "code",
-      "source_file": "app/Models/User.php",
-      "source_location": "class User",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "model_user",
-      "community": 7,
-      "norm_label": "user model"
-    },
-    {
-      "label": "Task Model",
-      "file_type": "code",
-      "source_file": "app/Models/Task.php",
-      "source_location": "class Task",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "model_task",
-      "community": 38,
-      "norm_label": "task model"
-    },
-    {
-      "label": "Spatie Permission Model",
-      "file_type": "code",
-      "source_file": "config/permission.php",
-      "source_location": "Spatie\\Permission\\Models\\Permission",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "spatie_permission_model",
-      "community": 7,
-      "norm_label": "spatie permission model"
-    },
-    {
-      "label": "Spatie Role Model",
-      "file_type": "code",
-      "source_file": "config/permission.php",
-      "source_location": "Spatie\\Permission\\Models\\Role",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "spatie_role_model",
-      "community": 7,
-      "norm_label": "spatie role model"
-    },
-    {
-      "label": "FilamentShield RoleResource",
-      "file_type": "code",
-      "source_file": "config/filament-shield.php",
-      "source_location": "BezhanSalleh\\FilamentShield\\Resources\\Roles\\RoleResource",
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "filament_shield_role_resource",
-      "community": 7,
-      "norm_label": "filamentshield roleresource"
-    },
-    {
       "label": "FilamentLogger ActivityResource",
       "file_type": "code",
       "source_file": "config/filament-logger.php",
@@ -3010,17 +2795,43 @@
       "norm_label": "filamentlogger activityresource"
     },
     {
-      "label": "Relaticle Flowforge BoardPage",
+      "label": "Mail Config",
       "file_type": "code",
-      "source_file": "app/Filament/Pages/TaskBoard.php",
-      "source_location": "Relaticle\\Flowforge\\BoardPage",
+      "source_file": "config/mail.php",
+      "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "flowforge_boardpage",
-      "community": 38,
-      "norm_label": "relaticle flowforge boardpage"
+      "id": "config_mail",
+      "community": 39,
+      "norm_label": "mail config"
+    },
+    {
+      "label": "Services Config",
+      "file_type": "code",
+      "source_file": "config/services.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "config_services",
+      "community": 39,
+      "norm_label": "services config"
+    },
+    {
+      "label": "Database Config",
+      "file_type": "code",
+      "source_file": "config/database.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "config_database",
+      "community": 12,
+      "norm_label": "database config"
     },
     {
       "label": "SQLite Database Driver (default)",
@@ -3033,8 +2844,21 @@
       "contributor": null,
       "rationale": "SQLite is configured as the default DB driver, making local dev and testing simpler without needing a separate database server.",
       "id": "db_driver_sqlite",
-      "community": 85,
+      "community": 86,
       "norm_label": "sqlite database driver (default)"
+    },
+    {
+      "label": "Cache Config",
+      "file_type": "code",
+      "source_file": "config/cache.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "config_cache",
+      "community": 12,
+      "norm_label": "cache config"
     },
     {
       "label": "Database-backed Cache and Session",
@@ -3047,8 +2871,86 @@
       "contributor": null,
       "rationale": "Both cache and session are configured to use the database driver by default, which works out-of-the-box with SQLite without Redis.",
       "id": "db_driver_database_cache",
-      "community": 11,
+      "community": 12,
       "norm_label": "database-backed cache and session"
+    },
+    {
+      "label": "Session Config",
+      "file_type": "code",
+      "source_file": "config/session.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "config_session",
+      "community": 12,
+      "norm_label": "session config"
+    },
+    {
+      "label": "Queue Config",
+      "file_type": "code",
+      "source_file": "config/queue.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "config_queue",
+      "community": 12,
+      "norm_label": "queue config"
+    },
+    {
+      "label": "Logging Config",
+      "file_type": "code",
+      "source_file": "config/logging.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "config_logging",
+      "community": 39,
+      "norm_label": "logging config"
+    },
+    {
+      "label": "Spatie Permission Config",
+      "file_type": "code",
+      "source_file": "config/permission.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "config_permission",
+      "community": 8,
+      "norm_label": "spatie permission config"
+    },
+    {
+      "label": "Spatie Permission Model",
+      "file_type": "code",
+      "source_file": "config/permission.php",
+      "source_location": "Spatie\\Permission\\Models\\Permission",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "spatie_permission_model",
+      "community": 8,
+      "norm_label": "spatie permission model"
+    },
+    {
+      "label": "Spatie Role Model",
+      "file_type": "code",
+      "source_file": "config/permission.php",
+      "source_location": "Spatie\\Permission\\Models\\Role",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "spatie_role_model",
+      "community": 8,
+      "norm_label": "spatie role model"
     },
     {
       "label": "Spatie Permission 24h Cache Strategy",
@@ -3061,8 +2963,60 @@
       "contributor": null,
       "rationale": "Permissions are cached for 24 hours to optimize performance; the cache is flushed automatically when roles or permissions change.",
       "id": "permission_cache_24h",
-      "community": 7,
+      "community": 8,
       "norm_label": "spatie permission 24h cache strategy"
+    },
+    {
+      "label": "Filesystems Config",
+      "file_type": "code",
+      "source_file": "config/filesystems.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "config_filesystems",
+      "community": 38,
+      "norm_label": "filesystems config"
+    },
+    {
+      "label": "Welcome Blade View",
+      "file_type": "code",
+      "source_file": "resources/views/welcome.blade.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "welcome_view",
+      "community": 38,
+      "norm_label": "welcome blade view"
+    },
+    {
+      "label": "Filament-Breezy Browser Sessions List Component",
+      "file_type": "code",
+      "source_file": "resources/views/vendor/filament-breezy/components/browser-sessions-list.blade.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "browser_sessions_list_view",
+      "community": 12,
+      "norm_label": "filament-breezy browser sessions list component"
+    },
+    {
+      "label": "Filament-Breezy Clipboard Link Component",
+      "file_type": "code",
+      "source_file": "resources/views/vendor/filament-breezy/components/clipboard-link.blade.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "clipboard_link_view",
+      "community": 12,
+      "norm_label": "filament-breezy clipboard link component"
     },
     {
       "label": "Browser Sessions Livewire View",
@@ -3089,6 +3043,19 @@
       "id": "two_factor_authentication_blade",
       "community": 6,
       "norm_label": "two-factor authentication livewire view"
+    },
+    {
+      "label": "Two-Factor Authentication State Machine Pattern",
+      "file_type": "rationale",
+      "source_file": "resources/views/vendor/filament-breezy/livewire/two-factor-authentication.blade.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "two_factor_auth_pattern",
+      "community": 6,
+      "norm_label": "two-factor authentication state machine pattern"
     },
     {
       "label": "Passkeys Livewire View",
@@ -3143,6 +3110,19 @@
       "norm_label": "passkey registration script"
     },
     {
+      "label": "WebAuthn Passkey Registration Flow",
+      "file_type": "rationale",
+      "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys/create-script.blade.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "webauthn_registration_flow",
+      "community": 6,
+      "norm_label": "webauthn passkey registration flow"
+    },
+    {
       "label": "Passkey Authentication Script",
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys/authenticate-script.blade.php",
@@ -3156,6 +3136,19 @@
       "norm_label": "passkey authentication script"
     },
     {
+      "label": "WebAuthn Passkey Authentication Flow",
+      "file_type": "rationale",
+      "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys/authenticate-script.blade.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "webauthn_authentication_flow",
+      "community": 6,
+      "norm_label": "webauthn passkey authentication flow"
+    },
+    {
       "label": "Filament Forms Action Blade (Sticky Actions)",
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/filament/forms/action.blade.php",
@@ -3165,7 +3158,7 @@
       "author": null,
       "contributor": null,
       "id": "filament_forms_action_blade",
-      "community": 86,
+      "community": 87,
       "norm_label": "filament forms action blade (sticky actions)"
     },
     {
@@ -3195,6 +3188,19 @@
       "norm_label": "my profile page blade"
     },
     {
+      "label": "My Profile Dynamic Component Registry",
+      "file_type": "rationale",
+      "source_file": "resources/views/vendor/filament-breezy/filament/pages/my-profile.blade.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "my_profile_component_registry",
+      "community": 6,
+      "norm_label": "my profile dynamic component registry"
+    },
+    {
       "label": "Pest Bootstrap (Pest.php)",
       "file_type": "code",
       "source_file": "tests/Pest.php",
@@ -3204,7 +3210,7 @@
       "author": null,
       "contributor": null,
       "id": "pest_bootstrap",
-      "community": 41,
+      "community": 40,
       "norm_label": "pest bootstrap (pest.php)"
     },
     {
@@ -3217,7 +3223,7 @@
       "author": null,
       "contributor": null,
       "id": "tests_testcase",
-      "community": 41,
+      "community": 40,
       "norm_label": "base testcase"
     },
     {
@@ -3230,7 +3236,7 @@
       "author": null,
       "contributor": null,
       "id": "unit_example_test",
-      "community": 87,
+      "community": 88,
       "norm_label": "unit exampletest"
     },
     {
@@ -3243,7 +3249,7 @@
       "author": null,
       "contributor": null,
       "id": "feature_example_test",
-      "community": 41,
+      "community": 40,
       "norm_label": "feature exampletest"
     },
     {
@@ -3273,56 +3279,368 @@
       "norm_label": "web routes"
     },
     {
-      "label": "WebAuthn Passkey Registration Flow",
-      "file_type": "rationale",
-      "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys/create-script.blade.php",
+      "label": "Bootstrap Services Cache",
+      "file_type": "code",
+      "source_file": "bootstrap/cache/services.php",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "webauthn_registration_flow",
-      "community": 6,
-      "norm_label": "webauthn passkey registration flow"
+      "id": "services_cache",
+      "community": 0,
+      "norm_label": "bootstrap services cache"
     },
     {
-      "label": "WebAuthn Passkey Authentication Flow",
-      "file_type": "rationale",
-      "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys/authenticate-script.blade.php",
+      "label": "Bootstrap Packages Cache",
+      "file_type": "code",
+      "source_file": "bootstrap/cache/packages.php",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "webauthn_authentication_flow",
-      "community": 6,
-      "norm_label": "webauthn passkey authentication flow"
+      "id": "packages_cache",
+      "community": 0,
+      "norm_label": "bootstrap packages cache"
     },
     {
-      "label": "Two-Factor Authentication State Machine Pattern",
-      "file_type": "rationale",
-      "source_file": "resources/views/vendor/filament-breezy/livewire/two-factor-authentication.blade.php",
+      "label": "Frontend App Entry (app.js)",
+      "file_type": "code",
+      "source_file": "resources/js/app.js",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "two_factor_auth_pattern",
-      "community": 6,
-      "norm_label": "two-factor authentication state machine pattern"
+      "id": "app_js",
+      "community": 89,
+      "norm_label": "frontend app entry (app.js)"
     },
     {
-      "label": "My Profile Dynamic Component Registry",
-      "file_type": "rationale",
-      "source_file": "resources/views/vendor/filament-breezy/filament/pages/my-profile.blade.php",
+      "label": "Project README",
+      "file_type": "document",
+      "source_file": "README.md",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "my_profile_component_registry",
-      "community": 6,
-      "norm_label": "my profile dynamic component registry"
+      "id": "readme_doc",
+      "community": 0,
+      "norm_label": "project readme"
+    },
+    {
+      "label": "CLAUDE.md Project Instructions",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md",
+      "community": 0,
+      "norm_label": "claude.md project instructions"
+    },
+    {
+      "label": "App\\Providers\\AppServiceProvider",
+      "file_type": "code",
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 62",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "provider_app_service",
+      "community": 0,
+      "norm_label": "app\\providers\\appserviceprovider"
+    },
+    {
+      "label": "App\\Providers\\Filament\\AdminPanelProvider",
+      "file_type": "code",
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 63",
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "provider_admin_panel",
+      "community": 0,
+      "norm_label": "app\\providers\\filament\\adminpanelprovider"
+    },
+    {
+      "label": "filament/filament v5",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_filament",
+      "community": 0,
+      "norm_label": "filament/filament v5"
+    },
+    {
+      "label": "bezhansalleh/filament-shield",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_filament_shield",
+      "community": 0,
+      "norm_label": "bezhansalleh/filament-shield"
+    },
+    {
+      "label": "jacobtims/filament-logger",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_filament_logger",
+      "community": 0,
+      "norm_label": "jacobtims/filament-logger"
+    },
+    {
+      "label": "jeffgreco13/filament-breezy",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_filament_breezy",
+      "community": 0,
+      "norm_label": "jeffgreco13/filament-breezy"
+    },
+    {
+      "label": "diogogpinto/filament-auth-ui-enhancer",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_auth_ui_enhancer",
+      "community": 0,
+      "norm_label": "diogogpinto/filament-auth-ui-enhancer"
+    },
+    {
+      "label": "leandrocfe/filament-apex-charts",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_apex_charts",
+      "community": 0,
+      "norm_label": "leandrocfe/filament-apex-charts"
+    },
+    {
+      "label": "laraveldaily/filacheck",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_filacheck",
+      "community": 0,
+      "norm_label": "laraveldaily/filacheck"
+    },
+    {
+      "label": "relaticle/flowforge",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_flowforge",
+      "community": 0,
+      "norm_label": "relaticle/flowforge"
+    },
+    {
+      "label": "saade/filament-fullcalendar",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_fullcalendar",
+      "community": 0,
+      "norm_label": "saade/filament-fullcalendar"
+    },
+    {
+      "label": "livewire/livewire v4",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_livewire",
+      "community": 0,
+      "norm_label": "livewire/livewire v4"
+    },
+    {
+      "label": "spatie/laravel-permission",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_spatie_permission",
+      "community": 0,
+      "norm_label": "spatie/laravel-permission"
+    },
+    {
+      "label": "spatie/laravel-activitylog",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_spatie_activitylog",
+      "community": 0,
+      "norm_label": "spatie/laravel-activitylog"
+    },
+    {
+      "label": "kirschbaum-development/eloquent-power-joins",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_power_joins",
+      "community": 0,
+      "norm_label": "kirschbaum-development/eloquent-power-joins"
+    },
+    {
+      "label": "laravel/boost v2",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_laravel_boost",
+      "community": 0,
+      "norm_label": "laravel/boost v2"
+    },
+    {
+      "label": "laravel/mcp v0",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_laravel_mcp",
+      "community": 0,
+      "norm_label": "laravel/mcp v0"
+    },
+    {
+      "label": "laravel/pail v1",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_laravel_pail",
+      "community": 90,
+      "norm_label": "laravel/pail v1"
+    },
+    {
+      "label": "pestphp/pest v4",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_pest",
+      "community": 0,
+      "norm_label": "pestphp/pest v4"
+    },
+    {
+      "label": "blade-ui-kit/blade-heroicons",
+      "file_type": "rationale",
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pkg_blade_heroicons",
+      "community": 0,
+      "norm_label": "blade-ui-kit/blade-heroicons"
+    },
+    {
+      "label": "Filament5 Laravel Starter Kit",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_starter_kit",
+      "community": 0,
+      "norm_label": "filament5 laravel starter kit"
+    },
+    {
+      "label": "Filament Admin Panel",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_admin_panel",
+      "community": 0,
+      "norm_label": "filament admin panel"
+    },
+    {
+      "label": "Development Guidelines and AI Conventions",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "concept_dev_guidelines",
+      "community": 0,
+      "norm_label": "development guidelines and ai conventions"
     }
   ],
   "links": [
@@ -4879,16 +5197,6 @@
       "confidence_score": 1.0
     },
     {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.65,
-      "source_file": "vite.config.js",
-      "source_location": null,
-      "weight": 0.65,
-      "source": "vite_config",
-      "target": "readme_starterkit"
-    },
-    {
       "relation": "conceptually_related_to",
       "confidence": "INFERRED",
       "confidence_score": 0.55,
@@ -4899,14 +5207,64 @@
       "target": "migration_users_table"
     },
     {
-      "relation": "references",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php",
+      "source_location": null,
+      "weight": 0.85,
+      "source": "migration_breezy_sessions",
+      "target": "migration_users_table"
+    },
+    {
+      "relation": "semantically_similar_to",
       "confidence": "INFERRED",
       "confidence_score": 0.75,
-      "source_file": "CLAUDE.md",
+      "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php",
       "source_location": null,
       "weight": 0.75,
-      "source": "claude_md_project",
-      "target": "readme_starterkit"
+      "source": "migration_breezy_sessions",
+      "target": "migration_passkeys"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/migrations/2026_04_20_194025_alter_breezy_sessions_table.php",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "migration_alter_breezy_sessions",
+      "target": "migration_breezy_sessions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/migrations/2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "migration_activity_log_batch_uuid",
+      "target": "migration_activity_log"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "database/migrations/2026_04_20_194026_create_passkeys_table.php",
+      "source_location": null,
+      "weight": 0.85,
+      "source": "migration_passkeys",
+      "target": "migration_users_table"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "migration_fix_tasks_schema",
+      "target": "migration_users_table"
     },
     {
       "relation": "shares_data_with",
@@ -4929,36 +5287,6 @@
       "target": "migration_users_table"
     },
     {
-      "relation": "shares_data_with",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php",
-      "source_location": null,
-      "weight": 0.85,
-      "source": "migration_breezy_sessions",
-      "target": "migration_users_table"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "database/migrations/2026_04_20_194026_create_passkeys_table.php",
-      "source_location": null,
-      "weight": 0.85,
-      "source": "migration_passkeys",
-      "target": "migration_users_table"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "migration_fix_tasks_schema",
-      "target": "migration_users_table"
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -4972,111 +5300,11 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "database/migrations/2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "migration_activity_log_batch_uuid",
-      "target": "migration_activity_log"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "database/migrations/2026_04_20_191120_create_activity_log_table.php",
-      "source_location": null,
-      "weight": 0.95,
-      "source": "migration_activity_log",
-      "target": "plugin_filament_logger"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "database/migrations/2026_04_20_194025_alter_breezy_sessions_table.php",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "migration_alter_breezy_sessions",
-      "target": "migration_breezy_sessions"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "migration_breezy_sessions",
-      "target": "plugin_filament_breezy"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.75,
-      "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php",
-      "source_location": null,
-      "weight": 0.75,
-      "source": "migration_breezy_sessions",
-      "target": "migration_passkeys"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "database/migrations/2026_04_20_194026_create_passkeys_table.php",
-      "source_location": null,
-      "weight": 0.95,
-      "source": "migration_passkeys",
-      "target": "plugin_filament_breezy"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "database/migrations/2026_04_25_220238_create_permission_tables.php",
-      "source_location": null,
-      "weight": 0.95,
-      "source": "migration_permission_tables",
-      "target": "plugin_filament_shield"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "database/seeders/ShieldSeeder.php",
-      "source_location": null,
-      "weight": 0.95,
-      "source": "seeder_shield",
-      "target": "migration_permission_tables"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
       "source_location": null,
       "weight": 1.0,
       "source": "migration_add_position_tasks",
       "target": "migration_create_tasks"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "migration_fix_tasks_schema",
-      "target": "migration_create_tasks"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "migration_add_position_tasks",
-      "target": "plugin_flowforge"
     },
     {
       "relation": "shares_data_with",
@@ -5092,21 +5320,31 @@
       "relation": "shares_data_with",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
-      "source_file": "database/factories/TaskFactory.php",
+      "source_file": "database/seeders/ShieldSeeder.php",
       "source_location": null,
       "weight": 0.95,
-      "source": "factory_task",
-      "target": "migration_fix_tasks_schema"
+      "source": "seeder_shield",
+      "target": "migration_permission_tables"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "database/seeders/ShieldSeeder.php",
+      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
       "source_location": null,
       "weight": 1.0,
-      "source": "seeder_shield",
-      "target": "plugin_filament_shield"
+      "source": "migration_fix_tasks_schema",
+      "target": "migration_create_tasks"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "database/factories/TaskFactory.php",
+      "source_location": null,
+      "weight": 0.95,
+      "source": "factory_task",
+      "target": "migration_fix_tasks_schema"
     },
     {
       "relation": "implements",
@@ -5179,6 +5417,16 @@
       "target": "userresource_userresource"
     },
     {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Models/User.php",
+      "source_location": "canAccessPanel",
+      "weight": 1.0,
+      "source": "filament_panel_access_control",
+      "target": "user_user"
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -5229,6 +5477,26 @@
       "target": "user_user"
     },
     {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "app/Filament/Resources/Users/Tables/UsersTable.php",
+      "source_location": "modifyQueryUsing roles relationship",
+      "weight": 1.0,
+      "source": "userstable_userstable",
+      "target": "user_user"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Filament/Resources/Users/Schemas/UserForm.php",
+      "source_location": "afterStateHydrated User $record",
+      "weight": 1.0,
+      "source": "userform_userform",
+      "target": "user_user"
+    },
+    {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -5269,34 +5537,44 @@
       "target": "user_user"
     },
     {
-      "relation": "references",
+      "relation": "calls",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "app/Filament/Resources/Users/Schemas/UserForm.php",
-      "source_location": "afterStateHydrated User $record",
+      "source_file": "app/Filament/Resources/Users/Widgets/UserStatsOverview.php",
+      "source_location": "User::selectRaw(...)->first()",
       "weight": 1.0,
-      "source": "userform_userform",
-      "target": "user_user"
+      "source": "userstatsoverview_widget",
+      "target": "model_user"
     },
     {
       "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "app/Filament/Resources/Users/Tables/UsersTable.php",
-      "source_location": "modifyQueryUsing roles relationship",
-      "weight": 1.0,
-      "source": "userstable_userstable",
-      "target": "user_user"
-    },
-    {
-      "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "app/Models/User.php",
-      "source_location": "canAccessPanel",
+      "source_file": "config/filament-shield.php",
+      "source_location": "'auth_provider_model' => 'App\\\\Models\\\\User'",
       "weight": 1.0,
-      "source": "filament_panel_access_control",
-      "target": "user_user"
+      "source": "config_filament_shield",
+      "target": "model_user"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "config/auth.php",
+      "source_location": "'model' => env('AUTH_MODEL', User::class)",
+      "weight": 1.0,
+      "source": "config_auth",
+      "target": "model_user"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app/Filament/Pages/TaskBoard.php",
+      "source_location": "Task::query()",
+      "weight": 1.0,
+      "source": "taskboard_page",
+      "target": "model_task"
     },
     {
       "relation": "semantically_similar_to",
@@ -5419,16 +5697,6 @@
       "target": "latestusetstable_latestuserstable"
     },
     {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Filament/Resources/Users/Widgets/UserStatsOverview.php",
-      "source_location": "User::selectRaw(...)->first()",
-      "weight": 1.0,
-      "source": "userstatsoverview_widget",
-      "target": "model_user"
-    },
-    {
       "relation": "shares_data_with",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
@@ -5437,16 +5705,6 @@
       "weight": 0.8,
       "source": "userstatsoverview_widget",
       "target": "config_permission"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app/Filament/Pages/TaskBoard.php",
-      "source_location": "Task::query()",
-      "weight": 1.0,
-      "source": "taskboard_page",
-      "target": "model_task"
     },
     {
       "relation": "implements",
@@ -5469,16 +5727,6 @@
       "target": "filament_shield_role_resource"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "config/filament-shield.php",
-      "source_location": "'auth_provider_model' => 'App\\\\Models\\\\User'",
-      "weight": 1.0,
-      "source": "config_filament_shield",
-      "target": "model_user"
-    },
-    {
       "relation": "conceptually_related_to",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
@@ -5487,26 +5735,6 @@
       "weight": 0.9,
       "source": "config_filament_shield",
       "target": "config_permission"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "config/auth.php",
-      "source_location": "'model' => env('AUTH_MODEL', User::class)",
-      "weight": 1.0,
-      "source": "config_auth",
-      "target": "model_user"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "resources/views/welcome.blade.php",
-      "source_location": "config('app.name', 'Laravel')",
-      "weight": 1.0,
-      "source": "welcome_view",
-      "target": "config_app"
     },
     {
       "relation": "references",
@@ -5522,6 +5750,16 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
+      "source_file": "resources/views/welcome.blade.php",
+      "source_location": "config('app.name', 'Laravel')",
+      "weight": 1.0,
+      "source": "welcome_view",
+      "target": "config_app"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "config/filament-logger.php",
       "source_location": "'activity_resource' => ActivityResource::class",
       "weight": 1.0,
@@ -5531,21 +5769,21 @@
     {
       "relation": "conceptually_related_to",
       "confidence": "INFERRED",
-      "confidence_score": 0.65,
-      "source_file": "config/logging.php",
-      "source_location": "slack driver references MAIL_LOG_CHANNEL",
-      "weight": 0.6,
-      "source": "config_logging",
-      "target": "config_mail"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "config/services.php",
       "source_location": "postmark/ses/resend credentials used in mail mailers",
       "weight": 0.8,
       "source": "config_services",
+      "target": "config_mail"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "config/logging.php",
+      "source_location": "slack driver references MAIL_LOG_CHANNEL",
+      "weight": 0.6,
+      "source": "config_logging",
       "target": "config_mail"
     },
     {
@@ -5670,6 +5908,16 @@
     },
     {
       "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "resources/views/vendor/filament-breezy/filament/pages/two-factor.blade.php",
+      "source_location": null,
+      "weight": 0.85,
+      "source": "two_factor_page_blade",
+      "target": "two_factor_auth_pattern"
+    },
+    {
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys.blade.php",
@@ -5679,16 +5927,6 @@
       "target": "passkeys_create_script"
     },
     {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "resources/views/vendor/filament-breezy/filament/pages/my-profile.blade.php",
-      "source_location": "line 3",
-      "weight": 0.9,
-      "source": "my_profile_page_blade",
-      "target": "passkeys_blade"
-    },
-    {
       "relation": "semantically_similar_to",
       "confidence": "INFERRED",
       "confidence_score": 0.75,
@@ -5696,6 +5934,16 @@
       "source_location": null,
       "weight": 0.75,
       "source": "passkey_action_blade",
+      "target": "passkeys_blade"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "resources/views/vendor/filament-breezy/filament/pages/my-profile.blade.php",
+      "source_location": "line 3",
+      "weight": 0.9,
+      "source": "my_profile_page_blade",
       "target": "passkeys_blade"
     },
     {
@@ -5749,16 +5997,6 @@
       "target": "webauthn_authentication_flow"
     },
     {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "resources/views/vendor/filament-breezy/filament/pages/two-factor.blade.php",
-      "source_location": null,
-      "weight": 0.85,
-      "source": "two_factor_page_blade",
-      "target": "two_factor_auth_pattern"
-    },
-    {
       "relation": "implements",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
@@ -5807,9 +6045,582 @@
       "weight": 0.55,
       "source": "routes_console",
       "target": "routes_web"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 62",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "provider_app_service"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 63",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "provider_admin_panel"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 29",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_filament"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 28",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_filament_shield"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 42",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_filament_logger"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 43",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_filament_breezy"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 52",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_livewire"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 61",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_spatie_permission"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 60",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_spatie_activitylog"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 45",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_laravel_boost"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 46",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_laravel_mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 51",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_apex_charts"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 50",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_filacheck"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 57",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_flowforge"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": "line 59",
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "pkg_fullcalendar"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "services_cache",
+      "target": "packages_cache"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 52",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_filament"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 9",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_filament_shield"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 115",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_filament_logger"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 126",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_filament_breezy"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 34",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_auth_ui_enhancer"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 190",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_apex_charts"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 183",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_filacheck"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 240",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_flowforge"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 262",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_fullcalendar"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 201",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_livewire"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 276",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_spatie_permission"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 269",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_spatie_activitylog"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 144",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_laravel_boost"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 151",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_laravel_mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 137",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_power_joins"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": "line 20",
+      "weight": 1.0,
+      "source": "packages_cache",
+      "target": "pkg_blade_heroicons"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "concept_starter_kit"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 5",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "concept_admin_panel"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 12",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_filament"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 14",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_livewire"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 16",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_pest"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 25",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_filament_shield"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 23",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_filament_logger"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 24",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_filament_breezy"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 26",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_auth_ui_enhancer"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 27",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_apex_charts"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 28",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_filacheck"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 29",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_flowforge"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "line 30",
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "pkg_fullcalendar"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_doc",
+      "target": "claude_md"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 1",
+      "weight": 1.0,
+      "source": "claude_md",
+      "target": "concept_dev_guidelines"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 13",
+      "weight": 1.0,
+      "source": "claude_md",
+      "target": "pkg_filament"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 16",
+      "weight": 1.0,
+      "source": "claude_md",
+      "target": "pkg_livewire"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 18",
+      "weight": 1.0,
+      "source": "claude_md",
+      "target": "pkg_laravel_boost"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 19",
+      "weight": 1.0,
+      "source": "claude_md",
+      "target": "pkg_laravel_mcp"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": "line 21",
+      "weight": 1.0,
+      "source": "claude_md",
+      "target": "pkg_pest"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "bootstrap/cache/services.php",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "provider_admin_panel",
+      "target": "pkg_filament"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "pkg_filament_shield",
+      "target": "pkg_spatie_permission"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "bootstrap/cache/packages.php",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "pkg_filament_logger",
+      "target": "pkg_spatie_activitylog"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "concept_starter_kit",
+      "target": "concept_admin_panel"
     }
   ],
   "hyperedges": [
+    {
+      "id": "breezy_auth_schema",
+      "label": "Breezy Authentication Schema (sessions, passkeys, alter)",
+      "nodes": [
+        "migration_breezy_sessions",
+        "migration_alter_breezy_sessions",
+        "migration_passkeys"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php"
+    },
     {
       "id": "tasks_schema_evolution",
       "label": "Tasks Table Schema Evolution (create, fix, add position)",
@@ -5837,17 +6648,17 @@
       "source_file": "database/migrations/2026_04_20_191120_create_activity_log_table.php"
     },
     {
-      "id": "breezy_auth_schema",
-      "label": "Breezy Authentication Schema (sessions, passkeys, alter)",
+      "id": "admin_panel_plugin_stack",
+      "label": "Admin Panel Plugin Registration Stack",
       "nodes": [
-        "migration_breezy_sessions",
-        "migration_alter_breezy_sessions",
-        "migration_passkeys"
+        "adminpanelprovider_adminpanelprovider",
+        "custompersonalinfo_custompersonalinfo",
+        "userresource_userresource"
       ],
-      "relation": "implement",
+      "relation": "participate_in",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php"
+      "confidence_score": 0.95,
+      "source_file": "app/Providers/Filament/AdminPanelProvider.php"
     },
     {
       "id": "user_resource_crud_pages",
@@ -5876,19 +6687,6 @@
       "source_file": "app/Filament/Resources/Users/UserResource.php"
     },
     {
-      "id": "admin_panel_plugin_stack",
-      "label": "Admin Panel Plugin Registration Stack",
-      "nodes": [
-        "adminpanelprovider_adminpanelprovider",
-        "custompersonalinfo_custompersonalinfo",
-        "userresource_userresource"
-      ],
-      "relation": "participate_in",
-      "confidence": "EXTRACTED",
-      "confidence_score": 0.95,
-      "source_file": "app/Providers/Filament/AdminPanelProvider.php"
-    },
-    {
       "id": "role_permission_authorization_stack",
       "label": "Role-Permission Authorization Stack",
       "nodes": [
@@ -5900,19 +6698,6 @@
       "confidence": "INFERRED",
       "confidence_score": 0.95,
       "source_file": "config/filament-shield.php"
-    },
-    {
-      "id": "database_backed_infra",
-      "label": "Database-backed Infrastructure (cache, session, queue)",
-      "nodes": [
-        "config_cache",
-        "config_session",
-        "config_queue"
-      ],
-      "relation": "participate_in",
-      "confidence": "INFERRED",
-      "confidence_score": 0.9,
-      "source_file": "config/database.php"
     },
     {
       "id": "filament_activity_logging",
@@ -5928,6 +6713,19 @@
       "source_file": "config/filament-logger.php"
     },
     {
+      "id": "database_backed_infra",
+      "label": "Database-backed Infrastructure (cache, session, queue)",
+      "nodes": [
+        "config_cache",
+        "config_session",
+        "config_queue"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "config/database.php"
+    },
+    {
       "id": "profile_security_sections",
       "label": "Profile Security Sections (2FA, Passkeys, Browser Sessions)",
       "nodes": [
@@ -5941,19 +6739,6 @@
       "source_file": "resources/views/vendor/filament-breezy/filament/pages/my-profile.blade.php"
     },
     {
-      "id": "passkey_webauthn_flow",
-      "label": "Passkey WebAuthn Registration and Authentication Flow",
-      "nodes": [
-        "passkeys_create_script",
-        "passkeys_authenticate_script",
-        "passkey_action_blade"
-      ],
-      "relation": "implement",
-      "confidence": "INFERRED",
-      "confidence_score": 0.9,
-      "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys"
-    },
-    {
       "id": "pest_test_infrastructure",
       "label": "Pest Testing Infrastructure",
       "nodes": [
@@ -5965,7 +6750,52 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/Pest.php"
+    },
+    {
+      "id": "filament_plugin_ecosystem",
+      "label": "Filament Plugin Ecosystem",
+      "nodes": [
+        "pkg_filament",
+        "pkg_filament_shield",
+        "pkg_filament_logger",
+        "pkg_filament_breezy",
+        "pkg_auth_ui_enhancer",
+        "pkg_apex_charts",
+        "pkg_filacheck",
+        "pkg_flowforge",
+        "pkg_fullcalendar"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "bootstrap/cache/packages.php"
+    },
+    {
+      "id": "laravel_core_providers",
+      "label": "Laravel Core Service Providers",
+      "nodes": [
+        "services_cache",
+        "provider_app_service",
+        "provider_admin_panel"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bootstrap/cache/services.php"
+    },
+    {
+      "id": "project_documentation",
+      "label": "Project Documentation and Guidelines",
+      "nodes": [
+        "readme_doc",
+        "claude_md",
+        "concept_starter_kit"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md"
     }
   ],
-  "built_at_commit": "199f8338fae53a81629f2ead86f1c93e7a21b4fa"
+  "built_at_commit": "d865be3652c9ad9eedbad94e51e7c678ba2bb7d1"
 }
