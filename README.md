@@ -27,6 +27,7 @@ El objetivo principal es tener una base lista para desorrollo acelarado, y que l
 | Apex Charts | [ApexCharts](https://filamentphp.com/plugins/leandrocfe-apex-charts) | 5.0.0 |
 | FilaCheck | [FilaCheck](https://filamentphp.com/plugins/laraveldaily-filacheck) | 1.2.0 |
 | Flowforge | [Flowforge](https://filamentphp.com/plugins/relaticle-flowforge) | 4.0.0 |
+| FullCalendar | [FullCalendar](https://filamentphp.com/plugins/saade-fullcalendar) | 4.0.0-beta7 |
 
 ## Requerimientos Mínimos
 
