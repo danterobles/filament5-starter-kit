@@ -2,8 +2,11 @@
 
 namespace App\Providers\Filament;
 
-use Filament\Http\Middleware\Authenticate;
+use App\Filament\Widgets\AgendaCalendarWidget;
+use App\Livewire\CustomPersonalInfo;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
+use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
+use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -16,17 +19,14 @@ use Filament\Widgets\FilamentInfoWidget;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
+// Custom Plugins used in the Admin Panel
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-
-//Custom Plugins used in the Admin Panel
 use Jacobtims\FilamentLogger\FilamentLoggerPlugin;
 use Jeffgreco13\FilamentBreezy\BreezyCore;
-use App\Livewire\CustomPersonalInfo;
-use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
 use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
-
+use Saade\FilamentFullCalendar\FilamentFullCalendarPlugin;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -52,12 +52,13 @@ class AdminPanelProvider extends PanelProvider
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
                 Dashboard::class,
-	        //App\Filament\Pages\TaskBoard::class,
+                // App\Filament\Pages\TaskBoard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
                 AccountWidget::class,
                 FilamentInfoWidget::class,
+                AgendaCalendarWidget::class,
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -74,27 +75,30 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-               FilamentApexChartsPlugin::make(), 
-               AuthUIEnhancerPlugin::make()
+                FilamentApexChartsPlugin::make(),
+                FilamentFullCalendarPlugin::make()
+                    ->selectable()
+                    ->editable(),
+                AuthUIEnhancerPlugin::make()
                     ->formPanelPosition('left')
                     ->formPanelWidth('35%')
                     ->emptyPanelBackgroundImageUrl(asset('img/image_nl_mty.jpg')),
-               FilamentShieldPlugin::make(),
-               FilamentLoggerPlugin::make(),
-               BreezyCore::make()
+                FilamentShieldPlugin::make(),
+                FilamentLoggerPlugin::make(),
+                BreezyCore::make()
                     ->avatarUploadComponent(
-                        fn($fileUpload) => $fileUpload->disableLabel(),
+                        fn ($fileUpload) => $fileUpload->disableLabel(),
                     )
                     ->myProfile(
                         shouldRegisterUserMenu: true, // Sets the 'account' link in the panel User Menu (default = true)
-                        userMenuLabel: "Mi Perfil", // Customizes the 'account' link label in the panel User Menu (default = null)
+                        userMenuLabel: 'Mi Perfil', // Customizes the 'account' link label in the panel User Menu (default = null)
                         shouldRegisterNavigation: true, // Adds a main navigation item for the My Profile page (default = false)
-                        navigationGroup: "Configuración", // Sets the navigation group for the My Profile page (default = null)
+                        navigationGroup: 'Configuración', // Sets the navigation group for the My Profile page (default = null)
                         hasAvatars: true, // Enables the avatar upload form component (default = false)
-                        slug: "my-profile", // Sets the slug for the profile page (default = 'my-profile')
+                        slug: 'my-profile', // Sets the slug for the profile page (default = 'my-profile')
                     )
                     ->myProfileComponents([
-                        "personal_info" => CustomPersonalInfo::class,
+                        'personal_info' => CustomPersonalInfo::class,
                     ])
                     ->enableBrowserSessions(condition: true)
                     ->enableTwoFactorAuthentication(
