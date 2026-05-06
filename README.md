@@ -28,6 +28,8 @@ El objetivo principal es tener una base lista para desorrollo acelarado, y que l
 | FilaCheck | [FilaCheck](https://filamentphp.com/plugins/laraveldaily-filacheck) | 1.2.0 |
 | Flowforge | [Flowforge](https://filamentphp.com/plugins/relaticle-flowforge) | 4.0.0 |
 | FullCalendar | [FullCalendar](https://filamentphp.com/plugins/saade-fullcalendar) | 4.0.0-beta7 |
+| Icon Picker | [IconPicker](https://filamentphp.com/plugins/guava-icon-picker) | 4.0.0 |
+
 
 ## Requerimientos Mínimos
 
