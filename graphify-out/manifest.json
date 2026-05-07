@@ -95,10 +95,7 @@
     "mtime": 1776455324.6281645,
     "hash": "c0094f35cad6bba7636002a62186dae4"
   },
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Providers/Filament/AdminPanelProvider.php": {
-    "mtime": 1777922552.677773,
-    "hash": "68efcca18e6ce1e24f9ceafa3b07704a"
-  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Providers/Filament/AdminPanelProvider.php": 1778089785.7632244,
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Models/User.php": {
     "mtime": 1777938825.3745513,
     "hash": "6d57cc58389249e3939470e3b8c78903"
@@ -302,5 +299,11 @@
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/CLAUDE.md": {
     "mtime": 1778027666.456659,
     "hash": "03546cf43fa72b5ca93af9860b2ff648"
-  }
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_05_06_173646_create_agendas_table.php": 1778089785.7635627,
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/factories/AgendaFactory.php": 1778089785.7633872,
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Models/Agenda.php": 1778089785.7629614,
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaCalendarWidget.php": 1778089785.7627437,
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaTimelineWidget.php": 1778177793.539955,
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaDoubleSidedTimelineWidget.php": 1778177803.4597309
 }

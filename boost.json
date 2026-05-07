@@ -6,12 +6,15 @@
     "mcp": true,
     "nightwatch_mcp": false,
     "packages": [
-        "filament/filament"
+        "filament/filament",
+        "laraveldaily/filacheck",
+        "relaticle/flowforge"
     ],
     "sail": false,
     "skills": [
         "laravel-best-practices",
         "pest-testing",
-        "tailwindcss-development"
+        "tailwindcss-development",
+        "flowforge-development"
     ]
 }

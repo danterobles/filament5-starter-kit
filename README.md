@@ -29,6 +29,7 @@ El objetivo principal es tener una base lista para desorrollo acelarado, y que l
 | Flowforge | [Flowforge](https://filamentphp.com/plugins/relaticle-flowforge) | 4.0.0 |
 | FullCalendar | [FullCalendar](https://filamentphp.com/plugins/saade-fullcalendar) | 4.0.0-beta7 |
 | Icon Picker | [IconPicker](https://filamentphp.com/plugins/guava-icon-picker) | 4.0.0 |
+| Timeline entry | [TimeLineEntry](https://filamentphp.com/plugins/devletes-timeline-view) | 1.0.0 |
 
 
 ## Requerimientos Mínimos
