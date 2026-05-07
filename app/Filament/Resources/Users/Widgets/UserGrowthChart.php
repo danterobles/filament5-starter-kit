@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Users\Widgets;
 use App\Models\User;
 use Filament\Widgets\ChartWidget;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 
 class UserGrowthChart extends ChartWidget
 {
@@ -14,7 +15,7 @@ class UserGrowthChart extends ChartWidget
 
     protected int|string|array $columnSpan = 'full';
 
-    protected ?string $pollingInterval = '10s';
+    protected ?string $pollingInterval = null;
 
     protected function getData(): array
     {
@@ -69,26 +70,27 @@ class UserGrowthChart extends ChartWidget
 
     private function getUsersPerMonth(): array
     {
-        $startDate = Carbon::now()->subMonths(5)->startOfMonth();
+        return Cache::remember('user_growth_chart', 300, function () {
+            $startDate = Carbon::now()->subMonths(5)->startOfMonth();
 
-        $results = User::selectRaw("DATE_FORMAT(created_at, '%Y-%m') as month_key, COUNT(*) as count")
-            ->where('created_at', '>=', $startDate)
-            ->groupByRaw("DATE_FORMAT(created_at, '%Y-%m')")
-            ->orderByRaw("DATE_FORMAT(created_at, '%Y-%m')")
-            ->pluck('count', 'month_key');
+            $results = User::where('created_at', '>=', $startDate)
+                ->get(['created_at'])
+                ->groupBy(fn ($user) => $user->created_at->format('Y-m'))
+                ->map->count();
 
-        $labels = collect();
-        $counts = collect();
+            $labels = collect();
+            $counts = collect();
 
-        for ($i = 5; $i >= 0; $i--) {
-            $date = Carbon::now()->subMonths($i);
-            $labels->push($date->translatedFormat('M Y'));
-            $counts->push((int) $results->get($date->format('Y-m'), 0));
-        }
+            for ($i = 5; $i >= 0; $i--) {
+                $date = Carbon::now()->subMonths($i);
+                $labels->push($date->translatedFormat('M Y'));
+                $counts->push((int) $results->get($date->format('Y-m'), 0));
+            }
 
-        return [
-            'labels' => $labels->toArray(),
-            'counts' => $counts->toArray(),
-        ];
+            return [
+                'labels' => $labels->toArray(),
+                'counts' => $counts->toArray(),
+            ];
+        });
     }
 }

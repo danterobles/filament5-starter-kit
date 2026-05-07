@@ -15,6 +15,8 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Cache;
 
 class UserResource extends Resource
 {
@@ -27,8 +29,6 @@ class UserResource extends Resource
     protected static ?string $modelLabel = 'Usuario';
 
     protected static ?string $pluralModelLabel = 'Usuarios';
-
-    // protected static ?string $recordTitleAttribute = 'full_name';
 
     protected static ?array $recordTitleAttributes = ['name', 'last', 'email'];
 
@@ -72,12 +72,12 @@ class UserResource extends Resource
 
     public static function getNavigationBadge(): ?string
     {
-        return static::getModel()::count();
+        return (string) Cache::remember('users_nav_badge', 60, fn () => static::getModel()::count());
     }
 
     public static function getNavigationBadgeColor(): ?string
     {
-        return static::getModel()::count() > 100 ? 'warning' : 'primary';
+        return Cache::remember('users_nav_badge_color', 60, fn () => static::getModel()::count() > 100 ? 'warning' : 'primary');
     }
 
     public static function getGlobalSearchResultTitle($record): string
@@ -99,7 +99,7 @@ class UserResource extends Resource
         ];
     }
 
-    public static function getGlobalSearchEloquentQuery(): \Illuminate\Database\Eloquent\Builder
+    public static function getGlobalSearchEloquentQuery(): Builder
     {
         return parent::getGlobalSearchEloquentQuery()->with(['roles']);
     }

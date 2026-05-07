@@ -19,7 +19,6 @@ use Filament\Widgets\FilamentInfoWidget;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\PreventRequestForgery;
-// Custom Plugins used in the Admin Panel
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
@@ -43,7 +42,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->passwordReset()
             ->databaseNotifications()
-            ->brandName('StarterKit_V1')
+            ->brandName(config('app.name'))
             ->sidebarCollapsibleOnDesktop()
             ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
             ->globalSearchFieldKeyBindingSuffix()
@@ -52,7 +51,6 @@ class AdminPanelProvider extends PanelProvider
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
                 Dashboard::class,
-                // App\Filament\Pages\TaskBoard::class,
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\Filament\Widgets')
             ->widgets([
@@ -90,19 +88,19 @@ class AdminPanelProvider extends PanelProvider
                         fn ($fileUpload) => $fileUpload->disableLabel(),
                     )
                     ->myProfile(
-                        shouldRegisterUserMenu: true, // Sets the 'account' link in the panel User Menu (default = true)
-                        userMenuLabel: 'Mi Perfil', // Customizes the 'account' link label in the panel User Menu (default = null)
-                        shouldRegisterNavigation: true, // Adds a main navigation item for the My Profile page (default = false)
-                        navigationGroup: 'Configuración', // Sets the navigation group for the My Profile page (default = null)
-                        hasAvatars: true, // Enables the avatar upload form component (default = false)
-                        slug: 'my-profile', // Sets the slug for the profile page (default = 'my-profile')
+                        shouldRegisterUserMenu: true,
+                        userMenuLabel: 'Mi Perfil',
+                        shouldRegisterNavigation: true,
+                        navigationGroup: 'Configuración',
+                        hasAvatars: true,
+                        slug: 'my-profile',
                     )
                     ->myProfileComponents([
                         'personal_info' => CustomPersonalInfo::class,
                     ])
                     ->enableBrowserSessions(condition: true)
                     ->enableTwoFactorAuthentication(
-                        force: false, // force the user to enable 2FA before they can use the application (default = false)
+                        force: false,
                     ),
             ]);
     }

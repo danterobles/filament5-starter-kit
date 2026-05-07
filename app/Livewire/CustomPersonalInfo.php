@@ -1,17 +1,10 @@
 <?php
 
-/********************************
-* CustomPersonalInfo.php
-* Clase para extender propiedades
-* de Model User y personalizar
-* Breezy
-********************************/
-
 namespace App\Livewire;
 
 use Filament\Forms;
-use Filament\Schemas\Components\Section;
 use Filament\Notifications\Notification;
+use Filament\Schemas\Components\Section;
 use Jeffgreco13\FilamentBreezy\Livewire\PersonalInfo;
 
 class CustomPersonalInfo extends PersonalInfo
@@ -54,7 +47,6 @@ class CustomPersonalInfo extends PersonalInfo
     {
         return Forms\Components\TextInput::make('phone')
             ->label('Teléfono')
-            // ->required()
             ->tel()
             ->maxLength(255);
     }
@@ -62,13 +54,11 @@ class CustomPersonalInfo extends PersonalInfo
     protected function getProfileFormSchema(): array
     {
         $components = [];
-        
-        // Avatar si está habilitado
+
         if ($this->hasAvatars) {
             $components[] = filament('filament-breezy')->getAvatarUploadComponent();
         }
-        
-        // Sección con los campos del perfil
+
         $components[] = Section::make('Información Personal')
             ->description('Actualiza tu información de perfil')
             ->schema([
@@ -77,9 +67,9 @@ class CustomPersonalInfo extends PersonalInfo
                 $this->getEmailComponent(),
                 $this->getPhoneComponent(),
             ])
-            ->columns(2) // 2 columnas en la sección
-            ->columnSpanFull(); // Ocupa todo el ancho disponible
-        
+            ->columns(2)
+            ->columnSpanFull();
+
         return $components;
     }
 

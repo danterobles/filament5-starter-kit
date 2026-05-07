@@ -5,8 +5,6 @@ namespace App\Filament\Resources\Users\Pages;
 use App\Filament\Resources\Users\UserResource;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
-use Filament\Actions\ForceDeleteAction;
-use Filament\Actions\RestoreAction;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\EditRecord;
 
@@ -47,14 +45,6 @@ class EditUser extends EditRecord
                 ->label('Eliminar')
                 ->icon('heroicon-o-trash')
                 ->successNotificationTitle('Usuario eliminado'),
-
-            ForceDeleteAction::make()
-                ->label('Eliminar permanentemente')
-                ->icon('heroicon-o-trash'),
-
-            RestoreAction::make()
-                ->label('Restaurar')
-                ->icon('heroicon-o-arrow-path'),
         ];
     }
 

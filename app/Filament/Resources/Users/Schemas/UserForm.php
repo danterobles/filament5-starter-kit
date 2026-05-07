@@ -11,8 +11,8 @@ use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Hash;
-use Spatie\Permission\Models\Role;
 use Illuminate\Support\Str;
+use Spatie\Permission\Models\Role;
 
 class UserForm
 {
@@ -74,7 +74,6 @@ class UserForm
                         TextInput::make('phone')
                             ->label('Teléfono')
                             ->tel()
-                            ->required()
                             ->maxLength(255)
                             ->placeholder('Ingrese el teléfono')
                             ->prefixIcon('heroicon-o-phone')
@@ -118,14 +117,13 @@ class UserForm
                     ->schema([
                         Select::make('role_id')
                             ->label('Rol')
-                            // ->options(fn () => Role::query()->orderBy('name')->pluck('name', 'id')->toArray())
                             ->options(function () {
                                 return Role::query()
                                     ->orderBy('name')
                                     ->get()
                                     ->mapWithKeys(function ($role) {
                                         return [
-                                            $role->id => Str::ucwords(Str::replace('_', ' ', $role->name))
+                                            $role->id => Str::ucwords(Str::replace('_', ' ', $role->name)),
                                         ];
                                     })
                                     ->toArray();

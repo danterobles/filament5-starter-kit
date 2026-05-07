@@ -11,8 +11,12 @@ use Relaticle\Flowforge\Column;
 class TaskBoard extends BoardPage
 {
     protected static string|null|\BackedEnum $navigationIcon = 'heroicon-o-view-columns';
+
     protected static ?string $navigationLabel = 'Task Board';
+
     protected static ?string $title = 'Task Board';
+
+    protected static string|\UnitEnum|null $navigationGroup = 'Gestión';
 
     public function board(Board $board): Board
     {
@@ -20,7 +24,7 @@ class TaskBoard extends BoardPage
             ->query($this->getEloquentQuery())
             ->recordTitleAttribute('title')
             ->columnIdentifier('status')
-            ->positionIdentifier('position') // Enable drag-and-drop with position field
+            ->positionIdentifier('position')
             ->columns([
                 Column::make('todo')->label('To Do')->color('gray'),
                 Column::make('in_progress')->label('In Progress')->color('blue'),

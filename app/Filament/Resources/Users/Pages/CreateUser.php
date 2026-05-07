@@ -5,7 +5,6 @@ namespace App\Filament\Resources\Users\Pages;
 use App\Filament\Resources\Users\UserResource;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\CreateRecord;
-use Spatie\Permission\Models\Role;
 
 class CreateUser extends CreateRecord
 {
@@ -17,8 +16,7 @@ class CreateUser extends CreateRecord
 
     protected function getRedirectUrl(): string
     {
-        // return $this->getResource()::getUrl('edit', ['record' => $this->getRecord()]);
-        return $this->getResource()::getUrl("index");
+        return $this->getResource()::getUrl('index');
     }
 
     protected function getCreatedNotification(): ?Notification
@@ -50,6 +48,7 @@ class CreateUser extends CreateRecord
         // Asignar el rol al usuario
         if ($this->selectedRoleId !== null) {
             $this->record->syncRoles([$this->selectedRoleId]);
+
             return;
         }
 
@@ -59,9 +58,9 @@ class CreateUser extends CreateRecord
     protected function getFormActions(): array
     {
         return [
-            $this->getCreateFormAction()->label("Registrar"),
+            $this->getCreateFormAction()->label('Registrar'),
 
-            $this->getCancelFormAction()->label("Cancelar"),
+            $this->getCancelFormAction()->label('Cancelar'),
         ];
     }
 }
