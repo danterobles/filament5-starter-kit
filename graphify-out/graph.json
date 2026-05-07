@@ -8,7 +8,7 @@
       "file_type": "code",
       "source_file": "vite.config.js",
       "source_location": "L1",
-      "community": 52,
+      "community": 54,
       "norm_label": "vite.config.js",
       "id": "vite_config_js"
     },
@@ -584,7 +584,7 @@
       "file_type": "code",
       "source_file": "bootstrap/app.php",
       "source_location": "L1",
-      "community": 53,
+      "community": 55,
       "norm_label": "app.php",
       "id": "bootstrap_app_php"
     },
@@ -593,7 +593,7 @@
       "file_type": "code",
       "source_file": "bootstrap/providers.php",
       "source_location": "L1",
-      "community": 54,
+      "community": 56,
       "norm_label": "providers.php",
       "id": "bootstrap_providers_php"
     },
@@ -602,7 +602,7 @@
       "file_type": "code",
       "source_file": "bootstrap/cache/services.php",
       "source_location": "L1",
-      "community": 55,
+      "community": 57,
       "norm_label": "services.php",
       "id": "bootstrap_cache_services_php"
     },
@@ -611,7 +611,7 @@
       "file_type": "code",
       "source_file": "bootstrap/cache/packages.php",
       "source_location": "L1",
-      "community": 56,
+      "community": 58,
       "norm_label": "packages.php",
       "id": "bootstrap_cache_packages_php"
     },
@@ -1556,7 +1556,7 @@
       "file_type": "code",
       "source_file": "app/Http/Controllers/Controller.php",
       "source_location": "L1",
-      "community": 45,
+      "community": 47,
       "norm_label": "controller.php",
       "id": "app_http_controllers_controller_php"
     },
@@ -1565,7 +1565,7 @@
       "file_type": "code",
       "source_file": "app/Http/Controllers/Controller.php",
       "source_location": "L5",
-      "community": 45,
+      "community": 47,
       "norm_label": "controller",
       "id": "controllers_controller_controller"
     },
@@ -1574,7 +1574,7 @@
       "file_type": "code",
       "source_file": "config/filament-shield.php",
       "source_location": "L1",
-      "community": 57,
+      "community": 59,
       "norm_label": "filament-shield.php",
       "id": "config_filament_shield_php"
     },
@@ -1583,7 +1583,7 @@
       "file_type": "code",
       "source_file": "config/auth.php",
       "source_location": "L1",
-      "community": 58,
+      "community": 60,
       "norm_label": "auth.php",
       "id": "config_auth_php"
     },
@@ -1592,7 +1592,7 @@
       "file_type": "code",
       "source_file": "config/app.php",
       "source_location": "L1",
-      "community": 59,
+      "community": 61,
       "norm_label": "app.php",
       "id": "config_app_php"
     },
@@ -1601,7 +1601,7 @@
       "file_type": "code",
       "source_file": "config/filament-logger.php",
       "source_location": "L1",
-      "community": 60,
+      "community": 62,
       "norm_label": "filament-logger.php",
       "id": "config_filament_logger_php"
     },
@@ -1610,7 +1610,7 @@
       "file_type": "code",
       "source_file": "config/mail.php",
       "source_location": "L1",
-      "community": 61,
+      "community": 63,
       "norm_label": "mail.php",
       "id": "config_mail_php"
     },
@@ -1619,7 +1619,7 @@
       "file_type": "code",
       "source_file": "config/services.php",
       "source_location": "L1",
-      "community": 62,
+      "community": 64,
       "norm_label": "services.php",
       "id": "config_services_php"
     },
@@ -1628,7 +1628,7 @@
       "file_type": "code",
       "source_file": "config/database.php",
       "source_location": "L1",
-      "community": 63,
+      "community": 65,
       "norm_label": "database.php",
       "id": "config_database_php"
     },
@@ -1637,7 +1637,7 @@
       "file_type": "code",
       "source_file": "config/cache.php",
       "source_location": "L1",
-      "community": 64,
+      "community": 66,
       "norm_label": "cache.php",
       "id": "config_cache_php"
     },
@@ -1646,7 +1646,7 @@
       "file_type": "code",
       "source_file": "config/session.php",
       "source_location": "L1",
-      "community": 65,
+      "community": 67,
       "norm_label": "session.php",
       "id": "config_session_php"
     },
@@ -1655,7 +1655,7 @@
       "file_type": "code",
       "source_file": "config/queue.php",
       "source_location": "L1",
-      "community": 66,
+      "community": 68,
       "norm_label": "queue.php",
       "id": "config_queue_php"
     },
@@ -1664,7 +1664,7 @@
       "file_type": "code",
       "source_file": "config/logging.php",
       "source_location": "L1",
-      "community": 67,
+      "community": 69,
       "norm_label": "logging.php",
       "id": "config_logging_php"
     },
@@ -1673,7 +1673,7 @@
       "file_type": "code",
       "source_file": "config/permission.php",
       "source_location": "L1",
-      "community": 68,
+      "community": 70,
       "norm_label": "permission.php",
       "id": "config_permission_php"
     },
@@ -1682,7 +1682,7 @@
       "file_type": "code",
       "source_file": "config/filesystems.php",
       "source_location": "L1",
-      "community": 69,
+      "community": 71,
       "norm_label": "filesystems.php",
       "id": "config_filesystems_php"
     },
@@ -1691,7 +1691,7 @@
       "file_type": "code",
       "source_file": "resources/js/app.js",
       "source_location": "L1",
-      "community": 70,
+      "community": 72,
       "norm_label": "app.js",
       "id": "resources_js_app_js"
     },
@@ -1700,7 +1700,7 @@
       "file_type": "code",
       "source_file": "resources/views/welcome.blade.php",
       "source_location": null,
-      "community": 71,
+      "community": 73,
       "norm_label": "welcome.blade.php",
       "id": "resources_views_welcome_blade_php"
     },
@@ -1709,7 +1709,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/components/browser-sessions-list.blade.php",
       "source_location": null,
-      "community": 72,
+      "community": 74,
       "norm_label": "browser-sessions-list.blade.php",
       "id": "resources_views_vendor_filament_breezy_components_browser_sessions_list_blade_php"
     },
@@ -1718,7 +1718,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/components/clipboard-link.blade.php",
       "source_location": null,
-      "community": 73,
+      "community": 75,
       "norm_label": "clipboard-link.blade.php",
       "id": "resources_views_vendor_filament_breezy_components_clipboard_link_blade_php"
     },
@@ -1727,7 +1727,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/livewire/browser-sessions.blade.php",
       "source_location": null,
-      "community": 74,
+      "community": 76,
       "norm_label": "browser-sessions.blade.php",
       "id": "resources_views_vendor_filament_breezy_livewire_browser_sessions_blade_php"
     },
@@ -1736,7 +1736,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/livewire/two-factor-authentication.blade.php",
       "source_location": null,
-      "community": 75,
+      "community": 77,
       "norm_label": "two-factor-authentication.blade.php",
       "id": "resources_views_vendor_filament_breezy_livewire_two_factor_authentication_blade_php"
     },
@@ -1745,7 +1745,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys.blade.php",
       "source_location": null,
-      "community": 46,
+      "community": 48,
       "norm_label": "passkeys.blade.php",
       "id": "resources_views_vendor_filament_breezy_livewire_passkeys_blade_php"
     },
@@ -1754,7 +1754,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys.blade.php",
       "source_location": null,
-      "community": 46,
+      "community": 48,
       "norm_label": "filament-breezy::livewire.passkeys.create-script",
       "id": "filament_breezy_livewire_passkeys_create_script"
     },
@@ -1790,7 +1790,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/livewire/personal-info.blade.php",
       "source_location": null,
-      "community": 76,
+      "community": 78,
       "norm_label": "personal-info.blade.php",
       "id": "resources_views_vendor_filament_breezy_livewire_personal_info_blade_php"
     },
@@ -1799,7 +1799,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys/create-script.blade.php",
       "source_location": null,
-      "community": 77,
+      "community": 79,
       "norm_label": "create-script.blade.php",
       "id": "resources_views_vendor_filament_breezy_livewire_passkeys_create_script_blade_php"
     },
@@ -1808,7 +1808,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/livewire/passkeys/authenticate-script.blade.php",
       "source_location": null,
-      "community": 78,
+      "community": 80,
       "norm_label": "authenticate-script.blade.php",
       "id": "resources_views_vendor_filament_breezy_livewire_passkeys_authenticate_script_blade_php"
     },
@@ -1817,7 +1817,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/filament/forms/action.blade.php",
       "source_location": null,
-      "community": 79,
+      "community": 81,
       "norm_label": "action.blade.php",
       "id": "resources_views_vendor_filament_breezy_filament_forms_action_blade_php"
     },
@@ -1826,7 +1826,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/filament/pages/two-factor.blade.php",
       "source_location": null,
-      "community": 80,
+      "community": 82,
       "norm_label": "two-factor.blade.php",
       "id": "resources_views_vendor_filament_breezy_filament_pages_two_factor_blade_php"
     },
@@ -1835,7 +1835,7 @@
       "file_type": "code",
       "source_file": "resources/views/vendor/filament-breezy/filament/pages/my-profile.blade.php",
       "source_location": null,
-      "community": 81,
+      "community": 83,
       "norm_label": "my-profile.blade.php",
       "id": "resources_views_vendor_filament_breezy_filament_pages_my_profile_blade_php"
     },
@@ -1844,7 +1844,7 @@
       "file_type": "code",
       "source_file": "tests/Pest.php",
       "source_location": "L1",
-      "community": 47,
+      "community": 49,
       "norm_label": "pest.php",
       "id": "tests_pest_php"
     },
@@ -1853,7 +1853,7 @@
       "file_type": "code",
       "source_file": "tests/Pest.php",
       "source_location": "L47",
-      "community": 47,
+      "community": 49,
       "norm_label": "something()",
       "id": "tests_pest_something"
     },
@@ -1862,7 +1862,7 @@
       "file_type": "code",
       "source_file": "tests/TestCase.php",
       "source_location": "L1",
-      "community": 48,
+      "community": 50,
       "norm_label": "testcase.php",
       "id": "tests_testcase_php"
     },
@@ -1871,7 +1871,7 @@
       "file_type": "code",
       "source_file": "tests/TestCase.php",
       "source_location": "L7",
-      "community": 48,
+      "community": 50,
       "norm_label": "testcase",
       "id": "tests_testcase_testcase"
     },
@@ -1880,7 +1880,7 @@
       "file_type": "code",
       "source_file": "tests/Unit/ExampleTest.php",
       "source_location": "L1",
-      "community": 82,
+      "community": 84,
       "norm_label": "exampletest.php",
       "id": "tests_unit_exampletest_php"
     },
@@ -1889,7 +1889,7 @@
       "file_type": "code",
       "source_file": "tests/Feature/ExampleTest.php",
       "source_location": "L1",
-      "community": 83,
+      "community": 85,
       "norm_label": "exampletest.php",
       "id": "tests_feature_exampletest_php"
     },
@@ -1898,7 +1898,7 @@
       "file_type": "code",
       "source_file": "routes/console.php",
       "source_location": "L1",
-      "community": 84,
+      "community": 86,
       "norm_label": "console.php",
       "id": "routes_console_php"
     },
@@ -1907,7 +1907,7 @@
       "file_type": "code",
       "source_file": "routes/web.php",
       "source_location": "L1",
-      "community": 85,
+      "community": 87,
       "norm_label": "web.php",
       "id": "routes_web_php"
     },
@@ -1920,7 +1920,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 86,
+      "community": 88,
       "norm_label": "vite configuration",
       "id": "vite_config"
     },
@@ -1985,7 +1985,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 87,
+      "community": 89,
       "norm_label": "create cache table migration",
       "id": "migration_cache_table"
     },
@@ -2011,7 +2011,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 88,
+      "community": 90,
       "norm_label": "create jobs table migration",
       "id": "migration_jobs_table"
     },
@@ -2050,7 +2050,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 49,
+      "community": 51,
       "norm_label": "create permission tables migration (spatie)",
       "id": "migration_permission_tables"
     },
@@ -2115,7 +2115,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 49,
+      "community": 51,
       "norm_label": "shieldseeder - filament shield roles/permissions seeder",
       "id": "seeder_shield"
     },
@@ -2481,7 +2481,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 89,
+      "community": 91,
       "norm_label": "base controller",
       "id": "controller_base"
     },
@@ -2533,7 +2533,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 40,
+      "community": 41,
       "norm_label": "app config",
       "id": "config_app"
     },
@@ -2546,7 +2546,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 50,
+      "community": 52,
       "norm_label": "filament logger config",
       "id": "config_filament_logger"
     },
@@ -2559,7 +2559,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 50,
+      "community": 52,
       "norm_label": "filamentlogger activityresource",
       "id": "filament_logger_activity_resource"
     },
@@ -2572,7 +2572,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 41,
+      "community": 40,
       "norm_label": "mail config",
       "id": "config_mail"
     },
@@ -2585,7 +2585,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 41,
+      "community": 40,
       "norm_label": "services config",
       "id": "config_services"
     },
@@ -2612,7 +2612,7 @@
       "author": null,
       "contributor": null,
       "rationale": "SQLite is configured as the default DB driver, making local dev and testing simpler without needing a separate database server.",
-      "community": 90,
+      "community": 92,
       "norm_label": "sqlite database driver (default)",
       "id": "db_driver_sqlite"
     },
@@ -2678,7 +2678,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 41,
+      "community": 40,
       "norm_label": "logging config",
       "id": "config_logging"
     },
@@ -2744,7 +2744,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 40,
+      "community": 41,
       "norm_label": "filesystems config",
       "id": "config_filesystems"
     },
@@ -2757,7 +2757,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 40,
+      "community": 41,
       "norm_label": "welcome blade view",
       "id": "welcome_view"
     },
@@ -2926,7 +2926,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 91,
+      "community": 93,
       "norm_label": "filament forms action blade (sticky actions)",
       "id": "filament_forms_action_blade"
     },
@@ -3004,7 +3004,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 92,
+      "community": 94,
       "norm_label": "unit exampletest",
       "id": "unit_example_test"
     },
@@ -3030,7 +3030,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 51,
+      "community": 53,
       "norm_label": "console routes (inspire command)",
       "id": "routes_console"
     },
@@ -3043,7 +3043,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 51,
+      "community": 53,
       "norm_label": "web routes",
       "id": "routes_web"
     },
@@ -3082,7 +3082,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 93,
+      "community": 95,
       "norm_label": "frontend app entry (app.js)",
       "id": "app_js"
     },
@@ -3342,7 +3342,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 94,
+      "community": 96,
       "norm_label": "laravel/pail v1",
       "id": "pkg_laravel_pail"
     },
@@ -3416,180 +3416,234 @@
       "file_type": "code",
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L1",
-      "id": "app_filament_widgets_agendacalendarwidget_php",
       "community": 9,
-      "norm_label": "agendacalendarwidget.php"
+      "norm_label": "agendacalendarwidget.php",
+      "id": "app_filament_widgets_agendacalendarwidget_php"
     },
     {
       "label": "AgendaCalendarWidget",
       "file_type": "code",
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L19",
-      "id": "widgets_agendacalendarwidget_agendacalendarwidget",
       "community": 9,
-      "norm_label": "agendacalendarwidget"
+      "norm_label": "agendacalendarwidget",
+      "id": "widgets_agendacalendarwidget_agendacalendarwidget"
     },
     {
       "label": ".fetchEvents()",
       "file_type": "code",
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L23",
-      "id": "widgets_agendacalendarwidget_agendacalendarwidget_fetchevents",
       "community": 9,
-      "norm_label": ".fetchevents()"
+      "norm_label": ".fetchevents()",
+      "id": "widgets_agendacalendarwidget_agendacalendarwidget_fetchevents"
     },
     {
       "label": ".getFormSchema()",
       "file_type": "code",
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L45",
-      "id": "widgets_agendacalendarwidget_agendacalendarwidget_getformschema",
       "community": 9,
-      "norm_label": ".getformschema()"
+      "norm_label": ".getformschema()",
+      "id": "widgets_agendacalendarwidget_agendacalendarwidget_getformschema"
     },
     {
       "label": ".headerActions()",
       "file_type": "code",
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L84",
-      "id": "widgets_agendacalendarwidget_agendacalendarwidget_headeractions",
       "community": 9,
-      "norm_label": ".headeractions()"
+      "norm_label": ".headeractions()",
+      "id": "widgets_agendacalendarwidget_agendacalendarwidget_headeractions"
     },
     {
       "label": ".modalActions()",
       "file_type": "code",
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L91",
-      "id": "widgets_agendacalendarwidget_agendacalendarwidget_modalactions",
       "community": 9,
-      "norm_label": ".modalactions()"
+      "norm_label": ".modalactions()",
+      "id": "widgets_agendacalendarwidget_agendacalendarwidget_modalactions"
     },
     {
       "label": "Agenda.php",
       "file_type": "code",
       "source_file": "app/Models/Agenda.php",
       "source_location": "L1",
-      "id": "app_models_agenda_php",
       "community": 9,
-      "norm_label": "agenda.php"
+      "norm_label": "agenda.php",
+      "id": "app_models_agenda_php"
     },
     {
       "label": "Agenda",
       "file_type": "code",
       "source_file": "app/Models/Agenda.php",
       "source_location": "L10",
-      "id": "models_agenda_agenda",
       "community": 9,
-      "norm_label": "agenda"
+      "norm_label": "agenda",
+      "id": "models_agenda_agenda"
     },
     {
       "label": ".casts()",
       "file_type": "code",
       "source_file": "app/Models/Agenda.php",
       "source_location": "L16",
-      "id": "models_agenda_agenda_casts",
       "community": 9,
-      "norm_label": ".casts()"
+      "norm_label": ".casts()",
+      "id": "models_agenda_agenda_casts"
     },
     {
       "label": "AgendaFactory.php",
       "file_type": "code",
       "source_file": "database/factories/AgendaFactory.php",
       "source_location": "L1",
-      "id": "database_factories_agendafactory_php",
       "community": 17,
-      "norm_label": "agendafactory.php"
+      "norm_label": "agendafactory.php",
+      "id": "database_factories_agendafactory_php"
     },
     {
       "label": "AgendaFactory",
       "file_type": "code",
       "source_file": "database/factories/AgendaFactory.php",
       "source_location": "L11",
-      "id": "factories_agendafactory_agendafactory",
       "community": 17,
-      "norm_label": "agendafactory"
+      "norm_label": "agendafactory",
+      "id": "factories_agendafactory_agendafactory"
     },
     {
       "label": ".definition()",
       "file_type": "code",
       "source_file": "database/factories/AgendaFactory.php",
       "source_location": "L18",
-      "id": "factories_agendafactory_agendafactory_definition",
       "community": 17,
-      "norm_label": ".definition()"
+      "norm_label": ".definition()",
+      "id": "factories_agendafactory_agendafactory_definition"
     },
     {
       "label": ".allDay()",
       "file_type": "code",
       "source_file": "database/factories/AgendaFactory.php",
       "source_location": "L34",
-      "id": "factories_agendafactory_agendafactory_allday",
       "community": 17,
-      "norm_label": ".allday()"
+      "norm_label": ".allday()",
+      "id": "factories_agendafactory_agendafactory_allday"
     },
     {
       "label": ".upcoming()",
       "file_type": "code",
       "source_file": "database/factories/AgendaFactory.php",
       "source_location": "L42",
-      "id": "factories_agendafactory_agendafactory_upcoming",
       "community": 17,
-      "norm_label": ".upcoming()"
+      "norm_label": ".upcoming()",
+      "id": "factories_agendafactory_agendafactory_upcoming"
     },
     {
       "label": "2026_05_06_173646_create_agendas_table.php",
       "file_type": "code",
       "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
       "source_location": "L1",
-      "id": "database_migrations_2026_05_06_173646_create_agendas_table_php",
       "community": 43,
-      "norm_label": "2026_05_06_173646_create_agendas_table.php"
+      "norm_label": "2026_05_06_173646_create_agendas_table.php",
+      "id": "database_migrations_2026_05_06_173646_create_agendas_table_php"
     },
     {
       "label": "up()",
       "file_type": "code",
       "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
       "source_location": "L12",
-      "id": "migrations_2026_05_06_173646_create_agendas_table_up",
       "community": 43,
-      "norm_label": "up()"
+      "norm_label": "up()",
+      "id": "migrations_2026_05_06_173646_create_agendas_table_up"
     },
     {
       "label": "down()",
       "file_type": "code",
       "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
       "source_location": "L30",
-      "id": "migrations_2026_05_06_173646_create_agendas_table_down",
       "community": 43,
-      "norm_label": "down()"
+      "norm_label": "down()",
+      "id": "migrations_2026_05_06_173646_create_agendas_table_down"
     },
     {
       "label": "AdminPanelProvider.php",
       "file_type": "code",
       "source_file": "app/Providers/Filament/AdminPanelProvider.php",
       "source_location": "L1",
-      "id": "app_providers_filament_adminpanelprovider_php",
       "community": 44,
-      "norm_label": "adminpanelprovider.php"
+      "norm_label": "adminpanelprovider.php",
+      "id": "app_providers_filament_adminpanelprovider_php"
     },
     {
       "label": "AdminPanelProvider",
       "file_type": "code",
       "source_file": "app/Providers/Filament/AdminPanelProvider.php",
       "source_location": "L31",
-      "id": "filament_adminpanelprovider_adminpanelprovider",
       "community": 44,
-      "norm_label": "adminpanelprovider"
+      "norm_label": "adminpanelprovider",
+      "id": "filament_adminpanelprovider_adminpanelprovider"
     },
     {
       "label": ".panel()",
       "file_type": "code",
       "source_file": "app/Providers/Filament/AdminPanelProvider.php",
       "source_location": "L33",
-      "id": "filament_adminpanelprovider_adminpanelprovider_panel",
       "community": 44,
-      "norm_label": ".panel()"
+      "norm_label": ".panel()",
+      "id": "filament_adminpanelprovider_adminpanelprovider_panel"
+    },
+    {
+      "label": "AgendaTimelineWidget.php",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaTimelineWidget.php",
+      "source_location": "L1",
+      "id": "app_filament_widgets_agendatimelinewidget_php",
+      "community": 45,
+      "norm_label": "agendatimelinewidget.php"
+    },
+    {
+      "label": "AgendaTimelineWidget",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaTimelineWidget.php",
+      "source_location": "L11",
+      "id": "widgets_agendatimelinewidget_agendatimelinewidget",
+      "community": 45,
+      "norm_label": "agendatimelinewidget"
+    },
+    {
+      "label": ".table()",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaTimelineWidget.php",
+      "source_location": "L17",
+      "id": "widgets_agendatimelinewidget_agendatimelinewidget_table",
+      "community": 45,
+      "norm_label": ".table()"
+    },
+    {
+      "label": "AgendaDoubleSidedTimelineWidget.php",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaDoubleSidedTimelineWidget.php",
+      "source_location": "L1",
+      "id": "app_filament_widgets_agendadoublesidedtimelinewidget_php",
+      "community": 46,
+      "norm_label": "agendadoublesidedtimelinewidget.php"
+    },
+    {
+      "label": "AgendaDoubleSidedTimelineWidget",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaDoubleSidedTimelineWidget.php",
+      "source_location": "L11",
+      "id": "widgets_agendadoublesidedtimelinewidget_agendadoublesidedtimelinewidget",
+      "community": 46,
+      "norm_label": "agendadoublesidedtimelinewidget"
+    },
+    {
+      "label": ".table()",
+      "file_type": "code",
+      "source_file": "app/Filament/Widgets/AgendaDoubleSidedTimelineWidget.php",
+      "source_location": "L17",
+      "id": "widgets_agendadoublesidedtimelinewidget_agendadoublesidedtimelinewidget_table",
+      "community": 46,
+      "norm_label": ".table()"
     }
   ],
   "links": [
@@ -6511,9 +6565,9 @@
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_filament_widgets_agendacalendarwidget_php",
-      "target": "widgets_agendacalendarwidget_agendacalendarwidget",
-      "confidence_score": 1.0
+      "target": "widgets_agendacalendarwidget_agendacalendarwidget"
     },
     {
       "relation": "method",
@@ -6521,9 +6575,9 @@
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "widgets_agendacalendarwidget_agendacalendarwidget",
-      "target": "widgets_agendacalendarwidget_agendacalendarwidget_fetchevents",
-      "confidence_score": 1.0
+      "target": "widgets_agendacalendarwidget_agendacalendarwidget_fetchevents"
     },
     {
       "relation": "method",
@@ -6531,9 +6585,9 @@
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "widgets_agendacalendarwidget_agendacalendarwidget",
-      "target": "widgets_agendacalendarwidget_agendacalendarwidget_getformschema",
-      "confidence_score": 1.0
+      "target": "widgets_agendacalendarwidget_agendacalendarwidget_getformschema"
     },
     {
       "relation": "method",
@@ -6541,9 +6595,9 @@
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "widgets_agendacalendarwidget_agendacalendarwidget",
-      "target": "widgets_agendacalendarwidget_agendacalendarwidget_headeractions",
-      "confidence_score": 1.0
+      "target": "widgets_agendacalendarwidget_agendacalendarwidget_headeractions"
     },
     {
       "relation": "method",
@@ -6551,9 +6605,9 @@
       "source_file": "app/Filament/Widgets/AgendaCalendarWidget.php",
       "source_location": "L91",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "widgets_agendacalendarwidget_agendacalendarwidget",
-      "target": "widgets_agendacalendarwidget_agendacalendarwidget_modalactions",
-      "confidence_score": 1.0
+      "target": "widgets_agendacalendarwidget_agendacalendarwidget_modalactions"
     },
     {
       "relation": "calls",
@@ -6572,9 +6626,9 @@
       "source_file": "app/Models/Agenda.php",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_models_agenda_php",
-      "target": "models_agenda_agenda",
-      "confidence_score": 1.0
+      "target": "models_agenda_agenda"
     },
     {
       "relation": "method",
@@ -6582,9 +6636,9 @@
       "source_file": "app/Models/Agenda.php",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "models_agenda_agenda",
-      "target": "models_agenda_agenda_casts",
-      "confidence_score": 1.0
+      "target": "models_agenda_agenda_casts"
     },
     {
       "relation": "contains",
@@ -6592,9 +6646,9 @@
       "source_file": "database/factories/AgendaFactory.php",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "database_factories_agendafactory_php",
-      "target": "factories_agendafactory_agendafactory",
-      "confidence_score": 1.0
+      "target": "factories_agendafactory_agendafactory"
     },
     {
       "relation": "method",
@@ -6602,9 +6656,9 @@
       "source_file": "database/factories/AgendaFactory.php",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "factories_agendafactory_agendafactory",
-      "target": "factories_agendafactory_agendafactory_definition",
-      "confidence_score": 1.0
+      "target": "factories_agendafactory_agendafactory_definition"
     },
     {
       "relation": "method",
@@ -6612,9 +6666,9 @@
       "source_file": "database/factories/AgendaFactory.php",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "factories_agendafactory_agendafactory",
-      "target": "factories_agendafactory_agendafactory_allday",
-      "confidence_score": 1.0
+      "target": "factories_agendafactory_agendafactory_allday"
     },
     {
       "relation": "method",
@@ -6622,9 +6676,9 @@
       "source_file": "database/factories/AgendaFactory.php",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "factories_agendafactory_agendafactory",
-      "target": "factories_agendafactory_agendafactory_upcoming",
-      "confidence_score": 1.0
+      "target": "factories_agendafactory_agendafactory_upcoming"
     },
     {
       "relation": "contains",
@@ -6632,9 +6686,9 @@
       "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_05_06_173646_create_agendas_table_php",
-      "target": "migrations_2026_05_06_173646_create_agendas_table_up",
-      "confidence_score": 1.0
+      "target": "migrations_2026_05_06_173646_create_agendas_table_up"
     },
     {
       "relation": "contains",
@@ -6642,9 +6696,9 @@
       "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "database_migrations_2026_05_06_173646_create_agendas_table_php",
-      "target": "migrations_2026_05_06_173646_create_agendas_table_down",
-      "confidence_score": 1.0
+      "target": "migrations_2026_05_06_173646_create_agendas_table_down"
     },
     {
       "relation": "contains",
@@ -6652,9 +6706,9 @@
       "source_file": "app/Providers/Filament/AdminPanelProvider.php",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_providers_filament_adminpanelprovider_php",
-      "target": "filament_adminpanelprovider_adminpanelprovider",
-      "confidence_score": 1.0
+      "target": "filament_adminpanelprovider_adminpanelprovider"
     },
     {
       "relation": "method",
@@ -6662,11 +6716,51 @@
       "source_file": "app/Providers/Filament/AdminPanelProvider.php",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "filament_adminpanelprovider_adminpanelprovider",
-      "target": "filament_adminpanelprovider_adminpanelprovider_panel",
+      "target": "filament_adminpanelprovider_adminpanelprovider_panel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaTimelineWidget.php",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "app_filament_widgets_agendatimelinewidget_php",
+      "target": "widgets_agendatimelinewidget_agendatimelinewidget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaTimelineWidget.php",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "widgets_agendatimelinewidget_agendatimelinewidget",
+      "target": "widgets_agendatimelinewidget_agendatimelinewidget_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaDoubleSidedTimelineWidget.php",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "app_filament_widgets_agendadoublesidedtimelinewidget_php",
+      "target": "widgets_agendadoublesidedtimelinewidget_agendadoublesidedtimelinewidget",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Widgets/AgendaDoubleSidedTimelineWidget.php",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "widgets_agendadoublesidedtimelinewidget_agendadoublesidedtimelinewidget",
+      "target": "widgets_agendadoublesidedtimelinewidget_agendadoublesidedtimelinewidget_table",
       "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e04996f11e509f820c627116016a0eeaee32ef2b"
+  "built_at_commit": "aa71a4f87de5fa3b0c0c48571d9c94de725ba1bd"
 }

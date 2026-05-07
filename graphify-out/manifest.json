@@ -303,5 +303,7 @@
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_05_06_173646_create_agendas_table.php": 1778089785.7635627,
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/factories/AgendaFactory.php": 1778089785.7633872,
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Models/Agenda.php": 1778089785.7629614,
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaCalendarWidget.php": 1778089785.7627437
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaCalendarWidget.php": 1778089785.7627437,
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaTimelineWidget.php": 1778177793.539955,
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaDoubleSidedTimelineWidget.php": 1778177803.4597309
 }
