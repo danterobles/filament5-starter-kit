@@ -3,10 +3,6 @@
     "mtime": 1776714647.693452,
     "hash": "f14d135d7fee9e462d362f49733801de"
   },
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/artisan": {
-    "mtime": 1776455324.6283534,
-    "hash": "e66bb13691f6184c762c196427d8e685"
-  },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_04_20_194024_create_breezy_sessions_table.php": {
     "mtime": 1776714647.6853793,
     "hash": "ded13d00853f176352ef4aab98c21a36"
@@ -26,6 +22,10 @@
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_04_20_191121_add_event_column_to_activity_log_table.php": {
     "mtime": 1776712669.7417476,
     "hash": "3f18b838909be7ffc3e3bfba3ab59a8e"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_05_06_173646_create_agendas_table.php": {
+    "mtime": 1778089785.7635627,
+    "hash": "08c476b4850db66dce08b769f951d40b"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/0001_01_01_000002_create_jobs_table.php": {
     "mtime": 1776455324.6308157,
@@ -67,42 +67,37 @@
     "mtime": 1777938825.3756998,
     "hash": "4e4dd59bbb15a1463fc4e6d0596af0e6"
   },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/factories/AgendaFactory.php": {
+    "mtime": 1778089785.7633872,
+    "hash": "6cbe0cd1cb7e9f1c354694669d830041"
+  },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/factories/TaskFactory.php": {
     "mtime": 1777938825.3749838,
     "hash": "f032f8412f6fc42909e62287d56b3db0"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/factories/UserFactory.php": {
-    "mtime": 1776455324.630535,
-    "hash": "1c9f381f9c2bc3027971a3bfdbe99164"
-  },
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/bootstrap/app.php": {
-    "mtime": 1776455324.6285443,
-    "hash": "d98cb8343b14d080523decff545f5fc8"
-  },
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/bootstrap/providers.php": {
-    "mtime": 1776455324.6287465,
-    "hash": "607aa0bfa40bdaba26371d1dbc4d3219"
-  },
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/bootstrap/cache/services.php": {
-    "mtime": 1778027664.4486773,
-    "hash": "d19332e8fb07285de2f0541dd7e68885"
-  },
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/bootstrap/cache/packages.php": {
-    "mtime": 1778027664.5458555,
-    "hash": "f79e558439746ebaa78d4404d297c49f"
+    "mtime": 1778179186.516381,
+    "hash": "da448c50916b266b91d84f879fd3ab35"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Providers/AppServiceProvider.php": {
     "mtime": 1776455324.6281645,
     "hash": "c0094f35cad6bba7636002a62186dae4"
   },
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Providers/Filament/AdminPanelProvider.php": 1778089785.7632244,
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Providers/Filament/AdminPanelProvider.php": {
+    "mtime": 1778179946.0636053,
+    "hash": "41b0093159f8e7acbabca55e33441f1c"
+  },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Models/User.php": {
-    "mtime": 1777938825.3745513,
-    "hash": "6d57cc58389249e3939470e3b8c78903"
+    "mtime": 1778179988.5665078,
+    "hash": "0d682b74af4440e00cdb0b84931a0c20"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Models/Task.php": {
     "mtime": 1777938825.3743522,
     "hash": "8fa987f55407db0c82ca5760269d640d"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Models/Agenda.php": {
+    "mtime": 1778089785.7629614,
+    "hash": "71da7e8c52364acb9f548a7c3e2e8579"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Policies/RolePolicy.php": {
     "mtime": 1777155063.76554,
@@ -113,48 +108,60 @@
     "hash": "be782b1e5dce5ae055dcd616eb7bf3f0"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Livewire/CustomPersonalInfo.php": {
-    "mtime": 1776896807.2637038,
-    "hash": "fb5f56049d6dd6c9bf71d32db6ff290d"
+    "mtime": 1778179715.3744879,
+    "hash": "66e311c81024b3dece4393b0dbe00cbe"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/UserResource.php": {
-    "mtime": 1777406207.0461698,
-    "hash": "49a1e67252b3350cf578aad0c7679027"
+    "mtime": 1778179674.2993414,
+    "hash": "bda482fc71b400f7ffabc53e3822af9c"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Tables/UsersTable.php": {
-    "mtime": 1777406748.019573,
-    "hash": "4f2196cac5aac396dcc688d0d272063d"
+    "mtime": 1778179700.2976444,
+    "hash": "5ef5563fce5953eba1cb74151af5b8c0"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Schemas/UserForm.php": {
-    "mtime": 1777406207.0457547,
-    "hash": "357137ecf92bd32232bdccb6343f8a9b"
+    "mtime": 1778179968.780023,
+    "hash": "1fff36db0a4bbad3936124e0dd72f244"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Pages/ListUsers.php": {
     "mtime": 1777406207.0454795,
     "hash": "1c98c65b8fe3abbc29aecf470988c381"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Pages/EditUser.php": {
-    "mtime": 1777406207.0453372,
-    "hash": "87d7e750563df8d8fd5abe09ecdb4cf1"
+    "mtime": 1778178816.0056498,
+    "hash": "d73182a75dda83dadfa82f5603454c69"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Pages/CreateUser.php": {
-    "mtime": 1777406207.0451822,
-    "hash": "594a021d26ce3d7c95ed7a589f2a1143"
+    "mtime": 1778179715.5679076,
+    "hash": "2566ddb1217c102eff357ae7c1026289"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Widgets/UserGrowthChart.php": {
-    "mtime": 1777938825.3737907,
-    "hash": "d3fadbff36e5e13d181328b94eba5e50"
+    "mtime": 1778179494.176645,
+    "hash": "47efbae4530ed23de3ee40357f284d3f"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Widgets/LatestUsersTable.php": {
     "mtime": 1777406207.046367,
     "hash": "69ee0692aefe990c4b189f670c33fd2d"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Widgets/UserStatsOverview.php": {
-    "mtime": 1777938825.3741312,
-    "hash": "08e132d2cd5ac86622221aa423452682"
+    "mtime": 1778179483.450054,
+    "hash": "e9d3328bb97387d276d4ba63118ded39"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Pages/TaskBoard.php": {
-    "mtime": 1777922552.676684,
-    "hash": "a17436f6781f0f3459858e0e1847ba65"
+    "mtime": 1778180008.0010831,
+    "hash": "465353d7f0172e7e0aada8941d9089d0"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaTimelineWidget.php": {
+    "mtime": 1778178092.2290642,
+    "hash": "582e5f8928d5ee9d66b51a2c876db09f"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaDoubleSidedTimelineWidget.php": {
+    "mtime": 1778178092.2288783,
+    "hash": "a0e053c36bcc2bb7ff1fa3d7f44d08bc"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaCalendarWidget.php": {
+    "mtime": 1778089785.7627437,
+    "hash": "767d17e1b0f30607ed267867380925d3"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Http/Controllers/Controller.php": {
     "mtime": 1776455324.627926,
@@ -280,9 +287,29 @@
     "mtime": 1776455324.6456134,
     "hash": "2bc41f1156dead26b2a3082f9634b041"
   },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Feature/UserModelTest.php": {
+    "mtime": 1778179983.7447603,
+    "hash": "1950817e2b07cdafee9d9ad6ca26ec64"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Feature/UserResourceTest.php": {
+    "mtime": 1778179294.4298873,
+    "hash": "ae981eb3dad607512e74f11b03ff02be"
+  },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Feature/ExampleTest.php": {
     "mtime": 1776455324.645368,
     "hash": "ae3435cba767f333cd40212d368cbc53"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Feature/Policies/RolePolicyTest.php": {
+    "mtime": 1778179294.463238,
+    "hash": "4a5d4845f076b18669abd48d036d6814"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Feature/Policies/ActivityPolicyTest.php": {
+    "mtime": 1778179294.494514,
+    "hash": "bd877490b2d17410154850d5fa64e904"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Feature/Widgets/UserStatsOverviewTest.php": {
+    "mtime": 1778179249.5617774,
+    "hash": "1136454964536ffc9ffe324317e799d5"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/routes/console.php": {
     "mtime": 1776455324.6439002,
@@ -292,18 +319,12 @@
     "mtime": 1776455324.6439745,
     "hash": "84625c52e743b1a4178bb27b7afb3615"
   },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/MEJORAS_MAYO.md": {
+    "mtime": 1778180017.5926738,
+    "hash": "b45e4b112328edd303c4d0f017d6ea88"
+  },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/README.md": {
-    "mtime": 1778027892.8016376,
-    "hash": "cbf0f536eeea247789cd67932b9031f7"
-  },
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/CLAUDE.md": {
-    "mtime": 1778027666.456659,
-    "hash": "03546cf43fa72b5ca93af9860b2ff648"
-  },
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/migrations/2026_05_06_173646_create_agendas_table.php": 1778089785.7635627,
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/factories/AgendaFactory.php": 1778089785.7633872,
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Models/Agenda.php": 1778089785.7629614,
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaCalendarWidget.php": 1778089785.7627437,
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaTimelineWidget.php": 1778177793.539955,
-  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaDoubleSidedTimelineWidget.php": 1778177803.4597309
+    "mtime": 1778178092.228647,
+    "hash": "8784846efc4dca54f851edf902af44c9"
+  }
 }
