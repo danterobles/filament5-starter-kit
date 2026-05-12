@@ -30,6 +30,7 @@ El objetivo principal es tener una base lista para desorrollo acelarado, y que l
 | FullCalendar | [FullCalendar](https://filamentphp.com/plugins/saade-fullcalendar) | 4.0.0-beta7 |
 | Icon Picker | [IconPicker](https://filamentphp.com/plugins/guava-icon-picker) | 4.0.0 |
 | Timeline entry | [TimeLineEntry](https://filamentphp.com/plugins/devletes-timeline-view) | 1.0.0 |
+| Openpay | [OpenpayPHP](https://github.com/open-pay/openpay-php) | 1.4.0 |
 
 
 ## Requerimientos Mínimos
