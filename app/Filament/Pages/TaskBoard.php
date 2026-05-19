@@ -12,11 +12,27 @@ class TaskBoard extends BoardPage
 {
     protected static string|null|\BackedEnum $navigationIcon = 'heroicon-o-view-columns';
 
-    protected static ?string $navigationLabel = 'Task Board';
+    protected static ?int $navigationSort = 20;
 
-    protected static ?string $title = 'Task Board';
+    public static function getNavigationLabel(): string
+    {
+        return __('navigation.task_board.navigation_label');
+    }
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Gestión';
+    public static function getNavigationGroup(): ?string
+    {
+        return __('navigation.groups.management');
+    }
+
+    public function getTitle(): string
+    {
+        return __('navigation.task_board.title');
+    }
+
+    public static function canAccess(): bool
+    {
+        return auth()->user()?->can('page_TaskBoard') ?? false;
+    }
 
     public function board(Board $board): Board
     {

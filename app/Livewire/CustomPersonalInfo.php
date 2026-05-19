@@ -1,6 +1,6 @@
 <?php
-//Class for add custom fields to Breezy Profile Page
 
+// Class for add custom fields to Breezy Profile Page
 
 namespace App\Livewire;
 
@@ -50,7 +50,9 @@ class CustomPersonalInfo extends PersonalInfo
         return Forms\Components\TextInput::make('phone')
             ->label('Teléfono')
             ->tel()
-            ->maxLength(255);
+            ->maxLength(255)
+            ->placeholder('Ingrese el teléfono')
+            ->prefixIcon('heroicon-o-phone');
     }
 
     protected function getProfileFormSchema(): array
