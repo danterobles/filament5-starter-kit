@@ -100,9 +100,9 @@
     "semantic_hash": "045a59cf1093b4b6f1347c7f42ca72f2"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/seeders/ShieldSeeder.php": {
-    "mtime": 1777155063.7680058,
-    "ast_hash": "eeaacc5d8fac3768cd3817d4d7b0e9ea",
-    "semantic_hash": "eeaacc5d8fac3768cd3817d4d7b0e9ea"
+    "mtime": 1779215475.1525977,
+    "ast_hash": "a27d66198b237be597aa806c7c0d93f9",
+    "semantic_hash": "a27d66198b237be597aa806c7c0d93f9"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/database/seeders/DatabaseSeeder.php": {
     "mtime": 1777938825.3756998,
@@ -140,9 +140,9 @@
     "semantic_hash": "c0094f35cad6bba7636002a62186dae4"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Providers/Filament/AdminPanelProvider.php": {
-    "mtime": 1778181237.2412667,
-    "ast_hash": "41b0093159f8e7acbabca55e33441f1c",
-    "semantic_hash": "41b0093159f8e7acbabca55e33441f1c"
+    "mtime": 1779215449.070423,
+    "ast_hash": "3fccf040b340a750148ad506ab7d6faa",
+    "semantic_hash": "3fccf040b340a750148ad506ab7d6faa"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Models/User.php": {
     "mtime": 1778181237.241025,
@@ -170,14 +170,14 @@
     "semantic_hash": "be782b1e5dce5ae055dcd616eb7bf3f0"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Livewire/CustomPersonalInfo.php": {
-    "mtime": 1778269108.7853117,
-    "ast_hash": "f8657decd557908bb8669770577321f1",
-    "semantic_hash": "f8657decd557908bb8669770577321f1"
+    "mtime": 1779215475.1971798,
+    "ast_hash": "93733ca85dd9d2392d259554fb93bacd",
+    "semantic_hash": "93733ca85dd9d2392d259554fb93bacd"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/UserResource.php": {
-    "mtime": 1778181237.239962,
-    "ast_hash": "bda482fc71b400f7ffabc53e3822af9c",
-    "semantic_hash": "bda482fc71b400f7ffabc53e3822af9c"
+    "mtime": 1779215443.5084746,
+    "ast_hash": "fc54aa8edfbe085e3e48b718996a2b86",
+    "semantic_hash": "fc54aa8edfbe085e3e48b718996a2b86"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Tables/UsersTable.php": {
     "mtime": 1778181237.2398045,
@@ -210,9 +210,9 @@
     "semantic_hash": "47efbae4530ed23de3ee40357f284d3f"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Widgets/LatestUsersTable.php": {
-    "mtime": 1777406207.046367,
-    "ast_hash": "69ee0692aefe990c4b189f670c33fd2d",
-    "semantic_hash": "69ee0692aefe990c4b189f670c33fd2d"
+    "mtime": 1779214979.4316618,
+    "ast_hash": "5a897be3a5aa21954e91bac88cbe063e",
+    "semantic_hash": "5a897be3a5aa21954e91bac88cbe063e"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Widgets/UserStatsOverview.php": {
     "mtime": 1778181237.240262,
@@ -220,9 +220,9 @@
     "semantic_hash": "e9d3328bb97387d276d4ba63118ded39"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Pages/TaskBoard.php": {
-    "mtime": 1778181237.2390094,
-    "ast_hash": "465353d7f0172e7e0aada8941d9089d0",
-    "semantic_hash": "465353d7f0172e7e0aada8941d9089d0"
+    "mtime": 1779215487.2451258,
+    "ast_hash": "11e5072427af0c5b696940c23af1d3a1",
+    "semantic_hash": "11e5072427af0c5b696940c23af1d3a1"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaTimelineWidget.php": {
     "mtime": 1778181237.2405882,
@@ -370,9 +370,9 @@
     "semantic_hash": "1136454964536ffc9ffe324317e799d5"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/.claude/settings.json": {
-    "mtime": 1778181237.2376611,
-    "ast_hash": "9276b535256dc065bd7b8b84e15abd95",
-    "semantic_hash": "9276b535256dc065bd7b8b84e15abd95"
+    "mtime": 1779214044.0391738,
+    "ast_hash": "87f0d903477984d0587a02f8fe185263",
+    "semantic_hash": "87f0d903477984d0587a02f8fe185263"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/.claude/settings.local.json": {
     "mtime": 1779213329.5981634,
@@ -395,14 +395,14 @@
     "semantic_hash": "b45e4b112328edd303c4d0f017d6ea88"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/README.md": {
-    "mtime": 1778615231.5431714,
-    "ast_hash": "90e0db9ccea3f0239dfeefec2849eec7",
-    "semantic_hash": "90e0db9ccea3f0239dfeefec2849eec7"
+    "mtime": 1779215850.281837,
+    "ast_hash": "20fa1008251c1dce42c1b2060dfab3fe",
+    "semantic_hash": "20fa1008251c1dce42c1b2060dfab3fe"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/CLAUDE.md": {
-    "mtime": 1778615183.0126376,
-    "ast_hash": "01bceb4bfcdb632025e6949a749a164e",
-    "semantic_hash": "01bceb4bfcdb632025e6949a749a164e"
+    "mtime": 1779214044.0387692,
+    "ast_hash": "8397c0bc1a8e7927db38781f8e225535",
+    "semantic_hash": "8397c0bc1a8e7927db38781f8e225535"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/.claude/skills/tailwindcss-development/SKILL.md": {
     "mtime": 1778522756.610842,
@@ -523,5 +523,15 @@
     "mtime": 1778522756.6089222,
     "ast_hash": "c7e66199f3ca5170907e1de811846140",
     "semantic_hash": "c7e66199f3ca5170907e1de811846140"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Clusters/Users/UsersCluster.php": {
+    "mtime": 1779215428.6390333,
+    "ast_hash": "43347aa3892c4df2da5ff98b513ddd9f",
+    "semantic_hash": "43347aa3892c4df2da5ff98b513ddd9f"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/lang/es/navigation.php": {
+    "mtime": 1779215475.2446582,
+    "ast_hash": "336c1fb6556dc21a1569a6924e525b98",
+    "semantic_hash": "336c1fb6556dc21a1569a6924e525b98"
   }
 }
