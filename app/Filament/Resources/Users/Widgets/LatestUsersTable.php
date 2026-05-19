@@ -16,7 +16,7 @@ class LatestUsersTable extends TableWidget
 
     protected int|string|array $columnSpan = 'full';
 
-    protected ?string $pollingInterval = '10s';
+    protected ?string $pollingInterval = null;
 
     public function table(Table $table): Table
     {
@@ -30,8 +30,7 @@ class LatestUsersTable extends TableWidget
             ->columns([
                 ImageColumn::make('avatar_url')
                     ->label('Avatar')
-                    ->circular()
-                    ->defaultImageUrl(fn ($record) => 'https://ui-avatars.com/api/?name='.urlencode($record->name).'&color=7F9CF5&background=EBF4FF'),
+                    ->circular(),
 
                 TextColumn::make('full_name')
                     ->label('Nombre Completo')
