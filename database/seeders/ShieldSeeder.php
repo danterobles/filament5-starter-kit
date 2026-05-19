@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
+use BezhanSalleh\FilamentShield\Support\Utils;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use BezhanSalleh\FilamentShield\Support\Utils;
 use Spatie\Permission\PermissionRegistrar;
 
 class ShieldSeeder extends Seeder
@@ -16,7 +17,7 @@ class ShieldSeeder extends Seeder
         $tenants = '[]';
         $users = '[]';
         $userTenantPivot = '[]';
-        $rolesWithPermissions = '[{"name":"super_admin","guard_name":"web","permissions":["Create:Activity","Create:Role","Delete:Activity","Delete:Role","DeleteAny:Activity","DeleteAny:Role","ForceDelete:Activity","ForceDelete:Role","ForceDeleteAny:Activity","ForceDeleteAny:Role","Reorder:Activity","Reorder:Role","Replicate:Activity","Replicate:Role","Restore:Activity","Restore:Role","RestoreAny:Activity","RestoreAny:Role","Update:Activity","Update:Role","View:Activity","View:MyProfilePage","View:Role","ViewAny:Activity","ViewAny:Role"]}]';
+        $rolesWithPermissions = '[{"name":"super_admin","guard_name":"web","permissions":["Create:Activity","Create:Role","Delete:Activity","Delete:Role","DeleteAny:Activity","DeleteAny:Role","ForceDelete:Activity","ForceDelete:Role","ForceDeleteAny:Activity","ForceDeleteAny:Role","Reorder:Activity","Reorder:Role","Replicate:Activity","Replicate:Role","Restore:Activity","Restore:Role","RestoreAny:Activity","RestoreAny:Role","Update:Activity","Update:Role","View:Activity","View:MyProfilePage","View:Role","ViewAny:Activity","ViewAny:Role","page_TaskBoard"]}]';
         $directPermissions = '[]';
 
         // 1. Seed tenants first (if present)
@@ -145,9 +146,9 @@ class ShieldSeeder extends Seeder
             return;
         }
 
-        /** @var \Illuminate\Database\Eloquent\Model $roleModel */
+        /** @var Model $roleModel */
         $roleModel = Utils::getRoleModel();
-        /** @var \Illuminate\Database\Eloquent\Model $permissionModel */
+        /** @var Model $permissionModel */
         $permissionModel = Utils::getPermissionModel();
 
         $tenancyEnabled = false;
@@ -192,7 +193,7 @@ class ShieldSeeder extends Seeder
             return;
         }
 
-        /** @var \Illuminate\Database\Eloquent\Model $permissionModel */
+        /** @var Model $permissionModel */
         $permissionModel = Utils::getPermissionModel();
 
         foreach ($permissions as $permission) {
