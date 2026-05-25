@@ -35,7 +35,6 @@ class CreateUser extends CreateRecord
         $this->selectedRoleId = $data['role_id'] ?? null;
         unset($data['role_id']);
 
-        // Asegurarse que active tenga un valor por defecto
         if (! isset($data['active'])) {
             $data['active'] = true;
         }
@@ -45,7 +44,6 @@ class CreateUser extends CreateRecord
 
     protected function afterCreate(): void
     {
-        // Asignar el rol al usuario
         if ($this->selectedRoleId !== null) {
             $this->record->syncRoles([$this->selectedRoleId]);
 

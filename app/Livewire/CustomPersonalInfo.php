@@ -1,7 +1,5 @@
 <?php
 
-// Class for add custom fields to Breezy Profile Page
-
 namespace App\Livewire;
 
 use Filament\Forms;
