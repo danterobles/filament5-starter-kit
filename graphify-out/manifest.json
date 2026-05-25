@@ -170,9 +170,9 @@
     "semantic_hash": "be782b1e5dce5ae055dcd616eb7bf3f0"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Livewire/CustomPersonalInfo.php": {
-    "mtime": 1779216572.208298,
-    "ast_hash": "93733ca85dd9d2392d259554fb93bacd",
-    "semantic_hash": "93733ca85dd9d2392d259554fb93bacd"
+    "mtime": 1779732141.640385,
+    "ast_hash": "76fcec708167122789ccfc314927f16b",
+    "semantic_hash": "76fcec708167122789ccfc314927f16b"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/UserResource.php": {
     "mtime": 1779216572.2079554,
@@ -200,9 +200,9 @@
     "semantic_hash": "d73182a75dda83dadfa82f5603454c69"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Pages/CreateUser.php": {
-    "mtime": 1778181237.239195,
-    "ast_hash": "2566ddb1217c102eff357ae7c1026289",
-    "semantic_hash": "2566ddb1217c102eff357ae7c1026289"
+    "mtime": 1779732137.5474732,
+    "ast_hash": "e9c6d248a6679d2278686204507a204b",
+    "semantic_hash": "e9c6d248a6679d2278686204507a204b"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Users/Widgets/UserGrowthChart.php": {
     "mtime": 1778181237.2401116,
@@ -230,9 +230,9 @@
     "semantic_hash": "582e5f8928d5ee9d66b51a2c876db09f"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaDoubleSidedTimelineWidget.php": {
-    "mtime": 1778181237.2404978,
-    "ast_hash": "a0e053c36bcc2bb7ff1fa3d7f44d08bc",
-    "semantic_hash": "a0e053c36bcc2bb7ff1fa3d7f44d08bc"
+    "mtime": 1779732115.54512,
+    "ast_hash": "985c73f68a6722e9bd55e4e98bd94062",
+    "semantic_hash": "985c73f68a6722e9bd55e4e98bd94062"
   },
   "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Widgets/AgendaCalendarWidget.php": {
     "mtime": 1778181237.2404106,
@@ -533,5 +533,85 @@
     "mtime": 1779216572.2180748,
     "ast_hash": "336c1fb6556dc21a1569a6924e525b98",
     "semantic_hash": "336c1fb6556dc21a1569a6924e525b98"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Tasks/TaskResource.php": {
+    "mtime": 1779732874.8435884,
+    "ast_hash": "28ed638bc31f1c8bb67bbf12191f2bf4",
+    "semantic_hash": "28ed638bc31f1c8bb67bbf12191f2bf4"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Tasks/Tables/TasksTable.php": {
+    "mtime": 1779732998.0681195,
+    "ast_hash": "3c304f0a45d210c5561d1e28eb8c1773",
+    "semantic_hash": "3c304f0a45d210c5561d1e28eb8c1773"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Tasks/Schemas/TaskForm.php": {
+    "mtime": 1779732881.8391256,
+    "ast_hash": "0700f8a176a5435e40f22978f4842606",
+    "semantic_hash": "0700f8a176a5435e40f22978f4842606"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Tasks/Pages/EditTask.php": {
+    "mtime": 1779732907.3156693,
+    "ast_hash": "753f50a363fdc1d580543fd2401102d5",
+    "semantic_hash": "753f50a363fdc1d580543fd2401102d5"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Tasks/Pages/CreateTask.php": {
+    "mtime": 1779732904.397059,
+    "ast_hash": "87b0c493af5aeb7559586c17f83448b7",
+    "semantic_hash": "87b0c493af5aeb7559586c17f83448b7"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Tasks/Pages/ListTasks.php": {
+    "mtime": 1779732910.8820863,
+    "ast_hash": "de225bc13ac934e879dfb1320c8e0d50",
+    "semantic_hash": "de225bc13ac934e879dfb1320c8e0d50"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Agendas/AgendaResource.php": {
+    "mtime": 1779732548.2843182,
+    "ast_hash": "848fbf94a648ec4cf0c0d802a8c7eeba",
+    "semantic_hash": "848fbf94a648ec4cf0c0d802a8c7eeba"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Agendas/Tables/AgendasTable.php": {
+    "mtime": 1779732580.6906195,
+    "ast_hash": "ce2c6d95e6d11d027a140c71abecf03b",
+    "semantic_hash": "ce2c6d95e6d11d027a140c71abecf03b"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Agendas/Schemas/AgendaForm.php": {
+    "mtime": 1779732559.2499404,
+    "ast_hash": "8059c6b5de7762a1546592e7dfffa64a",
+    "semantic_hash": "8059c6b5de7762a1546592e7dfffa64a"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Agendas/Pages/EditAgenda.php": {
+    "mtime": 1779732591.4282937,
+    "ast_hash": "c92307ccb79f00f3b968ec85a488c718",
+    "semantic_hash": "c92307ccb79f00f3b968ec85a488c718"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Agendas/Pages/ListAgendas.php": {
+    "mtime": 1779732406.4885247,
+    "ast_hash": "4c35acf08a6e9eb2860f40b450b84b4c",
+    "semantic_hash": "4c35acf08a6e9eb2860f40b450b84b4c"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/app/Filament/Resources/Agendas/Pages/CreateAgenda.php": {
+    "mtime": 1779732586.5322757,
+    "ast_hash": "9bb5c171f97226ca073943f733341487",
+    "semantic_hash": "9bb5c171f97226ca073943f733341487"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Feature/AgendaResourceTest.php": {
+    "mtime": 1779732679.4679933,
+    "ast_hash": "f5a4e0f69996ff33ae86417a43316ea2",
+    "semantic_hash": "f5a4e0f69996ff33ae86417a43316ea2"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/tests/Feature/TaskResourceTest.php": {
+    "mtime": 1779733015.6311057,
+    "ast_hash": "3a7e69cd63bdcbe80c67058f8dfde9d9",
+    "semantic_hash": "3a7e69cd63bdcbe80c67058f8dfde9d9"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/PLAN_JUNIO_2026.md": {
+    "mtime": 1779731592.7934082,
+    "ast_hash": "96a250bd01e160af7fc0e05ce6928eda",
+    "semantic_hash": "96a250bd01e160af7fc0e05ce6928eda"
+  },
+  "/Users/danterobles/Desktop/GitHub/filament5-starter-kit/PORIMPLEMENTAR.md": {
+    "mtime": 1779731813.703225,
+    "ast_hash": "de19b1593961edf98e766e3cccb83559",
+    "semantic_hash": "de19b1593961edf98e766e3cccb83559"
   }
 }
