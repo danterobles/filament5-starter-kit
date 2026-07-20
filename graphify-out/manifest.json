@@ -110,9 +110,9 @@
     "semantic_hash": ""
   },
   "database/factories/AgendaFactory.php": {
-    "mtime": 1778181237.242541,
-    "ast_hash": "6cbe0cd1cb7e9f1c354694669d830041",
-    "semantic_hash": "6cbe0cd1cb7e9f1c354694669d830041"
+    "mtime": 1784572888.2735178,
+    "ast_hash": "0cc833bead24395ee9b3f987fa70c627",
+    "semantic_hash": ""
   },
   "database/factories/TaskFactory.php": {
     "mtime": 1777938825.3749838,
@@ -145,19 +145,19 @@
     "semantic_hash": "3fccf040b340a750148ad506ab7d6faa"
   },
   "app/Models/User.php": {
-    "mtime": 1778181237.241025,
-    "ast_hash": "0d682b74af4440e00cdb0b84931a0c20",
-    "semantic_hash": "0d682b74af4440e00cdb0b84931a0c20"
+    "mtime": 1784572848.5330193,
+    "ast_hash": "c23e0fa44f7e1e124221ff114bab7655",
+    "semantic_hash": ""
   },
   "app/Models/Task.php": {
-    "mtime": 1777938825.3743522,
-    "ast_hash": "8fa987f55407db0c82ca5760269d640d",
-    "semantic_hash": "8fa987f55407db0c82ca5760269d640d"
+    "mtime": 1784572832.64192,
+    "ast_hash": "b54ee469cec767dc318e381d566067dd",
+    "semantic_hash": ""
   },
   "app/Models/Agenda.php": {
-    "mtime": 1778181237.2408733,
-    "ast_hash": "71da7e8c52364acb9f548a7c3e2e8579",
-    "semantic_hash": "71da7e8c52364acb9f548a7c3e2e8579"
+    "mtime": 1784572841.8711782,
+    "ast_hash": "27edfa517486fa413b36716f49581257",
+    "semantic_hash": ""
   },
   "app/Policies/RolePolicy.php": {
     "mtime": 1784571862.1011248,
@@ -235,9 +235,9 @@
     "semantic_hash": "985c73f68a6722e9bd55e4e98bd94062"
   },
   "app/Filament/Widgets/AgendaCalendarWidget.php": {
-    "mtime": 1778181237.2404106,
-    "ast_hash": "767d17e1b0f30607ed267867380925d3",
-    "semantic_hash": "767d17e1b0f30607ed267867380925d3"
+    "mtime": 1784572875.2527335,
+    "ast_hash": "ea569efa5c1dcedba3aa51e2f9a726a2",
+    "semantic_hash": ""
   },
   "app/Http/Controllers/Controller.php": {
     "mtime": 1776455324.627926,
@@ -590,19 +590,19 @@
     "semantic_hash": "4c35acf08a6e9eb2860f40b450b84b4c"
   },
   "app/Filament/Resources/Agendas/Pages/CreateAgenda.php": {
-    "mtime": 1779734101.534073,
-    "ast_hash": "9bb5c171f97226ca073943f733341487",
-    "semantic_hash": "9bb5c171f97226ca073943f733341487"
+    "mtime": 1784572853.5761342,
+    "ast_hash": "8e12a9838b25dba57cf3ee5fbf486645",
+    "semantic_hash": ""
   },
   "tests/Feature/AgendaResourceTest.php": {
-    "mtime": 1779734101.5961287,
-    "ast_hash": "f5a4e0f69996ff33ae86417a43316ea2",
-    "semantic_hash": "f5a4e0f69996ff33ae86417a43316ea2"
+    "mtime": 1784572957.81827,
+    "ast_hash": "e27a354f6fbed4b8f38897295dd510b9",
+    "semantic_hash": ""
   },
   "tests/Feature/TaskResourceTest.php": {
-    "mtime": 1779734101.5962684,
-    "ast_hash": "3a7e69cd63bdcbe80c67058f8dfde9d9",
-    "semantic_hash": "3a7e69cd63bdcbe80c67058f8dfde9d9"
+    "mtime": 1784572950.3284605,
+    "ast_hash": "621360307968179c3e5a36043a06efc6",
+    "semantic_hash": ""
   },
   "database/migrations/2026_07_20_174937_create_notifications_table.php": {
     "mtime": 1784569777.6694188,
@@ -642,6 +642,21 @@
   "tests/Feature/DatabaseSeederTest.php": {
     "mtime": 1784572085.200949,
     "ast_hash": "48ab90d30979400bfd78f10b5a9d4f86",
+    "semantic_hash": ""
+  },
+  "app/Models/Scopes/OwnedByUserScope.php": {
+    "mtime": 1784572814.0803087,
+    "ast_hash": "51774542b2550ac4ed4994856e5aa988",
+    "semantic_hash": ""
+  },
+  "database/migrations/2026_07_20_184017_add_user_id_to_agendas_table.php": {
+    "mtime": 1784572823.791727,
+    "ast_hash": "92926ca9357c06f5eb7b6c0a5b22aa7a",
+    "semantic_hash": ""
+  },
+  "tests/Feature/OwnedByUserScopeTest.php": {
+    "mtime": 1784572918.5824108,
+    "ast_hash": "2f72627267f8ffdb6e115e3c51a5244f",
     "semantic_hash": ""
   }
 }

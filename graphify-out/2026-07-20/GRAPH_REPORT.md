@@ -1,16 +1,16 @@
 # Graph Report - filament5-starter-kit  (2026-07-20)
 
 ## Corpus Check
-- 128 files · ~37,033 words
+- 129 files · ~37,055 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1318 nodes · 1749 edges · 127 communities (109 shown, 18 thin omitted)
+- 1319 nodes · 1749 edges · 128 communities (110 shown, 18 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 107 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9c25e4f1`
+- Built from commit: `47037c9f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -137,7 +137,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (127 total, 18 thin omitted)
+## Communities (128 total, 18 thin omitted)
 
 ### Community 0 - "Blade & Config Rules"
 Cohesion: 0.04
@@ -453,10 +453,10 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Plan de Mejoras Mayo 2026` connect `Project Guidelines & Improvement Notes` to `Advanced Query Patterns`, `Module Cluster 63`?**
   _High betweenness centrality (0.277) - this node is a cross-community bridge._
+- **Why does `Architecture Best Practices` connect `RBAC & Shield Permissions` to `Community 114`, `Community 118`, `Community 121`, `Community 123`, `Community 124`, `Community 125`?**
+  _High betweenness centrality (0.272) - this node is a cross-community bridge._
 - **Why does `Etapa 3 — Rendimiento de Widgets` connect `Project Guidelines & Improvement Notes` to `Community 114`?**
   _High betweenness centrality (0.269) - this node is a cross-community bridge._
-- **Why does `Architecture Best Practices` connect `RBAC & Shield Permissions` to `Community 114`, `Community 118`, `Community 121`, `Community 123`, `Community 124`, `Community 125`?**
-  _High betweenness centrality (0.267) - this node is a cross-community bridge._
 - **Are the 5 inferred relationships involving `User` (e.g. with `CustomPersonalInfo.php` and `CreateUser`) actually correct?**
   _`User` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `Agenda` (e.g. with `.fetchEvents()` and `.table()`) actually correct?**
