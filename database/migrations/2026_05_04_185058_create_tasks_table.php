@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->boolean('finish')->default(false);
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
+            $table->string('title');
+            $table->string('status')->default('todo');
             $table->mediumText('description')->nullable();
+            $table->flowforgePositionColumn('position'); // Handles database-specific collations automatically
             $table->timestamps();
         });
     }
