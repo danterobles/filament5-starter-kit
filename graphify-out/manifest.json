@@ -105,9 +105,9 @@
     "semantic_hash": ""
   },
   "database/seeders/DatabaseSeeder.php": {
-    "mtime": 1777938825.3756998,
-    "ast_hash": "4e4dd59bbb15a1463fc4e6d0596af0e6",
-    "semantic_hash": "4e4dd59bbb15a1463fc4e6d0596af0e6"
+    "mtime": 1784572054.800597,
+    "ast_hash": "c87e70b6436d881cda46afa851f7049c",
+    "semantic_hash": ""
   },
   "database/factories/AgendaFactory.php": {
     "mtime": 1778181237.242541,
@@ -637,6 +637,11 @@
   "tests/Feature/Policies/UserPolicyTest.php": {
     "mtime": 1784571995.6902542,
     "ast_hash": "c3d74ee5aa9425e637fa59354148416d",
+    "semantic_hash": ""
+  },
+  "tests/Feature/DatabaseSeederTest.php": {
+    "mtime": 1784572085.200949,
+    "ast_hash": "48ab90d30979400bfd78f10b5a9d4f86",
     "semantic_hash": ""
   }
 }
