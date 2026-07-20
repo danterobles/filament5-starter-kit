@@ -1359,7 +1359,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "widgets_agendacalendarwidget",
-      "community": 51,
+      "community": 7,
       "norm_label": "agendacalendarwidget.php"
     },
     {
@@ -1369,7 +1369,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "widgets_agendacalendarwidget_agendacalendarwidget",
-      "community": 51,
+      "community": 7,
       "norm_label": "agendacalendarwidget"
     },
     {
@@ -1379,7 +1379,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fullcalendarwidget",
-      "community": 51,
+      "community": 7,
       "norm_label": "fullcalendarwidget"
     },
     {
@@ -1389,7 +1389,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "model",
-      "community": 51,
+      "community": 7,
       "norm_label": "model"
     },
     {
@@ -1399,7 +1399,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "widgets_agendacalendarwidget_agendacalendarwidget_fetchevents",
-      "community": 51,
+      "community": 7,
       "norm_label": ".fetchevents()"
     },
     {
@@ -1409,7 +1409,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "widgets_agendacalendarwidget_agendacalendarwidget_getformschema",
-      "community": 51,
+      "community": 7,
       "norm_label": ".getformschema()"
     },
     {
@@ -1419,7 +1419,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "widgets_agendacalendarwidget_agendacalendarwidget_headeractions",
-      "community": 51,
+      "community": 7,
       "norm_label": ".headeractions()"
     },
     {
@@ -1429,7 +1429,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "widgets_agendacalendarwidget_agendacalendarwidget_modalactions",
-      "community": 51,
+      "community": 7,
       "norm_label": ".modalactions()"
     },
     {
@@ -1619,7 +1619,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_agenda",
-      "community": 51,
+      "community": 100,
       "norm_label": "agenda.php"
     },
     {
@@ -1639,7 +1639,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "hasfactory",
-      "community": 51,
+      "community": 100,
       "norm_label": "hasfactory"
     },
     {
@@ -1669,7 +1669,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "models_agenda_agenda_user",
-      "community": 51,
+      "community": 100,
       "norm_label": ".user()"
     },
     {
@@ -1679,7 +1679,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "belongsto",
-      "community": 51,
+      "community": 100,
       "norm_label": "belongsto"
     },
     {
@@ -1689,7 +1689,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "scopes_ownedbyuserscope",
-      "community": 35,
+      "community": 7,
       "norm_label": "ownedbyuserscope.php"
     },
     {
@@ -1699,7 +1699,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "scopes_ownedbyuserscope_ownedbyuserscope",
-      "community": 35,
+      "community": 7,
       "norm_label": "ownedbyuserscope"
     },
     {
@@ -1709,7 +1709,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "scope",
-      "community": 35,
+      "community": 7,
       "norm_label": "scope"
     },
     {
@@ -1719,7 +1719,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "scopes_ownedbyuserscope_ownedbyuserscope_apply",
-      "community": 35,
+      "community": 7,
       "norm_label": ".apply()"
     },
     {
@@ -1729,7 +1729,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_task",
-      "community": 51,
+      "community": 100,
       "norm_label": "task.php"
     },
     {
@@ -1759,7 +1759,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "models_task_task_user",
-      "community": 51,
+      "community": 100,
       "norm_label": ".user()"
     },
     {
@@ -1959,7 +1959,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "handlesauthorization",
-      "community": 16,
+      "community": 98,
       "norm_label": "handlesauthorization"
     },
     {
@@ -2399,7 +2399,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "policies_taskpolicy",
-      "community": 100,
+      "community": 98,
       "norm_label": "taskpolicy.php"
     },
     {
@@ -2539,7 +2539,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "policies_userpolicy",
-      "community": 16,
+      "community": 98,
       "norm_label": "userpolicy.php"
     },
     {
@@ -3949,7 +3949,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "migrations_0001_01_01_000001_create_cache_table",
-      "community": 70,
+      "community": 63,
       "norm_label": "0001_01_01_000001_create_cache_table.php"
     },
     {
@@ -3959,7 +3959,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "migrations_0001_01_01_000001_create_cache_table_up",
-      "community": 70,
+      "community": 63,
       "norm_label": "up()"
     },
     {
@@ -3969,7 +3969,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "migrations_0001_01_01_000001_create_cache_table_down",
-      "community": 70,
+      "community": 63,
       "norm_label": "down()"
     },
     {
@@ -4199,7 +4199,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "migrations_2026_04_20_194026_create_passkeys_table",
-      "community": 69,
+      "community": 70,
       "norm_label": "2026_04_20_194026_create_passkeys_table.php"
     },
     {
@@ -4209,7 +4209,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "migrations_2026_04_20_194026_create_passkeys_table_up",
-      "community": 69,
+      "community": 70,
       "norm_label": "up()"
     },
     {
@@ -4219,7 +4219,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "migrations_2026_04_20_194026_create_passkeys_table_down",
-      "community": 69,
+      "community": 70,
       "norm_label": "down()"
     },
     {
@@ -4259,7 +4259,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "migrations_2026_05_04_185058_create_tasks_table",
-      "community": 70,
+      "community": 69,
       "norm_label": "2026_05_04_185058_create_tasks_table.php"
     },
     {
@@ -4269,77 +4269,17 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "migrations_2026_05_04_185058_create_tasks_table_up",
-      "community": 70,
+      "community": 69,
       "norm_label": "up()"
     },
     {
       "label": "down()",
       "file_type": "code",
       "source_file": "database/migrations/2026_05_04_185058_create_tasks_table.php",
-      "source_location": "L26",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "migrations_2026_05_04_185058_create_tasks_table_down",
-      "community": 70,
-      "norm_label": "down()"
-    },
-    {
-      "label": "2026_05_04_191717_add_position_to_tasks_table.php",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "migrations_2026_05_04_191717_add_position_to_tasks_table",
-      "community": 134,
-      "norm_label": "2026_05_04_191717_add_position_to_tasks_table.php"
-    },
-    {
-      "label": "up()",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "migrations_2026_05_04_191717_add_position_to_tasks_table_up",
-      "community": 134,
-      "norm_label": "up()"
-    },
-    {
-      "label": "down()",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "migrations_2026_05_04_191717_add_position_to_tasks_table_down",
-      "community": 134,
-      "norm_label": "down()"
-    },
-    {
-      "label": "2026_05_04_232920_fix_tasks_table_schema.php",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "migrations_2026_05_04_232920_fix_tasks_table_schema",
-      "community": 135,
-      "norm_label": "2026_05_04_232920_fix_tasks_table_schema.php"
-    },
-    {
-      "label": "up()",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "migrations_2026_05_04_232920_fix_tasks_table_schema_up",
-      "community": 135,
-      "norm_label": "up()"
-    },
-    {
-      "label": "down()",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "migrations_2026_05_04_232920_fix_tasks_table_schema_down",
-      "community": 135,
+      "community": 69,
       "norm_label": "down()"
     },
     {
@@ -4379,7 +4319,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "migrations_2026_07_20_174937_create_notifications_table",
-      "community": 72,
+      "community": 70,
       "norm_label": "2026_07_20_174937_create_notifications_table.php"
     },
     {
@@ -4389,7 +4329,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "migrations_2026_07_20_174937_create_notifications_table_up",
-      "community": 72,
+      "community": 70,
       "norm_label": "up()"
     },
     {
@@ -4399,7 +4339,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "migrations_2026_07_20_174937_create_notifications_table_down",
-      "community": 72,
+      "community": 70,
       "norm_label": "down()"
     },
     {
@@ -4409,7 +4349,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "migrations_2026_07_20_184017_add_user_id_to_agendas_table",
-      "community": 136,
+      "community": 70,
       "norm_label": "2026_07_20_184017_add_user_id_to_agendas_table.php"
     },
     {
@@ -4419,7 +4359,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "migrations_2026_07_20_184017_add_user_id_to_agendas_table_up",
-      "community": 136,
+      "community": 70,
       "norm_label": "up()"
     },
     {
@@ -4429,7 +4369,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "migrations_2026_07_20_184017_add_user_id_to_agendas_table_down",
-      "community": 136,
+      "community": 70,
       "norm_label": "down()"
     },
     {
@@ -4899,7 +4839,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_testcase",
-      "community": 19,
+      "community": 51,
       "norm_label": "testcase.php"
     },
     {
@@ -4909,7 +4849,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_testcase_testcase",
-      "community": 19,
+      "community": 51,
       "norm_label": "testcase"
     },
     {
@@ -4919,7 +4859,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "basetestcase",
-      "community": 19,
+      "community": 51,
       "norm_label": "basetestcase"
     },
     {
@@ -6489,7 +6429,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "rules_mail",
-      "community": 129,
+      "community": 1,
       "norm_label": "mail.md"
     },
     {
@@ -6499,7 +6439,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "rules_mail_mail_best_practices",
-      "community": 129,
+      "community": 1,
       "norm_label": "mail best practices"
     },
     {
@@ -6509,7 +6449,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "rules_mail_implement_shouldqueue_on_the_mailable_class",
-      "community": 129,
+      "community": 1,
       "norm_label": "implement `shouldqueue` on the mailable class"
     },
     {
@@ -6519,7 +6459,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "rules_mail_use_aftercommit_on_mailables_inside_transactions",
-      "community": 129,
+      "community": 1,
       "norm_label": "use `aftercommit()` on mailables inside transactions"
     },
     {
@@ -6529,7 +6469,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "rules_mail_use_assertqueued_not_assertsent_for_queued_mailables",
-      "community": 129,
+      "community": 1,
       "norm_label": "use `assertqueued()` not `assertsent()` for queued mailables"
     },
     {
@@ -6539,7 +6479,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "rules_mail_use_markdown_mailables_for_transactional_emails",
-      "community": 129,
+      "community": 1,
       "norm_label": "use markdown mailables for transactional emails"
     },
     {
@@ -6549,7 +6489,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "rules_mail_separate_content_tests_from_sending_tests",
-      "community": 129,
+      "community": 1,
       "norm_label": "separate content tests from sending tests"
     },
     {
@@ -6689,7 +6629,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "rules_queue_jobs_implement_shouldbeunique",
-      "community": 12,
+      "community": 73,
       "norm_label": "implement `shouldbeunique`"
     },
     {
@@ -6729,7 +6669,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "rules_queue_jobs_retryuntil_needs_tries_0",
-      "community": 67,
+      "community": 12,
       "norm_label": "`retryuntil()` needs `$tries = 0`"
     },
     {
@@ -6739,7 +6679,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "rules_queue_jobs_use_shouldbeuniqueuntilprocessing_for_early_lock_release",
-      "community": 12,
+      "community": 72,
       "norm_label": "use `shouldbeuniqueuntilprocessing` for early lock release"
     },
     {
@@ -6909,7 +6849,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "rules_security",
-      "community": 73,
+      "community": 0,
       "norm_label": "security.md"
     },
     {
@@ -6919,7 +6859,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "rules_security_security_best_practices",
-      "community": 73,
+      "community": 0,
       "norm_label": "security best practices"
     },
     {
@@ -6939,7 +6879,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "rules_security_authorize_every_action",
-      "community": 73,
+      "community": 0,
       "norm_label": "authorize every action"
     },
     {
@@ -6949,7 +6889,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "rules_security_prevent_sql_injection",
-      "community": 137,
+      "community": 0,
       "norm_label": "prevent sql injection"
     },
     {
@@ -6959,7 +6899,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "rules_security_escape_output_to_prevent_xss",
-      "community": 128,
+      "community": 0,
       "norm_label": "escape output to prevent xss"
     },
     {
@@ -6969,7 +6909,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "rules_security_csrf_protection",
-      "community": 128,
+      "community": 0,
       "norm_label": "csrf protection"
     },
     {
@@ -6979,7 +6919,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "rules_security_rate_limit_auth_and_api_routes",
-      "community": 73,
+      "community": 0,
       "norm_label": "rate limit auth and api routes"
     },
     {
@@ -6989,7 +6929,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "rules_security_validate_file_uploads",
-      "community": 73,
+      "community": 0,
       "norm_label": "validate file uploads"
     },
     {
@@ -6999,7 +6939,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "rules_security_keep_secrets_out_of_code",
-      "community": 130,
+      "community": 0,
       "norm_label": "keep secrets out of code"
     },
     {
@@ -7009,7 +6949,7 @@
       "source_location": "L159",
       "_origin": "ast",
       "id": "rules_security_audit_dependencies",
-      "community": 73,
+      "community": 0,
       "norm_label": "audit dependencies"
     },
     {
@@ -7019,7 +6959,7 @@
       "source_location": "L167",
       "_origin": "ast",
       "id": "rules_security_encrypt_sensitive_database_fields",
-      "community": 130,
+      "community": 0,
       "norm_label": "encrypt sensitive database fields"
     },
     {
@@ -7099,7 +7039,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "rules_testing",
-      "community": 63,
+      "community": 1,
       "norm_label": "testing.md"
     },
     {
@@ -7109,7 +7049,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "rules_testing_testing_best_practices",
-      "community": 63,
+      "community": 1,
       "norm_label": "testing best practices"
     },
     {
@@ -7119,7 +7059,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "rules_testing_use_lazilyrefreshdatabase_over_refreshdatabase",
-      "community": 63,
+      "community": 1,
       "norm_label": "use `lazilyrefreshdatabase` over `refreshdatabase`"
     },
     {
@@ -7129,7 +7069,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "rules_testing_use_model_assertions_over_raw_database_assertions",
-      "community": 63,
+      "community": 1,
       "norm_label": "use model assertions over raw database assertions"
     },
     {
@@ -7139,7 +7079,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "rules_testing_use_factory_states_and_sequences",
-      "community": 63,
+      "community": 1,
       "norm_label": "use factory states and sequences"
     },
     {
@@ -7149,7 +7089,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "rules_testing_use_exceptions_fake_to_assert_exception_reporting",
-      "community": 63,
+      "community": 1,
       "norm_label": "use `exceptions::fake()` to assert exception reporting"
     },
     {
@@ -7159,7 +7099,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "rules_testing_call_event_fake_after_factory_setup",
-      "community": 63,
+      "community": 1,
       "norm_label": "call `event::fake()` after factory setup"
     },
     {
@@ -7169,7 +7109,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "rules_testing_use_recycle_to_share_relationship_instances_across_factories",
-      "community": 63,
+      "community": 1,
       "norm_label": "use `recycle()` to share relationship instances across factories"
     },
     {
@@ -10096,7 +10036,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/queue-jobs.md",
       "source_location": "L53",
-      "community": 12,
+      "community": 73,
       "norm_label": "code:php (class generateinvoice implements shouldqueue, shouldbeunique)",
       "id": "rules_queue_jobs_codeblock_5"
     },
@@ -10132,7 +10072,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/queue-jobs.md",
       "source_location": "L106",
-      "community": 67,
+      "community": 12,
       "norm_label": "code:php (public $tries = 0;)",
       "id": "rules_queue_jobs_codeblock_9"
     },
@@ -10141,7 +10081,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/queue-jobs.md",
       "source_location": "L119",
-      "community": 12,
+      "community": 72,
       "norm_label": "code:php (class updatesearchindex implements shouldqueue, shouldbeuniq)",
       "id": "rules_queue_jobs_codeblock_10"
     },
@@ -10159,7 +10099,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/testing.md",
       "source_location": "L39",
-      "community": 63,
+      "community": 1,
       "norm_label": "code:php (ticket::factory())",
       "id": "rules_testing_codeblock_1"
     },
@@ -10168,7 +10108,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/config.md",
       "source_location": "L8",
-      "community": 130,
+      "community": 0,
       "norm_label": "code:php ($key = env('api_key');)",
       "id": "rules_config_codeblock_1"
     },
@@ -10177,7 +10117,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/config.md",
       "source_location": "L13",
-      "community": 130,
+      "community": 0,
       "norm_label": "code:php (// config/services.php)",
       "id": "rules_config_codeblock_2"
     },
@@ -10546,7 +10486,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L34",
-      "community": 73,
+      "community": 0,
       "norm_label": "code:php (public function update(updatepostrequest $request, post $pos)",
       "id": "rules_security_codeblock_3"
     },
@@ -10555,7 +10495,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L53",
-      "community": 73,
+      "community": 0,
       "norm_label": "code:php (public function authorize(): bool)",
       "id": "rules_security_codeblock_5"
     },
@@ -10564,7 +10504,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L65",
-      "community": 137,
+      "community": 0,
       "norm_label": "code:php (db::select(\"select * from users where name = '{$request->nam)",
       "id": "rules_security_codeblock_6"
     },
@@ -10573,7 +10513,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L70",
-      "community": 137,
+      "community": 0,
       "norm_label": "code:php (user::where('name', $request->name)->get();)",
       "id": "rules_security_codeblock_7"
     },
@@ -10582,7 +10522,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L82",
-      "community": 128,
+      "community": 0,
       "norm_label": "code:blade ({!! $user->bio !!})",
       "id": "rules_security_codeblock_8"
     },
@@ -10591,7 +10531,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L96",
-      "community": 128,
+      "community": 0,
       "norm_label": "code:blade (<form method=\"post\" action=\"/posts\">)",
       "id": "rules_security_codeblock_10"
     },
@@ -10600,7 +10540,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L114",
-      "community": 73,
+      "community": 0,
       "norm_label": "code:php (ratelimiter::for('login', function (request $request) {)",
       "id": "rules_security_codeblock_12"
     },
@@ -10609,7 +10549,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L126",
-      "community": 73,
+      "community": 0,
       "norm_label": "code:php (public function rules(): array)",
       "id": "rules_security_codeblock_13"
     },
@@ -10618,7 +10558,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L137",
-      "community": 73,
+      "community": 0,
       "norm_label": "code:php ($path = $request->file('avatar')->store('avatars', 'public'))",
       "id": "rules_security_codeblock_14"
     },
@@ -10627,7 +10567,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L146",
-      "community": 130,
+      "community": 0,
       "norm_label": "code:php ($key = env('api_key');)",
       "id": "rules_security_codeblock_15"
     },
@@ -10636,7 +10576,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L151",
-      "community": 130,
+      "community": 0,
       "norm_label": "code:php (// config/services.php)",
       "id": "rules_security_codeblock_16"
     },
@@ -10645,7 +10585,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L163",
-      "community": 73,
+      "community": 0,
       "norm_label": "code:bash (composer audit)",
       "id": "rules_security_codeblock_17"
     },
@@ -10654,7 +10594,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/security.md",
       "source_location": "L172",
-      "community": 130,
+      "community": 0,
       "norm_label": "code:php (class integration extends model)",
       "id": "rules_security_codeblock_18"
     },
@@ -10745,7 +10685,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 42,
       "norm_label": "createagendastable migration",
       "id": "migrations_create_agendas_table"
     },
@@ -10761,19 +10701,6 @@
       "community": 103,
       "norm_label": "createjobstable migration",
       "id": "migrations_create_jobs_table"
-    },
-    {
-      "label": "AddPositionToTasksTable Migration",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 53,
-      "norm_label": "addpositiontotaskstable migration",
-      "id": "migrations_add_position_to_tasks_table"
     },
     {
       "label": "CreatePasskeysTable Migration",
@@ -10815,19 +10742,6 @@
       "id": "migrations_alter_breezy_sessions_table"
     },
     {
-      "label": "FixTasksTableSchema Migration",
-      "file_type": "code",
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 53,
-      "norm_label": "fixtaskstableschema migration",
-      "id": "migrations_fix_tasks_table_schema"
-    },
-    {
       "label": "CreateTasksTable Migration",
       "file_type": "code",
       "source_file": "database/migrations/2026_05_04_185058_create_tasks_table.php",
@@ -10836,7 +10750,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 42,
       "norm_label": "createtaskstable migration",
       "id": "migrations_create_tasks_table"
     },
@@ -10862,7 +10776,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 42,
       "norm_label": "filament admin panel",
       "id": "concept_filament_admin_panel"
     },
@@ -10901,7 +10815,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 42,
       "norm_label": "flowforge kanban (relaticle/flowforge)",
       "id": "concept_flowforge"
     },
@@ -10953,7 +10867,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 42,
       "norm_label": "tasks kanban board feature",
       "id": "concept_tasks_kanban"
     },
@@ -10966,7 +10880,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 42,
       "norm_label": "agendas / calendar feature",
       "id": "concept_agendas_calendar"
     },
@@ -11278,7 +11192,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 51,
+      "community": 7,
       "norm_label": "agenda full calendar widget",
       "id": "concept_agenda_calendar"
     },
@@ -11408,7 +11322,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 3,
       "norm_label": "skill: pest-testing",
       "id": "skills_pest_testing_skill"
     },
@@ -11525,7 +11439,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 51,
       "norm_label": "test coverage plan (etapa 2)",
       "id": "concept_test_coverage_plan"
     },
@@ -11967,7 +11881,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 128,
+      "community": 0,
       "norm_label": "blade and views best practices",
       "id": "rules_blade_views_blade_best_practices"
     },
@@ -11980,7 +11894,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 128,
+      "community": 0,
       "norm_label": "$attributes->merge() in components",
       "id": "rules_blade_views_attributes_merge"
     },
@@ -11993,7 +11907,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 128,
+      "community": 0,
       "norm_label": "@pushonce for per-component scripts",
       "id": "rules_blade_views_pushonce"
     },
@@ -12006,7 +11920,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 128,
+      "community": 0,
       "norm_label": "blade components over @include",
       "id": "rules_blade_views_blade_components_over_include"
     },
@@ -12019,7 +11933,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 128,
+      "community": 0,
       "norm_label": "view composers for shared view data",
       "id": "rules_blade_views_view_composers"
     },
@@ -12032,7 +11946,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 128,
+      "community": 0,
       "norm_label": "blade fragments for partial re-renders",
       "id": "rules_blade_views_blade_fragments"
     },
@@ -12045,7 +11959,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 128,
+      "community": 0,
       "norm_label": "@aware for deeply nested component props",
       "id": "rules_blade_views_aware_nested_props"
     },
@@ -12084,7 +11998,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 67,
+      "community": 21,
       "norm_label": "exponential backoff for jobs",
       "id": "rules_queue_jobs_exponential_backoff"
     },
@@ -12175,7 +12089,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 63,
+      "community": 1,
       "norm_label": "lazilyrefreshdatabase over refreshdatabase",
       "id": "rules_testing_lazily_refresh_database"
     },
@@ -12188,7 +12102,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 63,
+      "community": 1,
       "norm_label": "model assertions over raw database assertions",
       "id": "rules_testing_model_assertions"
     },
@@ -12201,7 +12115,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 63,
+      "community": 1,
       "norm_label": "factory states and sequences in tests",
       "id": "rules_testing_factory_states_sequences"
     },
@@ -12214,7 +12128,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 63,
+      "community": 1,
       "norm_label": "exceptions::fake() for exception reporting assertion",
       "id": "rules_testing_exceptions_fake"
     },
@@ -12227,7 +12141,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 63,
+      "community": 1,
       "norm_label": "call event::fake() after factory setup",
       "id": "rules_testing_event_fake_after_factory"
     },
@@ -12240,7 +12154,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 63,
+      "community": 1,
       "norm_label": "recycle() to share relationship instances across factories",
       "id": "rules_testing_recycle_factory"
     },
@@ -12253,7 +12167,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 130,
+      "community": 0,
       "norm_label": "env() only in config files",
       "id": "rules_config_env_only_in_config"
     },
@@ -12266,7 +12180,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 130,
+      "community": 0,
       "norm_label": "encrypted env or external secrets",
       "id": "rules_config_encrypted_env_secrets"
     },
@@ -12331,7 +12245,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 129,
+      "community": 1,
       "norm_label": "shouldqueue on mailable class",
       "id": "rules_mail_should_queue_mailable"
     },
@@ -12344,7 +12258,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 129,
+      "community": 1,
       "norm_label": "aftercommit() on mailables in transactions",
       "id": "rules_mail_after_commit_mailable"
     },
@@ -12357,7 +12271,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 129,
+      "community": 1,
       "norm_label": "assertqueued() not assertsent() for queued mailables",
       "id": "rules_mail_assert_queued"
     },
@@ -12370,7 +12284,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 129,
+      "community": 1,
       "norm_label": "markdown mailables for transactional emails",
       "id": "rules_mail_markdown_mailables"
     },
@@ -12643,7 +12557,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 18,
+      "community": 36,
       "norm_label": "laravel 13",
       "id": "readme_laravel13"
     },
@@ -12695,7 +12609,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 36,
+      "community": 18,
       "norm_label": "pest php 4",
       "id": "readme_pestphp4"
     },
@@ -12734,7 +12648,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 53,
       "norm_label": "filament breezy (auth)",
       "id": "readme_filament_breezy"
     },
@@ -12877,7 +12791,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 37,
       "norm_label": "userscluster",
       "id": "readme_users_cluster"
     },
@@ -12903,7 +12817,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 37,
       "norm_label": "users resource (crud)",
       "id": "readme_user_resource"
     },
@@ -12916,7 +12830,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 37,
       "norm_label": "userform schema",
       "id": "readme_user_form"
     },
@@ -12929,7 +12843,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 37,
       "norm_label": "userstable schema",
       "id": "readme_users_table"
     },
@@ -12942,7 +12856,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 37,
       "norm_label": "user widgets (stats, table, chart)",
       "id": "readme_user_widgets"
     },
@@ -12968,7 +12882,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 53,
       "norm_label": "custompersonalinfo livewire component",
       "id": "readme_custom_personal_info"
     },
@@ -13072,7 +12986,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 37,
       "norm_label": "navigation strings (lang/es/navigation.php)",
       "id": "readme_navigation_strings"
     },
@@ -13085,7 +12999,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 16,
       "norm_label": "shieldseeder",
       "id": "readme_shield_seeder"
     },
@@ -13098,7 +13012,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 4,
+      "community": 16,
       "norm_label": "rbac (roles and permissions)",
       "id": "readme_rbac"
     },
@@ -13111,7 +13025,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 53,
       "norm_label": "two-factor authentication (2fa totp)",
       "id": "readme_2fa"
     },
@@ -13124,7 +13038,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 53,
       "norm_label": "passkeys (webauthn)",
       "id": "readme_passkeys"
     },
@@ -13150,7 +13064,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 19,
+      "community": 51,
       "norm_label": "userresourcetest",
       "id": "readme_user_resource_test"
     },
@@ -13189,7 +13103,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 26,
+      "community": 18,
       "norm_label": "test enforcement rules",
       "id": "claude_md_test_enforcement"
     },
@@ -14258,9 +14172,9 @@
       "source_file": "app/Models/Scopes/OwnedByUserScope.php",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scopes_ownedbyuserscope",
-      "target": "builder",
-      "confidence_score": 1.0
+      "target": "builder"
     },
     {
       "relation": "references",
@@ -14269,9 +14183,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "scopes_ownedbyuserscope_ownedbyuserscope_apply",
-      "target": "builder",
-      "confidence_score": 1.0
+      "target": "builder"
     },
     {
       "relation": "imports",
@@ -14610,28 +14524,6 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_2026_05_04_191717_add_position_to_tasks_table",
-      "target": "schema"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_2026_05_04_232920_fix_tasks_table_schema",
-      "target": "schema"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
       "source_location": "L5",
       "weight": 1.0,
@@ -14657,9 +14549,9 @@
       "source_file": "database/migrations/2026_07_20_184017_add_user_id_to_agendas_table.php",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migrations_2026_07_20_184017_add_user_id_to_agendas_table",
-      "target": "schema",
-      "confidence_score": 1.0
+      "target": "schema"
     },
     {
       "relation": "imports",
@@ -15080,9 +14972,9 @@
       "source_file": "app/Filament/Resources/Agendas/Pages/CreateAgenda.php",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_createagenda_createagenda",
-      "target": "pages_createagenda_createagenda_mutateformdatabeforecreate",
-      "confidence_score": 1.0
+      "target": "pages_createagenda_createagenda_mutateformdatabeforecreate"
     },
     {
       "relation": "imports",
@@ -16885,9 +16777,9 @@
       "source_file": "app/Models/Scopes/OwnedByUserScope.php",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scopes_ownedbyuserscope",
-      "target": "model",
-      "confidence_score": 1.0
+      "target": "model"
     },
     {
       "relation": "references",
@@ -16896,9 +16788,9 @@
       "source_location": "L15",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "scopes_ownedbyuserscope_ownedbyuserscope_apply",
-      "target": "model",
-      "confidence_score": 1.0
+      "target": "model"
     },
     {
       "relation": "imports",
@@ -17343,9 +17235,9 @@
       "source_file": "app/Models/Agenda.php",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "models_agenda",
-      "target": "belongsto",
-      "confidence_score": 1.0
+      "target": "belongsto"
     },
     {
       "relation": "imports",
@@ -17397,9 +17289,9 @@
       "source_file": "tests/Feature/OwnedByUserScopeTest.php",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "feature_ownedbyuserscopetest",
-      "target": "models_agenda_agenda",
-      "confidence_score": 1.0
+      "target": "models_agenda_agenda"
     },
     {
       "relation": "references",
@@ -17427,9 +17319,9 @@
       "source_file": "app/Models/Agenda.php",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "models_agenda_agenda",
-      "target": "models_agenda_agenda_booted",
-      "confidence_score": 1.0
+      "target": "models_agenda_agenda_booted"
     },
     {
       "relation": "method",
@@ -17447,9 +17339,9 @@
       "source_file": "app/Models/Agenda.php",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "models_agenda_agenda",
-      "target": "models_agenda_agenda_user",
-      "confidence_score": 1.0
+      "target": "models_agenda_agenda_user"
     },
     {
       "relation": "imports",
@@ -17588,9 +17480,9 @@
       "source_location": "L32",
       "weight": 1.0,
       "context": "return_type",
+      "confidence_score": 1.0,
       "source": "models_agenda_agenda_user",
-      "target": "belongsto",
-      "confidence_score": 1.0
+      "target": "belongsto"
     },
     {
       "relation": "imports",
@@ -17621,9 +17513,9 @@
       "source_file": "app/Models/Scopes/OwnedByUserScope.php",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scopes_ownedbyuserscope",
-      "target": "scope",
-      "confidence_score": 1.0
+      "target": "scope"
     },
     {
       "relation": "contains",
@@ -17631,9 +17523,9 @@
       "source_file": "app/Models/Scopes/OwnedByUserScope.php",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scopes_ownedbyuserscope",
-      "target": "scopes_ownedbyuserscope_ownedbyuserscope",
-      "confidence_score": 1.0
+      "target": "scopes_ownedbyuserscope_ownedbyuserscope"
     },
     {
       "relation": "implements",
@@ -17641,9 +17533,9 @@
       "source_file": "app/Models/Scopes/OwnedByUserScope.php",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scopes_ownedbyuserscope_ownedbyuserscope",
-      "target": "scope",
-      "confidence_score": 1.0
+      "target": "scope"
     },
     {
       "relation": "method",
@@ -17651,9 +17543,9 @@
       "source_file": "app/Models/Scopes/OwnedByUserScope.php",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scopes_ownedbyuserscope_ownedbyuserscope",
-      "target": "scopes_ownedbyuserscope_ownedbyuserscope_apply",
-      "confidence_score": 1.0
+      "target": "scopes_ownedbyuserscope_ownedbyuserscope_apply"
     },
     {
       "relation": "contains",
@@ -17683,9 +17575,9 @@
       "source_file": "tests/Feature/OwnedByUserScopeTest.php",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "feature_ownedbyuserscopetest",
-      "target": "models_task_task",
-      "confidence_score": 1.0
+      "target": "models_task_task"
     },
     {
       "relation": "imports",
@@ -17725,9 +17617,9 @@
       "source_file": "app/Models/Task.php",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "models_task_task",
-      "target": "models_task_task_booted",
-      "confidence_score": 1.0
+      "target": "models_task_task_booted"
     },
     {
       "relation": "method",
@@ -17991,9 +17883,9 @@
       "source_file": "app/Models/User.php",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "models_user_user",
-      "target": "models_user_user_agendas",
-      "confidence_score": 1.0
+      "target": "models_user_user_agendas"
     },
     {
       "relation": "method",
@@ -18178,9 +18070,9 @@
       "source_location": "L58",
       "weight": 1.0,
       "context": "return_type",
+      "confidence_score": 1.0,
       "source": "models_user_user_agendas",
-      "target": "hasmany",
-      "confidence_score": 1.0
+      "target": "hasmany"
     },
     {
       "relation": "imports",
@@ -19604,9 +19496,9 @@
       "source_file": "tests/Feature/OwnedByUserScopeTest.php",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "feature_ownedbyuserscopetest",
-      "target": "role",
-      "confidence_score": 1.0
+      "target": "role"
     },
     {
       "relation": "imports",
@@ -21945,28 +21837,6 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_2026_05_04_191717_add_position_to_tasks_table",
-      "target": "migration"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_2026_05_04_232920_fix_tasks_table_schema",
-      "target": "migration"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
       "source_location": "L3",
       "weight": 1.0,
@@ -21992,9 +21862,9 @@
       "source_file": "database/migrations/2026_07_20_184017_add_user_id_to_agendas_table.php",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migrations_2026_07_20_184017_add_user_id_to_agendas_table",
-      "target": "migration",
-      "confidence_score": 1.0
+      "target": "migration"
     },
     {
       "relation": "method",
@@ -22229,46 +22099,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_2026_05_04_191717_add_position_to_tasks_table",
-      "target": "migrations_2026_05_04_191717_add_position_to_tasks_table_down"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_2026_05_04_191717_add_position_to_tasks_table",
-      "target": "migrations_2026_05_04_191717_add_position_to_tasks_table_up"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_2026_05_04_232920_fix_tasks_table_schema",
-      "target": "migrations_2026_05_04_232920_fix_tasks_table_schema_down"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "migrations_2026_05_04_232920_fix_tasks_table_schema",
-      "target": "migrations_2026_05_04_232920_fix_tasks_table_schema_up"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "database/migrations/2026_05_06_173646_create_agendas_table.php",
       "source_location": "L30",
       "weight": 1.0,
@@ -22312,9 +22142,9 @@
       "source_file": "database/migrations/2026_07_20_184017_add_user_id_to_agendas_table.php",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migrations_2026_07_20_184017_add_user_id_to_agendas_table",
-      "target": "migrations_2026_07_20_184017_add_user_id_to_agendas_table_down",
-      "confidence_score": 1.0
+      "target": "migrations_2026_07_20_184017_add_user_id_to_agendas_table_down"
     },
     {
       "relation": "contains",
@@ -22322,9 +22152,9 @@
       "source_file": "database/migrations/2026_07_20_184017_add_user_id_to_agendas_table.php",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "migrations_2026_07_20_184017_add_user_id_to_agendas_table",
-      "target": "migrations_2026_07_20_184017_add_user_id_to_agendas_table_up",
-      "confidence_score": 1.0
+      "target": "migrations_2026_07_20_184017_add_user_id_to_agendas_table_up"
     },
     {
       "relation": "imports",
@@ -29810,26 +29640,6 @@
       "target": "concept_agendas_calendar"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "migrations_add_position_to_tasks_table",
-      "target": "concept_flowforge"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "migrations_add_position_to_tasks_table",
-      "target": "migrations_create_tasks_table"
-    },
-    {
       "relation": "implements",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
@@ -29858,26 +29668,6 @@
       "weight": 1.0,
       "source": "migrations_alter_breezy_sessions_table",
       "target": "concept_filament_breezy"
-    },
-    {
-      "relation": "references",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "migrations_fix_tasks_table_schema",
-      "target": "concept_tasks_kanban"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "migrations_fix_tasks_table_schema",
-      "target": "migrations_create_tasks_table"
     },
     {
       "relation": "implements",
@@ -31891,5 +31681,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b30231709b6bd31dc09eeb04e547d588225f848e"
+  "built_at_commit": "0c9574ad4dd167170ff1bbfc5831fbd32dc9aa7c"
 }

@@ -1,16 +1,16 @@
 # Graph Report - filament5-starter-kit  (2026-07-20)
 
 ## Corpus Check
-- 129 files · ~37,055 words
+- 132 files · ~37,419 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1319 nodes · 1749 edges · 128 communities (110 shown, 18 thin omitted)
+- 1332 nodes · 1772 edges · 138 communities (118 shown, 20 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 107 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `47037c9f`
+- Built from commit: `b3023170`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -81,8 +81,10 @@
 - [[_COMMUNITY_Module Cluster 63|Module Cluster 63]]
 - [[_COMMUNITY_Module Cluster 64|Module Cluster 64]]
 - [[_COMMUNITY_Module Cluster 65|Module Cluster 65]]
+- [[_COMMUNITY_Module Cluster 67|Module Cluster 67]]
 - [[_COMMUNITY_Module Cluster 70|Module Cluster 70]]
 - [[_COMMUNITY_Module Cluster 71|Module Cluster 71]]
+- [[_COMMUNITY_Module Cluster 73|Module Cluster 73]]
 - [[_COMMUNITY_Module Cluster 74|Module Cluster 74]]
 - [[_COMMUNITY_Module Cluster 75|Module Cluster 75]]
 - [[_COMMUNITY_Module Cluster 78|Module Cluster 78]]
@@ -109,13 +111,19 @@
 - [[_COMMUNITY_Community 123|Community 123]]
 - [[_COMMUNITY_Community 124|Community 124]]
 - [[_COMMUNITY_Community 125|Community 125]]
+- [[_COMMUNITY_Community 128|Community 128]]
+- [[_COMMUNITY_Community 129|Community 129]]
+- [[_COMMUNITY_Community 130|Community 130]]
+- [[_COMMUNITY_Community 131|Community 131]]
+- [[_COMMUNITY_Community 132|Community 132]]
+- [[_COMMUNITY_Community 137|Community 137]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `User` - 27 edges
-2. `UserResource` - 22 edges
-3. `Agenda` - 22 edges
-4. `OpenpayService` - 22 edges
-5. `Task` - 20 edges
+1. `User` - 28 edges
+2. `Agenda` - 25 edges
+3. `UserResource` - 22 edges
+4. `Task` - 22 edges
+5. `OpenpayService` - 22 edges
 6. `Quick Reference` - 20 edges
 7. `Queue and Job Best Practices` - 20 edges
 8. `OpenpayService` - 19 edges
@@ -131,21 +139,21 @@
   README.md → tests/TestCase.php
 - `RolePolicy` --implements--> `TestCase`  [INFERRED]
   README.md → tests/TestCase.php
-- `UserStatsOverviewTest` --implements--> `TestCase`  [INFERRED]
-  README.md → tests/TestCase.php
+- `Providers Bootstrap` --references--> `AdminPanelProvider`  [EXTRACTED]
+  bootstrap/providers.php → README.md
 
 ## Import Cycles
 - None detected.
 
-## Communities (128 total, 18 thin omitted)
+## Communities (138 total, 20 thin omitted)
 
 ### Community 0 - "Blade & Config Rules"
-Cohesion: 0.04
-Nodes (47): $attributes->merge() in Components, @aware for Deeply Nested Component Props, Blade and Views Best Practices, Blade Components Over @include, Blade Fragments for Partial Re-Renders, @pushOnce for Per-Component Scripts, View Composers for Shared View Data, App::environment() for Environment Checks (+39 more)
+Cohesion: 0.14
+Nodes (13): App::environment() for Environment Checks, code:bash, code:bash (php artisan env:encrypt --env=production --readable), code:php (if (env('APP_ENV') === 'production') {), code:php (if (app()->isProduction()) {), code:php (// Incorrect), code:php (// Only when lang files already exist in the project), Configuration Best Practices (+5 more)
 
 ### Community 1 - "Events, Mail & Testing Rules"
-Cohesion: 0.05
-Nodes (43): afterCommit() on Notifications in Transactions, Always Queue Notifications, code:php (class OrderShipped implements ShouldDispatchAfterCommit {}), code:php (class InvoicePaid extends Notification implements ShouldQueu), code:php ($user->notify((new InvoicePaid($invoice))->afterCommit());), code:php (Notification::route('mail', 'admin@example.com')->notify(new), event:cache in Production Deploy, Event Discovery (+35 more)
+Cohesion: 0.11
+Nodes (19): afterCommit() on Notifications in Transactions, Always Queue Notifications, code:php (class OrderShipped implements ShouldDispatchAfterCommit {}), code:php (class InvoicePaid extends Notification implements ShouldQueu), code:php ($user->notify((new InvoicePaid($invoice))->afterCommit());), code:php (Notification::route('mail', 'admin@example.com')->notify(new), event:cache in Production Deploy, Event Discovery (+11 more)
 
 ### Community 2 - "Authorization Policies & Testing"
 Cohesion: 0.06
@@ -153,7 +161,7 @@ Nodes (44): AgendaResource CRUD Completo, API REST Versionada, Throttle en Rutas
 
 ### Community 3 - "Project Guidelines & Improvement Notes"
 Cohesion: 0.05
-Nodes (48): CLAUDE.md (project instructions), SoftDeletes Bug (etapa 1), code:php (// UserStatsOverview.php y UserGrowthChart.php), code:block10 (APP_NAME="Mi Aplicación"), code:block12 (Semana 1:), code:php (protected function getStats(): array), code:php (// UserResource.php), code:php (// app/Models/User.php) (+40 more)
+Nodes (47): CLAUDE.md (project instructions), SoftDeletes Bug (etapa 1), code:php (// UserStatsOverview.php y UserGrowthChart.php), code:block10 (APP_NAME="Mi Aplicación"), code:block12 (Semana 1:), code:php (protected function getStats(): array), code:php (// UserResource.php), code:php (// app/Models/User.php) (+39 more)
 
 ### Community 4 - "Activity Log & RBAC Migrations"
 Cohesion: 0.19
@@ -188,8 +196,8 @@ Cohesion: 0.08
 Nodes (26): Apply Global Scopes Sparingly, Attribute Casts Definition, Avoid Hardcoded Table Names in Queries, Cast Date Columns Properly, code:php (public function comments(): HasMany), code:php (Post::where('user_id', $user->id)->get();), code:php (Post::whereBelongsTo($user)->get();), code:php (DB::table('users')->where('active', true)->get();) (+18 more)
 
 ### Community 12 - "Starter Kit Customization Guide"
-Cohesion: 0.09
-Nodes (28): Always Implement `failed()`, Batch Related Jobs, Bus::batch() for Related Jobs, code:php (class ProcessReport implements ShouldQueue), code:php (class UpdateSearchIndex implements ShouldQueue, ShouldBeUniq), code:php (// config/horizon.php), code:php (class SyncWithStripe implements ShouldQueue), code:php (class GenerateInvoice implements ShouldQueue, ShouldBeUnique) (+20 more)
+Cohesion: 0.13
+Nodes (14): Always Implement `failed()`, code:php (class ProcessReport implements ShouldQueue), code:php (class UpdateSearchIndex implements ShouldQueue, ShouldBeUniq), code:php (// config/horizon.php), code:php (class SyncWithStripe implements ShouldQueue), code:php (class GenerateInvoice implements ShouldQueue, ShouldBeUnique), code:php (public function middleware(): array), Implement `ShouldBeUnique` (+6 more)
 
 ### Community 13 - "Laravel Best Practices Skill"
 Cohesion: 0.14
@@ -212,24 +220,24 @@ Cohesion: 0.18
 Nodes (5): AgendaFactory, TaskFactory, UserFactory, Factory, static
 
 ### Community 18 - "Payment Gateway (Openpay)"
-Cohesion: 0.12
-Nodes (17): Application Structure & Architecture, Conventions, Documentation Files, Foundational Context, Frontend Bundling, Laravel Boost Guidelines, Filament Development Guidelines, Pint Formatter Rule (+9 more)
+Cohesion: 0.14
+Nodes (14): Application Structure & Architecture, Conventions, Documentation Files, Foundational Context, Frontend Bundling, Laravel Boost Guidelines, Filament Development Guidelines, Pint Formatter Rule (+6 more)
 
 ### Community 19 - "Advanced Query Patterns"
-Cohesion: 0.08
-Nodes (18): Attribute, Authenticatable, ChartWidget, Widget Performance (polling/cache), AdminPanelProvider, FilamentUser, HasAvatar, HasMany (+10 more)
+Cohesion: 0.06
+Nodes (29): Attribute, Authenticatable, BaseTestCase, ChartWidget, Test Coverage Plan (etapa 2), Widget Performance (polling/cache), AdminPanelProvider, FilamentUser (+21 more)
 
 ### Community 20 - "Module Cluster 20"
 Cohesion: 0.12
 Nodes (16): Cache::flexible() Stale-While-Revalidate, Cache::memo() Per-Request Deduplication, Cache::remember() Pattern, Cache Tags for Group Invalidation, Caching Best Practices, code:php (Cache::tags(['user-1'])->flush();), code:php (public function roles(): Collection), code:php ('failover' => ['driver' => 'failover', 'stores' => ['redis',) (+8 more)
 
 ### Community 21 - "Module Cluster 21"
-Cohesion: 0.10
-Nodes (20): Always Set Explicit Timeouts, code:php ($response = Http::get('https://api.example.com/users');), code:php ($users = Http::get('https://api.example.com/users')->json();), code:php (use Illuminate\Http\Client\Pool;), code:php (it('syncs user from API', function () {), code:php (Http::fake([), code:php ($response = Http::timeout(5)), code:php (Http::macro('github', function () {) (+12 more)
+Cohesion: 0.17
+Nodes (11): code:php ($users = Http::get('https://api.example.com/users')->json();), code:php (use Illuminate\Http\Client\Pool;), code:php (it('syncs user from API', function () {), code:php (Http::fake([), Explicit Timeouts on HTTP Client, Fake HTTP Calls in Tests, Http::fake() in Tests, HTTP Client Best Practices (+3 more)
 
 ### Community 22 - "Module Cluster 22"
-Cohesion: 0.17
-Nodes (7): Openpay Payment Gateway Integration, ServicesConfig, Openpay Payments Feature, Openpay SDK, OpenpayService, OpenpayService, Throwable
+Cohesion: 0.18
+Nodes (6): Openpay Payment Gateway Integration, ServicesConfig, Openpay Payments Feature, OpenpayService, OpenpayService, Throwable
 
 ### Community 23 - "Module Cluster 23"
 Cohesion: 0.11
@@ -244,8 +252,8 @@ Cohesion: 0.11
 Nodes (18): Add Indexes in the Migration, code:php (// database/migrations/posts_migration.php  ← wrong naming, ), code:php (public function up(): void), code:php (// Migration 1: create_settings_table), code:bash (php artisan make:migration create_posts_table), code:php ($table->foreignId('user_id')->constrained()->cascadeOnDelete), code:php (// 2024_01_01_create_posts_table.php — already in production), code:php (// 2024_03_15_add_slug_to_posts_table.php) (+10 more)
 
 ### Community 26 - "Module Cluster 26"
-Cohesion: 0.08
-Nodes (27): APIs & Eloquent Resources, Artisan, Artisan, Common Mistakes, Correct Namespaces, Deployment, Do Things the Laravel Way, Filament (+19 more)
+Cohesion: 0.07
+Nodes (28): APIs & Eloquent Resources, Artisan, Artisan, Common Mistakes, Correct Namespaces, Deployment, Do Things the Laravel Way, Filament (+20 more)
 
 ### Community 27 - "Module Cluster 27"
 Cohesion: 0.12
@@ -280,16 +288,16 @@ Cohesion: 0.15
 Nodes (12): description, extra, laravel, keywords, dont-discover, license, minimum-stability, name (+4 more)
 
 ### Community 35 - "Module Cluster 35"
-Cohesion: 0.06
-Nodes (21): AgendaResource, BackedEnum, Board, BoardPage, Builder, Cluster, Agenda Timeline Views, Task Board Kanban (+13 more)
+Cohesion: 0.05
+Nodes (23): AgendaResource, BackedEnum, Board, BoardPage, Builder, Cluster, Agenda Timeline Views, Task Board Kanban (+15 more)
 
 ### Community 36 - "Module Cluster 36"
-Cohesion: 0.19
-Nodes (16): FilaCheck Post-Edit Rule, AdminPanelProvider, Agenda Widgets (Calendar, Timeline), Apex Charts Plugin, Auth UI Enhancer Plugin, FilaCheck Lint Plugin, Filament 5 Starter Kit, Filament Logger Plugin (+8 more)
+Cohesion: 0.18
+Nodes (15): FilaCheck Post-Edit Rule, AdminPanelProvider, Agenda Widgets (Calendar, Timeline), Apex Charts Plugin, Auth UI Enhancer Plugin, FilaCheck Lint Plugin, Filament 5 Starter Kit, Filament Logger Plugin (+7 more)
 
 ### Community 37 - "Module Cluster 37"
-Cohesion: 0.22
-Nodes (11): Two-Factor Authentication (2FA TOTP), CustomPersonalInfo Livewire Component, Filament Breezy (Auth), User Model, Navigation Strings (lang/es/navigation.php), Passkeys (WebAuthn), UserForm Schema, Users Resource (CRUD) (+3 more)
+Cohesion: 0.25
+Nodes (9): Two-Factor Authentication (2FA TOTP), CustomPersonalInfo Livewire Component, Filament Breezy (Auth), Filament Shield (RBAC), FlowForge Kanban Plugin, Task Model, User Model, Passkeys (WebAuthn) (+1 more)
 
 ### Community 38 - "Module Cluster 38"
 Cohesion: 0.29
@@ -336,12 +344,12 @@ Cohesion: 0.20
 Nodes (10): require-dev, fakerphp/faker, laravel/boost, laravel/pail, laravel/pint, laraveldaily/filacheck, mockery/mockery, nunomaduro/collision (+2 more)
 
 ### Community 50 - "Module Cluster 50"
-Cohesion: 0.06
+Cohesion: 0.05
 Nodes (14): CreateRecord, EditRecord, ExposesTableToWidgets, ListRecords, Notification, CreateAgenda, CreateTask, CreateUser (+6 more)
 
 ### Community 51 - "Module Cluster 51"
-Cohesion: 0.39
-Nodes (4): Agenda Full Calendar Widget, FullCalendarWidget, Model, AgendaCalendarWidget
+Cohesion: 0.21
+Nodes (6): BelongsTo, Agenda Full Calendar Widget, FullCalendarWidget, HasFactory, Model, AgendaCalendarWidget
 
 ### Community 52 - "Module Cluster 52"
 Cohesion: 0.28
@@ -384,28 +392,28 @@ Cohesion: 0.29
 Nodes (7): pestphp/pest-plugin, php-http/discovery, config, allow-plugins, optimize-autoloader, preferred-install, sort-packages
 
 ### Community 63 - "Module Cluster 63"
-Cohesion: 0.40
-Nodes (4): BaseTestCase, Test Coverage Plan (etapa 2), UserResourceTest, TestCase
+Cohesion: 0.14
+Nodes (14): Call `Event::fake()` After Factory Setup, code:php (Ticket::factory()), Call Event::fake() After Factory Setup, Exceptions::fake() for Exception Reporting Assertion, Factory States and Sequences in Tests, LazilyRefreshDatabase Over RefreshDatabase, Model Assertions Over Raw Database Assertions, recycle() to Share Relationship Instances Across Factories (+6 more)
 
 ### Community 65 - "Module Cluster 65"
 Cohesion: 0.67
 Nodes (3): AppConfig, FilesystemsConfig, MailConfig
 
+### Community 67 - "Module Cluster 67"
+Cohesion: 0.15
+Nodes (14): Batch Related Jobs, Bus::batch() for Related Jobs, code:php (public function failed(?Throwable $exception): void), code:php (Bus::batch([), code:php (public $tries = 0;), Exponential Backoff for Jobs, Always Implement failed() on Jobs, Laravel Horizon for Complex Queue Scenarios (+6 more)
+
 ### Community 71 - "Module Cluster 71"
 Cohesion: 0.53
 Nodes (3): Providers Bootstrap, AppServiceProvider, ServiceProvider
 
+### Community 73 - "Module Cluster 73"
+Cohesion: 0.17
+Nodes (11): Audit Dependencies, Authorize Every Action, code:php (RateLimiter::for('login', function (Request $request) {), code:php (public function rules(): array), code:php ($path = $request->file('avatar')->store('avatars', 'public')), code:bash (composer audit), code:php (public function update(UpdatePostRequest $request, Post $pos), code:php (public function authorize(): bool) (+3 more)
+
 ### Community 74 - "Module Cluster 74"
 Cohesion: 0.67
 Nodes (3): code:php ($query->whereHas('company', fn ($q) => $q->where('name', 'li), code:php ($query->whereIn('company_id', Company::where('name', 'like',), Prefer `whereIn` + Subquery Over `whereHas`
-
-### Community 98 - "Module Cluster 98"
-Cohesion: 0.14
-Nodes (3): HasFactory, Agenda, AgendaPolicy
-
-### Community 100 - "Module Cluster 100"
-Cohesion: 0.14
-Nodes (3): BelongsTo, Task, TaskPolicy
 
 ### Community 114 - "Community 114"
 Cohesion: 0.50
@@ -443,20 +451,44 @@ Nodes (3): code:php (strlen('José');          // 5 (bytes, not characters)), co
 Cohesion: 0.67
 Nodes (3): code:php ($val = Cache::get('stats');), code:php ($val = Cache::remember('stats', 60, fn () => $this->computeS), Use `Cache::remember()` Instead of Manual Get/Put
 
+### Community 128 - "Community 128"
+Cohesion: 0.18
+Nodes (11): $attributes->merge() in Components, @aware for Deeply Nested Component Props, Blade and Views Best Practices, Blade Components Over @include, Blade Fragments for Partial Re-Renders, @pushOnce for Per-Component Scripts, View Composers for Shared View Data, code:blade (<form method="POST" action="/posts">) (+3 more)
+
+### Community 129 - "Community 129"
+Cohesion: 0.18
+Nodes (10): afterCommit() on Mailables in Transactions, assertQueued() Not assertSent() for Queued Mailables, Implement `ShouldQueue` on the Mailable Class, Mail Best Practices, Markdown Mailables for Transactional Emails, Separate Content Tests from Sending Tests, ShouldQueue on Mailable Class, Use `afterCommit()` on Mailables Inside Transactions (+2 more)
+
+### Community 130 - "Community 130"
+Cohesion: 0.22
+Nodes (9): code:php ($key = env('API_KEY');), code:php (// config/services.php), Encrypted Env or External Secrets, env() Only in Config Files, code:php ($key = env('API_KEY');), code:php (// config/services.php), code:php (class Integration extends Model), Encrypt Sensitive Database Fields (+1 more)
+
+### Community 131 - "Community 131"
+Cohesion: 0.50
+Nodes (5): Always Set Explicit Timeouts, code:php ($response = Http::get('https://api.example.com/users');), code:php ($response = Http::timeout(5)), code:php (Http::macro('github', function () {), Handle Errors Explicitly
+
+### Community 132 - "Community 132"
+Cohesion: 0.50
+Nodes (4): code:php ($response = Http::post('https://api.stripe.com/v1/charges', ), code:php ($response = Http::retry([100, 500, 1000])), code:php ($response = Http::retry(3, 100, function (Throwable $excepti), Use Retry with Backoff for External APIs
+
+### Community 137 - "Community 137"
+Cohesion: 0.67
+Nodes (3): code:php (DB::select("SELECT * FROM users WHERE name = '{$request->nam), code:php (User::where('name', $request->name)->get();), Prevent SQL Injection
+
 ## Knowledge Gaps
 - **469 isolated node(s):** `php`, `Controller`, `$schema`, `name`, `type` (+464 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Plan de Mejoras Mayo 2026` connect `Project Guidelines & Improvement Notes` to `Advanced Query Patterns`, `Module Cluster 63`?**
-  _High betweenness centrality (0.277) - this node is a cross-community bridge._
+- **Why does `Plan de Mejoras Mayo 2026` connect `Project Guidelines & Improvement Notes` to `Advanced Query Patterns`?**
+  _High betweenness centrality (0.250) - this node is a cross-community bridge._
 - **Why does `Architecture Best Practices` connect `RBAC & Shield Permissions` to `Community 114`, `Community 118`, `Community 121`, `Community 123`, `Community 124`, `Community 125`?**
-  _High betweenness centrality (0.272) - this node is a cross-community bridge._
+  _High betweenness centrality (0.240) - this node is a cross-community bridge._
 - **Why does `Etapa 3 — Rendimiento de Widgets` connect `Project Guidelines & Improvement Notes` to `Community 114`?**
-  _High betweenness centrality (0.269) - this node is a cross-community bridge._
+  _High betweenness centrality (0.233) - this node is a cross-community bridge._
 - **Are the 5 inferred relationships involving `User` (e.g. with `CustomPersonalInfo.php` and `CreateUser`) actually correct?**
   _`User` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 3 inferred relationships involving `Agenda` (e.g. with `.fetchEvents()` and `.table()`) actually correct?**
@@ -464,4 +496,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `php`, `Controller`, `$schema` to the rest of the system?**
   _480 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Blade & Config Rules` be split into smaller, more focused modules?**
-  _Cohesion score 0.04336734693877551 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
