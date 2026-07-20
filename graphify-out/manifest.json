@@ -100,9 +100,9 @@
     "semantic_hash": "045a59cf1093b4b6f1347c7f42ca72f2"
   },
   "database/seeders/ShieldSeeder.php": {
-    "mtime": 1779216572.2086768,
-    "ast_hash": "a27d66198b237be597aa806c7c0d93f9",
-    "semantic_hash": "a27d66198b237be597aa806c7c0d93f9"
+    "mtime": 1784571936.8600276,
+    "ast_hash": "cdc9f23574926c96fc5df696f8bffcbc",
+    "semantic_hash": ""
   },
   "database/seeders/DatabaseSeeder.php": {
     "mtime": 1777938825.3756998,
@@ -160,12 +160,12 @@
     "semantic_hash": "71da7e8c52364acb9f548a7c3e2e8579"
   },
   "app/Policies/RolePolicy.php": {
-    "mtime": 1777155063.76554,
+    "mtime": 1784571862.1011248,
     "ast_hash": "2f9760438712573e77119c0328647742",
     "semantic_hash": "2f9760438712573e77119c0328647742"
   },
   "app/Policies/ActivityPolicy.php": {
-    "mtime": 1777155063.765393,
+    "mtime": 1784571862.1117356,
     "ast_hash": "be782b1e5dce5ae055dcd616eb7bf3f0",
     "semantic_hash": "be782b1e5dce5ae055dcd616eb7bf3f0"
   },
@@ -220,9 +220,9 @@
     "semantic_hash": "e9d3328bb97387d276d4ba63118ded39"
   },
   "app/Filament/Pages/TaskBoard.php": {
-    "mtime": 1779216572.207787,
-    "ast_hash": "11e5072427af0c5b696940c23af1d3a1",
-    "semantic_hash": "11e5072427af0c5b696940c23af1d3a1"
+    "mtime": 1784571932.562895,
+    "ast_hash": "7e0ed0141491b6bf75466e80ed976d83",
+    "semantic_hash": ""
   },
   "app/Filament/Widgets/AgendaTimelineWidget.php": {
     "mtime": 1778181237.2405882,
@@ -607,6 +607,36 @@
   "database/migrations/2026_07_20_174937_create_notifications_table.php": {
     "mtime": 1784569777.6694188,
     "ast_hash": "fd396841759fbd5474246c762ebef18b",
+    "semantic_hash": ""
+  },
+  "app/Policies/AgendaPolicy.php": {
+    "mtime": 1784571936.87783,
+    "ast_hash": "94e2fa7d157df20d676bf1868543bbb6",
+    "semantic_hash": ""
+  },
+  "app/Policies/TaskPolicy.php": {
+    "mtime": 1784571936.9184146,
+    "ast_hash": "b9ba64140362160219e4325b549c4e97",
+    "semantic_hash": ""
+  },
+  "app/Policies/UserPolicy.php": {
+    "mtime": 1784571936.8966253,
+    "ast_hash": "85fb0912e96597e75aabd1870f6cd37a",
+    "semantic_hash": ""
+  },
+  "tests/Feature/Policies/AgendaPolicyTest.php": {
+    "mtime": 1784571988.4495213,
+    "ast_hash": "4e060776f2aba0052e205f3cbad8cd2a",
+    "semantic_hash": ""
+  },
+  "tests/Feature/Policies/TaskPolicyTest.php": {
+    "mtime": 1784571978.8897855,
+    "ast_hash": "cca51bc2e0d42ed47c033903ba542a07",
+    "semantic_hash": ""
+  },
+  "tests/Feature/Policies/UserPolicyTest.php": {
+    "mtime": 1784571995.6902542,
+    "ast_hash": "c3d74ee5aa9425e637fa59354148416d",
     "semantic_hash": ""
   }
 }

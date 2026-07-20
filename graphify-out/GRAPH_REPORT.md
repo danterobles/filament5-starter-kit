@@ -1,16 +1,16 @@
 # Graph Report - filament5-starter-kit  (2026-07-20)
 
 ## Corpus Check
-- 122 files · ~36,074 words
+- 128 files · ~37,033 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1273 nodes · 1641 edges · 114 communities (95 shown, 19 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 107 edges (avg confidence: 0.84)
+- 1318 nodes · 1749 edges · 127 communities (109 shown, 18 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 107 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ebad3fa4`
+- Built from commit: `9c25e4f1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -86,6 +86,8 @@
 - [[_COMMUNITY_Module Cluster 74|Module Cluster 74]]
 - [[_COMMUNITY_Module Cluster 75|Module Cluster 75]]
 - [[_COMMUNITY_Module Cluster 78|Module Cluster 78]]
+- [[_COMMUNITY_Module Cluster 98|Module Cluster 98]]
+- [[_COMMUNITY_Module Cluster 100|Module Cluster 100]]
 - [[_COMMUNITY_Module Cluster 102|Module Cluster 102]]
 - [[_COMMUNITY_Module Cluster 103|Module Cluster 103]]
 - [[_COMMUNITY_Module Cluster 104|Module Cluster 104]]
@@ -95,35 +97,47 @@
 - [[_COMMUNITY_Community 108|Community 108]]
 - [[_COMMUNITY_Community 109|Community 109]]
 - [[_COMMUNITY_Community 110|Community 110]]
+- [[_COMMUNITY_Community 114|Community 114]]
+- [[_COMMUNITY_Community 115|Community 115]]
+- [[_COMMUNITY_Community 116|Community 116]]
+- [[_COMMUNITY_Community 117|Community 117]]
+- [[_COMMUNITY_Community 118|Community 118]]
+- [[_COMMUNITY_Community 119|Community 119]]
+- [[_COMMUNITY_Community 120|Community 120]]
+- [[_COMMUNITY_Community 121|Community 121]]
+- [[_COMMUNITY_Community 122|Community 122]]
+- [[_COMMUNITY_Community 123|Community 123]]
+- [[_COMMUNITY_Community 124|Community 124]]
+- [[_COMMUNITY_Community 125|Community 125]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `User` - 27 edges
 2. `UserResource` - 22 edges
-3. `OpenpayService` - 22 edges
-4. `Quick Reference` - 20 edges
-5. `Queue and Job Best Practices` - 20 edges
-6. `OpenpayService` - 19 edges
-7. `RolePolicy` - 19 edges
-8. `Filament 5 Starter Kit` - 18 edges
-9. `ActivityPolicy` - 18 edges
-10. `Advanced Query Patterns` - 16 edges
+3. `Agenda` - 22 edges
+4. `OpenpayService` - 22 edges
+5. `Task` - 20 edges
+6. `Quick Reference` - 20 edges
+7. `Queue and Job Best Practices` - 20 edges
+8. `OpenpayService` - 19 edges
+9. `RolePolicy` - 19 edges
+10. `Filament 5 Starter Kit` - 18 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `LatestUsersTable` --conceptually_related_to--> `UserStatsOverviewTest`  [INFERRED]
   app/Filament/Resources/Users/Widgets/LatestUsersTable.php → README.md
-- `UserGrowthChart` --conceptually_related_to--> `UserStatsOverviewTest`  [INFERRED]
-  app/Filament/Resources/Users/Widgets/UserGrowthChart.php → README.md
 - `AdminPanelProvider` --references--> `User`  [INFERRED]
   README.md → app/Models/User.php
-- `ListUsers` --references--> `UserStatsOverviewTest`  [EXTRACTED]
-  app/Filament/Resources/Users/Pages/ListUsers.php → README.md
-- `UserResource` --references--> `UserStatsOverviewTest`  [EXTRACTED]
-  app/Filament/Resources/Users/UserResource.php → README.md
+- `ActivityPolicy` --implements--> `TestCase`  [INFERRED]
+  README.md → tests/TestCase.php
+- `RolePolicy` --implements--> `TestCase`  [INFERRED]
+  README.md → tests/TestCase.php
+- `UserStatsOverviewTest` --implements--> `TestCase`  [INFERRED]
+  README.md → tests/TestCase.php
 
 ## Import Cycles
 - None detected.
 
-## Communities (114 total, 19 thin omitted)
+## Communities (127 total, 18 thin omitted)
 
 ### Community 0 - "Blade & Config Rules"
 Cohesion: 0.04
@@ -139,27 +153,27 @@ Nodes (44): AgendaResource CRUD Completo, API REST Versionada, Throttle en Rutas
 
 ### Community 3 - "Project Guidelines & Improvement Notes"
 Cohesion: 0.05
-Nodes (47): CLAUDE.md (project instructions), SoftDeletes Bug (etapa 1), code:php (// UserStatsOverview.php y UserGrowthChart.php), code:block10 (APP_NAME="Mi Aplicación"), code:block12 (Semana 1:), code:php (protected function getStats(): array), code:php (// UserResource.php), code:php (// app/Models/User.php) (+39 more)
+Nodes (48): CLAUDE.md (project instructions), SoftDeletes Bug (etapa 1), code:php (// UserStatsOverview.php y UserGrowthChart.php), code:block10 (APP_NAME="Mi Aplicación"), code:block12 (Semana 1:), code:php (protected function getStats(): array), code:php (// UserResource.php), code:php (// app/Models/User.php) (+40 more)
 
 ### Community 4 - "Activity Log & RBAC Migrations"
-Cohesion: 0.09
-Nodes (19): Activity, AuthUser, BaseTestCase, Test Coverage Plan (etapa 2), Widget Performance (polling/cache), HandlesAuthorization, ActivityPolicy, RolePolicy (+11 more)
+Cohesion: 0.19
+Nodes (5): RolePolicy, RBAC (Roles and Permissions), RolePolicy, ShieldSeeder, Role
 
 ### Community 5 - "Architecture Best Practices"
 Cohesion: 0.26
 Nodes (6): Spatie Activity Log, CreateActivityLogTable, AddBatchUuidColumnToActivityLogTable, AddBatchUuidColumnToActivityLogTable Migration, AddEventColumnToActivityLogTable Migration, CreateActivityLogTable Migration
 
 ### Community 6 - "RBAC & Shield Permissions"
-Cohesion: 0.06
-Nodes (32): code:php (->selectRaw("strftime('%Y-%m', created_at) as month_key, COU), 3.3 — Compatibilidad SQLite en UserGrowthChart, Architecture Best Practices, Atomic Locks for Race Conditions, Code to Interfaces, code:php (class CreateOrderAction), code:php (strlen('José');          // 5 (bytes, not characters)), code:php (mb_strlen('José');             // 4 (characters)) (+24 more)
+Cohesion: 0.12
+Nodes (16): Architecture Best Practices, code:php (class CreateOrderAction), code:php (dispatch(new LogPageView($page));), code:php (defer(fn () => PageView::create(['page_id' => $page->id, 'us), code:php (class Customer extends Model), code:php (class OrderController extends Controller), code:php (Cache::lock('order-processing-'.$order->id, 10)->block(5, fu), Concurrency::run() for Parallel Execution (+8 more)
 
 ### Community 7 - "Routing & Validation Rules"
 Cohesion: 0.08
 Nodes (19): Filament Shield (RBAC), Filament Shield RBAC, Spatie Laravel Permission, super_admin Role, AuthConfig, CacheConfig, DatabaseConfig, FilamentLoggerConfig (+11 more)
 
 ### Community 8 - "README Documentation"
-Cohesion: 0.06
-Nodes (32): Autenticación, code:block1 (app/), code:bash (# Desarrollo (servidor + queue + vite en paralelo)), code:bash (# 1. Clonar), code:bash (# Suite completa), code:bash (# Optimizar para producción), code:dotenv (APP_ENV=production), `Agenda` (+24 more)
+Cohesion: 0.12
+Nodes (16): code:block1 (app/), code:bash (# Desarrollo (servidor + queue + vite en paralelo)), code:bash (# 1. Clonar), code:bash (# Suite completa), Arquitectura, Autenticación, Comandos frecuentes, Instalación (+8 more)
 
 ### Community 9 - "Profile & Dev Guidelines"
 Cohesion: 0.07
@@ -178,8 +192,8 @@ Cohesion: 0.09
 Nodes (28): Always Implement `failed()`, Batch Related Jobs, Bus::batch() for Related Jobs, code:php (class ProcessReport implements ShouldQueue), code:php (class UpdateSearchIndex implements ShouldQueue, ShouldBeUniq), code:php (// config/horizon.php), code:php (class SyncWithStripe implements ShouldQueue), code:php (class GenerateInvoice implements ShouldQueue, ShouldBeUnique) (+20 more)
 
 ### Community 13 - "Laravel Best Practices Skill"
-Cohesion: 0.08
-Nodes (25): code:php (// app/Filament/Pages/MiPagina.php), code:php (->plugins([), code:bash (# Crea el Resource con CRUD completo a partir del modelo), code:php (// En el Resource generado:), code:php (public static function getNavigationGroup(): ?string), code:bash (php artisan make:filament-cluster NombreCluster --no-interac), code:php (class NombreCluster extends Cluster), code:php (protected static ?string $cluster = \App\Filament\Clusters\N) (+17 more)
+Cohesion: 0.14
+Nodes (14): code:php (// app/Filament/Pages/MiPagina.php), code:php (->plugins([), code:php (use App\Services\OpenpayService;), code:block5 (lang/es/navigation.php), code:php (return [), code:php (// ✗  No funciona en tiempo de definición de clase), code:php (use Filament\Support\Colors\Color;), code:bash (php artisan shield:generate --all) (+6 more)
 
 ### Community 14 - "Pest Testing Skill"
 Cohesion: 0.08
@@ -189,25 +203,33 @@ Nodes (23): 10. Routing & Controllers → `rules/routing.md`, 11. HTTP Client �
 Cohesion: 0.08
 Nodes (23): Architecture Testing, Assertions, Basic Test Structure, Basic Usage, Browser Test Example, code:php (it('is true', function () {), code:php (it('returns all', function () {), code:php (it('has emails', function (string $email) {) (+15 more)
 
+### Community 16 - "Caching Strategies"
+Cohesion: 0.21
+Nodes (4): Activity, HandlesAuthorization, ActivityPolicy, ActivityPolicy
+
+### Community 17 - "HTTP Client Patterns"
+Cohesion: 0.18
+Nodes (5): AgendaFactory, TaskFactory, UserFactory, Factory, static
+
 ### Community 18 - "Payment Gateway (Openpay)"
-Cohesion: 0.13
-Nodes (15): Application Structure & Architecture, Conventions, Documentation Files, Foundational Context, Frontend Bundling, Laravel Boost Guidelines, Filament Development Guidelines, Pint Formatter Rule (+7 more)
+Cohesion: 0.12
+Nodes (17): Application Structure & Architecture, Conventions, Documentation Files, Foundational Context, Frontend Bundling, Laravel Boost Guidelines, Filament Development Guidelines, Pint Formatter Rule (+9 more)
 
 ### Community 19 - "Advanced Query Patterns"
-Cohesion: 0.06
-Nodes (25): Attribute, Authenticatable, BelongsTo, Agenda Full Calendar Widget, AgendaFactory, TaskFactory, UserFactory, Factory (+17 more)
+Cohesion: 0.08
+Nodes (18): Attribute, Authenticatable, ChartWidget, Widget Performance (polling/cache), AdminPanelProvider, FilamentUser, HasAvatar, HasMany (+10 more)
 
 ### Community 20 - "Module Cluster 20"
-Cohesion: 0.10
-Nodes (20): Cache::add() for Atomic Conditional Writes, Cache::flexible() Stale-While-Revalidate, Cache::memo() Per-Request Deduplication, Cache::remember() Pattern, Cache Tags for Group Invalidation, Caching Best Practices, code:php ($val = Cache::get('stats');), code:php ($val = Cache::remember('stats', 60, fn () => $this->computeS) (+12 more)
+Cohesion: 0.12
+Nodes (16): Cache::flexible() Stale-While-Revalidate, Cache::memo() Per-Request Deduplication, Cache::remember() Pattern, Cache Tags for Group Invalidation, Caching Best Practices, code:php (Cache::tags(['user-1'])->flush();), code:php (public function roles(): Collection), code:php ('failover' => ['driver' => 'failover', 'stores' => ['redis',) (+8 more)
 
 ### Community 21 - "Module Cluster 21"
 Cohesion: 0.10
 Nodes (20): Always Set Explicit Timeouts, code:php ($response = Http::get('https://api.example.com/users');), code:php ($users = Http::get('https://api.example.com/users')->json();), code:php (use Illuminate\Http\Client\Pool;), code:php (it('syncs user from API', function () {), code:php (Http::fake([), code:php ($response = Http::timeout(5)), code:php (Http::macro('github', function () {) (+12 more)
 
 ### Community 22 - "Module Cluster 22"
-Cohesion: 0.18
-Nodes (6): Openpay Payment Gateway Integration, ServicesConfig, Openpay Payments Feature, OpenpayService, OpenpayService, Throwable
+Cohesion: 0.17
+Nodes (7): Openpay Payment Gateway Integration, ServicesConfig, Openpay Payments Feature, Openpay SDK, OpenpayService, OpenpayService, Throwable
 
 ### Community 23 - "Module Cluster 23"
 Cohesion: 0.11
@@ -262,12 +284,12 @@ Cohesion: 0.06
 Nodes (21): AgendaResource, BackedEnum, Board, BoardPage, Builder, Cluster, Agenda Timeline Views, Task Board Kanban (+13 more)
 
 ### Community 36 - "Module Cluster 36"
-Cohesion: 0.17
-Nodes (16): Providers Bootstrap, FilaCheck Post-Edit Rule, AdminPanelProvider, Agenda Widgets (Calendar, Timeline), Apex Charts Plugin, Auth UI Enhancer Plugin, FilaCheck Lint Plugin, Filament 5 Starter Kit (+8 more)
+Cohesion: 0.19
+Nodes (16): FilaCheck Post-Edit Rule, AdminPanelProvider, Agenda Widgets (Calendar, Timeline), Apex Charts Plugin, Auth UI Enhancer Plugin, FilaCheck Lint Plugin, Filament 5 Starter Kit, Filament Logger Plugin (+8 more)
 
 ### Community 37 - "Module Cluster 37"
 Cohesion: 0.22
-Nodes (11): Filament Shield (RBAC), FlowForge Kanban Plugin, Task Model, User Model, Navigation Strings (lang/es/navigation.php), TaskBoard Page (Kanban), UserForm Schema, Users Resource (CRUD) (+3 more)
+Nodes (11): Two-Factor Authentication (2FA TOTP), CustomPersonalInfo Livewire Component, Filament Breezy (Auth), User Model, Navigation Strings (lang/es/navigation.php), Passkeys (WebAuthn), UserForm Schema, Users Resource (CRUD) (+3 more)
 
 ### Community 38 - "Module Cluster 38"
 Cohesion: 0.29
@@ -314,12 +336,12 @@ Cohesion: 0.20
 Nodes (10): require-dev, fakerphp/faker, laravel/boost, laravel/pail, laravel/pint, laraveldaily/filacheck, mockery/mockery, nunomaduro/collision (+2 more)
 
 ### Community 50 - "Module Cluster 50"
-Cohesion: 0.20
-Nodes (4): EditRecord, Notification, EditAgenda, EditUser
+Cohesion: 0.06
+Nodes (14): CreateRecord, EditRecord, ExposesTableToWidgets, ListRecords, Notification, CreateAgenda, CreateTask, CreateUser (+6 more)
 
 ### Community 51 - "Module Cluster 51"
-Cohesion: 0.24
-Nodes (4): ExposesTableToWidgets, ListRecords, ListTasks, ListUsers
+Cohesion: 0.39
+Nodes (4): Agenda Full Calendar Widget, FullCalendarWidget, Model, AgendaCalendarWidget
 
 ### Community 52 - "Module Cluster 52"
 Cohesion: 0.28
@@ -341,6 +363,10 @@ Nodes (5): Artisan Commands, code:bash (php artisan flowforge:diagnose-positions
 Cohesion: 0.40
 Nodes (5): code:php (use Relaticle\Flowforge\Services\DecimalPosition;), code:php (// In your Livewire component), DecimalPosition Service, Manual Card Movement, Position Management
 
+### Community 58 - "Module Cluster 58"
+Cohesion: 0.22
+Nodes (9): Autenticación, Agenda / Calendario, Autenticación, Features, Gestión de usuarios, Pagos (Openpay), Panel de administración (`/admin`), RBAC (Filament Shield) (+1 more)
+
 ### Community 59 - "Module Cluster 59"
 Cohesion: 0.67
 Nodes (4): Filament Breezy (Auth/2FA/Passkeys), AlterBreezySessions Migration, CreateBreezySessions Migration, CreatePasskeysTable Migration
@@ -358,36 +384,84 @@ Cohesion: 0.29
 Nodes (7): pestphp/pest-plugin, php-http/discovery, config, allow-plugins, optimize-autoloader, preferred-install, sort-packages
 
 ### Community 63 - "Module Cluster 63"
-Cohesion: 0.67
-Nodes (4): Two-Factor Authentication (2FA TOTP), CustomPersonalInfo Livewire Component, Filament Breezy (Auth), Passkeys (WebAuthn)
+Cohesion: 0.40
+Nodes (4): BaseTestCase, Test Coverage Plan (etapa 2), UserResourceTest, TestCase
 
 ### Community 65 - "Module Cluster 65"
 Cohesion: 0.67
 Nodes (3): AppConfig, FilesystemsConfig, MailConfig
 
+### Community 71 - "Module Cluster 71"
+Cohesion: 0.53
+Nodes (3): Providers Bootstrap, AppServiceProvider, ServiceProvider
+
 ### Community 74 - "Module Cluster 74"
 Cohesion: 0.67
 Nodes (3): code:php ($query->whereHas('company', fn ($q) => $q->where('name', 'li), code:php ($query->whereIn('company_id', Company::where('name', 'like',), Prefer `whereIn` + Subquery Over `whereHas`
 
+### Community 98 - "Module Cluster 98"
+Cohesion: 0.14
+Nodes (3): HasFactory, Agenda, AgendaPolicy
+
+### Community 100 - "Module Cluster 100"
+Cohesion: 0.14
+Nodes (3): BelongsTo, Task, TaskPolicy
+
+### Community 114 - "Community 114"
+Cohesion: 0.50
+Nodes (4): code:php (->selectRaw("strftime('%Y-%m', created_at) as month_key, COU), 3.3 — Compatibilidad SQLite en UserGrowthChart, code:php (use Illuminate\Support\Facades\Concurrency;), Use `Concurrency::run()` for Parallel Execution
+
+### Community 115 - "Community 115"
+Cohesion: 0.50
+Nodes (4): code:bash (# Crea el Resource con CRUD completo a partir del modelo), code:php (// En el Resource generado:), code:php (public static function getNavigationGroup(): ?string), 6. Agregar un Resource
+
+### Community 116 - "Community 116"
+Cohesion: 0.50
+Nodes (4): code:bash (php artisan make:filament-cluster NombreCluster --no-interac), code:php (class NombreCluster extends Cluster), code:php (protected static ?string $cluster = \App\Filament\Clusters\N), 7. Agregar un Cluster
+
+### Community 117 - "Community 117"
+Cohesion: 0.50
+Nodes (4): `Agenda`, Modelos, `Task`, `User`
+
+### Community 118 - "Community 118"
+Cohesion: 0.50
+Nodes (4): Code to Interfaces, code:php (class OrderService), code:php (interface PaymentGateway), code:php ($this->app->bind(PaymentGateway::class, StripeGateway::class)
+
+### Community 119 - "Community 119"
+Cohesion: 0.67
+Nodes (3): code:bash (# Optimizar para producción), code:dotenv (APP_ENV=production), Despliegue
+
+### Community 120 - "Community 120"
+Cohesion: 0.67
+Nodes (3): code:dotenv (# .env), code:php (AuthUIEnhancerPlugin::make()), 1. Nombre y branding
+
+### Community 121 - "Community 121"
+Cohesion: 0.67
+Nodes (3): code:php (strlen('José');          // 5 (bytes, not characters)), code:php (mb_strlen('José');             // 4 (characters)), Use `mb_*` String Functions
+
+### Community 122 - "Community 122"
+Cohesion: 0.67
+Nodes (3): code:php ($val = Cache::get('stats');), code:php ($val = Cache::remember('stats', 60, fn () => $this->computeS), Use `Cache::remember()` Instead of Manual Get/Put
+
 ## Knowledge Gaps
 - **469 isolated node(s):** `php`, `Controller`, `$schema`, `name`, `type` (+464 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Plan de Mejoras Mayo 2026` connect `Project Guidelines & Improvement Notes` to `Activity Log & RBAC Migrations`?**
-  _High betweenness centrality (0.286) - this node is a cross-community bridge._
-- **Why does `Etapa 3 — Rendimiento de Widgets` connect `Project Guidelines & Improvement Notes` to `RBAC & Shield Permissions`?**
-  _High betweenness centrality (0.262) - this node is a cross-community bridge._
+- **Why does `Plan de Mejoras Mayo 2026` connect `Project Guidelines & Improvement Notes` to `Advanced Query Patterns`, `Module Cluster 63`?**
+  _High betweenness centrality (0.277) - this node is a cross-community bridge._
+- **Why does `Etapa 3 — Rendimiento de Widgets` connect `Project Guidelines & Improvement Notes` to `Community 114`?**
+  _High betweenness centrality (0.269) - this node is a cross-community bridge._
+- **Why does `Architecture Best Practices` connect `RBAC & Shield Permissions` to `Community 114`, `Community 118`, `Community 121`, `Community 123`, `Community 124`, `Community 125`?**
+  _High betweenness centrality (0.267) - this node is a cross-community bridge._
 - **Are the 5 inferred relationships involving `User` (e.g. with `CustomPersonalInfo.php` and `CreateUser`) actually correct?**
   _`User` has 5 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 3 inferred relationships involving `Agenda` (e.g. with `.fetchEvents()` and `.table()`) actually correct?**
+  _`Agenda` has 3 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `php`, `Controller`, `$schema` to the rest of the system?**
   _480 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Blade & Config Rules` be split into smaller, more focused modules?**
   _Cohesion score 0.04336734693877551 - nodes in this community are weakly interconnected._
-- **Should `Events, Mail & Testing Rules` be split into smaller, more focused modules?**
-  _Cohesion score 0.0463768115942029 - nodes in this community are weakly interconnected._
-- **Should `Authorization Policies & Testing` be split into smaller, more focused modules?**
-  _Cohesion score 0.06448202959830866 - nodes in this community are weakly interconnected._
