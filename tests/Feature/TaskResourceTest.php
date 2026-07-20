@@ -8,6 +8,7 @@ use App\Models\User;
 use Database\Seeders\ShieldSeeder;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\Testing\TestAction;
+use Illuminate\Notifications\DatabaseNotification;
 use Livewire\Livewire;
 
 use function Pest\Laravel\assertDatabaseHas;
@@ -148,6 +149,38 @@ test('table search finds tasks by title', function () {
         ->searchTable('Migracion')
         ->assertCanSeeTableRecords(collect([$target]))
         ->assertCanNotSeeTableRecords(collect([$other]));
+});
+
+test('creating a task with an assigned user sends them a reminder notification', function () {
+    $assignee = User::factory()->create();
+
+    Livewire::test(CreateTask::class)
+        ->fillForm([
+            'title' => 'Preparar reporte mensual',
+            'status' => 'todo',
+            'user_id' => $assignee->id,
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    assertDatabaseHas('notifications', [
+        'notifiable_type' => User::class,
+        'notifiable_id' => $assignee->id,
+    ]);
+
+    expect($assignee->fresh()->unreadNotifications()->count())->toBe(1);
+});
+
+test('creating a task without an assigned user sends no notification', function () {
+    Livewire::test(CreateTask::class)
+        ->fillForm([
+            'title' => 'Tarea sin dueño',
+            'status' => 'todo',
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    expect(DatabaseNotification::count())->toBe(0);
 });
 
 test('a regular user only sees tasks assigned to them in the table', function () {

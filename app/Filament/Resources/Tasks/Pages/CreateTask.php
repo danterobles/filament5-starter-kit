@@ -28,6 +28,21 @@ class CreateTask extends CreateRecord
             ->send();
     }
 
+    protected function afterCreate(): void
+    {
+        $assignee = $this->record->user;
+
+        if (! $assignee) {
+            return;
+        }
+
+        Notification::make()
+            ->title('Nueva tarea asignada')
+            ->body("Se te asignó la tarea \"{$this->record->title}\" como recordatorio.")
+            ->icon('heroicon-o-clipboard-document-list')
+            ->sendToDatabase($assignee);
+    }
+
     protected function getFormActions(): array
     {
         return [
