@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Agenda;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -21,6 +22,7 @@ class AgendaFactory extends Factory
         $colors = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4'];
 
         return [
+            'user_id' => User::factory(),
             'title' => fake()->sentence(3, false),
             'description' => fake()->optional(0.7)->paragraph(),
             'start_date' => $start,

@@ -54,4 +54,9 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
     {
         return $this->hasMany(Task::class);
     }
+
+    public function agendas(): HasMany
+    {
+        return $this->hasMany(Agenda::class);
+    }
 }

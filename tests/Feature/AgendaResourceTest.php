@@ -134,3 +134,32 @@ test('table search finds agendas by title', function () {
         ->assertCanSeeTableRecords(collect([$target]))
         ->assertCanNotSeeTableRecords(collect([$other]));
 });
+
+test('a regular user only sees agendas they created in the table', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Agenda', 'View:Agenda');
+
+    $ownAgenda = Agenda::factory()->for($viewer)->create();
+    $othersAgenda = Agenda::factory()->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(ListAgendas::class)
+        ->assertCanSeeTableRecords(collect([$ownAgenda]))
+        ->assertCanNotSeeTableRecords(collect([$othersAgenda]));
+});
+
+test('creating an agenda from the form assigns the current user as owner', function () {
+    Livewire::test(CreateAgenda::class)
+        ->fillForm([
+            'title' => 'Evento propio',
+            'start_date' => '2026-06-20 09:00:00',
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    assertDatabaseHas(Agenda::class, [
+        'title' => 'Evento propio',
+        'user_id' => $this->admin->id,
+    ]);
+});

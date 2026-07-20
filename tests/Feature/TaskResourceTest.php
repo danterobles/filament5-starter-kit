@@ -149,3 +149,17 @@ test('table search finds tasks by title', function () {
         ->assertCanSeeTableRecords(collect([$target]))
         ->assertCanNotSeeTableRecords(collect([$other]));
 });
+
+test('a regular user only sees tasks assigned to them in the table', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Task', 'View:Task');
+
+    $ownTask = Task::factory()->for($viewer)->create();
+    $othersTask = Task::factory()->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(ListTasks::class)
+        ->assertCanSeeTableRecords(collect([$ownTask]))
+        ->assertCanNotSeeTableRecords(collect([$othersTask]));
+});

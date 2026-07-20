@@ -12,6 +12,13 @@ class CreateAgenda extends CreateRecord
 
     protected static ?string $title = 'Crear Evento';
 
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['user_id'] = auth()->id();
+
+        return $data;
+    }
+
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');
