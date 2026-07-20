@@ -64,11 +64,6 @@
     "ast_hash": "ead9cce2650b36345454f85e8c0214a0",
     "semantic_hash": "ead9cce2650b36345454f85e8c0214a0"
   },
-  "database/migrations/2026_05_04_191717_add_position_to_tasks_table.php": {
-    "mtime": 1777922552.6797078,
-    "ast_hash": "34796fce3dc3fb87ab7ade3f972745d9",
-    "semantic_hash": "34796fce3dc3fb87ab7ade3f972745d9"
-  },
   "database/migrations/2026_04_20_194026_create_passkeys_table.php": {
     "mtime": 1776714647.6857991,
     "ast_hash": "1c20e8cb57d9ff3ab463ec475ef5db96",
@@ -79,20 +74,15 @@
     "ast_hash": "d0ce4624021f5b3121a91c406a5f79f2",
     "semantic_hash": "d0ce4624021f5b3121a91c406a5f79f2"
   },
-  "database/migrations/2026_05_04_232920_fix_tasks_table_schema.php": {
-    "mtime": 1777938825.3752153,
-    "ast_hash": "4bf126eb97e68803c92eb8241bed2ff1",
-    "semantic_hash": "4bf126eb97e68803c92eb8241bed2ff1"
-  },
   "database/migrations/2026_04_20_194025_alter_breezy_sessions_table.php": {
     "mtime": 1776714647.6855962,
     "ast_hash": "7d913a45e30bb6712ec1959731d9ccca",
     "semantic_hash": "7d913a45e30bb6712ec1959731d9ccca"
   },
   "database/migrations/2026_05_04_185058_create_tasks_table.php": {
-    "mtime": 1777922552.6795213,
-    "ast_hash": "1e0d4a6620893dd54670bdaac443f546",
-    "semantic_hash": "1e0d4a6620893dd54670bdaac443f546"
+    "mtime": 1784573019.2618346,
+    "ast_hash": "aeee4cd97c2bb8544d81c20c393a213d",
+    "semantic_hash": ""
   },
   "database/migrations/2026_04_20_191120_create_activity_log_table.php": {
     "mtime": 1776712669.7416112,

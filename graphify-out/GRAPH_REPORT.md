@@ -1,16 +1,16 @@
 # Graph Report - filament5-starter-kit  (2026-07-20)
 
 ## Corpus Check
-- 130 files · ~37,320 words
+- 130 files · ~37,424 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1324 nodes · 1760 edges · 131 communities (111 shown, 20 thin omitted)
+- 1325 nodes · 1762 edges · 124 communities (106 shown, 18 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 106 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0c9574ad`
+- Built from commit: `c2805f6d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -66,9 +66,7 @@
 - [[_COMMUNITY_Module Cluster 48|Module Cluster 48]]
 - [[_COMMUNITY_Module Cluster 49|Module Cluster 49]]
 - [[_COMMUNITY_Module Cluster 50|Module Cluster 50]]
-- [[_COMMUNITY_Module Cluster 51|Module Cluster 51]]
 - [[_COMMUNITY_Module Cluster 52|Module Cluster 52]]
-- [[_COMMUNITY_Module Cluster 53|Module Cluster 53]]
 - [[_COMMUNITY_Module Cluster 54|Module Cluster 54]]
 - [[_COMMUNITY_Module Cluster 55|Module Cluster 55]]
 - [[_COMMUNITY_Module Cluster 56|Module Cluster 56]]
@@ -80,11 +78,8 @@
 - [[_COMMUNITY_Module Cluster 62|Module Cluster 62]]
 - [[_COMMUNITY_Module Cluster 64|Module Cluster 64]]
 - [[_COMMUNITY_Module Cluster 65|Module Cluster 65]]
-- [[_COMMUNITY_Module Cluster 67|Module Cluster 67]]
 - [[_COMMUNITY_Module Cluster 70|Module Cluster 70]]
 - [[_COMMUNITY_Module Cluster 71|Module Cluster 71]]
-- [[_COMMUNITY_Module Cluster 72|Module Cluster 72]]
-- [[_COMMUNITY_Module Cluster 73|Module Cluster 73]]
 - [[_COMMUNITY_Module Cluster 74|Module Cluster 74]]
 - [[_COMMUNITY_Module Cluster 75|Module Cluster 75]]
 - [[_COMMUNITY_Module Cluster 78|Module Cluster 78]]
@@ -111,8 +106,6 @@
 - [[_COMMUNITY_Community 123|Community 123]]
 - [[_COMMUNITY_Community 124|Community 124]]
 - [[_COMMUNITY_Community 125|Community 125]]
-- [[_COMMUNITY_Community 131|Community 131]]
-- [[_COMMUNITY_Community 132|Community 132]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `User` - 28 edges
@@ -135,13 +128,13 @@
   README.md → tests/TestCase.php
 - `RolePolicy` --implements--> `TestCase`  [INFERRED]
   README.md → tests/TestCase.php
-- `UserStatsOverviewTest` --implements--> `TestCase`  [INFERRED]
-  README.md → tests/TestCase.php
+- `Providers Bootstrap` --references--> `AdminPanelProvider`  [EXTRACTED]
+  bootstrap/providers.php → README.md
 
 ## Import Cycles
 - None detected.
 
-## Communities (131 total, 20 thin omitted)
+## Communities (124 total, 18 thin omitted)
 
 ### Community 0 - "Blade & Config Rules"
 Cohesion: 0.04
@@ -192,8 +185,8 @@ Cohesion: 0.08
 Nodes (26): Apply Global Scopes Sparingly, Attribute Casts Definition, Avoid Hardcoded Table Names in Queries, Cast Date Columns Properly, code:php (public function comments(): HasMany), code:php (Post::where('user_id', $user->id)->get();), code:php (Post::whereBelongsTo($user)->get();), code:php (DB::table('users')->where('active', true)->get();) (+18 more)
 
 ### Community 12 - "Starter Kit Customization Guide"
-Cohesion: 0.15
-Nodes (12): Always Implement `failed()`, code:php (class ProcessReport implements ShouldQueue), code:php (// config/horizon.php), code:php (class SyncWithStripe implements ShouldQueue), code:php (public function middleware(): array), code:php (public $tries = 0;), Queue & Job Best Practices, Rate Limit External API Calls in Jobs (+4 more)
+Cohesion: 0.09
+Nodes (28): Always Implement `failed()`, Batch Related Jobs, Bus::batch() for Related Jobs, code:php (class ProcessReport implements ShouldQueue), code:php (class UpdateSearchIndex implements ShouldQueue, ShouldBeUniq), code:php (// config/horizon.php), code:php (class SyncWithStripe implements ShouldQueue), code:php (class GenerateInvoice implements ShouldQueue, ShouldBeUnique) (+20 more)
 
 ### Community 13 - "Laravel Best Practices Skill"
 Cohesion: 0.14
@@ -220,16 +213,16 @@ Cohesion: 0.13
 Nodes (15): Application Structure & Architecture, Conventions, Documentation Files, Foundational Context, Frontend Bundling, Laravel Boost Guidelines, Filament Development Guidelines, Pint Formatter Rule (+7 more)
 
 ### Community 19 - "Advanced Query Patterns"
-Cohesion: 0.08
-Nodes (18): Attribute, Authenticatable, ChartWidget, Widget Performance (polling/cache), AdminPanelProvider, FilamentUser, HasAvatar, HasMany (+10 more)
+Cohesion: 0.06
+Nodes (28): Attribute, Authenticatable, BaseTestCase, ChartWidget, Test Coverage Plan (etapa 2), Widget Performance (polling/cache), AdminPanelProvider, FilamentUser (+20 more)
 
 ### Community 20 - "Module Cluster 20"
 Cohesion: 0.12
 Nodes (16): Cache::flexible() Stale-While-Revalidate, Cache::memo() Per-Request Deduplication, Cache::remember() Pattern, Cache Tags for Group Invalidation, Caching Best Practices, code:php (Cache::tags(['user-1'])->flush();), code:php (public function roles(): Collection), code:php ('failover' => ['driver' => 'failover', 'stores' => ['redis',) (+8 more)
 
 ### Community 21 - "Module Cluster 21"
-Cohesion: 0.15
-Nodes (12): code:php ($users = Http::get('https://api.example.com/users')->json();), code:php (use Illuminate\Http\Client\Pool;), code:php (it('syncs user from API', function () {), code:php (Http::fake([), Explicit Timeouts on HTTP Client, Fake HTTP Calls in Tests, Http::fake() in Tests, HTTP Client Best Practices (+4 more)
+Cohesion: 0.10
+Nodes (20): Always Set Explicit Timeouts, code:php ($response = Http::get('https://api.example.com/users');), code:php ($users = Http::get('https://api.example.com/users')->json();), code:php (use Illuminate\Http\Client\Pool;), code:php (it('syncs user from API', function () {), code:php (Http::fake([), code:php ($response = Http::timeout(5)), code:php (Http::macro('github', function () {) (+12 more)
 
 ### Community 22 - "Module Cluster 22"
 Cohesion: 0.18
@@ -284,16 +277,16 @@ Cohesion: 0.15
 Nodes (12): description, extra, laravel, keywords, dont-discover, license, minimum-stability, name (+4 more)
 
 ### Community 35 - "Module Cluster 35"
-Cohesion: 0.06
-Nodes (21): AgendaResource, BackedEnum, Board, BoardPage, Builder, Cluster, Agenda Timeline Views, Task Board Kanban (+13 more)
+Cohesion: 0.05
+Nodes (23): AgendaResource, BackedEnum, Board, BoardPage, Builder, Cluster, Agenda Timeline Views, Task Board Kanban (+15 more)
 
 ### Community 36 - "Module Cluster 36"
 Cohesion: 0.18
 Nodes (15): FilaCheck Post-Edit Rule, AdminPanelProvider, Agenda Widgets (Calendar, Timeline), Apex Charts Plugin, Auth UI Enhancer Plugin, FilaCheck Lint Plugin, Filament 5 Starter Kit, Filament Logger Plugin (+7 more)
 
 ### Community 37 - "Module Cluster 37"
-Cohesion: 0.22
-Nodes (11): Filament Shield (RBAC), FlowForge Kanban Plugin, Task Model, User Model, Navigation Strings (lang/es/navigation.php), TaskBoard Page (Kanban), UserForm Schema, Users Resource (CRUD) (+3 more)
+Cohesion: 0.25
+Nodes (9): Two-Factor Authentication (2FA TOTP), CustomPersonalInfo Livewire Component, Filament Breezy (Auth), Filament Shield (RBAC), FlowForge Kanban Plugin, Task Model, User Model, Passkeys (WebAuthn) (+1 more)
 
 ### Community 38 - "Module Cluster 38"
 Cohesion: 0.29
@@ -340,20 +333,12 @@ Cohesion: 0.20
 Nodes (10): require-dev, fakerphp/faker, laravel/boost, laravel/pail, laravel/pint, laraveldaily/filacheck, mockery/mockery, nunomaduro/collision (+2 more)
 
 ### Community 50 - "Module Cluster 50"
-Cohesion: 0.05
-Nodes (14): CreateRecord, EditRecord, ExposesTableToWidgets, ListRecords, Notification, CreateAgenda, CreateTask, CreateUser (+6 more)
-
-### Community 51 - "Module Cluster 51"
-Cohesion: 0.40
-Nodes (4): BaseTestCase, Test Coverage Plan (etapa 2), UserResourceTest, TestCase
+Cohesion: 0.06
+Nodes (12): CreateRecord, EditRecord, ListRecords, Notification, CreateAgenda, CreateTask, CreateUser, EditAgenda (+4 more)
 
 ### Community 52 - "Module Cluster 52"
 Cohesion: 0.28
 Nodes (9): autoload, autoload-dev, psr-4, psr-4, App\\, Database\\Factories\\, Database\\Seeders\\, Tests\\ (+1 more)
-
-### Community 53 - "Module Cluster 53"
-Cohesion: 0.67
-Nodes (4): Two-Factor Authentication (2FA TOTP), CustomPersonalInfo Livewire Component, Filament Breezy (Auth), Passkeys (WebAuthn)
 
 ### Community 54 - "Module Cluster 54"
 Cohesion: 0.40
@@ -390,10 +375,6 @@ Nodes (7): pestphp/pest-plugin, php-http/discovery, config, allow-plugins, optim
 ### Community 65 - "Module Cluster 65"
 Cohesion: 0.67
 Nodes (3): AppConfig, FilesystemsConfig, MailConfig
-
-### Community 67 - "Module Cluster 67"
-Cohesion: 0.20
-Nodes (11): Batch Related Jobs, Bus::batch() for Related Jobs, code:php (public function failed(?Throwable $exception): void), code:php (Bus::batch([), Always Implement failed() on Jobs, Laravel Horizon for Complex Queue Scenarios, Queue and Job Best Practices, retry_after Greater Than timeout (+3 more)
 
 ### Community 71 - "Module Cluster 71"
 Cohesion: 0.53
@@ -447,26 +428,18 @@ Nodes (3): code:php (strlen('José');          // 5 (bytes, not characters)), co
 Cohesion: 0.67
 Nodes (3): code:php ($val = Cache::get('stats');), code:php ($val = Cache::remember('stats', 60, fn () => $this->computeS), Use `Cache::remember()` Instead of Manual Get/Put
 
-### Community 131 - "Community 131"
-Cohesion: 0.50
-Nodes (5): Always Set Explicit Timeouts, code:php ($response = Http::get('https://api.example.com/users');), code:php ($response = Http::timeout(5)), code:php (Http::macro('github', function () {), Handle Errors Explicitly
-
-### Community 132 - "Community 132"
-Cohesion: 0.50
-Nodes (4): code:php ($response = Http::post('https://api.stripe.com/v1/charges', ), code:php ($response = Http::retry([100, 500, 1000])), code:php ($response = Http::retry(3, 100, function (Throwable $excepti), Use Retry with Backoff for External APIs
-
 ## Knowledge Gaps
 - **470 isolated node(s):** `php`, `Controller`, `$schema`, `name`, `type` (+465 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **20 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **18 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Plan de Mejoras Mayo 2026` connect `Project Guidelines & Improvement Notes` to `Advanced Query Patterns`, `Module Cluster 51`?**
+- **Why does `Plan de Mejoras Mayo 2026` connect `Project Guidelines & Improvement Notes` to `Advanced Query Patterns`?**
   _High betweenness centrality (0.260) - this node is a cross-community bridge._
 - **Why does `Architecture Best Practices` connect `RBAC & Shield Permissions` to `Community 114`, `Community 118`, `Community 121`, `Community 123`, `Community 124`, `Community 125`?**
-  _High betweenness centrality (0.249) - this node is a cross-community bridge._
+  _High betweenness centrality (0.251) - this node is a cross-community bridge._
 - **Why does `Etapa 3 — Rendimiento de Widgets` connect `Project Guidelines & Improvement Notes` to `Community 114`?**
   _High betweenness centrality (0.243) - this node is a cross-community bridge._
 - **Are the 5 inferred relationships involving `User` (e.g. with `CustomPersonalInfo.php` and `CreateUser`) actually correct?**

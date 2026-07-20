@@ -583,10 +583,20 @@
       "norm_label": ".getcreatednotification()"
     },
     {
-      "label": ".getFormActions()",
+      "label": ".afterCreate()",
       "file_type": "code",
       "source_file": "app/Filament/Resources/Tasks/Pages/CreateTask.php",
       "source_location": "L31",
+      "_origin": "ast",
+      "id": "pages_createtask_createtask_aftercreate",
+      "community": 50,
+      "norm_label": ".aftercreate()"
+    },
+    {
+      "label": ".getFormActions()",
+      "file_type": "code",
+      "source_file": "app/Filament/Resources/Tasks/Pages/CreateTask.php",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "pages_createtask_createtask_getformactions",
       "community": 50,
@@ -949,7 +959,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pages_listusers",
-      "community": 50,
+      "community": 35,
       "norm_label": "listusers.php"
     },
     {
@@ -959,7 +969,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "pages_listusers_listusers",
-      "community": 50,
+      "community": 35,
       "norm_label": "listusers"
     },
     {
@@ -969,7 +979,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "exposestabletowidgets",
-      "community": 50,
+      "community": 35,
       "norm_label": "exposestabletowidgets"
     },
     {
@@ -979,7 +989,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "pages_listusers_listusers_getheaderactions",
-      "community": 50,
+      "community": 35,
       "norm_label": ".getheaderactions()"
     },
     {
@@ -989,7 +999,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "pages_listusers_listusers_getheaderwidgets",
-      "community": 50,
+      "community": 35,
       "norm_label": ".getheaderwidgets()"
     },
     {
@@ -999,7 +1009,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "pages_listusers_listusers_getfooterwidgets",
-      "community": 50,
+      "community": 35,
       "norm_label": ".getfooterwidgets()"
     },
     {
@@ -1009,7 +1019,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "pages_listusers_listusers_getheaderwidgetscolumns",
-      "community": 50,
+      "community": 35,
       "norm_label": ".getheaderwidgetscolumns()"
     },
     {
@@ -1129,7 +1139,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "users_userresource_userresource_getpages",
-      "community": 50,
+      "community": 35,
       "norm_label": ".getpages()"
     },
     {
@@ -4839,7 +4849,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_testcase",
-      "community": 51,
+      "community": 19,
       "norm_label": "testcase.php"
     },
     {
@@ -4849,7 +4859,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_testcase_testcase",
-      "community": 51,
+      "community": 19,
       "norm_label": "testcase"
     },
     {
@@ -4859,7 +4869,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "basetestcase",
-      "community": 51,
+      "community": 19,
       "norm_label": "basetestcase"
     },
     {
@@ -6379,7 +6389,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "rules_http_client_always_set_explicit_timeouts",
-      "community": 131,
+      "community": 21,
       "norm_label": "always set explicit timeouts"
     },
     {
@@ -6389,7 +6399,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "rules_http_client_use_retry_with_backoff_for_external_apis",
-      "community": 132,
+      "community": 21,
       "norm_label": "use retry with backoff for external apis"
     },
     {
@@ -6399,7 +6409,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "rules_http_client_handle_errors_explicitly",
-      "community": 131,
+      "community": 21,
       "norm_label": "handle errors explicitly"
     },
     {
@@ -6629,7 +6639,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "rules_queue_jobs_implement_shouldbeunique",
-      "community": 73,
+      "community": 12,
       "norm_label": "implement `shouldbeunique`"
     },
     {
@@ -6659,7 +6669,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "rules_queue_jobs_batch_related_jobs",
-      "community": 67,
+      "community": 12,
       "norm_label": "batch related jobs"
     },
     {
@@ -6679,7 +6689,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "rules_queue_jobs_use_shouldbeuniqueuntilprocessing_for_early_lock_release",
-      "community": 72,
+      "community": 12,
       "norm_label": "use `shouldbeuniqueuntilprocessing` for early lock release"
     },
     {
@@ -10036,7 +10046,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/queue-jobs.md",
       "source_location": "L53",
-      "community": 73,
+      "community": 12,
       "norm_label": "code:php (class generateinvoice implements shouldqueue, shouldbeunique)",
       "id": "rules_queue_jobs_codeblock_5"
     },
@@ -10045,7 +10055,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/queue-jobs.md",
       "source_location": "L69",
-      "community": 67,
+      "community": 12,
       "norm_label": "code:php (public function failed(?throwable $exception): void)",
       "id": "rules_queue_jobs_codeblock_6"
     },
@@ -10063,7 +10073,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/queue-jobs.md",
       "source_location": "L92",
-      "community": 67,
+      "community": 12,
       "norm_label": "code:php (bus::batch([)",
       "id": "rules_queue_jobs_codeblock_8"
     },
@@ -10081,7 +10091,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/queue-jobs.md",
       "source_location": "L119",
-      "community": 72,
+      "community": 12,
       "norm_label": "code:php (class updatesearchindex implements shouldqueue, shouldbeuniq)",
       "id": "rules_queue_jobs_codeblock_10"
     },
@@ -10243,7 +10253,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/http-client.md",
       "source_location": "L8",
-      "community": 131,
+      "community": 21,
       "norm_label": "code:php ($response = http::get('https://api.example.com/users');)",
       "id": "rules_http_client_codeblock_1"
     },
@@ -10252,7 +10262,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/http-client.md",
       "source_location": "L13",
-      "community": 131,
+      "community": 21,
       "norm_label": "code:php ($response = http::timeout(5))",
       "id": "rules_http_client_codeblock_2"
     },
@@ -10261,7 +10271,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/http-client.md",
       "source_location": "L21",
-      "community": 131,
+      "community": 21,
       "norm_label": "code:php (http::macro('github', function () {)",
       "id": "rules_http_client_codeblock_3"
     },
@@ -10270,7 +10280,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/http-client.md",
       "source_location": "L37",
-      "community": 132,
+      "community": 21,
       "norm_label": "code:php ($response = http::post('https://api.stripe.com/v1/charges', )",
       "id": "rules_http_client_codeblock_4"
     },
@@ -10279,7 +10289,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/http-client.md",
       "source_location": "L46",
-      "community": 132,
+      "community": 21,
       "norm_label": "code:php ($response = http::retry([100, 500, 1000]))",
       "id": "rules_http_client_codeblock_5"
     },
@@ -10288,7 +10298,7 @@
       "file_type": "document",
       "source_file": ".claude/skills/laravel-best-practices/rules/http-client.md",
       "source_location": "L54",
-      "community": 132,
+      "community": 21,
       "norm_label": "code:php ($response = http::retry(3, 100, function (throwable $excepti)",
       "id": "rules_http_client_codeblock_6"
     },
@@ -11439,7 +11449,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 51,
+      "community": 19,
       "norm_label": "test coverage plan (etapa 2)",
       "id": "concept_test_coverage_plan"
     },
@@ -11972,7 +11982,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 67,
+      "community": 12,
       "norm_label": "queue and job best practices",
       "id": "rules_queue_jobs_queue_best_practices"
     },
@@ -11985,7 +11995,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 67,
+      "community": 12,
       "norm_label": "retry_after greater than timeout",
       "id": "rules_queue_jobs_retry_after_timeout"
     },
@@ -11998,7 +12008,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 21,
+      "community": 12,
       "norm_label": "exponential backoff for jobs",
       "id": "rules_queue_jobs_exponential_backoff"
     },
@@ -12011,7 +12021,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 67,
+      "community": 12,
       "norm_label": "shouldbeunique for duplicate prevention",
       "id": "rules_queue_jobs_should_be_unique"
     },
@@ -12024,7 +12034,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 67,
+      "community": 12,
       "norm_label": "always implement failed() on jobs",
       "id": "rules_queue_jobs_failed_method"
     },
@@ -12037,7 +12047,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 67,
+      "community": 12,
       "norm_label": "bus::batch() for related jobs",
       "id": "rules_queue_jobs_bus_batch"
     },
@@ -12050,7 +12060,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 67,
+      "community": 12,
       "norm_label": "retryuntil() with tries=0",
       "id": "rules_queue_jobs_retry_until"
     },
@@ -12063,7 +12073,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 67,
+      "community": 12,
       "norm_label": "shouldbeuniqueuntilprocessing for early lock release",
       "id": "rules_queue_jobs_should_be_unique_until_processing"
     },
@@ -12076,7 +12086,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 67,
+      "community": 12,
       "norm_label": "laravel horizon for complex queue scenarios",
       "id": "rules_queue_jobs_horizon"
     },
@@ -12648,7 +12658,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 37,
       "norm_label": "filament breezy (auth)",
       "id": "readme_filament_breezy"
     },
@@ -12791,7 +12801,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 19,
       "norm_label": "userscluster",
       "id": "readme_users_cluster"
     },
@@ -12817,7 +12827,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 19,
       "norm_label": "users resource (crud)",
       "id": "readme_user_resource"
     },
@@ -12830,7 +12840,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 19,
       "norm_label": "userform schema",
       "id": "readme_user_form"
     },
@@ -12843,7 +12853,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 19,
       "norm_label": "userstable schema",
       "id": "readme_users_table"
     },
@@ -12856,7 +12866,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 19,
       "norm_label": "user widgets (stats, table, chart)",
       "id": "readme_user_widgets"
     },
@@ -12882,7 +12892,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 37,
       "norm_label": "custompersonalinfo livewire component",
       "id": "readme_custom_personal_info"
     },
@@ -12986,7 +12996,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 37,
+      "community": 19,
       "norm_label": "navigation strings (lang/es/navigation.php)",
       "id": "readme_navigation_strings"
     },
@@ -13025,7 +13035,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 37,
       "norm_label": "two-factor authentication (2fa totp)",
       "id": "readme_2fa"
     },
@@ -13038,7 +13048,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 53,
+      "community": 37,
       "norm_label": "passkeys (webauthn)",
       "id": "readme_passkeys"
     },
@@ -13064,7 +13074,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 51,
+      "community": 19,
       "norm_label": "userresourcetest",
       "id": "readme_user_resource_test"
     },
@@ -15052,6 +15062,17 @@
       "target": "notification"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Resources/Tasks/Pages/CreateTask.php",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "pages_createtask_createtask_aftercreate",
+      "target": "notification",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "context": "return_type",
       "confidence": "EXTRACTED",
@@ -15418,6 +15439,16 @@
       "confidence_score": 1.0,
       "source": "pages_createtask",
       "target": "pages_createtask_createtask"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Filament/Resources/Tasks/Pages/CreateTask.php",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "pages_createtask_createtask",
+      "target": "pages_createtask_createtask_aftercreate",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -31681,5 +31712,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0c9574ad4dd167170ff1bbfc5831fbd32dc9aa7c"
+  "built_at_commit": "c2805f6d4f25717846fa2f80b0d98c2f59bcb014"
 }
