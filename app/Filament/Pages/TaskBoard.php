@@ -31,7 +31,7 @@ class TaskBoard extends BoardPage
 
     public static function canAccess(): bool
     {
-        return auth()->user()?->can('page_TaskBoard') ?? false;
+        return auth()->user()?->can('View:TaskBoard') ?? false;
     }
 
     public function board(Board $board): Board
