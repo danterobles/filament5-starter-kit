@@ -10,7 +10,7 @@
     "semantic_hash": "f14d135d7fee9e462d362f49733801de"
   },
   "boost.json": {
-    "mtime": 1786583117.451172,
+    "mtime": 1786648330.8998315,
     "ast_hash": "7a3ebd4f40a91229072d1acc251b61a1",
     "semantic_hash": ""
   },
@@ -25,8 +25,8 @@
     "semantic_hash": "f3a120e7c5e37a027db6896a406aa56c"
   },
   "composer.json": {
-    "mtime": 1786583060.151834,
-    "ast_hash": "46935e6b4aa3421601441bddd74caded",
+    "mtime": 1786648317.0391674,
+    "ast_hash": "2f53e35fb9bb6843008ab729c25fa9e7",
     "semantic_hash": ""
   },
   "database/migrations/2026_04_20_194024_create_breezy_sessions_table.php": {
@@ -380,127 +380,127 @@
     "semantic_hash": "20fa1008251c1dce42c1b2060dfab3fe"
   },
   "CLAUDE.md": {
-    "mtime": 1786583117.4134753,
+    "mtime": 1786648330.8576806,
     "ast_hash": "5bd47e325ab26b8473dc08a7d2164a6a",
     "semantic_hash": ""
   },
   ".claude/skills/tailwindcss-development/SKILL.md": {
-    "mtime": 1786583117.4500017,
+    "mtime": 1786648330.8990402,
     "ast_hash": "8d666b4230a49c0dfe147d2f440a4d40",
     "semantic_hash": ""
   },
   ".claude/skills/pest-testing/SKILL.md": {
-    "mtime": 1786583117.4494548,
+    "mtime": 1786648330.898622,
     "ast_hash": "9de773a573ae82db0da14182043ad939",
     "semantic_hash": ""
   },
   ".claude/skills/flowforge-development/SKILL.md": {
-    "mtime": 1786583117.4506698,
+    "mtime": 1786648330.8994887,
     "ast_hash": "cdc3d0de8067c1d6edd8fb62442d7952",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/SKILL.md": {
-    "mtime": 1786583117.444995,
+    "mtime": 1786648330.8940024,
     "ast_hash": "c2c01a832148dafbd53386871ba74e77",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/routing.md": {
-    "mtime": 1786583117.445394,
+    "mtime": 1786648330.894369,
     "ast_hash": "6a10a65bd0b071eb2428ed6dd31ccf75",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/scheduling.md": {
-    "mtime": 1786583117.4455795,
+    "mtime": 1786648330.894608,
     "ast_hash": "ec51edae2effafe9633103a68ba023e6",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/migrations.md": {
-    "mtime": 1786583117.4457414,
+    "mtime": 1786648330.8948958,
     "ast_hash": "c46b22f0a58df02235cada95208b3d8a",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/architecture.md": {
-    "mtime": 1786583117.445993,
+    "mtime": 1786648330.895095,
     "ast_hash": "5ff00fd7c22c0e891f89040370b282f5",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/db-performance.md": {
-    "mtime": 1786583117.4462407,
+    "mtime": 1786648330.8953028,
     "ast_hash": "30ca712aa13bb1acd2466d42eed36561",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/collections.md": {
-    "mtime": 1786583117.44638,
+    "mtime": 1786648330.8955016,
     "ast_hash": "a377a223899308ace42da6b71775b8d7",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/caching.md": {
-    "mtime": 1786583117.4465487,
+    "mtime": 1786648330.8956962,
     "ast_hash": "50bec263dad9c1611c697480671cdea7",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/eloquent.md": {
-    "mtime": 1786583117.4467053,
+    "mtime": 1786648330.8960512,
     "ast_hash": "f7494b49ba60ebe433f5968ec4ebdf9c",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/validation.md": {
-    "mtime": 1786583117.4468539,
+    "mtime": 1786648330.8962126,
     "ast_hash": "901e4430821794a642694d445f43e43a",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/blade-views.md": {
-    "mtime": 1786583117.4469814,
+    "mtime": 1786648330.8963616,
     "ast_hash": "3c259ceaa9074c0e503c01c2d5d5de58",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/queue-jobs.md": {
-    "mtime": 1786583117.447116,
+    "mtime": 1786648330.8964949,
     "ast_hash": "556b119d5ae10462c69908a8399025c0",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/testing.md": {
-    "mtime": 1786583117.4472742,
+    "mtime": 1786648330.896636,
     "ast_hash": "c31ca40674ed518d8570b089f3eabec4",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/config.md": {
-    "mtime": 1786583117.4474127,
+    "mtime": 1786648330.8967702,
     "ast_hash": "3cf9e90d78c23ba56cc7158160868104",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/style.md": {
-    "mtime": 1786583117.4476404,
+    "mtime": 1786648330.8970442,
     "ast_hash": "21afa41850594faff9b40c59bb2c242d",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/mail.md": {
-    "mtime": 1786583117.4477916,
+    "mtime": 1786648330.897173,
     "ast_hash": "895f4d0643171b04f7b399027cb00d6c",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/http-client.md": {
-    "mtime": 1786583117.4479446,
+    "mtime": 1786648330.897296,
     "ast_hash": "fef2e702533bc8049f57bd6991296174",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/error-handling.md": {
-    "mtime": 1786583117.448096,
+    "mtime": 1786648330.8974073,
     "ast_hash": "75ea9b08d01ff1159c7fc8e7da9b70b9",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/events-notifications.md": {
-    "mtime": 1786583117.4482408,
+    "mtime": 1786648330.8976548,
     "ast_hash": "696011b9584ae0df0ca483e55ecd86c9",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/advanced-queries.md": {
-    "mtime": 1786583117.4484026,
+    "mtime": 1786648330.897768,
     "ast_hash": "9a78d2f8810d0c5a2b8b72df91ca4a18",
     "semantic_hash": ""
   },
   ".claude/skills/laravel-best-practices/rules/security.md": {
-    "mtime": 1786583117.4485462,
+    "mtime": 1786648330.897887,
     "ast_hash": "455a4025958caa0b51cfa6f352f55003",
     "semantic_hash": ""
   },
@@ -640,12 +640,12 @@
     "semantic_hash": ""
   },
   ".claude/skills/infer-conventions/SKILL.md": {
-    "mtime": 1786583117.4397838,
+    "mtime": 1786648330.889613,
     "ast_hash": "5cdf6120ddf8d37135adfebc8f98ef85",
     "semantic_hash": ""
   },
   ".claude/skills/infer-conventions/references/checklist.md": {
-    "mtime": 1786583117.4424305,
+    "mtime": 1786648330.8915906,
     "ast_hash": "f1dee4368df8baa779d53ddd0acc3ea8",
     "semantic_hash": ""
   }
