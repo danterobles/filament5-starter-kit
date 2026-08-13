@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Tasks\Pages;
 
 use App\Filament\Resources\Tasks\TaskResource;
+use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\CreateRecord;
 
@@ -40,6 +41,13 @@ class CreateTask extends CreateRecord
             ->title('Nueva tarea asignada')
             ->body("Se te asignó la tarea \"{$this->record->title}\" como recordatorio.")
             ->icon('heroicon-o-clipboard-document-list')
+            ->actions([
+                Action::make('view')
+                    ->label('Ver tarea')
+                    ->url(TaskResource::getUrl('edit', ['record' => $this->record]))
+                    ->button()
+                    ->markAsRead(),
+            ])
             ->sendToDatabase($assignee);
     }
 

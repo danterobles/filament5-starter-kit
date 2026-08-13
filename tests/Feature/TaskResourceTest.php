@@ -168,7 +168,11 @@ test('creating a task with an assigned user sends them a reminder notification',
         'notifiable_id' => $assignee->id,
     ]);
 
-    expect($assignee->fresh()->unreadNotifications()->count())->toBe(1);
+    $task = Task::where('title', 'Preparar reporte mensual')->firstOrFail();
+    $notification = $assignee->fresh()->unreadNotifications()->sole();
+
+    expect($notification->data['actions'][0]['url'] ?? null)
+        ->toBe(EditTask::getUrl(['record' => $task]));
 });
 
 test('creating a task without an assigned user sends no notification', function () {
