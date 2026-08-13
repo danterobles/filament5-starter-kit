@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6cc3bd1550c1657d0f845589a879a0b",
+    "content-hash": "e267894d6279c60bb3310a722bf73dd9",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -2074,41 +2074,43 @@
         },
         {
             "name": "guava/filament-icon-picker",
-            "version": "4.0.0",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GuavaCZ/filament-icon-picker.git",
-                "reference": "c1aa7bbf9f2c434a02574a9b0673b4506d0588d2"
+                "reference": "bedb0fa5d58478827bef3f919d9547939b37e39d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GuavaCZ/filament-icon-picker/zipball/c1aa7bbf9f2c434a02574a9b0673b4506d0588d2",
-                "reference": "c1aa7bbf9f2c434a02574a9b0673b4506d0588d2",
+                "url": "https://api.github.com/repos/GuavaCZ/filament-icon-picker/zipball/bedb0fa5d58478827bef3f919d9547939b37e39d",
+                "reference": "bedb0fa5d58478827bef3f919d9547939b37e39d",
                 "shasum": ""
             },
             "require": {
                 "blade-ui-kit/blade-icons": "^1.8",
                 "filament/filament": "^5.0",
+                "illuminate/contracts": "^12.0|^13.0",
                 "php": "^8.2",
                 "spatie/laravel-package-tools": "^1.15.0"
             },
             "require-dev": {
+                "larastan/larastan": "^3.0",
                 "laravel/pint": "^1.0",
                 "nunomaduro/collision": "^8.0",
-                "nunomaduro/larastan": "^3.0",
-                "orchestra/testbench": "^10.0",
-                "pestphp/pest": "^3.1",
-                "pestphp/pest-plugin-arch": "^3.0",
-                "pestphp/pest-plugin-laravel": "^3.0",
+                "orchestra/testbench": "^10.0|^11.0",
+                "pestphp/pest": "^3.8|^4.4",
+                "pestphp/pest-plugin": "^3.0|^4.0",
+                "pestphp/pest-plugin-arch": "^3.0|^4.0",
+                "pestphp/pest-plugin-laravel": "^3.2|^4.1",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan-deprecation-rules": "^2.0",
-                "phpstan/phpstan-phpunit": "2.0"
+                "phpstan/phpstan-phpunit": "^2.0"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "aliases": {
-                        "IconPicker": "IconManager"
+                        "IconManager": "Guava\\IconPicker\\Icons\\Facades\\IconManager"
                     },
                     "providers": [
                         "Guava\\IconPicker\\IconPickerServiceProvider"
@@ -2140,8 +2142,8 @@
                 "laravel"
             ],
             "support": {
-                "issues": "https://github.com/guavaCZ/filament-icon-picker/issues",
-                "source": "https://github.com/guavaCZ/filament-icon-picker"
+                "issues": "https://github.com/GuavaCZ/filament-icon-picker/issues",
+                "source": "https://github.com/GuavaCZ/filament-icon-picker"
             },
             "funding": [
                 {
@@ -2149,7 +2151,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-01-24T10:42:07+00:00"
+            "time": "2026-08-04T07:48:57+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
