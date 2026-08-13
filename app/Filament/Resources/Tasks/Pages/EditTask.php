@@ -13,6 +13,15 @@ class EditTask extends EditRecord
 
     protected static ?string $title = 'Editar Tarea';
 
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        if (! auth()->user()->hasRole('super_admin')) {
+            $data['user_id'] = auth()->id();
+        }
+
+        return $data;
+    }
+
     protected function getHeaderActions(): array
     {
         return [

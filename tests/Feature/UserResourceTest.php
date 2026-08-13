@@ -117,6 +117,75 @@ test('admin can edit a user', function () {
     assertDatabaseHas(User::class, ['id' => $user->id, 'name' => 'Editado']);
 });
 
+test('a regular user editing themself cannot grant the super_admin role', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:User', 'View:User', 'Update:User');
+
+    $this->actingAs($viewer);
+
+    $superAdminRole = Role::findByName('super_admin', 'web');
+
+    Livewire::test(EditUser::class, ['record' => $viewer->id])
+        ->fillForm([
+            'name' => $viewer->name,
+            'last' => $viewer->last,
+            'email' => $viewer->email,
+            'role_id' => $superAdminRole->id,
+        ])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($viewer->fresh()->hasRole('super_admin'))->toBeFalse();
+});
+
+test('a regular user editing another user cannot grant the super_admin role', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:User', 'View:User', 'Update:User');
+    $target = User::factory()->create();
+
+    $this->actingAs($viewer);
+
+    $superAdminRole = Role::findByName('super_admin', 'web');
+
+    Livewire::test(EditUser::class, ['record' => $target->id])
+        ->fillForm([
+            'name' => $target->name,
+            'last' => $target->last,
+            'email' => $target->email,
+            'role_id' => $superAdminRole->id,
+        ])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($target->fresh()->hasRole('super_admin'))->toBeFalse();
+});
+
+test('a regular user creating a user cannot grant the super_admin role', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:User', 'View:User', 'Create:User');
+
+    $this->actingAs($viewer);
+
+    $superAdminRole = Role::findByName('super_admin', 'web');
+
+    Livewire::test(CreateUser::class)
+        ->fillForm([
+            'name' => 'Eve',
+            'last' => 'Hacker',
+            'email' => 'eve@test.com',
+            'phone' => '5551112222',
+            'password' => 'secretpass1',
+            'password_confirmation' => 'secretpass1',
+            'role_id' => $superAdminRole->id,
+            'active' => true,
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    $created = User::where('email', 'eve@test.com')->first();
+    expect($created->hasRole('super_admin'))->toBeFalse();
+});
+
 test('admin can activate an inactive user', function () {
     $user = User::factory()->inactive()->create();
 

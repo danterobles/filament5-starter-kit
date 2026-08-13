@@ -141,6 +141,46 @@ test('bulk action changes status of multiple tasks', function () {
     }
 });
 
+test('a user without update permission cannot change task status via bulk action', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Task', 'View:Task');
+
+    $tasks = Task::factory()->todo()->for($viewer)->count(3)->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(ListTasks::class)
+        ->selectTableRecords($tasks->pluck('id')->toArray())
+        ->callAction(TestAction::make('bulk_status')->table()->bulk(), data: ['status' => 'completed']);
+
+    foreach ($tasks as $task) {
+        assertDatabaseHas(Task::class, [
+            'id' => $task->id,
+            'status' => 'todo',
+        ]);
+    }
+});
+
+test('a user with update permission can change task status via bulk action', function () {
+    $editor = User::factory()->create();
+    $editor->givePermissionTo('ViewAny:Task', 'View:Task', 'Update:Task');
+
+    $tasks = Task::factory()->todo()->for($editor)->count(3)->create();
+
+    $this->actingAs($editor);
+
+    Livewire::test(ListTasks::class)
+        ->selectTableRecords($tasks->pluck('id')->toArray())
+        ->callAction(TestAction::make('bulk_status')->table()->bulk(), data: ['status' => 'completed']);
+
+    foreach ($tasks as $task) {
+        assertDatabaseHas(Task::class, [
+            'id' => $task->id,
+            'status' => 'completed',
+        ]);
+    }
+});
+
 test('table search finds tasks by title', function () {
     $target = Task::factory()->create(['title' => 'Migracion de base de datos']);
     $other = Task::factory()->create(['title' => 'Diseno de interfaz']);
@@ -199,4 +239,69 @@ test('a regular user only sees tasks assigned to them in the table', function ()
     Livewire::test(ListTasks::class)
         ->assertCanSeeTableRecords(collect([$ownTask]))
         ->assertCanNotSeeTableRecords(collect([$othersTask]));
+});
+
+test('a regular user creating a task cannot assign it to another user', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Task', 'View:Task', 'Create:Task');
+    $otherUser = User::factory()->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(CreateTask::class)
+        ->fillForm([
+            'title' => 'Tarea propia',
+            'status' => 'todo',
+            'user_id' => $otherUser->id,
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    assertDatabaseHas(Task::class, [
+        'title' => 'Tarea propia',
+        'user_id' => $viewer->id,
+    ]);
+
+    assertDatabaseMissing(Task::class, [
+        'title' => 'Tarea propia',
+        'user_id' => $otherUser->id,
+    ]);
+});
+
+test('a regular user editing a task cannot reassign it to another user', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Task', 'View:Task', 'Update:Task');
+    $otherUser = User::factory()->create();
+    $task = Task::factory()->for($viewer)->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(EditTask::class, ['record' => $task->id])
+        ->fillForm([
+            'user_id' => $otherUser->id,
+        ])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    assertDatabaseHas(Task::class, [
+        'id' => $task->id,
+        'user_id' => $viewer->id,
+    ]);
+});
+
+test('a super_admin can still assign a task to another user when editing', function () {
+    $task = Task::factory()->for($this->admin)->create();
+    $otherUser = User::factory()->create();
+
+    Livewire::test(EditTask::class, ['record' => $task->id])
+        ->fillForm([
+            'user_id' => $otherUser->id,
+        ])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    assertDatabaseHas(Task::class, [
+        'id' => $task->id,
+        'user_id' => $otherUser->id,
+    ]);
 });

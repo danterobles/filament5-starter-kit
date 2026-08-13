@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Users\Pages;
 use App\Filament\Resources\Users\UserResource;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\CreateRecord;
+use Spatie\Permission\Models\Role;
 
 class CreateUser extends CreateRecord
 {
@@ -34,6 +35,14 @@ class CreateUser extends CreateRecord
     {
         $this->selectedRoleId = $data['role_id'] ?? null;
         unset($data['role_id']);
+
+        if (
+            $this->selectedRoleId !== null
+            && ! auth()->user()->hasRole('super_admin')
+            && Role::find($this->selectedRoleId)?->name === 'super_admin'
+        ) {
+            $this->selectedRoleId = null;
+        }
 
         if (! isset($data['active'])) {
             $data['active'] = true;

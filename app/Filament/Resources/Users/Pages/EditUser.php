@@ -7,6 +7,7 @@ use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\EditRecord;
+use Spatie\Permission\Models\Role;
 
 class EditUser extends EditRecord
 {
@@ -68,6 +69,14 @@ class EditUser extends EditRecord
     {
         $this->selectedRoleId = $data['role_id'] ?? null;
         unset($data['role_id']);
+
+        if (
+            $this->selectedRoleId !== null
+            && ! auth()->user()->hasRole('super_admin')
+            && Role::find($this->selectedRoleId)?->name === 'super_admin'
+        ) {
+            $this->selectedRoleId = $this->record->roles()->pluck('id')->first();
+        }
 
         // Si no se proporciona contraseña, eliminarla del array para no actualizarla
         if (empty($data['password'])) {

@@ -13,6 +13,15 @@ class CreateTask extends CreateRecord
 
     protected static ?string $title = 'Crear Tarea';
 
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        if (! auth()->user()->hasRole('super_admin')) {
+            $data['user_id'] = auth()->id();
+        }
+
+        return $data;
+    }
+
     protected function getRedirectUrl(): string
     {
         return $this->getResource()::getUrl('index');

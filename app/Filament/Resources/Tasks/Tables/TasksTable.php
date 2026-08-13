@@ -97,6 +97,7 @@ class TasksTable
                     BulkAction::make('bulk_status')
                         ->label('Cambiar estado')
                         ->icon('heroicon-o-arrow-path')
+                        ->authorizeIndividualRecords('update')
                         ->schema([
                             Select::make('status')
                                 ->label('Nuevo estado')
