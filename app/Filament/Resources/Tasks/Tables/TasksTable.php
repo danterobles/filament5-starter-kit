@@ -9,6 +9,7 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
@@ -84,6 +85,9 @@ class TasksTable
                     ->indicator('Usuario'),
             ])
             ->recordActions([
+                ViewAction::make()
+                    ->iconButton()
+                    ->tooltip('Ver tarea'),
                 EditAction::make()
                     ->iconButton()
                     ->tooltip('Editar tarea'),

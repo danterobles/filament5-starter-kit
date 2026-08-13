@@ -28,6 +28,11 @@ class AgendaResource extends Resource
 
     protected static ?array $recordTitleAttributes = ['title'];
 
+    public static function getNavigationGroup(): ?string
+    {
+        return __('navigation.groups.management');
+    }
+
     public static function form(Schema $schema): Schema
     {
         return AgendaForm::configure($schema);

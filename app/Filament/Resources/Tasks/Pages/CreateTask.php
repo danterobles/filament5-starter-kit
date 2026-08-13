@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\Tasks\Pages;
 
 use App\Filament\Resources\Tasks\TaskResource;
-use Filament\Actions\Action;
+use App\Notifications\TaskAssignedNotification;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\CreateRecord;
 
@@ -46,18 +46,7 @@ class CreateTask extends CreateRecord
             return;
         }
 
-        Notification::make()
-            ->title('Nueva tarea asignada')
-            ->body("Se te asignó la tarea \"{$this->record->title}\" como recordatorio.")
-            ->icon('heroicon-o-clipboard-document-list')
-            ->actions([
-                Action::make('view')
-                    ->label('Ver tarea')
-                    ->url(TaskResource::getUrl('edit', ['record' => $this->record]))
-                    ->button()
-                    ->markAsRead(),
-            ])
-            ->sendToDatabase($assignee);
+        $assignee->notify(new TaskAssignedNotification($this->record));
     }
 
     protected function getFormActions(): array

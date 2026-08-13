@@ -7,6 +7,7 @@ use App\Models\Agenda;
 use App\Models\User;
 use Database\Seeders\ShieldSeeder;
 use Filament\Actions\DeleteAction;
+use Filament\Actions\Testing\TestAction;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\DB;
 use Livewire\Livewire;
@@ -135,6 +136,28 @@ test('table search finds agendas by title', function () {
         ->searchTable('Conferencia')
         ->assertCanSeeTableRecords(collect([$target]))
         ->assertCanNotSeeTableRecords(collect([$other]));
+});
+
+test('a user with view permission can see the view action for their own agenda', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Agenda', 'View:Agenda');
+    $ownAgenda = Agenda::factory()->for($viewer)->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(ListAgendas::class)
+        ->assertActionVisible(TestAction::make('view')->table($ownAgenda));
+});
+
+test('a user cannot see another user\'s agenda to view it', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Agenda', 'View:Agenda');
+    $othersAgenda = Agenda::factory()->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(ListAgendas::class)
+        ->assertCanNotSeeTableRecords(collect([$othersAgenda]));
 });
 
 test('a regular user only sees agendas they created in the table', function () {

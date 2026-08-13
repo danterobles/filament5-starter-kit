@@ -6,6 +6,7 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
 use Filament\Forms\Components\DatePicker;
 use Filament\Tables\Columns\ColorColumn;
 use Filament\Tables\Columns\IconColumn;
@@ -117,6 +118,9 @@ class AgendasTable
                     }),
             ])
             ->recordActions([
+                ViewAction::make()
+                    ->iconButton()
+                    ->tooltip('Ver evento'),
                 EditAction::make()
                     ->iconButton()
                     ->tooltip('Editar evento'),

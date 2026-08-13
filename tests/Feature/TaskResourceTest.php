@@ -235,6 +235,28 @@ test('creating a task without an assigned user sends no notification', function 
     expect(DatabaseNotification::count())->toBe(0);
 });
 
+test('a user with view permission can see the view action for their own task', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Task', 'View:Task');
+    $ownTask = Task::factory()->for($viewer)->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(ListTasks::class)
+        ->assertActionVisible(TestAction::make('view')->table($ownTask));
+});
+
+test('a user cannot see another user\'s task to view it', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Task', 'View:Task');
+    $othersTask = Task::factory()->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(ListTasks::class)
+        ->assertCanNotSeeTableRecords(collect([$othersTask]));
+});
+
 test('a regular user only sees tasks assigned to them in the table', function () {
     $viewer = User::factory()->create();
     $viewer->givePermissionTo('ViewAny:Task', 'View:Task');

@@ -49,12 +49,14 @@ Boilerplate de desarrollo acelerado para proyectos **Laravel 13** con panel de a
 | [Filament Breezy](https://filamentphp.com/plugins/jeffgreco-breezy) | Perfil, 2FA, passkeys, sesiones | ^3.1 |
 | [Auth UI Enhancer](https://filamentphp.com/plugins/diogogpinto-auth-ui-enhancer) | Login con imagen lateral | ^2.0 |
 | [Filament Logger](https://filamentphp.com/plugins/jacobtims-logger) | Log de actividad de usuarios | ^1.2 |
-| [Apex Charts](https://filamentphp.com/plugins/leandrocfe-apex-charts) | Gráficas interactivas | ^5.0 |
+| [Apex Charts](https://filamentphp.com/plugins/leandrocfe-apex-charts) | Gráficas interactivas *(instalado, sin usar aún — ver nota)* | ^5.0 |
 | [FlowForge](https://filamentphp.com/plugins/relaticle-flowforge) | Kanban / Task Board | ^4.0 |
 | [FullCalendar](https://filamentphp.com/plugins/saade-fullcalendar) | Calendario de eventos | ^4.0 |
-| [Icon Picker](https://filamentphp.com/plugins/guava-icon-picker) | Selector de íconos Heroicons | ^5.0 |
+| [Icon Picker](https://filamentphp.com/plugins/guava-icon-picker) | Selector de íconos Heroicons *(instalado, sin usar aún — ver nota)* | ^5.0 |
 | [Timeline View](https://filamentphp.com/plugins/devletes-timeline-view) | Vistas de línea de tiempo | ^1.0 |
 | [FilaCheck](https://filamentphp.com/plugins/laraveldaily-filacheck) | Lint de código Filament | ^1.2 |
+
+> **Nota:** Apex Charts e Icon Picker vienen preinstalados y registrados en el panel, pero este starter kit no los usa todavía en ningún recurso — quedan disponibles como ejemplo listo para cablear (p. ej. convertir un widget de gráfica a `ApexChartWidget`, o añadir un campo `IconPicker::make()` a un formulario) sin necesidad de instalar nada nuevo.
 
 ---
 
