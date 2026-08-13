@@ -7,6 +7,7 @@ use App\Models\Agenda;
 use App\Models\User;
 use Database\Seeders\ShieldSeeder;
 use Filament\Actions\DeleteAction;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Livewire\Livewire;
 
 use function Pest\Laravel\assertDatabaseHas;
@@ -148,6 +149,16 @@ test('a regular user only sees agendas they created in the table', function () {
         ->assertCanSeeTableRecords(collect([$ownAgenda]))
         ->assertCanNotSeeTableRecords(collect([$othersAgenda]));
 });
+
+test('a regular user cannot open the edit page for another user\'s agenda', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Agenda', 'View:Agenda', 'Update:Agenda');
+    $othersAgenda = Agenda::factory()->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(EditAgenda::class, ['record' => $othersAgenda->id]);
+})->throws(ModelNotFoundException::class);
 
 test('creating an agenda from the form assigns the current user as owner', function () {
     Livewire::test(CreateAgenda::class)

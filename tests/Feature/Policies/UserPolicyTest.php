@@ -14,7 +14,6 @@ dataset('user_policy_methods', [
     'view' => ['view', 'View:User'],
     'create' => ['create', 'Create:User'],
     'update' => ['update', 'Update:User'],
-    'delete' => ['delete', 'Delete:User'],
     'deleteAny' => ['deleteAny', 'DeleteAny:User'],
     'restore' => ['restore', 'Restore:User'],
     'restoreAny' => ['restoreAny', 'RestoreAny:User'],
@@ -42,7 +41,6 @@ test('user without permission cannot perform action', function (string $method) 
     'view' => ['view'],
     'create' => ['create'],
     'update' => ['update'],
-    'delete' => ['delete'],
     'deleteAny' => ['deleteAny'],
     'restore' => ['restore'],
     'restoreAny' => ['restoreAny'],
@@ -51,3 +49,30 @@ test('user without permission cannot perform action', function (string $method) 
     'replicate' => ['replicate'],
     'reorder' => ['reorder'],
 ]);
+
+test('a user with Delete:User permission can delete a different user', function () {
+    Permission::create(['name' => 'Delete:User', 'guard_name' => 'web']);
+    $actor = User::factory()->create();
+    $actor->givePermissionTo('Delete:User');
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    $target = User::factory()->create();
+
+    expect((new UserPolicy)->delete($actor, $target))->toBeTrue();
+});
+
+test('a user without Delete:User permission cannot delete a different user', function () {
+    $actor = User::factory()->create();
+    $target = User::factory()->create();
+
+    expect((new UserPolicy)->delete($actor, $target))->toBeFalse();
+});
+
+test('a user with Delete:User permission cannot delete their own account', function () {
+    Permission::create(['name' => 'Delete:User', 'guard_name' => 'web']);
+    $actor = User::factory()->create();
+    $actor->givePermissionTo('Delete:User');
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect((new UserPolicy)->delete($actor, $actor))->toBeFalse();
+});

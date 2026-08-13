@@ -8,6 +8,7 @@ use App\Models\User;
 use Database\Seeders\ShieldSeeder;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\Testing\TestAction;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Notifications\DatabaseNotification;
 use Livewire\Livewire;
 
@@ -213,6 +214,13 @@ test('creating a task with an assigned user sends them a reminder notification',
 
     expect($notification->data['actions'][0]['url'] ?? null)
         ->toBe(EditTask::getUrl(['record' => $task]));
+
+    expect($notification->data['title'] ?? null)
+        ->toBe('Nueva tarea asignada');
+
+    expect($notification->data['body'] ?? null)
+        ->toContain($task->title)
+        ->toBe("Se te asignó la tarea \"{$task->title}\" como recordatorio.");
 });
 
 test('creating a task without an assigned user sends no notification', function () {
@@ -288,6 +296,16 @@ test('a regular user editing a task cannot reassign it to another user', functio
         'user_id' => $viewer->id,
     ]);
 });
+
+test('a regular user cannot open the edit page for another user\'s task', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Task', 'View:Task', 'Update:Task');
+    $othersTask = Task::factory()->create();
+
+    $this->actingAs($viewer);
+
+    Livewire::test(EditTask::class, ['record' => $othersTask->id]);
+})->throws(ModelNotFoundException::class);
 
 test('a super_admin can still assign a task to another user when editing', function () {
     $task = Task::factory()->for($this->admin)->create();

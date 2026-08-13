@@ -2,6 +2,7 @@
 
 namespace App\Policies;
 
+use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Foundation\Auth\User as AuthUser;
 
@@ -29,8 +30,15 @@ class UserPolicy
         return $authUser->can('Update:User');
     }
 
-    public function delete(AuthUser $authUser): bool
+    public function delete(AuthUser $authUser, User $model): bool
     {
+        // Security: A user must never be able to delete their own
+        // account through the admin panel, even with Delete:User
+        // permission, to avoid accidental or malicious self-lockout.
+        if ($authUser->is($model)) {
+            return false;
+        }
+
         return $authUser->can('Delete:User');
     }
 

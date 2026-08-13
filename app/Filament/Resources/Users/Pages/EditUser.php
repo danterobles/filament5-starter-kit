@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Users\Pages;
 
 use App\Filament\Resources\Users\UserResource;
+use App\Models\User;
 use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Notifications\Notification;
@@ -74,6 +75,18 @@ class EditUser extends EditRecord
             $this->selectedRoleId !== null
             && ! auth()->user()->hasRole('super_admin')
             && Role::find($this->selectedRoleId)?->name === 'super_admin'
+        ) {
+            $this->selectedRoleId = $this->record->roles()->pluck('id')->first();
+        }
+
+        // Security: The sole remaining super_admin cannot demote themselves,
+        // otherwise the application would be left without an administrator
+        // capable of managing roles.
+        if (
+            $this->record->is(auth()->user())
+            && $this->record->hasRole('super_admin')
+            && Role::find($this->selectedRoleId)?->name !== 'super_admin'
+            && User::role('super_admin')->count() <= 1
         ) {
             $this->selectedRoleId = $this->record->roles()->pluck('id')->first();
         }
