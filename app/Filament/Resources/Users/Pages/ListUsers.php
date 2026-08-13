@@ -4,8 +4,8 @@ namespace App\Filament\Resources\Users\Pages;
 
 use App\Filament\Resources\Users\UserResource;
 use App\Filament\Resources\Users\Widgets\LatestUsersTable;
-use App\Filament\Resources\Users\Widgets\UserStatsOverview;
 use App\Filament\Resources\Users\Widgets\UserGrowthChart;
+use App\Filament\Resources\Users\Widgets\UserStatsOverview;
 use Filament\Actions\CreateAction;
 use Filament\Pages\Concerns\ExposesTableToWidgets;
 use Filament\Resources\Pages\ListRecords;
