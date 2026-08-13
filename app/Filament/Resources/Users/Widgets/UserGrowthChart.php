@@ -75,7 +75,7 @@ class UserGrowthChart extends ChartWidget
 
             $results = User::where('created_at', '>=', $startDate)
                 ->get(['created_at'])
-                ->groupBy(fn ($user) => $user->created_at->format('Y-m'))
+                ->groupBy(fn (User $user) => $user->created_at->format('Y-m'))
                 ->map->count();
 
             $labels = collect();

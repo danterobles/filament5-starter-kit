@@ -6,6 +6,7 @@ use App\Filament\Widgets\AgendaCalendarWidget;
 use App\Livewire\CustomPersonalInfo;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
+use Filament\Forms\Components\FileUpload;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -87,7 +88,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentLoggerPlugin::make(),
                 BreezyCore::make()
                     ->avatarUploadComponent(
-                        fn ($fileUpload) => $fileUpload->disableLabel(),
+                        fn (FileUpload $fileUpload) => $fileUpload->disableLabel(),
                     )
                     ->myProfile(
                         shouldRegisterUserMenu: true,

@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Users\Tables;
 
+use App\Models\User;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
@@ -68,7 +69,7 @@ class UsersTable
                 TextColumn::make('roles.name')
                     ->label('Rol')
                     ->badge()
-                    ->formatStateUsing(fn ($state) => Arr::first(Arr::wrap($state)))
+                    ->formatStateUsing(fn (mixed $state) => Arr::first(Arr::wrap($state)))
                     ->color(fn (?string $state): string => match ($state) {
                         'super_admin' => 'danger',
                         'admin' => 'warning',
@@ -102,7 +103,7 @@ class UsersTable
                     ->dateTime('d/m/Y H:i')
                     ->sortable()
                     ->since()
-                    ->tooltip(fn ($record) => $record->created_at->format('d/m/Y H:i:s'))
+                    ->tooltip(fn (User $record) => $record->created_at->format('d/m/Y H:i:s'))
                     ->toggleable(isToggledHiddenByDefault: true),
 
                 TextColumn::make('updated_at')
@@ -110,7 +111,7 @@ class UsersTable
                     ->dateTime('d/m/Y H:i')
                     ->sortable()
                     ->since()
-                    ->tooltip(fn ($record) => $record->updated_at->format('d/m/Y H:i:s'))
+                    ->tooltip(fn (User $record) => $record->updated_at->format('d/m/Y H:i:s'))
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([

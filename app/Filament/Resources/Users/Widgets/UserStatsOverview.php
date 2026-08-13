@@ -6,7 +6,6 @@ use App\Models\User;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\DB;
 
 class UserStatsOverview extends StatsOverviewWidget
 {
@@ -30,9 +29,7 @@ class UserStatsOverview extends StatsOverviewWidget
                 'new_this_month' => User::whereMonth('created_at', now()->month)
                     ->whereYear('created_at', now()->year)
                     ->count(),
-                'with_roles' => DB::table('model_has_roles')
-                    ->distinct('model_id')
-                    ->count('model_id'),
+                'with_roles' => User::has('roles')->count(),
                 'growth' => User::selectRaw('DATE(created_at) as date, COUNT(*) as count')
                     ->where('created_at', '>=', now()->subDays(7))
                     ->groupBy('date')

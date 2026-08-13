@@ -24,13 +24,7 @@ class AgendaDoubleSidedTimelineWidget extends TableWidget
                 TimelineEntry::make()
                     ->title('title')
                     ->content('description')
-                    ->image(function (Agenda $record): string {
-                        $initials = mb_strtoupper(mb_substr($record->title, 0, 2));
-                        $color = ltrim($record->color ?? '#3b82f6', '#');
-                        $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><rect width="80" height="80" fill="#'.$color.'"/><text x="40" y="55" font-family="Arial,sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">'.htmlspecialchars($initials).'</text></svg>';
-
-                        return 'data:image/svg+xml;base64,'.base64_encode($svg);
-                    })
+                    ->image(fn (Agenda $record): string => $record->initials_avatar_url)
                     ->author(
                         fn (Agenda $record): string => $record->location ?? 'Sin ubicación',
                     )

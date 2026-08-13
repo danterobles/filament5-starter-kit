@@ -8,6 +8,7 @@ use App\Models\User;
 use Database\Seeders\ShieldSeeder;
 use Filament\Actions\DeleteAction;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\DB;
 use Livewire\Livewire;
 
 use function Pest\Laravel\assertDatabaseHas;
@@ -159,6 +160,29 @@ test('a regular user cannot open the edit page for another user\'s agenda', func
 
     Livewire::test(EditAgenda::class, ['record' => $othersAgenda->id]);
 })->throws(ModelNotFoundException::class);
+
+test('the user relation is eager loaded and does not cause N+1 queries', function () {
+    Agenda::factory()->count(3)->create(['user_id' => $this->admin->id]);
+
+    // Warm up Spatie's permission/role cache so the authorization queries used by
+    // record actions don't inflate the count of the first measured request.
+    Livewire::test(ListAgendas::class)->assertSuccessful();
+
+    DB::enableQueryLog();
+    Livewire::test(ListAgendas::class)->assertSuccessful();
+    $queryCountForThreeAgendas = count(DB::getQueryLog());
+    DB::flushQueryLog();
+    DB::disableQueryLog();
+
+    Agenda::factory()->count(6)->create(['user_id' => $this->admin->id]);
+
+    DB::enableQueryLog();
+    Livewire::test(ListAgendas::class)->assertSuccessful();
+    $queryCountForNineAgendas = count(DB::getQueryLog());
+    DB::disableQueryLog();
+
+    expect($queryCountForNineAgendas)->toBe($queryCountForThreeAgendas);
+});
 
 test('creating an agenda from the form assigns the current user as owner', function () {
     Livewire::test(CreateAgenda::class)

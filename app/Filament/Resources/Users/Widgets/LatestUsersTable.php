@@ -27,6 +27,7 @@ class LatestUsersTable extends TableWidget
                     ->latest()
                     ->limit(10)
             )
+            ->paginated(false)
             ->columns([
                 ImageColumn::make('avatar_url')
                     ->label('Avatar')
@@ -48,7 +49,7 @@ class LatestUsersTable extends TableWidget
                 TextColumn::make('roles.name')
                     ->label('Rol')
                     ->badge()
-                    ->formatStateUsing(fn ($state) => Arr::first(Arr::wrap($state)))
+                    ->formatStateUsing(fn (mixed $state) => Arr::first(Arr::wrap($state)))
                     ->color(fn (?string $state): string => match ($state) {
                         'admin' => 'danger',
                         'super_admin' => 'warning',
@@ -78,7 +79,7 @@ class LatestUsersTable extends TableWidget
                     ->dateTime('d/m/Y H:i')
                     ->sortable()
                     ->since()
-                    ->tooltip(fn ($record) => $record->created_at->format('d/m/Y H:i:s')),
+                    ->tooltip(fn (User $record) => $record->created_at->format('d/m/Y H:i:s')),
             ]);
     }
 }

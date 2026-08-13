@@ -20,6 +20,7 @@ class AgendasTable
     public static function configure(Table $table): Table
     {
         return $table
+            ->modifyQueryUsing(fn (Builder $query) => $query->with('user'))
             ->columns([
                 ColorColumn::make('color')
                     ->label('Color')
@@ -30,6 +31,12 @@ class AgendasTable
                     ->searchable()
                     ->sortable()
                     ->weight('medium'),
+
+                TextColumn::make('user.full_name')
+                    ->label('Creado por')
+                    ->placeholder('Sin asignar')
+                    ->icon('heroicon-o-user-circle')
+                    ->toggleable(),
 
                 TextColumn::make('start_date')
                     ->label('Inicio')

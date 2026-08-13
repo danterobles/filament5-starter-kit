@@ -90,8 +90,8 @@ class UserForm
                             ->label('Contraseña')
                             ->password()
                             ->required(fn (string $context): bool => $context === 'create')
-                            ->dehydrateStateUsing(fn ($state) => ! empty($state) ? Hash::make($state) : null)
-                            ->dehydrated(fn ($state) => filled($state))
+                            ->dehydrateStateUsing(fn (?string $state) => ! empty($state) ? Hash::make($state) : null)
+                            ->dehydrated(fn (?string $state) => filled($state))
                             ->minLength(8)
                             ->maxLength(255)
                             ->placeholder('Mínimo 8 caracteres')
@@ -121,7 +121,7 @@ class UserForm
                                 return Role::query()
                                     ->orderBy('name')
                                     ->get()
-                                    ->mapWithKeys(function ($role) {
+                                    ->mapWithKeys(function (Role $role) {
                                         return [
                                             $role->id => Str::ucwords(Str::replace('_', ' ', $role->name)),
                                         ];
@@ -143,7 +143,7 @@ class UserForm
                                 $roleId = $record->roles()->pluck('id')->first();
                                 $component->state($roleId ? (string) $roleId : null);
                             })
-                            ->dehydrateStateUsing(fn ($state) => $state ? (int) $state : null)
+                            ->dehydrateStateUsing(fn (?string $state) => $state ? (int) $state : null)
                             ->columnSpanFull(),
                     ])
                     ->columns(1),

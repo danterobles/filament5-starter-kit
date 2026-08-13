@@ -13,6 +13,7 @@ use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 
 class TasksTable
@@ -20,7 +21,7 @@ class TasksTable
     public static function configure(Table $table): Table
     {
         return $table
-            ->modifyQueryUsing(fn ($query) => $query->with('user'))
+            ->modifyQueryUsing(fn (Builder $query) => $query->with('user'))
             ->columns([
                 TextColumn::make('title')
                     ->label('Título')
