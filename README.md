@@ -1,6 +1,6 @@
 # Laravel 13 + Filament 5 — Starter Kit
 
-Boilerplate de desarrollo acelerado para proyectos **Laravel 13** con panel de administración **Filament PHP 5**. Incluye autenticación completa, RBAC, gestión de usuarios, Kanban, calendario y módulo de pagos con Openpay — todo listo para personalizar y escalar.
+Boilerplate de desarrollo acelerado para proyectos **Laravel 13** con panel de administración **Filament PHP 5**. Incluye autenticación completa, RBAC, gestión de usuarios, Kanban y calendario — todo listo para personalizar y escalar.
 
 ---
 
@@ -20,7 +20,6 @@ Boilerplate de desarrollo acelerado para proyectos **Laravel 13** con panel de a
   - [Activar / desactivar features](#5-activar--desactivar-features)
   - [Agregar un Resource](#6-agregar-un-resource)
   - [Agregar un Cluster](#7-agregar-un-cluster)
-  - [Openpay — pagos](#8-openpay--pagos)
 - [Modelos](#modelos)
 - [Autenticación](#autenticación)
 - [Comandos frecuentes](#comandos-frecuentes)
@@ -53,10 +52,9 @@ Boilerplate de desarrollo acelerado para proyectos **Laravel 13** con panel de a
 | [Apex Charts](https://filamentphp.com/plugins/leandrocfe-apex-charts) | Gráficas interactivas | ^5.0 |
 | [FlowForge](https://filamentphp.com/plugins/relaticle-flowforge) | Kanban / Task Board | ^4.0 |
 | [FullCalendar](https://filamentphp.com/plugins/saade-fullcalendar) | Calendario de eventos | ^4.0 |
-| [Icon Picker](https://filamentphp.com/plugins/guava-icon-picker) | Selector de íconos Heroicons | ^4.0 |
+| [Icon Picker](https://filamentphp.com/plugins/guava-icon-picker) | Selector de íconos Heroicons | ^5.0 |
 | [Timeline View](https://filamentphp.com/plugins/devletes-timeline-view) | Vistas de línea de tiempo | ^1.0 |
 | [FilaCheck](https://filamentphp.com/plugins/laraveldaily-filacheck) | Lint de código Filament | ^1.2 |
-| [Openpay SDK](https://github.com/open-pay/openpay-php) | Procesador de pagos (MX/CO/PE) | ^3.1 |
 
 ---
 
@@ -99,10 +97,6 @@ Boilerplate de desarrollo acelerado para proyectos **Laravel 13** con panel de a
 - Vista de línea de tiempo simple y doble
 - Modelo `Agenda` con soporte de eventos de todo el día, ubicación y color
 
-### Pagos (Openpay)
-- `OpenpayService` listo para: crear clientes, cargos, planes y suscripciones
-- Configurable para México, Colombia y Perú
-
 ---
 
 ## Arquitectura
@@ -131,10 +125,8 @@ app/
 ├── Policies/
 │   ├── RolePolicy.php
 │   └── ActivityPolicy.php
-├── Providers/Filament/
-│   └── AdminPanelProvider.php            # Configuración central del panel
-└── Services/
-    └── OpenpayService.php                # SDK de pagos Openpay
+└── Providers/Filament/
+    └── AdminPanelProvider.php            # Configuración central del panel
 
 lang/
 └── es/
@@ -212,11 +204,6 @@ Variables clave a configurar antes del primer deploy:
 | `APP_DEBUG` | Mostrar stack traces | `true` |
 | `DB_CONNECTION` | Driver (`sqlite`, `mysql`, `pgsql`) | `sqlite` |
 | `FILESYSTEM_DISK` | Disco para avatares y uploads | `local` |
-| `OPENPAY_MERCHANT_ID` | ID de comercio Openpay | — |
-| `OPENPAY_PRIVATE_KEY` | Llave privada Openpay | — |
-| `OPENPAY_PUBLIC_KEY` | Llave pública Openpay | — |
-| `OPENPAY_PRODUCTION` | Modo producción Openpay | `false` |
-| `OPENPAY_COUNTRY` | País (`MX`, `CO`, `PE`) | `MX` |
 
 Para **producción**: `APP_ENV=production`, `APP_DEBUG=false`, y configura `FILESYSTEM_DISK=s3` si los avatares deben ser accesibles públicamente.
 
@@ -419,41 +406,6 @@ protected static ?string $cluster = \App\Filament\Clusters\NombreCluster\NombreC
 ```
 
 > **Nota de URLs:** Cuando el slug del cluster y el slug del resource coinciden (ej. `users/users`), ajusta `protected static ?string $slug` en el cluster para diferenciarlos.
-
----
-
-### 8. Openpay — pagos
-
-Configura las credenciales en `.env` (ver [Variables de entorno](#variables-de-entorno)). Obtén tus keys en [dashboard.openpay.mx](https://dashboard.openpay.mx).
-
-Inyecta `OpenpayService` donde lo necesites:
-
-```php
-use App\Services\OpenpayService;
-
-class ProcessPayment
-{
-    public function __construct(private OpenpayService $openpay) {}
-
-    public function handle(): void
-    {
-        $customer = $this->openpay->createCustomer([
-            'name'      => 'Juan',
-            'last_name' => 'García',
-            'email'     => 'juan@ejemplo.com',
-        ]);
-
-        $charge = $this->openpay->createCharge($customer['id'], [
-            'amount'      => 150.00,
-            'currency'    => 'MXN',
-            'description' => 'Suscripción mensual',
-            'method'      => 'card',
-        ]);
-    }
-}
-```
-
-Para activar modo producción: `OPENPAY_PRODUCTION=true` en `.env`.
 
 ---
 
