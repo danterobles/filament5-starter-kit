@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Tasks\Schemas;
 
 use App\Models\User;
+use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -62,6 +63,11 @@ class TaskForm
                                     ->searchable()
                                     ->native(false)
                                     ->placeholder('Sin asignar'),
+
+                                DateTimePicker::make('due_date')
+                                    ->label('Fecha límite')
+                                    ->native(false)
+                                    ->placeholder('Sin fecha límite'),
                             ]),
                     ])
                     ->columns(1),

@@ -52,6 +52,13 @@ class TasksTable
                     ->icon('heroicon-o-user-circle')
                     ->toggleable(),
 
+                TextColumn::make('due_date')
+                    ->label('Fecha límite')
+                    ->dateTime('d/m/Y H:i')
+                    ->placeholder('Sin fecha límite')
+                    ->sortable()
+                    ->toggleable(),
+
                 TextColumn::make('created_at')
                     ->label('Creado')
                     ->dateTime('d/m/Y H:i')
