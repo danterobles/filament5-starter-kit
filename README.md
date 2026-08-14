@@ -25,6 +25,7 @@ Boilerplate de desarrollo acelerado para proyectos **Laravel 13** con panel de a
 - [Comandos frecuentes](#comandos-frecuentes)
 - [Testing](#testing)
 - [Despliegue](#despliegue)
+- [Contribuir](#contribuir)
 - [Licencia](#licencia)
 
 ---
@@ -542,6 +543,12 @@ FILESYSTEM_DISK=s3
 Compatible con [Laravel Cloud](https://cloud.laravel.com/), Laravel Forge y cualquier servidor con PHP 8.3+.
 
 ---
+
+## Contribuir
+
+¿Quieres reportar un bug, proponer una mejora o abrir un PR? Revisa [CONTRIBUTING.md](CONTRIBUTING.md)
+para el flujo de trabajo, convenciones de commits y qué verificar antes de solicitar revisión.
+El historial de cambios notables vive en [CHANGELOG.md](CHANGELOG.md).
 
 ## Licencia
 
