@@ -52,8 +52,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_clusters_users_userscluster",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "userscluster.php"
     },
     {
@@ -63,8 +63,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_filament_clusters_users_userscluster_userscluster",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "userscluster"
     },
     {
@@ -74,8 +74,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "app_filament_clusters_users_userscluster_userscluster_getnavigationlabel",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getnavigationlabel()"
     },
     {
@@ -85,8 +85,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "app_filament_clusters_users_userscluster_userscluster_getnavigationgroup",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getnavigationgroup()"
     },
     {
@@ -195,8 +195,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_agendaresource",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "agendaresource.php"
     },
     {
@@ -206,8 +206,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_agendaresource_agendaresource",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "agendaresource"
     },
     {
@@ -217,8 +217,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_agendaresource_agendaresource_getnavigationgroup",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getnavigationgroup()"
     },
     {
@@ -229,7 +229,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_agendas_agendaresource_agendaresource_form",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".form()"
     },
     {
@@ -239,7 +239,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_agendaresource_agendaresource_table",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": ".table()"
     },
@@ -250,8 +250,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_agendaresource_agendaresource_getrelations",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getrelations()"
     },
     {
@@ -261,8 +261,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_agendaresource_agendaresource_getpages",
-      "community": 16,
-      "community_name": "EditAgenda",
+      "community": 33,
+      "community_name": "ListUsers.php",
       "norm_label": ".getpages()"
     },
     {
@@ -272,8 +272,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_createagenda",
-      "community": 4,
-      "community_name": "Filament\\Notifications\\Notification",
+      "community": 20,
+      "community_name": "CreateAgenda",
       "norm_label": "createagenda.php"
     },
     {
@@ -283,7 +283,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_createagenda_createagenda",
-      "community": 131,
+      "community": 20,
       "community_name": "CreateAgenda",
       "norm_label": "createagenda"
     },
@@ -294,7 +294,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_createagenda_createagenda_mutateformdatabeforecreate",
-      "community": 131,
+      "community": 20,
       "community_name": "CreateAgenda",
       "norm_label": ".mutateformdatabeforecreate()"
     },
@@ -305,7 +305,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_createagenda_createagenda_getredirecturl",
-      "community": 131,
+      "community": 20,
       "community_name": "CreateAgenda",
       "norm_label": ".getredirecturl()"
     },
@@ -316,7 +316,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_createagenda_createagenda_getcreatednotification",
-      "community": 131,
+      "community": 20,
       "community_name": "CreateAgenda",
       "norm_label": ".getcreatednotification()"
     },
@@ -327,7 +327,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_createagenda_php_notification",
-      "community": 131,
+      "community": 20,
       "community_name": "CreateAgenda",
       "norm_label": "notification"
     },
@@ -338,7 +338,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_createagenda_createagenda_getformactions",
-      "community": 131,
+      "community": 20,
       "community_name": "CreateAgenda",
       "norm_label": ".getformactions()"
     },
@@ -360,8 +360,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_editagenda_editagenda",
-      "community": 16,
-      "community_name": "EditAgenda",
+      "community": 4,
+      "community_name": "Filament\\Notifications\\Notification",
       "norm_label": "editagenda"
     },
     {
@@ -371,8 +371,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_editagenda_editagenda_getheaderactions",
-      "community": 16,
-      "community_name": "EditAgenda",
+      "community": 4,
+      "community_name": "Filament\\Notifications\\Notification",
       "norm_label": ".getheaderactions()"
     },
     {
@@ -382,8 +382,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_editagenda_editagenda_getsavednotification",
-      "community": 16,
-      "community_name": "EditAgenda",
+      "community": 4,
+      "community_name": "Filament\\Notifications\\Notification",
       "norm_label": ".getsavednotification()"
     },
     {
@@ -393,8 +393,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_editagenda_php_notification",
-      "community": 16,
-      "community_name": "EditAgenda",
+      "community": 4,
+      "community_name": "Filament\\Notifications\\Notification",
       "norm_label": "notification"
     },
     {
@@ -404,8 +404,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_editagenda_editagenda_getredirecturl",
-      "community": 16,
-      "community_name": "EditAgenda",
+      "community": 4,
+      "community_name": "Filament\\Notifications\\Notification",
       "norm_label": ".getredirecturl()"
     },
     {
@@ -415,8 +415,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_listagendas",
-      "community": 16,
-      "community_name": "EditAgenda",
+      "community": 33,
+      "community_name": "ListUsers.php",
       "norm_label": "listagendas.php"
     },
     {
@@ -426,8 +426,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_listagendas_listagendas",
-      "community": 16,
-      "community_name": "EditAgenda",
+      "community": 33,
+      "community_name": "ListUsers.php",
       "norm_label": "listagendas"
     },
     {
@@ -437,8 +437,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_pages_listagendas_listagendas_getheaderactions",
-      "community": 16,
-      "community_name": "EditAgenda",
+      "community": 33,
+      "community_name": "ListUsers.php",
       "norm_label": ".getheaderactions()"
     },
     {
@@ -449,7 +449,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_agendas_schemas_agendaform",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "agendaform.php"
     },
     {
@@ -460,7 +460,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_agendas_schemas_agendaform_agendaform",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "agendaform"
     },
     {
@@ -471,7 +471,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_agendas_schemas_agendaform_agendaform_configure",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".configure()"
     },
     {
@@ -481,7 +481,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_tables_agendastable",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": "agendastable.php"
     },
@@ -492,7 +492,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_tables_agendastable_agendastable",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": "agendastable"
     },
@@ -503,7 +503,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_filament_resources_agendas_tables_agendastable_agendastable_configure",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": ".configure()"
     },
@@ -514,7 +514,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_createtask",
-      "community": 100,
+      "community": 99,
       "community_name": "TaskResource.php",
       "norm_label": "createtask.php"
     },
@@ -602,8 +602,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_edittask",
-      "community": 4,
-      "community_name": "Filament\\Notifications\\Notification",
+      "community": 99,
+      "community_name": "TaskResource.php",
       "norm_label": "edittask.php"
     },
     {
@@ -613,8 +613,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_edittask_edittask",
-      "community": 4,
-      "community_name": "Filament\\Notifications\\Notification",
+      "community": 16,
+      "community_name": "EditTask",
       "norm_label": "edittask"
     },
     {
@@ -624,8 +624,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_edittask_edittask_mutateformdatabeforesave",
-      "community": 4,
-      "community_name": "Filament\\Notifications\\Notification",
+      "community": 16,
+      "community_name": "EditTask",
       "norm_label": ".mutateformdatabeforesave()"
     },
     {
@@ -635,8 +635,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_edittask_edittask_getheaderactions",
-      "community": 4,
-      "community_name": "Filament\\Notifications\\Notification",
+      "community": 16,
+      "community_name": "EditTask",
       "norm_label": ".getheaderactions()"
     },
     {
@@ -646,8 +646,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_edittask_edittask_getsavednotification",
-      "community": 4,
-      "community_name": "Filament\\Notifications\\Notification",
+      "community": 16,
+      "community_name": "EditTask",
       "norm_label": ".getsavednotification()"
     },
     {
@@ -657,8 +657,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_edittask_php_notification",
-      "community": 4,
-      "community_name": "Filament\\Notifications\\Notification",
+      "community": 16,
+      "community_name": "EditTask",
       "norm_label": "notification"
     },
     {
@@ -668,8 +668,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_edittask_edittask_getredirecturl",
-      "community": 4,
-      "community_name": "Filament\\Notifications\\Notification",
+      "community": 16,
+      "community_name": "EditTask",
       "norm_label": ".getredirecturl()"
     },
     {
@@ -679,7 +679,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_listtasks",
-      "community": 100,
+      "community": 99,
       "community_name": "TaskResource.php",
       "norm_label": "listtasks.php"
     },
@@ -690,8 +690,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_listtasks_listtasks",
-      "community": 100,
-      "community_name": "TaskResource.php",
+      "community": 16,
+      "community_name": "EditTask",
       "norm_label": "listtasks"
     },
     {
@@ -701,8 +701,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_pages_listtasks_listtasks_getheaderactions",
-      "community": 100,
-      "community_name": "TaskResource.php",
+      "community": 16,
+      "community_name": "EditTask",
       "norm_label": ".getheaderactions()"
     },
     {
@@ -713,29 +713,29 @@
       "_origin": "ast",
       "id": "app_filament_resources_tasks_schemas_taskform",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "taskform.php"
     },
     {
       "label": "TaskForm",
       "file_type": "code",
       "source_file": "app/Filament/Resources/Tasks/Schemas/TaskForm.php",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_schemas_taskform_taskform",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "taskform"
     },
     {
       "label": ".configure()",
       "file_type": "code",
       "source_file": "app/Filament/Resources/Tasks/Schemas/TaskForm.php",
-      "source_location": "L16",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_schemas_taskform_taskform_configure",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".configure()"
     },
     {
@@ -745,7 +745,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_tables_taskstable",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": "taskstable.php"
     },
@@ -756,7 +756,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_tables_taskstable_taskstable",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": "taskstable"
     },
@@ -767,7 +767,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_tables_taskstable_taskstable_configure",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": ".configure()"
     },
@@ -778,7 +778,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_taskresource",
-      "community": 100,
+      "community": 99,
       "community_name": "TaskResource.php",
       "norm_label": "taskresource.php"
     },
@@ -789,7 +789,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_taskresource_taskresource",
-      "community": 100,
+      "community": 99,
       "community_name": "TaskResource.php",
       "norm_label": "taskresource"
     },
@@ -800,7 +800,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_taskresource_taskresource_getnavigationgroup",
-      "community": 100,
+      "community": 99,
       "community_name": "TaskResource.php",
       "norm_label": ".getnavigationgroup()"
     },
@@ -812,7 +812,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_tasks_taskresource_taskresource_form",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".form()"
     },
     {
@@ -822,7 +822,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_taskresource_taskresource_table",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": ".table()"
     },
@@ -833,7 +833,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_taskresource_taskresource_getrelations",
-      "community": 100,
+      "community": 99,
       "community_name": "TaskResource.php",
       "norm_label": ".getrelations()"
     },
@@ -844,8 +844,8 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "app_filament_resources_tasks_taskresource_taskresource_getpages",
-      "community": 100,
-      "community_name": "TaskResource.php",
+      "community": 16,
+      "community_name": "EditTask",
       "norm_label": ".getpages()"
     },
     {
@@ -855,8 +855,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_createuser",
-      "community": 20,
-      "community_name": "CreateUser",
+      "community": 4,
+      "community_name": "Filament\\Notifications\\Notification",
       "norm_label": "createuser.php"
     },
     {
@@ -866,7 +866,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_createuser_createuser",
-      "community": 20,
+      "community": 19,
       "community_name": "CreateUser",
       "norm_label": "createuser"
     },
@@ -877,7 +877,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_createuser_createuser_getredirecturl",
-      "community": 20,
+      "community": 19,
       "community_name": "CreateUser",
       "norm_label": ".getredirecturl()"
     },
@@ -888,7 +888,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_createuser_createuser_getcreatednotification",
-      "community": 20,
+      "community": 19,
       "community_name": "CreateUser",
       "norm_label": ".getcreatednotification()"
     },
@@ -899,7 +899,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_createuser_php_notification",
-      "community": 20,
+      "community": 19,
       "community_name": "CreateUser",
       "norm_label": "notification"
     },
@@ -910,7 +910,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_createuser_createuser_mutateformdatabeforecreate",
-      "community": 20,
+      "community": 19,
       "community_name": "CreateUser",
       "norm_label": ".mutateformdatabeforecreate()"
     },
@@ -921,7 +921,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_createuser_createuser_aftercreate",
-      "community": 20,
+      "community": 19,
       "community_name": "CreateUser",
       "norm_label": ".aftercreate()"
     },
@@ -932,7 +932,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_createuser_createuser_getformactions",
-      "community": 20,
+      "community": 19,
       "community_name": "CreateUser",
       "norm_label": ".getformactions()"
     },
@@ -943,8 +943,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_edituser",
-      "community": 33,
-      "community_name": "UserResource.php",
+      "community": 4,
+      "community_name": "Filament\\Notifications\\Notification",
       "norm_label": "edituser.php"
     },
     {
@@ -1032,7 +1032,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_listusers",
       "community": 33,
-      "community_name": "UserResource.php",
+      "community_name": "ListUsers.php",
       "norm_label": "listusers.php"
     },
     {
@@ -1043,7 +1043,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_listusers_listusers",
       "community": 33,
-      "community_name": "UserResource.php",
+      "community_name": "ListUsers.php",
       "norm_label": "listusers"
     },
     {
@@ -1054,7 +1054,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_listusers_listusers_getheaderactions",
       "community": 33,
-      "community_name": "UserResource.php",
+      "community_name": "ListUsers.php",
       "norm_label": ".getheaderactions()"
     },
     {
@@ -1065,7 +1065,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_listusers_listusers_getheaderwidgets",
       "community": 33,
-      "community_name": "UserResource.php",
+      "community_name": "ListUsers.php",
       "norm_label": ".getheaderwidgets()"
     },
     {
@@ -1076,7 +1076,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_listusers_listusers_getfooterwidgets",
       "community": 33,
-      "community_name": "UserResource.php",
+      "community_name": "ListUsers.php",
       "norm_label": ".getfooterwidgets()"
     },
     {
@@ -1087,7 +1087,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_pages_listusers_listusers_getheaderwidgetscolumns",
       "community": 33,
-      "community_name": "UserResource.php",
+      "community_name": "ListUsers.php",
       "norm_label": ".getheaderwidgetscolumns()"
     },
     {
@@ -1098,7 +1098,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_schemas_userform",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "userform.php"
     },
     {
@@ -1109,7 +1109,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_schemas_userform_userform",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "userform"
     },
     {
@@ -1120,7 +1120,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_schemas_userform_userform_configure",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".configure()"
     },
     {
@@ -1130,8 +1130,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_users_tables_userstable",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "userstable.php"
     },
     {
@@ -1141,8 +1141,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "app_filament_resources_users_tables_userstable_userstable",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "userstable"
     },
     {
@@ -1152,8 +1152,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "app_filament_resources_users_tables_userstable_userstable_configure",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".configure()"
     },
     {
@@ -1163,8 +1163,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource",
-      "community": 33,
-      "community_name": "UserResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "userresource.php"
     },
     {
@@ -1174,8 +1174,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource_userresource",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "userresource"
     },
     {
@@ -1186,7 +1186,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource_userresource_form",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".form()"
     },
     {
@@ -1196,8 +1196,8 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource_userresource_table",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".table()"
     },
     {
@@ -1207,8 +1207,8 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource_userresource_getrelations",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getrelations()"
     },
     {
@@ -1229,8 +1229,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource_userresource_getwidgets",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getwidgets()"
     },
     {
@@ -1240,8 +1240,8 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource_userresource_getnavigationbadge",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getnavigationbadge()"
     },
     {
@@ -1251,8 +1251,8 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource_userresource_getnavigationbadgecolor",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getnavigationbadgecolor()"
     },
     {
@@ -1262,8 +1262,8 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource_userresource_getglobalsearchresulttitle",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getglobalsearchresulttitle()"
     },
     {
@@ -1273,8 +1273,8 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource_userresource_getgloballysearchableattributes",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getgloballysearchableattributes()"
     },
     {
@@ -1284,8 +1284,8 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "app_filament_resources_users_userresource_userresource_getglobalsearchresultdetails",
-      "community": 18,
-      "community_name": "UserResource",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getglobalsearchresultdetails()"
     },
     {
@@ -1306,8 +1306,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_users_widgets_latestuserstable",
-      "community": 2,
-      "community_name": "Filament\\Tables\\Table",
+      "community": 51,
+      "community_name": "User.php",
       "norm_label": "latestuserstable.php"
     },
     {
@@ -1317,8 +1317,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_filament_resources_users_widgets_latestuserstable_latestuserstable",
-      "community": 2,
-      "community_name": "Filament\\Tables\\Table",
+      "community": 51,
+      "community_name": "User.php",
       "norm_label": "latestuserstable"
     },
     {
@@ -1328,8 +1328,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_filament_resources_users_widgets_latestuserstable_latestuserstable_table",
-      "community": 2,
-      "community_name": "Filament\\Tables\\Table",
+      "community": 51,
+      "community_name": "User.php",
       "norm_label": ".table()"
     },
     {
@@ -1405,8 +1405,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_resources_users_widgets_userstatsoverview",
-      "community": 33,
-      "community_name": "UserResource.php",
+      "community": 84,
+      "community_name": "UserStatsOverview.php",
       "norm_label": "userstatsoverview.php"
     },
     {
@@ -1417,7 +1417,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_widgets_userstatsoverview_userstatsoverview",
       "community": 84,
-      "community_name": "TasksOverdueWidget.php",
+      "community_name": "UserStatsOverview.php",
       "norm_label": "userstatsoverview"
     },
     {
@@ -1428,7 +1428,7 @@
       "_origin": "ast",
       "id": "app_filament_resources_users_widgets_userstatsoverview_userstatsoverview_getstats",
       "community": 84,
-      "community_name": "TasksOverdueWidget.php",
+      "community_name": "UserStatsOverview.php",
       "norm_label": ".getstats()"
     },
     {
@@ -1504,7 +1504,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_widgets_agendadoublesidedtimelinewidget",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": "agendadoublesidedtimelinewidget.php"
     },
@@ -1515,7 +1515,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "app_filament_widgets_agendadoublesidedtimelinewidget_agendadoublesidedtimelinewidget",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": "agendadoublesidedtimelinewidget"
     },
@@ -1526,7 +1526,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "app_filament_widgets_agendadoublesidedtimelinewidget_agendadoublesidedtimelinewidget_table",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": ".table()"
     },
@@ -1537,7 +1537,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_filament_widgets_agendatimelinewidget",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": "agendatimelinewidget.php"
     },
@@ -1548,7 +1548,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "app_filament_widgets_agendatimelinewidget_agendatimelinewidget",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": "agendatimelinewidget"
     },
@@ -1559,7 +1559,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "app_filament_widgets_agendatimelinewidget_agendatimelinewidget_table",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": ".table()"
     },
@@ -1571,29 +1571,29 @@
       "_origin": "ast",
       "id": "app_filament_widgets_tasksoverduewidget",
       "community": 84,
-      "community_name": "TasksOverdueWidget.php",
+      "community_name": "UserStatsOverview.php",
       "norm_label": "tasksoverduewidget.php"
     },
     {
       "label": "TasksOverdueWidget",
       "file_type": "code",
       "source_file": "app/Filament/Widgets/TasksOverdueWidget.php",
-      "source_location": "L25",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "app_filament_widgets_tasksoverduewidget_tasksoverduewidget",
       "community": 84,
-      "community_name": "TasksOverdueWidget.php",
+      "community_name": "UserStatsOverview.php",
       "norm_label": "tasksoverduewidget"
     },
     {
       "label": ".getStats()",
       "file_type": "code",
       "source_file": "app/Filament/Widgets/TasksOverdueWidget.php",
-      "source_location": "L29",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "app_filament_widgets_tasksoverduewidget_tasksoverduewidget_getstats",
       "community": 84,
-      "community_name": "TasksOverdueWidget.php",
+      "community_name": "UserStatsOverview.php",
       "norm_label": ".getstats()"
     },
     {
@@ -1625,8 +1625,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_livewire_custompersonalinfo",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "custompersonalinfo.php"
     },
     {
@@ -1636,8 +1636,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "app_livewire_custompersonalinfo_custompersonalinfo",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "custompersonalinfo"
     },
     {
@@ -1647,8 +1647,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "app_livewire_custompersonalinfo_custompersonalinfo_getnamecomponent",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getnamecomponent()"
     },
     {
@@ -1658,8 +1658,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "textinput",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "textinput"
     },
     {
@@ -1669,8 +1669,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "app_livewire_custompersonalinfo_custompersonalinfo_getlastcomponent",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getlastcomponent()"
     },
     {
@@ -1680,8 +1680,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "app_livewire_custompersonalinfo_custompersonalinfo_getemailcomponent",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getemailcomponent()"
     },
     {
@@ -1691,8 +1691,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "app_livewire_custompersonalinfo_custompersonalinfo_getphonecomponent",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getphonecomponent()"
     },
     {
@@ -1702,8 +1702,8 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "app_livewire_custompersonalinfo_custompersonalinfo_getprofileformschema",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".getprofileformschema()"
     },
     {
@@ -1713,8 +1713,8 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "app_livewire_custompersonalinfo_custompersonalinfo_sendnotification",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": ".sendnotification()"
     },
     {
@@ -1724,8 +1724,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_models_agenda",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 2,
+      "community_name": "Agenda.php",
       "norm_label": "agenda.php"
     },
     {
@@ -1768,8 +1768,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "app_models_agenda_agenda_user",
-      "community": 42,
-      "community_name": "Task",
+      "community": 2,
+      "community_name": "Agenda.php",
       "norm_label": ".user()"
     },
     {
@@ -1779,8 +1779,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "app_models_agenda_agenda_initialsavatarurl",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 35,
+      "community_name": "Illuminate\\Database\\Eloquent\\Casts\\Attribute",
       "norm_label": ".initialsavatarurl()"
     },
     {
@@ -1790,8 +1790,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "app_models_agenda_php_attribute",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 35,
+      "community_name": "Illuminate\\Database\\Eloquent\\Casts\\Attribute",
       "norm_label": "attribute"
     },
     {
@@ -1861,14 +1861,25 @@
       "norm_label": ".booted()"
     },
     {
-      "label": ".user()",
+      "label": ".casts()",
       "file_type": "code",
       "source_file": "app/Models/Task.php",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "app_models_task_task_user",
+      "id": "app_models_task_task_casts",
       "community": 42,
       "community_name": "Task",
+      "norm_label": ".casts()"
+    },
+    {
+      "label": ".user()",
+      "file_type": "code",
+      "source_file": "app/Models/Task.php",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "app_models_task_task_user",
+      "community": 2,
+      "community_name": "Agenda.php",
       "norm_label": ".user()"
     },
     {
@@ -1923,7 +1934,7 @@
       "_origin": "ast",
       "id": "app_models_user_user_canaccesspanel",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": ".canaccesspanel()"
     },
     {
@@ -1933,8 +1944,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "app_models_user_user_fullname",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 35,
+      "community_name": "Illuminate\\Database\\Eloquent\\Casts\\Attribute",
       "norm_label": ".fullname()"
     },
     {
@@ -1944,8 +1955,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "app_models_user_php_attribute",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 35,
+      "community_name": "Illuminate\\Database\\Eloquent\\Casts\\Attribute",
       "norm_label": "attribute"
     },
     {
@@ -1978,25 +1989,25 @@
       "_origin": "ast",
       "id": "app_notifications_taskassignednotification",
       "community": 99,
-      "community_name": "TaskAssignedNotification.php",
+      "community_name": "TaskResource.php",
       "norm_label": "taskassignednotification.php"
     },
     {
       "label": "TaskAssignedNotification",
       "file_type": "code",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "app_notifications_taskassignednotification_taskassignednotification",
       "community": 99,
-      "community_name": "TaskAssignedNotification.php",
+      "community_name": "TaskResource.php",
       "norm_label": "taskassignednotification"
     },
     {
       "label": ".__construct()",
       "file_type": "code",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L21",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "app_notifications_taskassignednotification_taskassignednotification_construct",
       "community": 42,
@@ -2007,23 +2018,34 @@
       "label": ".via()",
       "file_type": "code",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L28",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "app_notifications_taskassignednotification_taskassignednotification_via",
       "community": 99,
-      "community_name": "TaskAssignedNotification.php",
+      "community_name": "TaskResource.php",
       "norm_label": ".via()"
     },
     {
       "label": ".toDatabase()",
       "file_type": "code",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L38",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "app_notifications_taskassignednotification_taskassignednotification_todatabase",
-      "community": 100,
+      "community": 99,
       "community_name": "TaskResource.php",
       "norm_label": ".todatabase()"
+    },
+    {
+      "label": ".toMail()",
+      "file_type": "code",
+      "source_file": "app/Notifications/TaskAssignedNotification.php",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "app_notifications_taskassignednotification_taskassignednotification_tomail",
+      "community": 99,
+      "community_name": "TaskResource.php",
+      "norm_label": ".tomail()"
     },
     {
       "label": "ActivityPolicy.php",
@@ -2186,8 +2208,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_policies_agendapolicy",
-      "community": 6,
-      "community_name": "Agenda",
+      "community": 18,
+      "community_name": "Illuminate\\Auth\\Access\\HandlesAuthorization",
       "norm_label": "agendapolicy.php"
     },
     {
@@ -2340,8 +2362,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_policies_rolepolicy",
-      "community": 21,
-      "community_name": "RolePolicy",
+      "community": 18,
+      "community_name": "Illuminate\\Auth\\Access\\HandlesAuthorization",
       "norm_label": "rolepolicy.php"
     },
     {
@@ -2494,8 +2516,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_policies_taskpolicy",
-      "community": 42,
-      "community_name": "Task",
+      "community": 18,
+      "community_name": "Illuminate\\Auth\\Access\\HandlesAuthorization",
       "norm_label": "taskpolicy.php"
     },
     {
@@ -2648,8 +2670,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_policies_userpolicy",
-      "community": 21,
-      "community_name": "RolePolicy",
+      "community": 18,
+      "community_name": "Illuminate\\Auth\\Access\\HandlesAuthorization",
       "norm_label": "userpolicy.php"
     },
     {
@@ -2803,7 +2825,7 @@
       "_origin": "ast",
       "id": "app_providers_appserviceprovider",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": "appserviceprovider.php"
     },
     {
@@ -2814,7 +2836,7 @@
       "_origin": "ast",
       "id": "app_providers_appserviceprovider_appserviceprovider",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": "appserviceprovider"
     },
     {
@@ -2825,7 +2847,7 @@
       "_origin": "ast",
       "id": "app_providers_appserviceprovider_appserviceprovider_register",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": ".register()"
     },
     {
@@ -2836,7 +2858,7 @@
       "_origin": "ast",
       "id": "app_providers_appserviceprovider_appserviceprovider_boot",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": ".boot()"
     },
     {
@@ -2847,7 +2869,7 @@
       "_origin": "ast",
       "id": "app_providers_filament_adminpanelprovider",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": "adminpanelprovider.php"
     },
     {
@@ -2858,7 +2880,7 @@
       "_origin": "ast",
       "id": "app_providers_filament_adminpanelprovider_adminpanelprovider",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": "adminpanelprovider"
     },
     {
@@ -2869,7 +2891,7 @@
       "_origin": "ast",
       "id": "app_providers_filament_adminpanelprovider_adminpanelprovider_panel",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": ".panel()"
     },
     {
@@ -2902,7 +2924,7 @@
       "_origin": "ast",
       "id": "bootstrap_providers",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": "providers.php"
     },
     {
@@ -3671,7 +3693,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "composer_extra",
-      "community": 133,
+      "community": 70,
       "community_name": "extra",
       "norm_label": "extra"
     },
@@ -3682,7 +3704,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "composer_extra_laravel",
-      "community": 133,
+      "community": 70,
       "community_name": "extra",
       "norm_label": "laravel"
     },
@@ -3693,7 +3715,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "composer_laravel_dont_discover",
-      "community": 133,
+      "community": 70,
       "community_name": "extra",
       "norm_label": "dont-discover"
     },
@@ -3815,7 +3837,7 @@
       "_origin": "ast",
       "id": "config_auth",
       "community": 84,
-      "community_name": "TasksOverdueWidget.php",
+      "community_name": "UserStatsOverview.php",
       "norm_label": "auth.php"
     },
     {
@@ -3902,8 +3924,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "config_permission",
-      "community": 21,
-      "community_name": "RolePolicy",
+      "community": 18,
+      "community_name": "Illuminate\\Auth\\Access\\HandlesAuthorization",
       "norm_label": "permission.php"
     },
     {
@@ -3946,8 +3968,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_factories_agendafactory",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 2,
+      "community_name": "Agenda.php",
       "norm_label": "agendafactory.php"
     },
     {
@@ -3957,8 +3979,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "database_factories_agendafactory_agendafactory",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 2,
+      "community_name": "Agenda.php",
       "norm_label": "agendafactory"
     },
     {
@@ -3968,8 +3990,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "database_factories_agendafactory_agendafactory_definition",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 2,
+      "community_name": "Agenda.php",
       "norm_label": ".definition()"
     },
     {
@@ -3979,8 +4001,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "database_factories_agendafactory_agendafactory_allday",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 2,
+      "community_name": "Agenda.php",
       "norm_label": ".allday()"
     },
     {
@@ -3990,8 +4012,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "database_factories_agendafactory_php_static",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 2,
+      "community_name": "Agenda.php",
       "norm_label": "static"
     },
     {
@@ -4001,8 +4023,8 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "database_factories_agendafactory_agendafactory_upcoming",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 2,
+      "community_name": "Agenda.php",
       "norm_label": ".upcoming()"
     },
     {
@@ -4012,8 +4034,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_factories_taskfactory",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 80,
+      "community_name": "Illuminate\\Database\\Eloquent\\Factories\\Factory",
       "norm_label": "taskfactory.php"
     },
     {
@@ -4023,8 +4045,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "database_factories_taskfactory_taskfactory",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 113,
+      "community_name": "TaskFactory",
       "norm_label": "taskfactory"
     },
     {
@@ -4034,19 +4056,19 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "database_factories_taskfactory_taskfactory_definition",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 113,
+      "community_name": "TaskFactory",
       "norm_label": ".definition()"
     },
     {
       "label": ".todo()",
       "file_type": "code",
       "source_file": "database/factories/TaskFactory.php",
-      "source_location": "L25",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "database_factories_taskfactory_taskfactory_todo",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 113,
+      "community_name": "TaskFactory",
       "norm_label": ".todo()"
     },
     {
@@ -4056,31 +4078,64 @@
       "source_location": "",
       "_origin": "ast",
       "id": "database_factories_taskfactory_php_static",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 113,
+      "community_name": "TaskFactory",
       "norm_label": "static"
     },
     {
       "label": ".inProgress()",
       "file_type": "code",
       "source_file": "database/factories/TaskFactory.php",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "database_factories_taskfactory_taskfactory_inprogress",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 113,
+      "community_name": "TaskFactory",
       "norm_label": ".inprogress()"
     },
     {
       "label": ".completed()",
       "file_type": "code",
       "source_file": "database/factories/TaskFactory.php",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "database_factories_taskfactory_taskfactory_completed",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 113,
+      "community_name": "TaskFactory",
       "norm_label": ".completed()"
+    },
+    {
+      "label": ".overdue()",
+      "file_type": "code",
+      "source_file": "database/factories/TaskFactory.php",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "database_factories_taskfactory_taskfactory_overdue",
+      "community": 113,
+      "community_name": "TaskFactory",
+      "norm_label": ".overdue()"
+    },
+    {
+      "label": ".dueSoon()",
+      "file_type": "code",
+      "source_file": "database/factories/TaskFactory.php",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "database_factories_taskfactory_taskfactory_duesoon",
+      "community": 113,
+      "community_name": "TaskFactory",
+      "norm_label": ".duesoon()"
+    },
+    {
+      "label": ".noDueDate()",
+      "file_type": "code",
+      "source_file": "database/factories/TaskFactory.php",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "database_factories_taskfactory_taskfactory_noduedate",
+      "community": 113,
+      "community_name": "TaskFactory",
+      "norm_label": ".noduedate()"
     },
     {
       "label": "UserFactory.php",
@@ -4089,8 +4144,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_factories_userfactory",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 80,
+      "community_name": "Illuminate\\Database\\Eloquent\\Factories\\Factory",
       "norm_label": "userfactory.php"
     },
     {
@@ -4100,8 +4155,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "database_factories_userfactory_userfactory",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 80,
+      "community_name": "Illuminate\\Database\\Eloquent\\Factories\\Factory",
       "norm_label": "userfactory"
     },
     {
@@ -4111,8 +4166,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "database_factories_userfactory_userfactory_definition",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 80,
+      "community_name": "Illuminate\\Database\\Eloquent\\Factories\\Factory",
       "norm_label": ".definition()"
     },
     {
@@ -4122,8 +4177,8 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "database_factories_userfactory_userfactory_unverified",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 80,
+      "community_name": "Illuminate\\Database\\Eloquent\\Factories\\Factory",
       "norm_label": ".unverified()"
     },
     {
@@ -4133,8 +4188,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "database_factories_userfactory_php_static",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 80,
+      "community_name": "Illuminate\\Database\\Eloquent\\Factories\\Factory",
       "norm_label": "static"
     },
     {
@@ -4144,8 +4199,8 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "database_factories_userfactory_userfactory_inactive",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 80,
+      "community_name": "Illuminate\\Database\\Eloquent\\Factories\\Factory",
       "norm_label": ".inactive()"
     },
     {
@@ -4342,8 +4397,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table",
-      "community": 115,
-      "community_name": "AddBatchUuidColumnToActivityLogTable",
+      "community": 1,
+      "community_name": "Illuminate\\Database\\Migrations\\Migration",
       "norm_label": "2026_04_20_191122_add_batch_uuid_column_to_activity_log_table.php"
     },
     {
@@ -4353,8 +4408,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "database_migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_addbatchuuidcolumntoactivitylogtable",
-      "community": 115,
-      "community_name": "AddBatchUuidColumnToActivityLogTable",
+      "community": 1,
+      "community_name": "Illuminate\\Database\\Migrations\\Migration",
       "norm_label": "addbatchuuidcolumntoactivitylogtable"
     },
     {
@@ -4364,8 +4419,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "database_migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_addbatchuuidcolumntoactivitylogtable_up",
-      "community": 115,
-      "community_name": "AddBatchUuidColumnToActivityLogTable",
+      "community": 1,
+      "community_name": "Illuminate\\Database\\Migrations\\Migration",
       "norm_label": ".up()"
     },
     {
@@ -4375,8 +4430,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "database_migrations_2026_04_20_191122_add_batch_uuid_column_to_activity_log_table_addbatchuuidcolumntoactivitylogtable_down",
-      "community": 115,
-      "community_name": "AddBatchUuidColumnToActivityLogTable",
+      "community": 1,
+      "community_name": "Illuminate\\Database\\Migrations\\Migration",
       "norm_label": ".down()"
     },
     {
@@ -4710,14 +4765,47 @@
       "norm_label": "down()"
     },
     {
+      "label": "2026_08_14_150436_add_due_date_to_tasks_table.php",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_08_14_150436_add_due_date_to_tasks_table.php",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "database_migrations_2026_08_14_150436_add_due_date_to_tasks_table",
+      "community": 98,
+      "community_name": "2026_08_14_150436_add_due_date_to_tasks_table.php",
+      "norm_label": "2026_08_14_150436_add_due_date_to_tasks_table.php"
+    },
+    {
+      "label": "up()",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_08_14_150436_add_due_date_to_tasks_table.php",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "database_migrations_2026_08_14_150436_add_due_date_to_tasks_table_up",
+      "community": 98,
+      "community_name": "2026_08_14_150436_add_due_date_to_tasks_table.php",
+      "norm_label": "up()"
+    },
+    {
+      "label": "down()",
+      "file_type": "code",
+      "source_file": "database/migrations/2026_08_14_150436_add_due_date_to_tasks_table.php",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "database_migrations_2026_08_14_150436_add_due_date_to_tasks_table_down",
+      "community": 98,
+      "community_name": "2026_08_14_150436_add_due_date_to_tasks_table.php",
+      "norm_label": "down()"
+    },
+    {
       "label": "DatabaseSeeder.php",
       "file_type": "code",
       "source_file": "database/seeders/DatabaseSeeder.php",
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_seeders_databaseseeder",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": "databaseseeder.php"
     },
     {
@@ -4727,8 +4815,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "database_seeders_databaseseeder_databaseseeder",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": "databaseseeder"
     },
     {
@@ -4738,8 +4826,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "database_seeders_databaseseeder_databaseseeder_run",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": ".run()"
     },
     {
@@ -4749,8 +4837,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "database_seeders_shieldseeder",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": "shieldseeder.php"
     },
     {
@@ -4760,8 +4848,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "database_seeders_shieldseeder_shieldseeder",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": "shieldseeder"
     },
     {
@@ -4771,8 +4859,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "database_seeders_shieldseeder_shieldseeder_run",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": ".run()"
     },
     {
@@ -4782,8 +4870,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "database_seeders_shieldseeder_shieldseeder_seedtenants",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": ".seedtenants()"
     },
     {
@@ -4793,8 +4881,8 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "database_seeders_shieldseeder_shieldseeder_seedusers",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": ".seedusers()"
     },
     {
@@ -4804,8 +4892,8 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "database_seeders_shieldseeder_shieldseeder_seedusertenantpivot",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": ".seedusertenantpivot()"
     },
     {
@@ -4815,8 +4903,8 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "database_seeders_shieldseeder_shieldseeder_makeroleswithpermissions",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": ".makeroleswithpermissions()"
     },
     {
@@ -4826,8 +4914,8 @@
       "source_location": "L190",
       "_origin": "ast",
       "id": "database_seeders_shieldseeder_shieldseeder_makedirectpermissions",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": ".makedirectpermissions()"
     },
     {
@@ -4848,8 +4936,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "package",
-      "community": 31,
-      "community_name": "package.json",
+      "community": 36,
+      "community_name": "Filament 5 Starter Kit",
       "norm_label": "package.json"
     },
     {
@@ -4859,8 +4947,8 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "package_schema",
-      "community": 31,
-      "community_name": "package.json",
+      "community": 36,
+      "community_name": "Filament 5 Starter Kit",
       "norm_label": "$schema"
     },
     {
@@ -4870,8 +4958,8 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "package_private",
-      "community": 31,
-      "community_name": "package.json",
+      "community": 36,
+      "community_name": "Filament 5 Starter Kit",
       "norm_label": "private"
     },
     {
@@ -4881,8 +4969,8 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "package_type",
-      "community": 31,
-      "community_name": "package.json",
+      "community": 36,
+      "community_name": "Filament 5 Starter Kit",
       "norm_label": "type"
     },
     {
@@ -4892,8 +4980,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "package_scripts",
-      "community": 31,
-      "community_name": "package.json",
+      "community": 36,
+      "community_name": "Filament 5 Starter Kit",
       "norm_label": "scripts"
     },
     {
@@ -4903,8 +4991,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "package_scripts_build",
-      "community": 31,
-      "community_name": "package.json",
+      "community": 36,
+      "community_name": "Filament 5 Starter Kit",
       "norm_label": "build"
     },
     {
@@ -4914,8 +5002,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "package_scripts_dev",
-      "community": 31,
-      "community_name": "package.json",
+      "community": 36,
+      "community_name": "Filament 5 Starter Kit",
       "norm_label": "dev"
     },
     {
@@ -4926,7 +5014,7 @@
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "devdependencies"
     },
     {
@@ -4937,7 +5025,7 @@
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_vite",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "@tailwindcss/vite"
     },
     {
@@ -4948,7 +5036,7 @@
       "_origin": "ast",
       "id": "tailwindcss_vite",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "@tailwindcss/vite"
     },
     {
@@ -4959,7 +5047,7 @@
       "_origin": "ast",
       "id": "package_devdependencies_concurrently",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "concurrently"
     },
     {
@@ -4970,7 +5058,7 @@
       "_origin": "ast",
       "id": "concurrently",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "concurrently"
     },
     {
@@ -4981,7 +5069,7 @@
       "_origin": "ast",
       "id": "package_devdependencies_laravel_vite_plugin",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "laravel-vite-plugin"
     },
     {
@@ -4992,7 +5080,7 @@
       "_origin": "ast",
       "id": "laravel_vite_plugin",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "laravel-vite-plugin"
     },
     {
@@ -5003,7 +5091,7 @@
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "tailwindcss"
     },
     {
@@ -5014,7 +5102,7 @@
       "_origin": "ast",
       "id": "tailwindcss",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "tailwindcss"
     },
     {
@@ -5025,7 +5113,7 @@
       "_origin": "ast",
       "id": "package_devdependencies_vite",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "vite"
     },
     {
@@ -5036,7 +5124,7 @@
       "_origin": "ast",
       "id": "vite",
       "community": 31,
-      "community_name": "package.json",
+      "community_name": "devDependencies",
       "norm_label": "vite"
     },
     {
@@ -5090,8 +5178,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_agendaresourcetest",
-      "community": 4,
-      "community_name": "Filament\\Notifications\\Notification",
+      "community": 33,
+      "community_name": "ListUsers.php",
       "norm_label": "agendaresourcetest.php"
     },
     {
@@ -5101,8 +5189,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_databaseseedertest",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": "databaseseedertest.php"
     },
     {
@@ -5123,8 +5211,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_livewire_custompersonalinfotest",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "custompersonalinfotest.php"
     },
     {
@@ -5146,7 +5234,7 @@
       "_origin": "ast",
       "id": "tests_feature_notifications_taskassignednotificationtest",
       "community": 99,
-      "community_name": "TaskAssignedNotification.php",
+      "community_name": "TaskResource.php",
       "norm_label": "taskassignednotificationtest.php"
     },
     {
@@ -5178,8 +5266,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_policies_agendapolicytest",
-      "community": 6,
-      "community_name": "Agenda",
+      "community": 18,
+      "community_name": "Illuminate\\Auth\\Access\\HandlesAuthorization",
       "norm_label": "agendapolicytest.php"
     },
     {
@@ -5189,8 +5277,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_policies_rolepolicytest",
-      "community": 21,
-      "community_name": "RolePolicy",
+      "community": 18,
+      "community_name": "Illuminate\\Auth\\Access\\HandlesAuthorization",
       "norm_label": "rolepolicytest.php"
     },
     {
@@ -5200,8 +5288,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_policies_taskpolicytest",
-      "community": 21,
-      "community_name": "RolePolicy",
+      "community": 18,
+      "community_name": "Illuminate\\Auth\\Access\\HandlesAuthorization",
       "norm_label": "taskpolicytest.php"
     },
     {
@@ -5211,8 +5299,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_policies_userpolicytest",
-      "community": 21,
-      "community_name": "RolePolicy",
+      "community": 18,
+      "community_name": "Illuminate\\Auth\\Access\\HandlesAuthorization",
       "norm_label": "userpolicytest.php"
     },
     {
@@ -5233,7 +5321,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_taskresourcetest",
-      "community": 100,
+      "community": 99,
       "community_name": "TaskResource.php",
       "norm_label": "taskresourcetest.php"
     },
@@ -5255,8 +5343,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_userresourcetest",
-      "community": 33,
-      "community_name": "UserResource.php",
+      "community": 4,
+      "community_name": "Filament\\Notifications\\Notification",
       "norm_label": "userresourcetest.php"
     },
     {
@@ -5266,8 +5354,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_widgets_latestuserstabletest",
-      "community": 2,
-      "community_name": "Filament\\Tables\\Table",
+      "community": 51,
+      "community_name": "User.php",
       "norm_label": "latestuserstabletest.php"
     },
     {
@@ -5278,7 +5366,7 @@
       "_origin": "ast",
       "id": "tests_feature_widgets_tasksoverduewidgettest",
       "community": 84,
-      "community_name": "TasksOverdueWidget.php",
+      "community_name": "UserStatsOverview.php",
       "norm_label": "tasksoverduewidgettest.php"
     },
     {
@@ -5299,8 +5387,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_feature_widgets_userstatsoverviewtest",
-      "community": 33,
-      "community_name": "UserResource.php",
+      "community": 84,
+      "community_name": "UserStatsOverview.php",
       "norm_label": "userstatsoverviewtest.php"
     },
     {
@@ -5310,8 +5398,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_pest",
-      "community": 116,
-      "community_name": "DatabaseConfig",
+      "community": 7,
+      "community_name": "Users Resource (CRUD)",
       "norm_label": "pest.php"
     },
     {
@@ -5321,8 +5409,8 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "tests_pest_something",
-      "community": 116,
-      "community_name": "DatabaseConfig",
+      "community": 7,
+      "community_name": "Users Resource (CRUD)",
       "norm_label": "something()"
     },
     {
@@ -5332,8 +5420,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_testcase",
-      "community": 116,
-      "community_name": "DatabaseConfig",
+      "community": 7,
+      "community_name": "Users Resource (CRUD)",
       "norm_label": "testcase.php"
     },
     {
@@ -5343,8 +5431,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "tests_testcase_testcase",
-      "community": 112,
-      "community_name": "TestCase",
+      "community": 7,
+      "community_name": "Users Resource (CRUD)",
       "norm_label": "testcase"
     },
     {
@@ -5365,8 +5453,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "vite_config",
-      "community": 31,
-      "community_name": "package.json",
+      "community": 36,
+      "community_name": "Filament 5 Starter Kit",
       "norm_label": "vite.config.js"
     },
     {
@@ -6976,608 +7064,14 @@
       "norm_label": "use `recycle()` to share relationship instances across factories"
     },
     {
-      "label": "CHANGELOG.md",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "changelog",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "changelog.md"
-    },
-    {
-      "label": "Changelog",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "changelog_changelog",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "changelog"
-    },
-    {
-      "label": "2026-08-14",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "changelog_2026_08_14",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-08-14"
-    },
-    {
-      "label": "Fixed",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "changelog_fixed",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "fixed"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "changelog_added",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "2026-08-13",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "changelog_2026_08_13",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-08-13"
-    },
-    {
-      "label": "Security",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "changelog_security",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "security"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "changelog_added_33",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "Changed",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L44",
-      "_origin": "ast",
-      "id": "changelog_changed",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "changed"
-    },
-    {
-      "label": "Fixed",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "changelog_fixed_51",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "fixed"
-    },
-    {
-      "label": "Removed",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L55",
-      "_origin": "ast",
-      "id": "changelog_removed",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "removed"
-    },
-    {
-      "label": "2026-08-12",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L59",
-      "_origin": "ast",
-      "id": "changelog_2026_08_12",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-08-12"
-    },
-    {
-      "label": "Removed",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L61",
-      "_origin": "ast",
-      "id": "changelog_removed_61",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "removed"
-    },
-    {
-      "label": "2026-07-20",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L65",
-      "_origin": "ast",
-      "id": "changelog_2026_07_20",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-07-20"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L67",
-      "_origin": "ast",
-      "id": "changelog_added_67",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "Fixed",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L71",
-      "_origin": "ast",
-      "id": "changelog_fixed_71",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "fixed"
-    },
-    {
-      "label": "Changed",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L76",
-      "_origin": "ast",
-      "id": "changelog_changed_76",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "changed"
-    },
-    {
-      "label": "2026-05-25 \u2014 Plan Junio",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L79",
-      "_origin": "ast",
-      "id": "changelog_2026_05_25_plan_junio",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-05-25 \u2014 plan junio"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L81",
-      "_origin": "ast",
-      "id": "changelog_added_81",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "Removed",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L85",
-      "_origin": "ast",
-      "id": "changelog_removed_85",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "removed"
-    },
-    {
-      "label": "2026-05-19",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L88",
-      "_origin": "ast",
-      "id": "changelog_2026_05_19",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-05-19"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L90",
-      "_origin": "ast",
-      "id": "changelog_added_90",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "Changed",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L93",
-      "_origin": "ast",
-      "id": "changelog_changed_93",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "changed"
-    },
-    {
-      "label": "Docs",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L98",
-      "_origin": "ast",
-      "id": "changelog_docs",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "docs"
-    },
-    {
-      "label": "2026-05-12",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L102",
-      "_origin": "ast",
-      "id": "changelog_2026_05_12",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-05-12"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L104",
-      "_origin": "ast",
-      "id": "changelog_added_104",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "2026-05-07",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L107",
-      "_origin": "ast",
-      "id": "changelog_2026_05_07",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-05-07"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L109",
-      "_origin": "ast",
-      "id": "changelog_added_109",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "Changed",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L112",
-      "_origin": "ast",
-      "id": "changelog_changed_112",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "changed"
-    },
-    {
-      "label": "2026-05-06",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L115",
-      "_origin": "ast",
-      "id": "changelog_2026_05_06",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-05-06"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L117",
-      "_origin": "ast",
-      "id": "changelog_added_117",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "2026-05-05",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L121",
-      "_origin": "ast",
-      "id": "changelog_2026_05_05",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-05-05"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L123",
-      "_origin": "ast",
-      "id": "changelog_added_123",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "2026-05-04",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L126",
-      "_origin": "ast",
-      "id": "changelog_2026_05_04",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-05-04"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L128",
-      "_origin": "ast",
-      "id": "changelog_added_128",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "2026-04-28",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L132",
-      "_origin": "ast",
-      "id": "changelog_2026_04_28",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-04-28"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L134",
-      "_origin": "ast",
-      "id": "changelog_added_134",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "2026-04-25",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L140",
-      "_origin": "ast",
-      "id": "changelog_2026_04_25",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-04-25"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L142",
-      "_origin": "ast",
-      "id": "changelog_added_142",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "2026-04-20",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L146",
-      "_origin": "ast",
-      "id": "changelog_2026_04_20",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-04-20"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L148",
-      "_origin": "ast",
-      "id": "changelog_added_148",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "2026-04-17",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L152",
-      "_origin": "ast",
-      "id": "changelog_2026_04_17",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "2026-04-17"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L154",
-      "_origin": "ast",
-      "id": "changelog_added_154",
-      "community": 80,
-      "community_name": "Changelog",
-      "norm_label": "added"
-    },
-    {
-      "label": "CONTRIBUTING.md",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "contributing",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "contributing.md"
-    },
-    {
-      "label": "Contribuir a este starter kit",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "contributing_contribuir_a_este_starter_kit",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "contribuir a este starter kit"
-    },
-    {
-      "label": "Requisitos",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "contributing_requisitos",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "requisitos"
-    },
-    {
-      "label": "Puesta en marcha",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "contributing_puesta_en_marcha",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "puesta en marcha"
-    },
-    {
-      "label": "Flujo de trabajo",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "contributing_flujo_de_trabajo",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "flujo de trabajo"
-    },
-    {
-      "label": "Convenciones del proyecto",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L35",
-      "_origin": "ast",
-      "id": "contributing_convenciones_del_proyecto",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "convenciones del proyecto"
-    },
-    {
-      "label": "Commits",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L46",
-      "_origin": "ast",
-      "id": "contributing_commits",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "commits"
-    },
-    {
-      "label": "Tests",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L62",
-      "_origin": "ast",
-      "id": "contributing_tests",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "tests"
-    },
-    {
-      "label": "Estilo y an\u00e1lisis est\u00e1tico",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L76",
-      "_origin": "ast",
-      "id": "contributing_estilo_y_an\u00e1lisis_est\u00e1tico",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "estilo y analisis estatico"
-    },
-    {
-      "label": "Antes de abrir un PR",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L83",
-      "_origin": "ast",
-      "id": "contributing_antes_de_abrir_un_pr",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "antes de abrir un pr"
-    },
-    {
-      "label": "Reportar un bug o proponer una mejora",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L94",
-      "_origin": "ast",
-      "id": "contributing_reportar_un_bug_o_proponer_una_mejora",
-      "community": 101,
-      "community_name": "Contribuir a este starter kit",
-      "norm_label": "reportar un bug o proponer una mejora"
-    },
-    {
       "label": "BackedEnum",
       "file_type": "code",
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
       "id": "backedenum",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "backedenum"
     },
     {
@@ -7587,8 +7081,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "filament_clusters_cluster",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "filament\\clusters\\cluster"
     },
     {
@@ -7631,8 +7125,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "filament_resources_resource",
-      "community": 35,
-      "community_name": "AgendaResource.php",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "filament\\resources\\resource"
     },
     {
@@ -7643,7 +7137,7 @@
       "_origin": "ast",
       "id": "filament_schemas_schema",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "filament\\schemas\\schema"
     },
     {
@@ -7653,7 +7147,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "filament_tables_table",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": "filament\\tables\\table"
     },
@@ -7676,7 +7170,7 @@
       "_origin": "ast",
       "id": "filament_resources_pages_createrecord",
       "community": 20,
-      "community_name": "CreateUser",
+      "community_name": "CreateAgenda",
       "norm_label": "filament\\resources\\pages\\createrecord"
     },
     {
@@ -7697,8 +7191,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "filament_resources_pages_listrecords",
-      "community": 16,
-      "community_name": "EditAgenda",
+      "community": 33,
+      "community_name": "ListUsers.php",
       "norm_label": "filament\\resources\\pages\\listrecords"
     },
     {
@@ -7709,7 +7203,7 @@
       "_origin": "ast",
       "id": "filament_forms_components_textinput",
       "community": 11,
-      "community_name": "Filament\\Schemas\\Schema",
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "filament\\forms\\components\\textinput"
     },
     {
@@ -7731,7 +7225,7 @@
       "_origin": "ast",
       "id": "filament_pages_concerns_exposestabletowidgets",
       "community": 33,
-      "community_name": "UserResource.php",
+      "community_name": "ListUsers.php",
       "norm_label": "filament\\pages\\concerns\\exposestabletowidgets"
     },
     {
@@ -7741,7 +7235,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "filament_widgets_tablewidget",
-      "community": 2,
+      "community": 11,
       "community_name": "Filament\\Tables\\Table",
       "norm_label": "filament\\widgets\\tablewidget"
     },
@@ -7764,7 +7258,7 @@
       "_origin": "ast",
       "id": "filament_widgets_statsoverviewwidget",
       "community": 84,
-      "community_name": "TasksOverdueWidget.php",
+      "community_name": "UserStatsOverview.php",
       "norm_label": "filament\\widgets\\statsoverviewwidget"
     },
     {
@@ -7796,8 +7290,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "jeffgreco13_filamentbreezy_livewire_personalinfo",
-      "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community": 11,
+      "community_name": "Filament\\Tables\\Table",
       "norm_label": "jeffgreco13\\filamentbreezy\\livewire\\personalinfo"
     },
     {
@@ -7807,8 +7301,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_database_eloquent_casts_attribute",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 35,
+      "community_name": "Illuminate\\Database\\Eloquent\\Casts\\Attribute",
       "norm_label": "illuminate\\database\\eloquent\\casts\\attribute"
     },
     {
@@ -7829,8 +7323,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_database_eloquent_relations_belongsto",
-      "community": 42,
-      "community_name": "Task",
+      "community": 2,
+      "community_name": "Agenda.php",
       "norm_label": "illuminate\\database\\eloquent\\relations\\belongsto"
     },
     {
@@ -7874,7 +7368,7 @@
       "_origin": "ast",
       "id": "filament_panel",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": "filament\\panel"
     },
     {
@@ -7940,7 +7434,7 @@
       "_origin": "ast",
       "id": "illuminate_notifications_notification",
       "community": 99,
-      "community_name": "TaskAssignedNotification.php",
+      "community_name": "TaskResource.php",
       "norm_label": "illuminate\\notifications\\notification"
     },
     {
@@ -7951,7 +7445,7 @@
       "_origin": "ast",
       "id": "illuminate_bus_queueable",
       "community": 99,
-      "community_name": "TaskAssignedNotification.php",
+      "community_name": "TaskResource.php",
       "norm_label": "illuminate\\bus\\queueable"
     },
     {
@@ -7962,8 +7456,19 @@
       "_origin": "ast",
       "id": "illuminate_contracts_queue_shouldqueue",
       "community": 99,
-      "community_name": "TaskAssignedNotification.php",
+      "community_name": "TaskResource.php",
       "norm_label": "illuminate\\contracts\\queue\\shouldqueue"
+    },
+    {
+      "label": "Illuminate\\Notifications\\Messages\\MailMessage",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "illuminate_notifications_messages_mailmessage",
+      "community": 99,
+      "community_name": "TaskResource.php",
+      "norm_label": "illuminate\\notifications\\messages\\mailmessage"
     },
     {
       "label": "Illuminate\\Auth\\Access\\HandlesAuthorization",
@@ -7972,8 +7477,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_auth_access_handlesauthorization",
-      "community": 21,
-      "community_name": "RolePolicy",
+      "community": 18,
+      "community_name": "Illuminate\\Auth\\Access\\HandlesAuthorization",
       "norm_label": "illuminate\\auth\\access\\handlesauthorization"
     },
     {
@@ -7995,7 +7500,7 @@
       "_origin": "ast",
       "id": "illuminate_support_serviceprovider",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": "illuminate\\support\\serviceprovider"
     },
     {
@@ -8006,7 +7511,7 @@
       "_origin": "ast",
       "id": "filament_panelprovider",
       "community": 68,
-      "community_name": "CustomPersonalInfo",
+      "community_name": "AdminPanelProvider.php",
       "norm_label": "filament\\panelprovider"
     },
     {
@@ -8016,8 +7521,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_database_eloquent_factories_factory",
-      "community": 10,
-      "community_name": "TaskBoard",
+      "community": 80,
+      "community_name": "Illuminate\\Database\\Eloquent\\Factories\\Factory",
       "norm_label": "illuminate\\database\\eloquent\\factories\\factory"
     },
     {
@@ -8038,8 +7543,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_database_console_seeds_withoutmodelevents",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": "illuminate\\database\\console\\seeds\\withoutmodelevents"
     },
     {
@@ -8049,8 +7554,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_database_seeder",
-      "community": 19,
-      "community_name": "ShieldSeeder",
+      "community": 10,
+      "community_name": "TaskBoard",
       "norm_label": "illuminate\\database\\seeder"
     },
     {
@@ -8061,7 +7566,7 @@
       "_origin": "ast",
       "id": "illuminate_support_facades_notification",
       "community": 99,
-      "community_name": "TaskAssignedNotification.php",
+      "community_name": "TaskResource.php",
       "norm_label": "illuminate\\support\\facades\\notification"
     },
     {
@@ -8071,8 +7576,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "illuminate_foundation_testing_testcase",
-      "community": 112,
-      "community_name": "TestCase",
+      "community": 7,
+      "community_name": "Users Resource (CRUD)",
       "norm_label": "illuminate\\foundation\\testing\\testcase"
     },
     {
@@ -9632,9 +9137,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 70,
+      "community": 36,
       "norm_label": "laravel boost guidelines",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_laravel_boost_guidelines"
     },
     {
@@ -9643,9 +9148,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 70,
+      "community": 36,
       "norm_label": "foundational context",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_foundational_context"
     },
     {
@@ -9654,9 +9159,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 70,
+      "community": 36,
       "norm_label": "skills activation",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_skills_activation"
     },
     {
@@ -9665,9 +9170,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L34",
       "_origin": "ast",
-      "community": 70,
+      "community": 36,
       "norm_label": "conventions",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_conventions"
     },
     {
@@ -9676,9 +9181,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L40",
       "_origin": "ast",
-      "community": 70,
+      "community": 36,
       "norm_label": "verification scripts",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_verification_scripts"
     },
     {
@@ -9687,9 +9192,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L44",
       "_origin": "ast",
-      "community": 70,
+      "community": 36,
       "norm_label": "application structure & architecture",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_application_structure_architecture"
     },
     {
@@ -9698,9 +9203,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L49",
       "_origin": "ast",
-      "community": 70,
+      "community": 36,
       "norm_label": "frontend bundling",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_frontend_bundling"
     },
     {
@@ -9709,9 +9214,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L53",
       "_origin": "ast",
-      "community": 70,
+      "community": 36,
       "norm_label": "documentation files",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_documentation_files"
     },
     {
@@ -9720,9 +9225,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 70,
+      "community": 36,
       "norm_label": "replies",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_replies"
     },
     {
@@ -11584,7 +11089,7 @@
       "community": 7,
       "norm_label": "createpermissiontables migration",
       "_origin": "semantic",
-      "community_name": "Spatie Laravel Permission",
+      "community_name": "Users Resource (CRUD)",
       "id": "migrations_create_permission_tables"
     },
     {
@@ -11659,7 +11164,7 @@
       "community": 7,
       "norm_label": "filament shield (rbac)",
       "_origin": "semantic",
-      "community_name": "Spatie Laravel Permission",
+      "community_name": "Users Resource (CRUD)",
       "id": "concept_filament_shield"
     },
     {
@@ -11734,7 +11239,7 @@
       "community": 7,
       "norm_label": "spatie laravel permission",
       "_origin": "semantic",
-      "community_name": "Spatie Laravel Permission",
+      "community_name": "Users Resource (CRUD)",
       "id": "concept_spatie_permission"
     },
     {
@@ -11806,10 +11311,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 31,
+      "community": 36,
       "norm_label": "vite build pipeline",
       "_origin": "semantic",
-      "community_name": "package.json",
+      "community_name": "Filament 5 Starter Kit",
       "id": "concept_vite_build"
     },
     {
@@ -11869,7 +11374,7 @@
       "community": 7,
       "norm_label": "filamentshieldconfig",
       "_origin": "semantic",
-      "community_name": "Spatie Laravel Permission",
+      "community_name": "Users Resource (CRUD)",
       "id": "config_filament_shield_filamentshieldconfig"
     },
     {
@@ -11884,7 +11389,7 @@
       "community": 7,
       "norm_label": "authconfig",
       "_origin": "semantic",
-      "community_name": "Spatie Laravel Permission",
+      "community_name": "Users Resource (CRUD)",
       "id": "config_auth_authconfig"
     },
     {
@@ -11914,7 +11419,7 @@
       "community": 7,
       "norm_label": "filamentloggerconfig",
       "_origin": "semantic",
-      "community_name": "Spatie Laravel Permission",
+      "community_name": "Users Resource (CRUD)",
       "id": "config_filament_logger_filamentloggerconfig"
     },
     {
@@ -11956,10 +11461,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 116,
+      "community": 7,
       "norm_label": "databaseconfig",
       "_origin": "semantic",
-      "community_name": "DatabaseConfig",
+      "community_name": "Users Resource (CRUD)",
       "id": "config_database_databaseconfig"
     },
     {
@@ -11971,10 +11476,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 116,
+      "community": 7,
       "norm_label": "cacheconfig",
       "_origin": "semantic",
-      "community_name": "DatabaseConfig",
+      "community_name": "Users Resource (CRUD)",
       "id": "config_cache_cacheconfig"
     },
     {
@@ -11986,10 +11491,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 116,
+      "community": 7,
       "norm_label": "sessionconfig",
       "_origin": "semantic",
-      "community_name": "DatabaseConfig",
+      "community_name": "Users Resource (CRUD)",
       "id": "config_session_sessionconfig"
     },
     {
@@ -12001,10 +11506,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 116,
+      "community": 7,
       "norm_label": "queueconfig",
       "_origin": "semantic",
-      "community_name": "DatabaseConfig",
+      "community_name": "Users Resource (CRUD)",
       "id": "config_queue_queueconfig"
     },
     {
@@ -12019,7 +11524,7 @@
       "community": 7,
       "norm_label": "loggingconfig",
       "_origin": "semantic",
-      "community_name": "Spatie Laravel Permission",
+      "community_name": "Users Resource (CRUD)",
       "id": "config_logging_loggingconfig"
     },
     {
@@ -12034,7 +11539,7 @@
       "community": 7,
       "norm_label": "permissionconfig",
       "_origin": "semantic",
-      "community_name": "Spatie Laravel Permission",
+      "community_name": "Users Resource (CRUD)",
       "id": "config_permission_permissionconfig"
     },
     {
@@ -12064,7 +11569,7 @@
       "community": 7,
       "norm_label": "filament shield rbac",
       "_origin": "semantic",
-      "community_name": "Spatie Laravel Permission",
+      "community_name": "Users Resource (CRUD)",
       "id": "concept_filament_shield_rbac"
     },
     {
@@ -12196,10 +11701,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 113,
+      "community": 7,
       "norm_label": "readme \u2014 starter kit",
       "_origin": "semantic",
-      "community_name": "CLAUDE.md (project instructions)",
+      "community_name": "Users Resource (CRUD)",
       "id": "readme_starterkit"
     },
     {
@@ -12211,10 +11716,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 113,
+      "community": 7,
       "norm_label": "claude.md (project instructions)",
       "_origin": "semantic",
-      "community_name": "CLAUDE.md (project instructions)",
+      "community_name": "Users Resource (CRUD)",
       "id": "claude_md_project"
     },
     {
@@ -12226,10 +11731,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 113,
+      "community": 7,
       "norm_label": "skill: tailwindcss-development",
       "_origin": "semantic",
-      "community_name": "CLAUDE.md (project instructions)",
+      "community_name": "Users Resource (CRUD)",
       "id": "skills_tailwindcss_skill"
     },
     {
@@ -12241,10 +11746,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 112,
+      "community": 7,
       "norm_label": "skill: pest-testing",
       "_origin": "semantic",
-      "community_name": "TestCase",
+      "community_name": "Users Resource (CRUD)",
       "id": "skills_pest_testing_skill"
     },
     {
@@ -12256,10 +11761,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 113,
+      "community": 7,
       "norm_label": "skill: flowforge-development",
       "_origin": "semantic",
-      "community_name": "CLAUDE.md (project instructions)",
+      "community_name": "Users Resource (CRUD)",
       "id": "skills_flowforge_skill"
     },
     {
@@ -12271,10 +11776,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 113,
+      "community": 7,
       "norm_label": "skill: laravel-best-practices",
       "_origin": "semantic",
-      "community_name": "CLAUDE.md (project instructions)",
+      "community_name": "Users Resource (CRUD)",
       "id": "skills_laravel_best_practices_skill"
     },
     {
@@ -12286,10 +11791,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 113,
+      "community": 7,
       "norm_label": "rule: routing & controllers",
       "_origin": "semantic",
-      "community_name": "CLAUDE.md (project instructions)",
+      "community_name": "Users Resource (CRUD)",
       "id": "skills_laravel_best_practices_routing"
     },
     {
@@ -12301,10 +11806,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 113,
+      "community": 7,
       "norm_label": "rule: task scheduling",
       "_origin": "semantic",
-      "community_name": "CLAUDE.md (project instructions)",
+      "community_name": "Users Resource (CRUD)",
       "id": "skills_laravel_best_practices_scheduling"
     },
     {
@@ -12316,10 +11821,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 113,
+      "community": 7,
       "norm_label": "rule: migrations",
       "_origin": "semantic",
-      "community_name": "CLAUDE.md (project instructions)",
+      "community_name": "Users Resource (CRUD)",
       "id": "skills_laravel_best_practices_migrations"
     },
     {
@@ -12691,10 +12196,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 70,
+      "community": 36,
       "norm_label": "filament php 5",
       "_origin": "semantic",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_filament5"
     },
     {
@@ -12721,10 +12226,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 31,
+      "community": 36,
       "norm_label": "tailwind css 4",
       "_origin": "semantic",
-      "community_name": "package.json",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_tailwindcss4"
     },
     {
@@ -12736,10 +12241,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 70,
+      "community": 36,
       "norm_label": "pest php 4",
       "_origin": "semantic",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_pestphp4"
     },
     {
@@ -12751,10 +12256,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 70,
+      "community": 36,
       "norm_label": "laravel pint",
       "_origin": "semantic",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_laravelpint"
     },
     {
@@ -12766,10 +12271,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 36,
       "norm_label": "filament shield (rbac)",
       "_origin": "semantic",
-      "community_name": "Users Resource (CRUD)",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_filament_shield"
     },
     {
@@ -12781,10 +12286,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 132,
+      "community": 36,
       "norm_label": "filament breezy (auth)",
       "_origin": "semantic",
-      "community_name": "Filament Breezy (Auth)",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_filament_breezy"
     },
     {
@@ -12841,10 +12346,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 36,
       "norm_label": "flowforge kanban plugin",
       "_origin": "semantic",
-      "community_name": "Users Resource (CRUD)",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_flowforge"
     },
     {
@@ -12916,10 +12421,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 130,
+      "community": 36,
       "norm_label": "openpay sdk",
       "_origin": "semantic",
-      "community_name": "Openpay SDK",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_openpay_sdk"
     },
     {
@@ -12946,7 +12451,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 7,
       "norm_label": "userscluster",
       "_origin": "semantic",
       "community_name": "Users Resource (CRUD)",
@@ -12961,10 +12466,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 36,
       "norm_label": "taskboard page (kanban)",
       "_origin": "semantic",
-      "community_name": "Users Resource (CRUD)",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_task_board"
     },
     {
@@ -12976,7 +12481,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 7,
       "norm_label": "users resource (crud)",
       "_origin": "semantic",
       "community_name": "Users Resource (CRUD)",
@@ -12991,7 +12496,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 7,
       "norm_label": "userform schema",
       "_origin": "semantic",
       "community_name": "Users Resource (CRUD)",
@@ -13006,7 +12511,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 7,
       "norm_label": "userstable schema",
       "_origin": "semantic",
       "community_name": "Users Resource (CRUD)",
@@ -13021,7 +12526,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 7,
       "norm_label": "user widgets (stats, table, chart)",
       "_origin": "semantic",
       "community_name": "Users Resource (CRUD)",
@@ -13051,10 +12556,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 132,
+      "community": 36,
       "norm_label": "custompersonalinfo livewire component",
       "_origin": "semantic",
-      "community_name": "Filament Breezy (Auth)",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_custom_personal_info"
     },
     {
@@ -13066,10 +12571,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 36,
       "norm_label": "user model",
       "_origin": "semantic",
-      "community_name": "Users Resource (CRUD)",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_model_user"
     },
     {
@@ -13081,10 +12586,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 36,
       "norm_label": "task model",
       "_origin": "semantic",
-      "community_name": "Users Resource (CRUD)",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_model_task"
     },
     {
@@ -13111,10 +12616,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 112,
+      "community": 7,
       "norm_label": "rolepolicy",
       "_origin": "semantic",
-      "community_name": "TestCase",
+      "community_name": "Users Resource (CRUD)",
       "id": "readme_role_policy"
     },
     {
@@ -13126,10 +12631,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 112,
+      "community": 7,
       "norm_label": "activitypolicy",
       "_origin": "semantic",
-      "community_name": "TestCase",
+      "community_name": "Users Resource (CRUD)",
       "id": "readme_activity_policy"
     },
     {
@@ -13156,10 +12661,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 130,
+      "community": 36,
       "norm_label": "openpayservice",
       "_origin": "semantic",
-      "community_name": "Openpay SDK",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_openpay_service"
     },
     {
@@ -13171,7 +12676,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 98,
+      "community": 7,
       "norm_label": "navigation strings (lang/es/navigation.php)",
       "_origin": "semantic",
       "community_name": "Users Resource (CRUD)",
@@ -13186,10 +12691,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 112,
+      "community": 7,
       "norm_label": "shieldseeder",
       "_origin": "semantic",
-      "community_name": "TestCase",
+      "community_name": "Users Resource (CRUD)",
       "id": "readme_shield_seeder"
     },
     {
@@ -13201,10 +12706,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 112,
+      "community": 7,
       "norm_label": "rbac (roles and permissions)",
       "_origin": "semantic",
-      "community_name": "TestCase",
+      "community_name": "Users Resource (CRUD)",
       "id": "readme_rbac"
     },
     {
@@ -13216,10 +12721,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 132,
+      "community": 36,
       "norm_label": "two-factor authentication (2fa totp)",
       "_origin": "semantic",
-      "community_name": "Filament Breezy (Auth)",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_2fa"
     },
     {
@@ -13231,10 +12736,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 132,
+      "community": 36,
       "norm_label": "passkeys (webauthn)",
       "_origin": "semantic",
-      "community_name": "Filament Breezy (Auth)",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_passkeys"
     },
     {
@@ -13246,10 +12751,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 130,
+      "community": 36,
       "norm_label": "openpay payments feature",
       "_origin": "semantic",
-      "community_name": "Openpay SDK",
+      "community_name": "Filament 5 Starter Kit",
       "id": "readme_openpay_payments"
     },
     {
@@ -13261,10 +12766,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 112,
+      "community": 7,
       "norm_label": "userresourcetest",
       "_origin": "semantic",
-      "community_name": "TestCase",
+      "community_name": "Users Resource (CRUD)",
       "id": "readme_user_resource_test"
     },
     {
@@ -13276,10 +12781,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 112,
+      "community": 7,
       "norm_label": "userstatsoverviewtest",
       "_origin": "semantic",
-      "community_name": "TestCase",
+      "community_name": "Users Resource (CRUD)",
       "id": "readme_user_stats_overview_test"
     },
     {
@@ -13306,10 +12811,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 70,
+      "community": 36,
       "norm_label": "test enforcement rules",
       "_origin": "semantic",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_md_test_enforcement"
     },
     {
@@ -13336,10 +12841,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 70,
+      "community": 36,
       "norm_label": "filament development guidelines",
       "_origin": "semantic",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_md_filament_guidelines"
     },
     {
@@ -13366,10 +12871,10 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 70,
+      "community": 36,
       "norm_label": "pint formatter rule",
       "_origin": "semantic",
-      "community_name": "Laravel Boost Guidelines",
+      "community_name": "Filament 5 Starter Kit",
       "id": "claude_md_pint_rule"
     },
     {
@@ -14838,7 +14343,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/Filament/Resources/Tasks/Schemas/TaskForm.php",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_resources_tasks_schemas_taskform",
@@ -14850,7 +14355,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/Filament/Resources/Tasks/Schemas/TaskForm.php",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_resources_tasks_schemas_taskform",
@@ -14862,7 +14367,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "app/Filament/Resources/Tasks/Schemas/TaskForm.php",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_resources_tasks_schemas_taskform",
@@ -14897,7 +14402,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Filament/Resources/Tasks/Schemas/TaskForm.php",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_resources_tasks_schemas_taskform_taskform",
@@ -14922,7 +14427,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Filament/Resources/Tasks/Schemas/TaskForm.php",
-      "source_location": "L55",
+      "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_resources_tasks_schemas_taskform_taskform_configure",
@@ -14932,7 +14437,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Filament/Resources/Tasks/Schemas/TaskForm.php",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -14946,7 +14451,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Filament/Resources/Tasks/Schemas/TaskForm.php",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_resources_tasks_schemas_taskform_taskform_configure",
@@ -15028,7 +14533,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Filament/Resources/Tasks/Tables/TasksTable.php",
-      "source_location": "L76",
+      "source_location": "L83",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_resources_tasks_tables_taskstable_taskstable_configure",
@@ -15130,6 +14635,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/Feature/Notifications/TaskAssignedNotificationTest.php",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_feature_notifications_taskassignednotificationtest",
+      "target": "app_filament_resources_tasks_taskresource",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Filament/Resources/Tasks/TaskResource.php",
@@ -15213,10 +14730,22 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L47",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_notifications_taskassignednotification_taskassignednotification_todatabase",
+      "target": "app_filament_resources_tasks_taskresource_taskresource"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/Notifications/TaskAssignedNotification.php",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_notifications_taskassignednotification_taskassignednotification_tomail",
       "target": "app_filament_resources_tasks_taskresource_taskresource"
     },
     {
@@ -16973,7 +16502,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/Filament/Widgets/TasksOverdueWidget.php",
-      "source_location": "L25",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_widgets_tasksoverduewidget",
@@ -17044,7 +16573,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Filament/Widgets/TasksOverdueWidget.php",
-      "source_location": "L29",
+      "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_widgets_tasksoverduewidget_tasksoverduewidget",
@@ -17055,7 +16584,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "app/Filament/Widgets/TasksOverdueWidget.php",
-      "source_location": "L25",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_widgets_tasksoverduewidget_tasksoverduewidget",
@@ -17068,7 +16597,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/Filament/Widgets/TasksOverdueWidget.php",
-      "source_location": "L35",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_filament_widgets_tasksoverduewidget_tasksoverduewidget_getstats",
@@ -17815,7 +17344,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/Notifications/TaskAssignedNotificationTest.php",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_notifications_taskassignednotificationtest",
@@ -17913,6 +17442,17 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_models_task_task",
+      "target": "app_models_task_task_casts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Models/Task.php",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_models_task_task",
       "target": "app_models_task_task_user",
       "confidence_score": 1.0
     },
@@ -17954,7 +17494,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast",
@@ -17966,7 +17506,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
@@ -18062,7 +17602,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Models/Task.php",
-      "source_location": "L23",
+      "source_location": "L30",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -18338,7 +17878,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/Notifications/TaskAssignedNotificationTest.php",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_notifications_taskassignednotificationtest",
@@ -18672,11 +18212,23 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0,
       "context": "parameter_type",
       "_origin": "ast",
       "source": "app_notifications_taskassignednotification_taskassignednotification_todatabase",
+      "target": "app_models_user_user",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Notifications/TaskAssignedNotification.php",
+      "source_location": "L58",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "_origin": "ast",
+      "source": "app_notifications_taskassignednotification_taskassignednotification_tomail",
       "target": "app_models_user_user",
       "confidence_score": 1.0
     },
@@ -18722,7 +18274,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "database/factories/TaskFactory.php",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "database_factories_taskfactory_taskfactory_definition",
@@ -18804,7 +18356,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_notifications_taskassignednotification",
@@ -18844,6 +18396,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_notifications_taskassignednotification",
+      "target": "illuminate_notifications_messages_mailmessage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Notifications/TaskAssignedNotification.php",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_notifications_taskassignednotification",
       "target": "illuminate_notifications_notification",
       "confidence_score": 1.0
     },
@@ -18852,7 +18416,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/Notifications/TaskAssignedNotificationTest.php",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_notifications_taskassignednotificationtest",
@@ -18863,7 +18427,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_notifications_taskassignednotification_taskassignednotification",
@@ -18874,7 +18438,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_notifications_taskassignednotification_taskassignednotification",
@@ -18885,7 +18449,18 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L28",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "app_notifications_taskassignednotification_taskassignednotification",
+      "target": "app_notifications_taskassignednotification_taskassignednotification_tomail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Notifications/TaskAssignedNotification.php",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_notifications_taskassignednotification_taskassignednotification",
@@ -18896,7 +18471,7 @@
       "relation": "mixes_in",
       "confidence": "EXTRACTED",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_notifications_taskassignednotification_taskassignednotification",
@@ -18907,7 +18482,7 @@
       "relation": "implements",
       "confidence": "EXTRACTED",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_notifications_taskassignednotification_taskassignednotification",
@@ -18918,11 +18493,23 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "app/Notifications/TaskAssignedNotification.php",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "app_notifications_taskassignednotification_taskassignednotification",
       "target": "illuminate_notifications_notification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/Notifications/TaskAssignedNotification.php",
+      "source_location": "L58",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "app_notifications_taskassignednotification_taskassignednotification_tomail",
+      "target": "illuminate_notifications_messages_mailmessage",
       "confidence_score": 1.0
     },
     {
@@ -22067,7 +21654,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "database/factories/TaskFactory.php",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
       "source": "database_factories_taskfactory_taskfactory",
@@ -22089,7 +21676,18 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "database/factories/TaskFactory.php",
-      "source_location": "L30",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "database_factories_taskfactory_taskfactory",
+      "target": "database_factories_taskfactory_taskfactory_duesoon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/TaskFactory.php",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "database_factories_taskfactory_taskfactory",
@@ -22100,7 +21698,29 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "database/factories/TaskFactory.php",
-      "source_location": "L25",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "database_factories_taskfactory_taskfactory",
+      "target": "database_factories_taskfactory_taskfactory_noduedate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/TaskFactory.php",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "database_factories_taskfactory_taskfactory",
+      "target": "database_factories_taskfactory_taskfactory_overdue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/TaskFactory.php",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "database_factories_taskfactory_taskfactory",
@@ -22122,7 +21742,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "database/factories/TaskFactory.php",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -22134,7 +21754,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "database/factories/TaskFactory.php",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
@@ -22146,11 +21766,47 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "database/factories/TaskFactory.php",
-      "source_location": "L30",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "database_factories_taskfactory_taskfactory_duesoon",
+      "target": "database_factories_taskfactory_php_static",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/TaskFactory.php",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "return_type",
       "_origin": "ast",
       "source": "database_factories_taskfactory_taskfactory_inprogress",
+      "target": "database_factories_taskfactory_php_static",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/TaskFactory.php",
+      "source_location": "L55",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "database_factories_taskfactory_taskfactory_noduedate",
+      "target": "database_factories_taskfactory_php_static",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "database/factories/TaskFactory.php",
+      "source_location": "L41",
+      "weight": 1.0,
+      "context": "return_type",
+      "_origin": "ast",
+      "source": "database_factories_taskfactory_taskfactory_overdue",
       "target": "database_factories_taskfactory_php_static",
       "confidence_score": 1.0
     },
@@ -22869,6 +22525,40 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "database/migrations/2026_08_14_150436_add_due_date_to_tasks_table.php",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "database_migrations_2026_08_14_150436_add_due_date_to_tasks_table",
+      "target": "database_migrations_2026_08_14_150436_add_due_date_to_tasks_table_down",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "database/migrations/2026_08_14_150436_add_due_date_to_tasks_table.php",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "database_migrations_2026_08_14_150436_add_due_date_to_tasks_table",
+      "target": "database_migrations_2026_08_14_150436_add_due_date_to_tasks_table_up",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "database/migrations/2026_08_14_150436_add_due_date_to_tasks_table.php",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "database_migrations_2026_08_14_150436_add_due_date_to_tasks_table",
+      "target": "illuminate_database_migrations_migration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "database/seeders/DatabaseSeeder.php",
       "source_location": "L11",
       "weight": 1.0,
@@ -23277,7 +22967,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/Notifications/TaskAssignedNotificationTest.php",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_notifications_taskassignednotificationtest",
@@ -23289,7 +22979,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/Feature/Notifications/TaskAssignedNotificationTest.php",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_feature_notifications_taskassignednotificationtest",
@@ -24905,578 +24595,6 @@
       "_origin": "ast",
       "source": "claude_skills_laravel_best_practices_rules_testing_testing_best_practices",
       "target": "claude_skills_laravel_best_practices_rules_testing_use_recycle_to_share_relationship_instances_across_factories",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog",
-      "target": "changelog_changelog",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L152",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_04_17",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L146",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_04_20",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L140",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_04_25",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L132",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_04_28",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L126",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_05_04",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L121",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_05_05",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L115",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_05_06",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L107",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_05_07",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L102",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_05_12",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L88",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_05_19",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L79",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_05_25_plan_junio",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L65",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_07_20",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L59",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_08_12",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_08_13",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L10",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_changelog",
-      "target": "changelog_2026_08_14",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L17",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_08_14",
-      "target": "changelog_added",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_08_14",
-      "target": "changelog_fixed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L33",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_08_13",
-      "target": "changelog_added_33",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L44",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_08_13",
-      "target": "changelog_changed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L51",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_08_13",
-      "target": "changelog_fixed_51",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L55",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_08_13",
-      "target": "changelog_removed",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L22",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_08_13",
-      "target": "changelog_security",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L61",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_08_12",
-      "target": "changelog_removed_61",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L67",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_07_20",
-      "target": "changelog_added_67",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L76",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_07_20",
-      "target": "changelog_changed_76",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L71",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_07_20",
-      "target": "changelog_fixed_71",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L81",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_25_plan_junio",
-      "target": "changelog_added_81",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L85",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_25_plan_junio",
-      "target": "changelog_removed_85",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L90",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_19",
-      "target": "changelog_added_90",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L93",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_19",
-      "target": "changelog_changed_93",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L98",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_19",
-      "target": "changelog_docs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L104",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_12",
-      "target": "changelog_added_104",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L109",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_07",
-      "target": "changelog_added_109",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L112",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_07",
-      "target": "changelog_changed_112",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L117",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_06",
-      "target": "changelog_added_117",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L123",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_05",
-      "target": "changelog_added_123",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L128",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_05_04",
-      "target": "changelog_added_128",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L134",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_04_28",
-      "target": "changelog_added_134",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L142",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_04_25",
-      "target": "changelog_added_142",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L148",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_04_20",
-      "target": "changelog_added_148",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CHANGELOG.md",
-      "source_location": "L154",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "changelog_2026_04_17",
-      "target": "changelog_added_154",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "contributing",
-      "target": "contributing_contribuir_a_este_starter_kit",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L83",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "contributing_contribuir_a_este_starter_kit",
-      "target": "contributing_antes_de_abrir_un_pr",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L35",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "contributing_contribuir_a_este_starter_kit",
-      "target": "contributing_convenciones_del_proyecto",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "contributing_contribuir_a_este_starter_kit",
-      "target": "contributing_flujo_de_trabajo",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L13",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "contributing_contribuir_a_este_starter_kit",
-      "target": "contributing_puesta_en_marcha",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L94",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "contributing_contribuir_a_este_starter_kit",
-      "target": "contributing_reportar_un_bug_o_proponer_una_mejora",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "contributing_contribuir_a_este_starter_kit",
-      "target": "contributing_requisitos",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L46",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "contributing_convenciones_del_proyecto",
-      "target": "contributing_commits",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L76",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "contributing_convenciones_del_proyecto",
-      "target": "contributing_estilo_y_an\u00e1lisis_est\u00e1tico",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L62",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "contributing_convenciones_del_proyecto",
-      "target": "contributing_tests",
       "confidence_score": 1.0
     },
     {
@@ -30365,5 +29483,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4dd987ca56aa03b30b15b0dbf328b54d0081a0a0"
+  "built_at_commit": "2556f9114e0d61e0d17f11105ba12ba15bf03717"
 }

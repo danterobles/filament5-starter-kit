@@ -105,9 +105,9 @@
     "semantic_hash": ""
   },
   "database/factories/TaskFactory.php": {
-    "mtime": 1786720261.9675753,
-    "ast_hash": "f032f8412f6fc42909e62287d56b3db0",
-    "semantic_hash": "f032f8412f6fc42909e62287d56b3db0"
+    "mtime": 1786719929.058068,
+    "ast_hash": "55545c9122fa70f3e848a62c5831171d",
+    "semantic_hash": ""
   },
   "database/factories/UserFactory.php": {
     "mtime": 1778181237.2426803,
@@ -140,8 +140,8 @@
     "semantic_hash": ""
   },
   "app/Models/Task.php": {
-    "mtime": 1786720261.9671974,
-    "ast_hash": "b54ee469cec767dc318e381d566067dd",
+    "mtime": 1786719895.6170385,
+    "ast_hash": "1f0b7bcf2c7e2752ee3248b3ce44e79e",
     "semantic_hash": ""
   },
   "app/Models/Agenda.php": {
@@ -375,8 +375,8 @@
     "semantic_hash": "84625c52e743b1a4178bb27b7afb3615"
   },
   "README.md": {
-    "mtime": 1786720509.5598817,
-    "ast_hash": "5134485ea5004afd5f9e83b20e9a9880",
+    "mtime": 1786652422.7062943,
+    "ast_hash": "d4e017923e8ed56cb12163bb8e74ead7",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
@@ -520,14 +520,14 @@
     "semantic_hash": "28ed638bc31f1c8bb67bbf12191f2bf4"
   },
   "app/Filament/Resources/Tasks/Tables/TasksTable.php": {
-    "mtime": 1786720261.9665937,
-    "ast_hash": "16d45c921b94cabd1488c78a54da9df0",
+    "mtime": 1786719906.32331,
+    "ast_hash": "0601f45947e5d3d704df4f396cb98fa1",
     "semantic_hash": ""
   },
   "app/Filament/Resources/Tasks/Schemas/TaskForm.php": {
-    "mtime": 1786720261.9656003,
-    "ast_hash": "0700f8a176a5435e40f22978f4842606",
-    "semantic_hash": "0700f8a176a5435e40f22978f4842606"
+    "mtime": 1786719902.0779703,
+    "ast_hash": "e0b99d8c2b5ceda55d240943d681d1a4",
+    "semantic_hash": ""
   },
   "app/Filament/Resources/Tasks/Pages/EditTask.php": {
     "mtime": 1786651189.255488,
@@ -580,8 +580,8 @@
     "semantic_hash": ""
   },
   "tests/Feature/TaskResourceTest.php": {
-    "mtime": 1786720261.9711843,
-    "ast_hash": "b2e540c36e02a4042f39ecd029509414",
+    "mtime": 1786719965.2259014,
+    "ast_hash": "d7f9b4508bb8a667743bf980cf3ecc20",
     "semantic_hash": ""
   },
   "database/migrations/2026_07_20_174937_create_notifications_table.php": {
@@ -650,13 +650,13 @@
     "semantic_hash": ""
   },
   "app/Filament/Widgets/TasksOverdueWidget.php": {
-    "mtime": 1786720261.9669983,
-    "ast_hash": "c53bada3db0d48531eb6ef766fee2ee5",
+    "mtime": 1786719921.8819969,
+    "ast_hash": "c6305b8ef5369d4de5d81ab135556fe4",
     "semantic_hash": ""
   },
   "app/Notifications/TaskAssignedNotification.php": {
-    "mtime": 1786720261.967392,
-    "ast_hash": "0f78e0353112d51b7604e6aa47bd471d",
+    "mtime": 1786719901.8386476,
+    "ast_hash": "6c26bf8046095e78688b665f816ad89c",
     "semantic_hash": ""
   },
   "database/migrations/2026_08_13_201359_add_index_to_status_on_tasks_table.php": {
@@ -680,8 +680,8 @@
     "semantic_hash": ""
   },
   "tests/Feature/Notifications/TaskAssignedNotificationTest.php": {
-    "mtime": 1786720261.9709406,
-    "ast_hash": "1ec8b8f147b6328e6a4d03f54b2aef2d",
+    "mtime": 1786719916.4931126,
+    "ast_hash": "0abfb356caaf2dbdca95c3350885fdd1",
     "semantic_hash": ""
   },
   "tests/Feature/TaskBoardTest.php": {
@@ -695,8 +695,8 @@
     "semantic_hash": ""
   },
   "tests/Feature/Widgets/TasksOverdueWidgetTest.php": {
-    "mtime": 1786720261.9714932,
-    "ast_hash": "650e2a8191d98e5f79a04a24626c08ed",
+    "mtime": 1786719956.5506692,
+    "ast_hash": "3a4660c31c72b031fcb95eb9aec4a8df",
     "semantic_hash": ""
   },
   "tests/Feature/Widgets/UserGrowthChartTest.php": {
@@ -704,14 +704,9 @@
     "ast_hash": "a81207c201817dec2b2bf6a982ce61e0",
     "semantic_hash": ""
   },
-  "CHANGELOG.md": {
-    "mtime": 1786720473.268969,
-    "ast_hash": "913b6a30cf9d31f785adf6f160a04820",
-    "semantic_hash": ""
-  },
-  "CONTRIBUTING.md": {
-    "mtime": 1786720495.5369198,
-    "ast_hash": "24048a6d102806e6d6cf609c3d205c00",
+  "database/migrations/2026_08_14_150436_add_due_date_to_tasks_table.php": {
+    "mtime": 1786719889.2196443,
+    "ast_hash": "0f809222f50d9d4af3e12b76a1b122d7",
     "semantic_hash": ""
   }
 }

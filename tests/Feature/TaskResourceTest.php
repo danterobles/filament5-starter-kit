@@ -49,6 +49,41 @@ test('admin can create a task with user assignment', function () {
     ]);
 });
 
+test('admin can create a task with a due date', function () {
+    $dueDate = now()->addDays(3)->startOfMinute();
+
+    Livewire::test(CreateTask::class)
+        ->fillForm([
+            'title' => 'Entregar informe',
+            'status' => 'todo',
+            'due_date' => $dueDate,
+        ])
+        ->call('create')
+        ->assertHasNoFormErrors();
+
+    assertDatabaseHas(Task::class, [
+        'title' => 'Entregar informe',
+        'due_date' => $dueDate->format('Y-m-d H:i:s'),
+    ]);
+});
+
+test('admin can edit a task\'s due date', function () {
+    $task = Task::factory()->todo()->create(['due_date' => null]);
+    $dueDate = now()->addWeek()->startOfMinute();
+
+    Livewire::test(EditTask::class, ['record' => $task->id])
+        ->fillForm([
+            'due_date' => $dueDate,
+        ])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    assertDatabaseHas(Task::class, [
+        'id' => $task->id,
+        'due_date' => $dueDate->format('Y-m-d H:i:s'),
+    ]);
+});
+
 test('create form requires title and status', function () {
     Livewire::test(CreateTask::class)
         ->fillForm([
