@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-#[Fillable(['title', 'status', 'description', 'position', 'user_id'])]
+#[Fillable(['title', 'status', 'description', 'position', 'user_id', 'due_date'])]
 class Task extends Model
 {
     /** @use HasFactory<TaskFactory> */
@@ -18,6 +18,13 @@ class Task extends Model
     protected static function booted(): void
     {
         static::addGlobalScope(new OwnedByUserScope);
+    }
+
+    protected function casts(): array
+    {
+        return [
+            'due_date' => 'datetime',
+        ];
     }
 
     public function user(): BelongsTo

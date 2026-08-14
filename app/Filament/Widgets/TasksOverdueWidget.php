@@ -11,12 +11,17 @@ use Illuminate\Support\Facades\Cache;
 /**
  * Surfaces tasks that need attention on the dashboard.
  *
- * The `tasks` table has no `due_date` column (see the
- * `create_tasks_table` migration), so "overdue" and "due soon" are
- * approximated from the columns that do exist: a task that is still
- * open (status other than `completed`) and was created more than 7
- * days ago is treated as overdue, while one created within the last
- * 7 days is treated as due soon.
+ * "Overdue" and "due soon" are computed from the real `due_date`
+ * column on `tasks`:
+ * - Overdue: still open (status other than `completed`) with a
+ *   `due_date` in the past.
+ * - Due soon: still open with a `due_date` between now and 7 days
+ *   from now.
+ * - Sin fecha límite: still open with no `due_date` set at all. A
+ *   task without a deadline cannot violate one, so it is excluded
+ *   from both the overdue and due-soon counts, but it is still
+ *   surfaced as its own stat so this information isn't silently
+ *   dropped from the widget.
  *
  * `Task::query()` already applies the global `OwnedByUserScope`, so a
  * regular user only sees counts for their own tasks, while a
@@ -29,16 +34,23 @@ class TasksOverdueWidget extends StatsOverviewWidget
     protected function getStats(): array
     {
         $data = Cache::remember('tasks_overdue_widget_'.Auth::id(), 60, function () {
-            $threshold = now()->subDays(7);
+            $now = now();
+            $dueSoonThreshold = $now->clone()->addDays(7);
 
             return [
                 'overdue' => Task::query()
                     ->where('status', '!=', 'completed')
-                    ->where('created_at', '<', $threshold)
+                    ->whereNotNull('due_date')
+                    ->where('due_date', '<', $now)
                     ->count(),
                 'due_soon' => Task::query()
                     ->where('status', '!=', 'completed')
-                    ->where('created_at', '>=', $threshold)
+                    ->whereNotNull('due_date')
+                    ->whereBetween('due_date', [$now, $dueSoonThreshold])
+                    ->count(),
+                'no_due_date' => Task::query()
+                    ->where('status', '!=', 'completed')
+                    ->whereNull('due_date')
                     ->count(),
                 'completed' => Task::query()
                     ->where('status', 'completed')
@@ -48,14 +60,19 @@ class TasksOverdueWidget extends StatsOverviewWidget
 
         return [
             Stat::make('Tareas Vencidas', $data['overdue'])
-                ->description('Abiertas hace más de 7 días')
+                ->description('Fecha límite pasada')
                 ->descriptionIcon('heroicon-o-exclamation-triangle')
                 ->color($data['overdue'] > 0 ? 'danger' : 'gray'),
 
             Stat::make('Por Vencer Pronto', $data['due_soon'])
-                ->description('Abiertas en los últimos 7 días')
+                ->description('Vencen en los próximos 7 días')
                 ->descriptionIcon('heroicon-o-clock')
                 ->color($data['due_soon'] > 0 ? 'warning' : 'gray'),
+
+            Stat::make('Sin Fecha Límite', $data['no_due_date'])
+                ->description('Abiertas sin fecha asignada')
+                ->descriptionIcon('heroicon-o-calendar')
+                ->color('gray'),
 
             Stat::make('Completadas', $data['completed'])
                 ->description('Tareas finalizadas')
