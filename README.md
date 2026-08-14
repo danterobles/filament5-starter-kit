@@ -545,4 +545,4 @@ Compatible con [Laravel Cloud](https://cloud.laravel.com/), Laravel Forge y cual
 
 ## Licencia
 
-[MIT](https://opensource.org/licenses/MIT)
+Este proyecto está licenciado bajo [MIT](LICENSE).
