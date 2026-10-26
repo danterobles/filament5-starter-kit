@@ -16,7 +16,7 @@
   "14": "Quick Reference",
   "15": "Illuminate\\Database\\Eloquent\\Model",
   "16": "TestCase",
-  "17": "EditTask",
+  "17": "EditUser",
   "18": "Spatie\\Permission\\Models\\Permission",
   "19": "CreateUser",
   "20": "Filament\\Notifications\\Notification",
@@ -70,7 +70,7 @@
   "68": "AdminPanelProvider.php",
   "69": "Illuminate\\Foundation\\Auth\\User",
   "70": "extra",
-  "71": "keywords",
+  "71": "TaskBoard",
   "72": "Controller.php",
   "73": "Agenda Full Calendar Widget",
   "74": "Agenda Timeline Views",
@@ -85,7 +85,7 @@
   "83": "app.js",
   "84": "UserStatsOverview",
   "85": "Skill: laravel-best-practices",
-  "86": "filament-logger.php",
+  "86": "EditTask",
   "87": "Endpoint Tests",
   "88": "filesystems.php",
   "89": "logging.php",
@@ -131,5 +131,6 @@
   "129": "console.php",
   "130": "package.json",
   "131": "Filament Breezy (Auth)",
+  "132": "autoload-dev",
   "133": "Openpay SDK"
 }
