@@ -8,7 +8,6 @@ use App\Models\User;
 use Database\Seeders\ShieldSeeder;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\Testing\TestAction;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Notifications\DatabaseNotification;
 use Livewire\Livewire;
 
@@ -361,8 +360,9 @@ test('a regular user cannot open the edit page for another user\'s task', functi
 
     $this->actingAs($viewer);
 
-    Livewire::test(EditTask::class, ['record' => $othersTask->id]);
-})->throws(ModelNotFoundException::class);
+    Livewire::test(EditTask::class, ['record' => $othersTask->id])
+        ->assertNotFound();
+});
 
 test('a super_admin can still assign a task to another user when editing', function () {
     $task = Task::factory()->for($this->admin)->create();

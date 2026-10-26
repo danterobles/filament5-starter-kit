@@ -8,7 +8,6 @@ use App\Models\User;
 use Database\Seeders\ShieldSeeder;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\Testing\TestAction;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\DB;
 use Livewire\Livewire;
 
@@ -181,8 +180,9 @@ test('a regular user cannot open the edit page for another user\'s agenda', func
 
     $this->actingAs($viewer);
 
-    Livewire::test(EditAgenda::class, ['record' => $othersAgenda->id]);
-})->throws(ModelNotFoundException::class);
+    Livewire::test(EditAgenda::class, ['record' => $othersAgenda->id])
+        ->assertNotFound();
+});
 
 test('the user relation is eager loaded and does not cause N+1 queries', function () {
     Agenda::factory()->count(3)->create(['user_id' => $this->admin->id]);
