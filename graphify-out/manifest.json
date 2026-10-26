@@ -156,9 +156,9 @@
     "semantic_hash": "c0094f35cad6bba7636002a62186dae4"
   },
   "app/Providers/Filament/AdminPanelProvider.php": {
-    "mtime": 1786652218.0932605,
-    "seen": 1790794488.742739,
-    "ast_hash": "e43867cac637d74200cd569fc94f50ac",
+    "mtime": 1793042719.1944234,
+    "seen": 1793042743.613318,
+    "ast_hash": "9d079ec6a2780f36bd7eab355e3f4304",
     "semantic_hash": ""
   },
   "app/Models/User.php": {
@@ -300,9 +300,9 @@
     "semantic_hash": "276578ad68424be59d0998379ae7d4cb"
   },
   "config/filament-logger.php": {
-    "mtime": 1786651950.1682901,
-    "seen": 1790794488.742744,
-    "ast_hash": "955185dc54be3d938e2a574b4848d212",
+    "mtime": 1793042734.4556048,
+    "seen": 1793042743.613325,
+    "ast_hash": "397105310e1ba5b9f4272d4dda8abeac",
     "semantic_hash": ""
   },
   "config/mail.php": {
@@ -921,6 +921,24 @@
     "mtime": 1790793906.3544753,
     "seen": 1790794488.7427928,
     "ast_hash": "303fec2da84871e00f3d10d63b9d94d9",
+    "semantic_hash": ""
+  },
+  "app/Filament/Resources/ActivityLogs/ActivityLogResource.php": {
+    "mtime": 1793042719.1863616,
+    "seen": 1793042743.6132941,
+    "ast_hash": "c2d4e2e88dcbf2804e2a4590803de247",
+    "semantic_hash": ""
+  },
+  "app/Filament/Resources/ActivityLogs/Tables/ActivityLogsTable.php": {
+    "mtime": 1793042719.1886148,
+    "seen": 1793042743.6132941,
+    "ast_hash": "a81ae4f0dbf0b721a4b9410ca277e740",
+    "semantic_hash": ""
+  },
+  "tests/Feature/ActivityLogResourceTest.php": {
+    "mtime": 1793042727.4864993,
+    "seen": 1793042743.613346,
+    "ast_hash": "738b00fca77496bcc93b517cb212b022",
     "semantic_hash": ""
   }
 }

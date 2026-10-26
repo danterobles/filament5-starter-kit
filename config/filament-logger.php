@@ -1,16 +1,16 @@
 <?php
 
+use App\Filament\Resources\ActivityLogs\ActivityLogResource;
 use Jacobtims\FilamentLogger\Loggers\AccessLogger;
 use Jacobtims\FilamentLogger\Loggers\ModelLogger;
 use Jacobtims\FilamentLogger\Loggers\NotificationLogger;
 use Jacobtims\FilamentLogger\Loggers\ResourceLogger;
-use Jacobtims\FilamentLogger\Resources\ActivityResource;
 
 return [
     'datetime_format' => 'd/m/Y H:i:s',
     'date_format' => 'd/m/Y',
 
-    'activity_resource' => ActivityResource::class,
+    'activity_resource' => ActivityLogResource::class,
     'scoped_to_tenant' => true,
     'navigation_sort' => null,
 

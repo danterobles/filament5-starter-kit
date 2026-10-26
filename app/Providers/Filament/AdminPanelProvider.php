@@ -24,7 +24,6 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Support\Facades\App;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-use Jacobtims\FilamentLogger\FilamentLoggerPlugin;
 use Jeffgreco13\FilamentBreezy\BreezyCore;
 use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
 use Saade\FilamentFullCalendar\FilamentFullCalendarPlugin;
@@ -85,7 +84,6 @@ class AdminPanelProvider extends PanelProvider
                     ->formPanelWidth('35%')
                     ->emptyPanelBackgroundImageUrl(asset('img/image_nl_mty.jpg')),
                 FilamentShieldPlugin::make(),
-                FilamentLoggerPlugin::make(),
                 BreezyCore::make()
                     ->avatarUploadComponent(
                         fn (FileUpload $fileUpload) => $fileUpload->disableLabel(),
