@@ -162,9 +162,9 @@
     "semantic_hash": ""
   },
   "app/Models/User.php": {
-    "mtime": 1784572848.5330193,
-    "seen": 1790794488.7427342,
-    "ast_hash": "c23e0fa44f7e1e124221ff114bab7655",
+    "mtime": 1794428886.3834367,
+    "seen": 1794428970.8594282,
+    "ast_hash": "5fa51250b9dcc94ba5f6365ed3a55180",
     "semantic_hash": ""
   },
   "app/Models/Task.php": {
@@ -204,9 +204,9 @@
     "semantic_hash": "fc54aa8edfbe085e3e48b718996a2b86"
   },
   "app/Filament/Resources/Users/Tables/UsersTable.php": {
-    "mtime": 1794428721.5055375,
-    "seen": 1794428736.411734,
-    "ast_hash": "d810f5c98f3703a1c94edf61e96a99c1",
+    "mtime": 1794428886.3835766,
+    "seen": 1794428970.8594198,
+    "ast_hash": "fc92c7931592d69ce51690a78c9bd0af",
     "semantic_hash": ""
   },
   "app/Filament/Resources/Users/Schemas/UserForm.php": {
@@ -240,9 +240,9 @@
     "semantic_hash": ""
   },
   "app/Filament/Resources/Users/Widgets/LatestUsersTable.php": {
-    "mtime": 1794428721.505379,
-    "seen": 1794428736.411735,
-    "ast_hash": "302343b75272f57b92e3f537a2c82b5b",
+    "mtime": 1794428919.1658847,
+    "seen": 1794428970.859421,
+    "ast_hash": "61a7d0a9f6f3840235ddae9d9d12d396",
     "semantic_hash": ""
   },
   "app/Filament/Resources/Users/Widgets/UserStatsOverview.php": {
@@ -390,10 +390,10 @@
     "semantic_hash": "2bc41f1156dead26b2a3082f9634b041"
   },
   "tests/Feature/UserModelTest.php": {
-    "mtime": 1778181239.388898,
-    "seen": 1790794488.74277,
-    "ast_hash": "1950817e2b07cdafee9d9ad6ca26ec64",
-    "semantic_hash": "1950817e2b07cdafee9d9ad6ca26ec64"
+    "mtime": 1794428961.7263706,
+    "seen": 1794428970.859465,
+    "ast_hash": "4e2ff4a16189fe54b5063567cd65330a",
+    "semantic_hash": ""
   },
   "tests/Feature/UserResourceTest.php": {
     "mtime": 1786653319.1081905,
@@ -816,9 +816,9 @@
     "semantic_hash": ""
   },
   "tests/Feature/Widgets/LatestUsersTableTest.php": {
-    "mtime": 1794428699.2731206,
-    "seen": 1794428736.411784,
-    "ast_hash": "faa2bca8dfda2c1c969043079bf33279",
+    "mtime": 1794428906.1889281,
+    "seen": 1794428970.859466,
+    "ast_hash": "656a12aeb7712dddb15767a83ed7c5a1",
     "semantic_hash": ""
   },
   "tests/Feature/Widgets/TasksOverdueWidgetTest.php": {

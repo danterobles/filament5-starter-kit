@@ -8,6 +8,8 @@ use Filament\Models\Contracts\HasAvatar;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
+use Illuminate\Database\Eloquent\Attributes\Scope;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -48,6 +50,19 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
         return Attribute::make(
             get: fn () => trim("{$this->name} {$this->last}"),
         );
+    }
+
+    /**
+     * Orders by the real columns behind the `full_name` accessor.
+     *
+     * @param  Builder<User>  $query
+     */
+    #[Scope]
+    protected function orderByFullName(Builder $query, string $direction = 'asc'): void
+    {
+        $query
+            ->orderBy($this->qualifyColumn('name'), $direction)
+            ->orderBy($this->qualifyColumn('last'), $direction);
     }
 
     public function tasks(): HasMany

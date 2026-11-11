@@ -69,3 +69,15 @@ test('user tasks relationship only returns own tasks', function () {
 
     expect($user->tasks)->toHaveCount(2);
 });
+
+test('orderByFullName sorts by name and then by last using qualified columns', function () {
+    User::factory()->create(['name' => 'Bruno', 'last' => 'Zamora']);
+    User::factory()->create(['name' => 'Ana', 'last' => 'Perez']);
+    User::factory()->create(['name' => 'Ana', 'last' => 'Lopez']);
+
+    $query = User::query()->orderByFullName();
+
+    expect($query->toSql())->toContain('"users"."name" asc, "users"."last" asc')
+        ->and($query->get()->map->full_name->all())->toBe(['Ana Lopez', 'Ana Perez', 'Bruno Zamora'])
+        ->and(User::query()->orderByFullName('desc')->first()->full_name)->toBe('Bruno Zamora');
+});

@@ -114,3 +114,17 @@ test('sorting only reorders the 10 most recent users and never pulls in older on
         ->sortTable('full_name', 'asc')
         ->assertCanNotSeeTableRecords([$oldest]);
 });
+
+test('searching finds users outside the 10 most recent ones', function () {
+    $old = User::factory()->create([
+        'name' => 'Marisol',
+        'last' => 'Quintero',
+        'created_at' => Carbon::now()->subYear(),
+    ]);
+    User::factory()->count(12)->create();
+
+    Livewire::test(LatestUsersTable::class)
+        ->assertCanNotSeeTableRecords([$old])
+        ->searchTable('Marisol')
+        ->assertCanSeeTableRecords([$old]);
+});

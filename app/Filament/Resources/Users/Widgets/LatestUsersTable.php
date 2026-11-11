@@ -22,12 +22,10 @@ class LatestUsersTable extends TableWidget
     public function table(Table $table): Table
     {
         return $table
-            ->query(
-                User::query()
-                    ->with('roles')
-                    ->fromSub(User::query()->latest()->latest('id')->limit(10), 'users')
-            )
-            ->defaultSort(fn (Builder $query): Builder => $query->latest()->latest('id'))
+            ->query(fn (): Builder => User::query()
+                ->with('roles')
+                ->fromSub($this->latestUsersQuery(), 'users'))
+            ->defaultSort(fn (Builder $query): Builder => $this->orderByLatest($query))
             ->paginated(false)
             ->columns([
                 ImageColumn::make('avatar_url')
@@ -37,9 +35,7 @@ class LatestUsersTable extends TableWidget
                 TextColumn::make('full_name')
                     ->label('Nombre Completo')
                     ->searchable(['name', 'last'])
-                    ->sortable(query: fn (Builder $query, string $direction): Builder => $query
-                        ->orderBy('name', $direction)
-                        ->orderBy('last', $direction))
+                    ->sortable(query: fn (Builder $query, string $direction): Builder => $query->orderByFullName($direction))
                     ->weight('medium'),
 
                 TextColumn::make('email')
@@ -84,5 +80,34 @@ class LatestUsersTable extends TableWidget
                     ->since()
                     ->tooltip(fn (User $record) => $record->created_at->format('d/m/Y H:i:s')),
             ]);
+    }
+
+    /**
+     * The search is applied before the limit so that users outside the 10 newest
+     * are still reachable; sorting then only reorders the resulting rows.
+     *
+     * @return Builder<User>
+     */
+    private function latestUsersQuery(): Builder
+    {
+        $query = User::query();
+
+        foreach (preg_split('/\s+/', trim((string) $this->getTableSearch()), -1, PREG_SPLIT_NO_EMPTY) as $term) {
+            $query->where(fn (Builder $query): Builder => $query
+                ->whereLike('name', "%{$term}%")
+                ->orWhereLike('last', "%{$term}%")
+                ->orWhereLike('email', "%{$term}%"));
+        }
+
+        return $this->orderByLatest($query)->limit(10);
+    }
+
+    /**
+     * @param  Builder<User>  $query
+     * @return Builder<User>
+     */
+    private function orderByLatest(Builder $query): Builder
+    {
+        return $query->latest()->latest('id');
     }
 }
