@@ -90,6 +90,7 @@ class AgendaCalendarWidget extends FullCalendarWidget
     {
         return [
             CreateAction::make()
+                ->authorize('create')
                 ->mutateDataUsing(function (array $data): array {
                     $data['user_id'] = auth()->id();
 
@@ -101,8 +102,8 @@ class AgendaCalendarWidget extends FullCalendarWidget
     protected function modalActions(): array
     {
         return [
-            EditAction::make(),
-            DeleteAction::make(),
+            EditAction::make()->authorize('update'),
+            DeleteAction::make()->authorize('delete'),
         ];
     }
 }

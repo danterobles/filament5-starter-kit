@@ -3,7 +3,10 @@
 use App\Filament\Widgets\AgendaCalendarWidget;
 use App\Models\Agenda;
 use App\Models\User;
+use Database\Seeders\ShieldSeeder;
 use Illuminate\Support\Carbon;
+use Livewire\Livewire;
+use Spatie\Permission\PermissionRegistrar;
 
 beforeEach(function () {
     $this->user = User::factory()->create();
@@ -67,4 +70,33 @@ test('an event without end date that starts inside the window is returned', func
     ]);
 
     expect(fetchedEventTitles($this->window))->toBe(['Open-ended']);
+});
+
+test('the create event action follows the Agenda policy', function () {
+    $this->seed(ShieldSeeder::class);
+
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('View:AgendaCalendarWidget');
+    $this->actingAs($viewer);
+
+    Livewire::test(AgendaCalendarWidget::class)->assertActionHidden('create');
+
+    $viewer->givePermissionTo('Create:Agenda');
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    Livewire::test(AgendaCalendarWidget::class)->assertActionVisible('create');
+});
+
+test('editing and deleting an event requires the matching Agenda permission', function () {
+    $this->seed(ShieldSeeder::class);
+
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('View:AgendaCalendarWidget');
+    $this->actingAs($viewer);
+    $event = Agenda::factory()->for($viewer)->create();
+
+    Livewire::test(AgendaCalendarWidget::class)
+        ->call('onEventClick', ['id' => $event->id])
+        ->assertActionHidden('edit')
+        ->assertActionHidden('delete');
 });

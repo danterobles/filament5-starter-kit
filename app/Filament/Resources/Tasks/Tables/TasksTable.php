@@ -86,6 +86,7 @@ class TasksTable
                             ->mapWithKeys(fn (User $user) => [$user->id => $user->full_name])
                             ->toArray()
                     )
+                    ->visible(fn (): bool => (bool) auth()->user()?->hasRole('super_admin'))
                     ->placeholder('Todos los usuarios')
                     ->native(false)
                     ->searchable()

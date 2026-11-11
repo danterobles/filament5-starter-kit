@@ -271,3 +271,18 @@ test('a non super_admin cannot change their own role', function () {
     expect($actor->fresh()->hasRole('editor'))->toBeTrue()
         ->and($actor->fresh()->hasRole('broader'))->toBeFalse();
 });
+
+test('the user password must satisfy the default password rules', function () {
+    app()->detectEnvironment(fn (): string => 'production');
+
+    Livewire::test(CreateUser::class)
+        ->fillForm([
+            'name' => 'Ana',
+            'last' => 'Lopez',
+            'email' => 'ana@example.com',
+            'password' => 'short',
+            'password_confirmation' => 'short',
+        ])
+        ->call('create')
+        ->assertHasFormErrors(['password']);
+});

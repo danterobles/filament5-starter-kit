@@ -443,3 +443,14 @@ test('a super_admin can still assign a task to another user when editing', funct
         'user_id' => $otherUser->id,
     ]);
 });
+
+test('the assignee table filter is only shown to a super_admin', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Task', 'View:Task');
+
+    $this->actingAs($viewer);
+    Livewire::test(ListTasks::class)->assertTableFilterHidden('user_id');
+
+    $this->actingAs($this->admin);
+    Livewire::test(ListTasks::class)->assertTableFilterVisible('user_id');
+});

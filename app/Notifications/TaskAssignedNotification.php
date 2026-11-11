@@ -64,8 +64,17 @@ class TaskAssignedNotification extends Notification implements ShouldQueue
         return (new MailMessage)
             ->subject('Nueva tarea asignada')
             ->greeting("Hola, {$notifiable->fullName}.")
-            ->line("Se te asignó la tarea \"{$this->task->title}\" como recordatorio.")
+            ->line("Se te asignó la tarea \"{$this->escapedTitle()}\" como recordatorio.")
             ->action('Ver tarea', TaskResource::getUrl('edit', ['record' => $this->task]))
             ->line('Si tienes alguna duda, contacta al equipo responsable de la tarea.');
+    }
+
+    /**
+     * Escapes markdown control characters so a task title cannot inject links
+     * or formatting into the email.
+     */
+    private function escapedTitle(): string
+    {
+        return addcslashes($this->task->title, '\\`*_[]()<>');
     }
 }

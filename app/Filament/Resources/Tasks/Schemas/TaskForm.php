@@ -10,6 +10,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 
 class TaskForm
@@ -56,8 +57,9 @@ class TaskForm
                                     ->searchable()
                                     ->getSearchResultsUsing(
                                         fn (string $search): array => User::query()
-                                            ->whereLike('name', "%{$search}%")
-                                            ->orWhereLike('last', "%{$search}%")
+                                            ->where(fn (Builder $query): Builder => $query
+                                                ->whereLike('name', "%{$search}%")
+                                                ->orWhereLike('last', "%{$search}%"))
                                             ->orderByFullName()
                                             ->limit(50)
                                             ->get()

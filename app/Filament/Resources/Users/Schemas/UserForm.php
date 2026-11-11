@@ -12,6 +12,7 @@ use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use Illuminate\Validation\Rules\Password;
 use Spatie\Permission\Models\Role;
 
 class UserForm
@@ -93,6 +94,7 @@ class UserForm
                             ->dehydrateStateUsing(fn (?string $state) => ! empty($state) ? Hash::make($state) : null)
                             ->dehydrated(fn (?string $state) => filled($state))
                             ->minLength(8)
+                            ->rule(Password::default())
                             ->maxLength(255)
                             ->placeholder('Mínimo 8 caracteres')
                             ->revealable()

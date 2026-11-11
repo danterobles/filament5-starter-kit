@@ -87,3 +87,14 @@ test('notifying a user renders the task assigned mail message', function () {
         }
     );
 });
+
+test('markdown control characters in the task title are escaped in the email', function () {
+    $assignee = User::factory()->create();
+    $task = Task::factory()->create(['title' => '[Restablece tu contraseña](https://evil.example)']);
+
+    $mail = (new TaskAssignedNotification($task))->toMail($assignee);
+
+    expect(implode(' ', $mail->introLines))
+        ->toContain('\[Restablece tu contraseña\]\(https://evil.example\)')
+        ->not->toContain('"[Restablece');
+});
