@@ -16,6 +16,8 @@ class TaskBoard extends BoardPage
 
     protected static ?int $navigationSort = 20;
 
+    private const STATUSES = ['todo', 'in_progress', 'completed'];
+
     public static function getNavigationLabel(): string
     {
         return __('navigation.task_board.navigation_label');
@@ -44,10 +46,26 @@ class TaskBoard extends BoardPage
             ->columnIdentifier('status')
             ->positionIdentifier('position')
             ->columns([
-                Column::make('todo')->label('To Do')->color('gray'),
-                Column::make('in_progress')->label('In Progress')->color('blue'),
-                Column::make('completed')->label('Completed')->color('green'),
+                Column::make(self::STATUSES[0])->label('To Do')->color('gray'),
+                Column::make(self::STATUSES[1])->label('In Progress')->color('blue'),
+                Column::make(self::STATUSES[2])->label('Completed')->color('green'),
             ]);
+    }
+
+    /**
+     * Moving a card updates the task, so it requires Update:Task and only the
+     * statuses this board actually shows.
+     */
+    public function moveCard(
+        string $cardId,
+        string $targetColumnId,
+        ?string $afterCardId = null,
+        ?string $beforeCardId = null
+    ): void {
+        abort_unless(auth()->user()?->can('Update:Task'), 403);
+        abort_unless(in_array($targetColumnId, self::STATUSES, true), 422);
+
+        parent::moveCard($cardId, $targetColumnId, $afterCardId, $beforeCardId);
     }
 
     public function getEloquentQuery(): Builder

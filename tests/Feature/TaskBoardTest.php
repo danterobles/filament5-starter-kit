@@ -29,7 +29,7 @@ test('a user with the View:TaskBoard permission can render the board', function 
 
 test('a regular user can move their own task via drag and drop', function () {
     $user = User::factory()->create();
-    $user->givePermissionTo('View:TaskBoard');
+    $user->givePermissionTo('View:TaskBoard', 'Update:Task');
     $this->actingAs($user);
 
     $ownTask = Task::factory()->for($user)->todo()->create();
@@ -42,7 +42,7 @@ test('a regular user can move their own task via drag and drop', function () {
 
 test('OwnedByUserScope prevents a regular user from moving another user\'s task via a crafted card id', function () {
     $user = User::factory()->create();
-    $user->givePermissionTo('View:TaskBoard');
+    $user->givePermissionTo('View:TaskBoard', 'Update:Task');
     $other = User::factory()->create();
 
     $othersTask = Task::factory()->for($other)->todo()->create();
@@ -67,4 +67,32 @@ test('a super_admin can move any task via drag and drop', function () {
         ->call('moveCard', (string) $someonesTask->id, 'completed');
 
     expect($someonesTask->fresh()->status)->toBe('completed');
+});
+
+test('moving a card requires the Update:Task permission', function () {
+    $user = User::factory()->create();
+    $user->givePermissionTo('View:TaskBoard');
+    $this->actingAs($user);
+
+    $ownTask = Task::factory()->for($user)->todo()->create();
+
+    Livewire::test(TaskBoard::class)
+        ->call('moveCard', (string) $ownTask->id, 'completed')
+        ->assertForbidden();
+
+    expect($ownTask->fresh()->status)->toBe('todo');
+});
+
+test('moving a card to a status that is not a board column is rejected', function () {
+    $user = User::factory()->create();
+    $user->givePermissionTo('View:TaskBoard', 'Update:Task');
+    $this->actingAs($user);
+
+    $ownTask = Task::factory()->for($user)->todo()->create();
+
+    Livewire::test(TaskBoard::class)
+        ->call('moveCard', (string) $ownTask->id, 'not_a_status')
+        ->assertStatus(422);
+
+    expect($ownTask->fresh()->status)->toBe('todo');
 });
