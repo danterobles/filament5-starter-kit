@@ -3,6 +3,8 @@
 namespace App\Filament\Pages;
 
 use App\Models\Task;
+use BackedEnum;
+use Filament\Support\Icons\Heroicon;
 use Illuminate\Database\Eloquent\Builder;
 use Relaticle\Flowforge\Board;
 use Relaticle\Flowforge\BoardPage;
@@ -10,7 +12,7 @@ use Relaticle\Flowforge\Column;
 
 class TaskBoard extends BoardPage
 {
-    protected static string|null|\BackedEnum $navigationIcon = 'heroicon-o-view-columns';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedViewColumns;
 
     protected static ?int $navigationSort = 20;
 

@@ -30,11 +30,12 @@ class UserPolicy
         return $authUser->can('Update:User');
     }
 
+    /**
+     * A user can never delete their own account through the admin panel, even
+     * with the Delete:User permission, to avoid accidental or malicious self-lockout.
+     */
     public function delete(AuthUser $authUser, User $model): bool
     {
-        // Security: A user must never be able to delete their own
-        // account through the admin panel, even with Delete:User
-        // permission, to avoid accidental or malicious self-lockout.
         if ($authUser->is($model)) {
             return false;
         }

@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         // ADMIN_SEED_PASSWORD or fall back to a random, unguessable one.
         $password = app()->environment(['local', 'testing'])
             ? 'demo'
-            : (env('ADMIN_SEED_PASSWORD') ?: Str::password(32));
+            : (config('starterkit.admin_seed_password') ?: Str::password(32));
 
         $admin = User::create([
             'name' => 'Administrator',
@@ -37,7 +37,11 @@ class DatabaseSeeder extends Seeder
 
         $admin->assignRole('super_admin');
 
-        if (! app()->environment(['local', 'testing']) && blank(env('ADMIN_SEED_PASSWORD'))) {
+        if (app()->environment('local')) {
+            $this->call([TaskSeeder::class, AgendaSeeder::class]);
+        }
+
+        if (! app()->environment(['local', 'testing']) && blank(config('starterkit.admin_seed_password'))) {
             $this->command?->info("Admin seeded with a random password: {$password}");
         }
     }

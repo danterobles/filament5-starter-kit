@@ -66,6 +66,15 @@ class EditUser extends EditRecord
         return $this->getResource()::getUrl('index');
     }
 
+    /**
+     * Applies the role-assignment safeguards before saving: only a super_admin can
+     * assign the super_admin role, and the sole remaining super_admin cannot demote
+     * themselves, otherwise the application would be left without an administrator
+     * capable of managing roles. An empty password is dropped so it is not updated.
+     *
+     * @param  array<string, mixed>  $data
+     * @return array<string, mixed>
+     */
     protected function mutateFormDataBeforeSave(array $data): array
     {
         $this->selectedRoleId = $data['role_id'] ?? null;
@@ -79,9 +88,6 @@ class EditUser extends EditRecord
             $this->selectedRoleId = $this->record->roles()->pluck('id')->first();
         }
 
-        // Security: The sole remaining super_admin cannot demote themselves,
-        // otherwise the application would be left without an administrator
-        // capable of managing roles.
         if (
             $this->record->is(auth()->user())
             && $this->record->hasRole('super_admin')
@@ -91,7 +97,6 @@ class EditUser extends EditRecord
             $this->selectedRoleId = $this->record->roles()->pluck('id')->first();
         }
 
-        // Si no se proporciona contraseña, eliminarla del array para no actualizarla
         if (empty($data['password'])) {
             unset($data['password']);
         }

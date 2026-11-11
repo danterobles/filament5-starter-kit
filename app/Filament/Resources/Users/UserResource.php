@@ -17,6 +17,7 @@ use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 
 class UserResource extends Resource
@@ -81,7 +82,10 @@ class UserResource extends Resource
         return Cache::remember('users_nav_badge_color', 60, fn () => static::getModel()::count() > 100 ? 'warning' : 'primary');
     }
 
-    public static function getGlobalSearchResultTitle($record): string
+    /**
+     * @param  User  $record
+     */
+    public static function getGlobalSearchResultTitle(Model $record): string
     {
         return $record->name;
     }
@@ -91,7 +95,11 @@ class UserResource extends Resource
         return ['name', 'last', 'email'];
     }
 
-    public static function getGlobalSearchResultDetails($record): array
+    /**
+     * @param  User  $record
+     * @return array<string, string>
+     */
+    public static function getGlobalSearchResultDetails(Model $record): array
     {
         return [
             'Email' => $record->email,
