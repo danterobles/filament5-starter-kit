@@ -45,7 +45,8 @@ class Agenda extends Model
         return Attribute::make(
             get: function (): string {
                 $initials = mb_strtoupper(mb_substr($this->title, 0, 2));
-                $color = ltrim($this->color ?? '#3b82f6', '#');
+                $color = ltrim($this->color ?? '', '#');
+                $color = preg_match('/^[0-9a-f]{3,8}$/i', $color) ? $color : '3b82f6';
                 $svg = '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80"><rect width="80" height="80" fill="#'.$color.'"/><text x="40" y="55" font-family="Arial,sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">'.htmlspecialchars($initials).'</text></svg>';
 
                 return 'data:image/svg+xml;base64,'.base64_encode($svg);

@@ -37,24 +37,27 @@ class TasksOverdueWidget extends StatsOverviewWidget
             $now = now();
             $dueSoonThreshold = $now->clone()->addDays(7);
 
+            $counts = Task::query()
+                ->toBase()
+                ->selectRaw(
+                    'SUM(CASE WHEN status != ? AND due_date IS NOT NULL AND due_date < ? THEN 1 ELSE 0 END) AS overdue, '
+                    .'SUM(CASE WHEN status != ? AND due_date IS NOT NULL AND due_date BETWEEN ? AND ? THEN 1 ELSE 0 END) AS due_soon, '
+                    .'SUM(CASE WHEN status != ? AND due_date IS NULL THEN 1 ELSE 0 END) AS no_due_date, '
+                    .'SUM(CASE WHEN status = ? THEN 1 ELSE 0 END) AS completed',
+                    [
+                        'completed', $now->toDateTimeString(),
+                        'completed', $now->toDateTimeString(), $dueSoonThreshold->toDateTimeString(),
+                        'completed',
+                        'completed',
+                    ]
+                )
+                ->first();
+
             return [
-                'overdue' => Task::query()
-                    ->where('status', '!=', 'completed')
-                    ->whereNotNull('due_date')
-                    ->where('due_date', '<', $now)
-                    ->count(),
-                'due_soon' => Task::query()
-                    ->where('status', '!=', 'completed')
-                    ->whereNotNull('due_date')
-                    ->whereBetween('due_date', [$now, $dueSoonThreshold])
-                    ->count(),
-                'no_due_date' => Task::query()
-                    ->where('status', '!=', 'completed')
-                    ->whereNull('due_date')
-                    ->count(),
-                'completed' => Task::query()
-                    ->where('status', 'completed')
-                    ->count(),
+                'overdue' => (int) $counts->overdue,
+                'due_soon' => (int) $counts->due_soon,
+                'no_due_date' => (int) $counts->no_due_date,
+                'completed' => (int) $counts->completed,
             ];
         });
 

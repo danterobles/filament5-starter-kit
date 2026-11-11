@@ -80,11 +80,7 @@ class EditUser extends EditRecord
         $this->selectedRoleId = $data['role_id'] ?? null;
         unset($data['role_id']);
 
-        if (
-            $this->selectedRoleId !== null
-            && ! auth()->user()->hasRole('super_admin')
-            && Role::find($this->selectedRoleId)?->name === 'super_admin'
-        ) {
+        if (! auth()->user()->canAssignRole($this->selectedRoleId)) {
             $this->selectedRoleId = $this->record->roles()->pluck('id')->first();
         }
 

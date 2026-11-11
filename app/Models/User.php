@@ -17,6 +17,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Storage;
 use Jeffgreco13\FilamentBreezy\Traits\TwoFactorAuthenticatable;
+use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
 
 #[Fillable(['name', 'last', 'email', 'phone', 'avatar_url', 'password', 'active'])]
@@ -63,6 +64,16 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
         $query
             ->orderBy($this->qualifyColumn('name'), $direction)
             ->orderBy($this->qualifyColumn('last'), $direction);
+    }
+
+    /**
+     * Only a super_admin can assign the super_admin role to a user.
+     */
+    public function canAssignRole(int|string|null $roleId): bool
+    {
+        return $roleId === null
+            || $this->hasRole('super_admin')
+            || Role::find($roleId)?->name !== 'super_admin';
     }
 
     public function tasks(): HasMany

@@ -4,6 +4,8 @@ use App\Filament\Widgets\TasksOverdueWidget;
 use App\Models\Task;
 use App\Models\User;
 use Database\Seeders\ShieldSeeder;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Livewire\Livewire;
 
 beforeEach(function () {
@@ -120,4 +122,25 @@ test('a super_admin sees overdue counts across every user', function () {
 
     Livewire::test(TasksOverdueWidget::class)
         ->assertSuccessful();
+});
+
+test('the widget computes all its counts with a single tasks query', function () {
+    $user = User::factory()->create();
+    $user->givePermissionTo('ViewAny:Task', 'View:Task');
+    $this->actingAs($user);
+
+    Task::factory()->for($user)->todo()->overdue()->count(3)->create();
+    Task::factory()->for($user)->completed()->count(2)->create();
+    Task::factory()->todo()->overdue()->count(5)->create();
+
+    Cache::flush();
+    DB::enableQueryLog();
+
+    Livewire::test(TasksOverdueWidget::class)->assertSuccessful();
+
+    $taskQueries = collect(DB::getQueryLog())
+        ->filter(fn (array $query): bool => str_contains($query['query'], 'from "tasks"'));
+
+    expect($taskQueries)->toHaveCount(1)
+        ->and($taskQueries->first()['query'])->toContain('"user_id" = ?');
 });

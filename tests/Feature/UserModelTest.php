@@ -3,6 +3,7 @@
 use App\Models\Task;
 use App\Models\User;
 use Filament\Panel;
+use Spatie\Permission\Models\Role;
 
 test('full_name combines name and last', function () {
     $user = new User(['name' => 'Ana', 'last' => 'López']);
@@ -80,4 +81,19 @@ test('orderByFullName sorts by name and then by last using qualified columns', f
     expect($query->toSql())->toContain('"users"."name" asc, "users"."last" asc')
         ->and($query->get()->map->full_name->all())->toBe(['Ana Lopez', 'Ana Perez', 'Bruno Zamora'])
         ->and(User::query()->orderByFullName('desc')->first()->full_name)->toBe('Bruno Zamora');
+});
+
+test('canAssignRole only lets a super_admin assign the super_admin role', function () {
+    $superAdminRole = Role::create(['name' => 'super_admin', 'guard_name' => 'web']);
+    $otherRole = Role::create(['name' => 'panel_user', 'guard_name' => 'web']);
+
+    $regular = User::factory()->create();
+    $superAdmin = User::factory()->create();
+    $superAdmin->assignRole($superAdminRole);
+
+    expect($regular->canAssignRole(null))->toBeTrue()
+        ->and($regular->canAssignRole($otherRole->id))->toBeTrue()
+        ->and($regular->canAssignRole($superAdminRole->id))->toBeFalse()
+        ->and($regular->canAssignRole((string) $superAdminRole->id))->toBeFalse()
+        ->and($superAdmin->canAssignRole($superAdminRole->id))->toBeTrue();
 });

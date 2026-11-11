@@ -47,3 +47,20 @@ test('initials_avatar_url escapes html special characters and uppercases unicode
 
     expect($svg)->toContain('>ÁÉ<');
 });
+
+test('initials_avatar_url falls back to the default color when the stored color is not a valid hex value', function () {
+    $agenda = new Agenda(['title' => 'Reunión', 'color' => '"><script>alert(1)</script>']);
+
+    $svg = base64_decode(str_replace('data:image/svg+xml;base64,', '', $agenda->initials_avatar_url));
+
+    expect($svg)->toContain('fill="#3b82f6"')
+        ->not->toContain('<script>');
+});
+
+test('initials_avatar_url keeps a valid hex color', function () {
+    $agenda = new Agenda(['title' => 'Reunión', 'color' => '#10b981']);
+
+    $svg = base64_decode(str_replace('data:image/svg+xml;base64,', '', $agenda->initials_avatar_url));
+
+    expect($svg)->toContain('fill="#10b981"');
+});
