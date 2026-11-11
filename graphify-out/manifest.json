@@ -204,9 +204,9 @@
     "semantic_hash": "fc54aa8edfbe085e3e48b718996a2b86"
   },
   "app/Filament/Resources/Users/Tables/UsersTable.php": {
-    "mtime": 1786652175.6582706,
-    "seen": 1790794488.7427268,
-    "ast_hash": "86f08dd1797dd1cdf6755c51b57e520c",
+    "mtime": 1794428721.5055375,
+    "seen": 1794428736.411734,
+    "ast_hash": "d810f5c98f3703a1c94edf61e96a99c1",
     "semantic_hash": ""
   },
   "app/Filament/Resources/Users/Schemas/UserForm.php": {
@@ -240,9 +240,9 @@
     "semantic_hash": ""
   },
   "app/Filament/Resources/Users/Widgets/LatestUsersTable.php": {
-    "mtime": 1786652184.3434844,
-    "seen": 1790794488.742728,
-    "ast_hash": "e7235e4f447d77500946696eb11581cf",
+    "mtime": 1794428721.505379,
+    "seen": 1794428736.411735,
+    "ast_hash": "302343b75272f57b92e3f537a2c82b5b",
     "semantic_hash": ""
   },
   "app/Filament/Resources/Users/Widgets/UserStatsOverview.php": {
@@ -816,9 +816,9 @@
     "semantic_hash": ""
   },
   "tests/Feature/Widgets/LatestUsersTableTest.php": {
-    "mtime": 1786652275.6331964,
-    "seen": 1790794488.742771,
-    "ast_hash": "8ebc6a5b863fd523c99a7b097badb655",
+    "mtime": 1794428699.2731206,
+    "seen": 1794428736.411784,
+    "ast_hash": "faa2bca8dfda2c1c969043079bf33279",
     "semantic_hash": ""
   },
   "tests/Feature/Widgets/TasksOverdueWidgetTest.php": {

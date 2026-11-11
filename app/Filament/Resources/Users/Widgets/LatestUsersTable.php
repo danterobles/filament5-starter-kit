@@ -8,6 +8,7 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Filament\Widgets\TableWidget;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
 
 class LatestUsersTable extends TableWidget
@@ -24,9 +25,9 @@ class LatestUsersTable extends TableWidget
             ->query(
                 User::query()
                     ->with('roles')
-                    ->latest()
-                    ->limit(10)
+                    ->fromSub(User::query()->latest()->latest('id')->limit(10), 'users')
             )
+            ->defaultSort(fn (Builder $query): Builder => $query->latest()->latest('id'))
             ->paginated(false)
             ->columns([
                 ImageColumn::make('avatar_url')
@@ -36,7 +37,9 @@ class LatestUsersTable extends TableWidget
                 TextColumn::make('full_name')
                     ->label('Nombre Completo')
                     ->searchable(['name', 'last'])
-                    ->sortable()
+                    ->sortable(query: fn (Builder $query, string $direction): Builder => $query
+                        ->orderBy('name', $direction)
+                        ->orderBy('last', $direction))
                     ->weight('medium'),
 
                 TextColumn::make('email')

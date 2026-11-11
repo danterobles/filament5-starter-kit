@@ -32,7 +32,7 @@ test('users are listed newest first', function () {
 test('the first page shows the 10 most recently created users', function () {
     User::factory()->count(15)->create();
 
-    $expectedLatestTen = User::query()->latest()->limit(10)->get();
+    $expectedLatestTen = User::query()->latest()->latest('id')->limit(10)->get();
 
     Livewire::test(LatestUsersTable::class)
         ->assertCanSeeTableRecords($expectedLatestTen, inOrder: true);
@@ -48,8 +48,8 @@ test('the widget never shows more than the 10 most recently created users', func
     // on the query is the only, and final, cap.
     User::factory()->count(15)->create();
 
-    $expectedLatestTen = User::query()->latest()->limit(10)->get();
-    $usersBeyondTheLatestTen = User::query()->latest()->skip(10)->take(6)->get();
+    $expectedLatestTen = User::query()->latest()->latest('id')->limit(10)->get();
+    $usersBeyondTheLatestTen = User::query()->latest()->latest('id')->skip(10)->take(6)->get();
 
     Livewire::test(LatestUsersTable::class)
         ->assertCanSeeTableRecords($expectedLatestTen, inOrder: true)
@@ -77,4 +77,40 @@ test('the roles relation is eager loaded and does not cause N+1 queries', functi
     DB::disableQueryLog();
 
     expect($queryCountForNineUsers)->toBe($queryCountForThreeUsers);
+});
+
+test('the full name column sorts by real database columns', function () {
+    User::factory()->create(['name' => 'Carlos', 'last' => 'Zamora']);
+
+    DB::enableQueryLog();
+
+    Livewire::test(LatestUsersTable::class)
+        ->sortTable('full_name')
+        ->assertSuccessful();
+
+    $sql = collect(DB::getQueryLog())->pluck('query')->implode(' ');
+
+    expect($sql)->not->toContain('"full_name"')
+        ->and($sql)->toContain('"name" asc');
+});
+
+test('clicking a sortable column reorders the latest users', function () {
+    User::factory()->create(['name' => 'Ana', 'last' => 'Lopez', 'created_at' => Carbon::now()->subDays(3)]);
+    User::factory()->create(['name' => 'Bruno', 'last' => 'Perez', 'created_at' => Carbon::now()->subDays(2)]);
+    User::factory()->create(['name' => 'Carla', 'last' => 'Diaz', 'created_at' => Carbon::now()->subDay()]);
+
+    Livewire::test(LatestUsersTable::class)
+        ->sortTable('created_at', 'asc')
+        ->assertSeeInOrder(['Ana', 'Bruno', 'Carla'])
+        ->sortTable('full_name', 'desc')
+        ->assertSeeInOrder(['Carla', 'Bruno', 'Ana']);
+});
+
+test('sorting only reorders the 10 most recent users and never pulls in older ones', function () {
+    $oldest = User::factory()->create(['name' => 'Aaron', 'created_at' => Carbon::now()->subYear()]);
+    User::factory()->count(10)->create(['name' => 'Zeta']);
+
+    Livewire::test(LatestUsersTable::class)
+        ->sortTable('full_name', 'asc')
+        ->assertCanNotSeeTableRecords([$oldest]);
 });

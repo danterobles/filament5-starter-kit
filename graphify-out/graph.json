@@ -53,7 +53,7 @@
       "file_type": "code",
       "norm_label": "latestuserstable",
       "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
-      "source_location": "L13"
+      "source_location": "L14"
     },
     {
       "id": "database_seeders_shieldseeder_shieldseeder",
@@ -158,19 +158,6 @@
       "norm_label": "userscluster",
       "source_file": "app/Filament/Clusters/Users/UsersCluster.php",
       "source_location": "L9"
-    },
-    {
-      "id": "app_filament_resources_agendas_agendaresource_agendaresource",
-      "label": "AgendaResource",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "UserResource.php",
-      "file_type": "code",
-      "norm_label": "agendaresource",
-      "source_file": "app/Filament/Resources/Agendas/AgendaResource.php",
-      "source_location": "L17"
     },
     {
       "id": "app_filament_resources_agendas_schemas_agendaform_agendaform",
@@ -342,32 +329,6 @@
       "source_location": "L13"
     },
     {
-      "id": "app_filament_resources_users_pages_createuser_createuser",
-      "label": "CreateUser",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": "createuser",
-      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
-      "source_location": "L10"
-    },
-    {
-      "id": "app_filament_resources_users_pages_listusers_listusers",
-      "label": "ListUsers",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": "listusers",
-      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
-      "source_location": "L13"
-    },
-    {
       "id": "app_filament_resources_agendas_pages_createagenda_createagenda",
       "label": "CreateAgenda",
       "_callable": true,
@@ -394,6 +355,19 @@
       "source_location": "L10"
     },
     {
+      "id": "app_filament_resources_users_pages_createuser_createuser",
+      "label": "CreateUser",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "Filament\\Notifications\\Notification",
+      "file_type": "code",
+      "norm_label": "createuser",
+      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
+      "source_location": "L10"
+    },
+    {
       "id": "app_policies_rolepolicy_rolepolicy",
       "label": "RolePolicy",
       "_callable": true,
@@ -407,13 +381,26 @@
       "source_location": "L11"
     },
     {
+      "id": "app_filament_resources_agendas_agendaresource_agendaresource",
+      "label": "AgendaResource",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": "agendaresource",
+      "source_file": "app/Filament/Resources/Agendas/AgendaResource.php",
+      "source_location": "L17"
+    },
+    {
       "id": "app_filament_resources_agendas_pages_listagendas_listagendas",
       "label": "ListAgendas",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "ListAgendas",
+      "community_name": "AgendaResource",
       "file_type": "code",
       "norm_label": "listagendas",
       "source_file": "app/Filament/Resources/Agendas/Pages/ListAgendas.php",
@@ -426,11 +413,24 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "ListAgendas",
+      "community_name": "AgendaResource",
       "file_type": "code",
       "norm_label": "listtasks",
       "source_file": "app/Filament/Resources/Tasks/Pages/ListTasks.php",
       "source_location": "L9"
+    },
+    {
+      "id": "app_filament_resources_users_pages_listusers_listusers",
+      "label": "ListUsers",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": "listusers",
+      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
+      "source_location": "L13"
     },
     {
       "id": "app_models_task_task",
@@ -608,7 +608,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 84,
-      "community_name": "ListUsers.php",
+      "community_name": "UserStatsOverview",
       "file_type": "code",
       "norm_label": "userstatsoverview",
       "source_file": "app/Filament/Resources/Users/Widgets/UserStatsOverview.php",
@@ -621,7 +621,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "community": 84,
-      "community_name": "ListUsers.php",
+      "community_name": "UserStatsOverview",
       "file_type": "code",
       "norm_label": "tasksoverduewidget",
       "source_file": "app/Filament/Widgets/TasksOverdueWidget.php",
@@ -1097,7 +1097,7 @@
       "file_type": "code",
       "norm_label": ".table()",
       "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "database_seeders_shieldseeder_shieldseeder_makedirectpermissions",
@@ -1304,18 +1304,6 @@
       "source_location": "L22"
     },
     {
-      "id": "app_filament_resources_users_userresource_userresource_getglobalsearcheloquentquery",
-      "label": ".getGlobalSearchEloquentQuery()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 100,
-      "community_name": "Filament\\Tables\\Table",
-      "file_type": "code",
-      "norm_label": ".getglobalsearcheloquentquery()",
-      "source_file": "app/Filament/Resources/Users/UserResource.php",
-      "source_location": "L103"
-    },
-    {
       "id": "app_filament_resources_users_userresource_userresource_table",
       "label": ".table()",
       "_callable": true,
@@ -1386,30 +1374,6 @@
       "norm_label": ".form()",
       "source_file": "app/Filament/Resources/Agendas/AgendaResource.php",
       "source_location": "L36"
-    },
-    {
-      "id": "app_filament_resources_agendas_agendaresource_agendaresource_getnavigationgroup",
-      "label": ".getNavigationGroup()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "UserResource.php",
-      "file_type": "code",
-      "norm_label": ".getnavigationgroup()",
-      "source_file": "app/Filament/Resources/Agendas/AgendaResource.php",
-      "source_location": "L31"
-    },
-    {
-      "id": "app_filament_resources_agendas_agendaresource_agendaresource_getrelations",
-      "label": ".getRelations()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "UserResource.php",
-      "file_type": "code",
-      "norm_label": ".getrelations()",
-      "source_file": "app/Filament/Resources/Agendas/AgendaResource.php",
-      "source_location": "L46"
     },
     {
       "id": "app_filament_resources_agendas_schemas_agendaform_agendaform_configure",
@@ -1772,18 +1736,6 @@
       "source_location": "L47"
     },
     {
-      "id": "app_filament_resources_agendas_agendaresource_agendaresource_getpages",
-      "label": ".getPages()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 17,
-      "community_name": "EditUser",
-      "file_type": "code",
-      "norm_label": ".getpages()",
-      "source_file": "app/Filament/Resources/Agendas/AgendaResource.php",
-      "source_location": "L51"
-    },
-    {
       "id": "app_filament_resources_agendas_pages_editagenda_editagenda_getheaderactions",
       "label": ".getHeaderActions()",
       "_callable": true,
@@ -1880,120 +1832,12 @@
       "source_location": "L69"
     },
     {
-      "id": "app_filament_resources_users_pages_createuser_createuser_aftercreate",
-      "label": ".afterCreate()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": ".aftercreate()",
-      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
-      "source_location": "L54"
-    },
-    {
-      "id": "app_filament_resources_users_pages_createuser_createuser_getcreatednotification",
-      "label": ".getCreatedNotification()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": ".getcreatednotification()",
-      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
-      "source_location": "L23"
-    },
-    {
-      "id": "app_filament_resources_users_pages_createuser_createuser_getformactions",
-      "label": ".getFormActions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": ".getformactions()",
-      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
-      "source_location": "L65"
-    },
-    {
-      "id": "app_filament_resources_users_pages_createuser_createuser_getredirecturl",
-      "label": ".getRedirectUrl()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": ".getredirecturl()",
-      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
-      "source_location": "L18"
-    },
-    {
-      "id": "app_filament_resources_users_pages_createuser_createuser_mutateformdatabeforecreate",
-      "label": ".mutateFormDataBeforeCreate()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": ".mutateformdatabeforecreate()",
-      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
-      "source_location": "L34"
-    },
-    {
-      "id": "app_filament_resources_users_pages_listusers_listusers_getfooterwidgets",
-      "label": ".getFooterWidgets()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": ".getfooterwidgets()",
-      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
-      "source_location": "L37"
-    },
-    {
-      "id": "app_filament_resources_users_pages_listusers_listusers_getheaderactions",
-      "label": ".getHeaderActions()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": ".getheaderactions()",
-      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
-      "source_location": "L19"
-    },
-    {
-      "id": "app_filament_resources_users_pages_listusers_listusers_getheaderwidgets",
-      "label": ".getHeaderWidgets()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": ".getheaderwidgets()",
-      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
-      "source_location": "L30"
-    },
-    {
-      "id": "app_filament_resources_users_pages_listusers_listusers_getheaderwidgetscolumns",
-      "label": ".getHeaderWidgetsColumns()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": ".getheaderwidgetscolumns()",
-      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
-      "source_location": "L45"
-    },
-    {
       "id": "app_filament_resources_users_userresource_userresource_getpages",
       "label": ".getPages()",
       "_callable": true,
       "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
+      "community": 17,
+      "community_name": "EditUser",
       "file_type": "code",
       "norm_label": ".getpages()",
       "source_file": "app/Filament/Resources/Users/UserResource.php",
@@ -2130,6 +1974,66 @@
       "norm_label": ".mutateformdatabeforecreate()",
       "source_file": "app/Filament/Resources/Tasks/Pages/CreateTask.php",
       "source_location": "L16"
+    },
+    {
+      "id": "app_filament_resources_users_pages_createuser_createuser_aftercreate",
+      "label": ".afterCreate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "Filament\\Notifications\\Notification",
+      "file_type": "code",
+      "norm_label": ".aftercreate()",
+      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
+      "source_location": "L54"
+    },
+    {
+      "id": "app_filament_resources_users_pages_createuser_createuser_getcreatednotification",
+      "label": ".getCreatedNotification()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "Filament\\Notifications\\Notification",
+      "file_type": "code",
+      "norm_label": ".getcreatednotification()",
+      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
+      "source_location": "L23"
+    },
+    {
+      "id": "app_filament_resources_users_pages_createuser_createuser_getformactions",
+      "label": ".getFormActions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "Filament\\Notifications\\Notification",
+      "file_type": "code",
+      "norm_label": ".getformactions()",
+      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
+      "source_location": "L65"
+    },
+    {
+      "id": "app_filament_resources_users_pages_createuser_createuser_getredirecturl",
+      "label": ".getRedirectUrl()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "Filament\\Notifications\\Notification",
+      "file_type": "code",
+      "norm_label": ".getredirecturl()",
+      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
+      "source_location": "L18"
+    },
+    {
+      "id": "app_filament_resources_users_pages_createuser_createuser_mutateformdatabeforecreate",
+      "label": ".mutateFormDataBeforeCreate()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "Filament\\Notifications\\Notification",
+      "file_type": "code",
+      "norm_label": ".mutateformdatabeforecreate()",
+      "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
+      "source_location": "L34"
     },
     {
       "id": "app_policies_rolepolicy_rolepolicy_create",
@@ -2276,12 +2180,48 @@
       "source_location": "L15"
     },
     {
+      "id": "app_filament_resources_agendas_agendaresource_agendaresource_getnavigationgroup",
+      "label": ".getNavigationGroup()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": ".getnavigationgroup()",
+      "source_file": "app/Filament/Resources/Agendas/AgendaResource.php",
+      "source_location": "L31"
+    },
+    {
+      "id": "app_filament_resources_agendas_agendaresource_agendaresource_getpages",
+      "label": ".getPages()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": ".getpages()",
+      "source_file": "app/Filament/Resources/Agendas/AgendaResource.php",
+      "source_location": "L51"
+    },
+    {
+      "id": "app_filament_resources_agendas_agendaresource_agendaresource_getrelations",
+      "label": ".getRelations()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": ".getrelations()",
+      "source_file": "app/Filament/Resources/Agendas/AgendaResource.php",
+      "source_location": "L46"
+    },
+    {
       "id": "app_filament_resources_agendas_pages_listagendas_listagendas_getheaderactions",
       "label": ".getHeaderActions()",
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "ListAgendas",
+      "community_name": "AgendaResource",
       "file_type": "code",
       "norm_label": ".getheaderactions()",
       "source_file": "app/Filament/Resources/Agendas/Pages/ListAgendas.php",
@@ -2293,7 +2233,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "ListAgendas",
+      "community_name": "AgendaResource",
       "file_type": "code",
       "norm_label": ".getheaderactions()",
       "source_file": "app/Filament/Resources/Tasks/Pages/ListTasks.php",
@@ -2305,11 +2245,59 @@
       "_callable": true,
       "_origin": "ast",
       "community": 33,
-      "community_name": "ListAgendas",
+      "community_name": "AgendaResource",
       "file_type": "code",
       "norm_label": ".getpages()",
       "source_file": "app/Filament/Resources/Tasks/TaskResource.php",
       "source_location": "L53"
+    },
+    {
+      "id": "app_filament_resources_users_pages_listusers_listusers_getfooterwidgets",
+      "label": ".getFooterWidgets()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": ".getfooterwidgets()",
+      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
+      "source_location": "L37"
+    },
+    {
+      "id": "app_filament_resources_users_pages_listusers_listusers_getheaderactions",
+      "label": ".getHeaderActions()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": ".getheaderactions()",
+      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
+      "source_location": "L19"
+    },
+    {
+      "id": "app_filament_resources_users_pages_listusers_listusers_getheaderwidgets",
+      "label": ".getHeaderWidgets()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": ".getheaderwidgets()",
+      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
+      "source_location": "L30"
+    },
+    {
+      "id": "app_filament_resources_users_pages_listusers_listusers_getheaderwidgetscolumns",
+      "label": ".getHeaderWidgetsColumns()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": ".getheaderwidgetscolumns()",
+      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
+      "source_location": "L45"
     },
     {
       "id": "app_models_task_task_booted",
@@ -3044,6 +3032,18 @@
       "source_location": "L89"
     },
     {
+      "id": "app_filament_resources_users_userresource_userresource_getglobalsearcheloquentquery",
+      "label": ".getGlobalSearchEloquentQuery()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 71,
+      "community_name": "UserResource",
+      "file_type": "code",
+      "norm_label": ".getglobalsearcheloquentquery()",
+      "source_file": "app/Filament/Resources/Users/UserResource.php",
+      "source_location": "L103"
+    },
+    {
       "id": "app_filament_resources_users_userresource_userresource_getglobalsearchresultdetails",
       "label": ".getGlobalSearchResultDetails()",
       "_callable": true,
@@ -3193,7 +3193,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 84,
-      "community_name": "ListUsers.php",
+      "community_name": "UserStatsOverview",
       "file_type": "code",
       "norm_label": ".getstats()",
       "source_file": "app/Filament/Resources/Users/Widgets/UserStatsOverview.php",
@@ -3205,7 +3205,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 84,
-      "community_name": "ListUsers.php",
+      "community_name": "UserStatsOverview",
       "file_type": "code",
       "norm_label": ".getstats()",
       "source_file": "app/Filament/Widgets/TasksOverdueWidget.php",
@@ -3988,17 +3988,6 @@
       "file_type": "code",
       "norm_label": "latestuserstabletest.php",
       "source_file": "tests/Feature/Widgets/LatestUsersTableTest.php",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_feature_widgets_tasksoverduewidgettest",
-      "label": "TasksOverdueWidgetTest.php",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "ShieldSeeder",
-      "file_type": "code",
-      "norm_label": "tasksoverduewidgettest.php",
-      "source_file": "tests/Feature/Widgets/TasksOverdueWidgetTest.php",
       "source_location": "L1"
     },
     {
@@ -6965,17 +6954,6 @@
       "source_location": "L1"
     },
     {
-      "id": "app_filament_resources_users_pages_createuser_php_notification",
-      "label": "Notification",
-      "_origin": "ast",
-      "community": 19,
-      "community_name": "CreateUser",
-      "file_type": "code",
-      "norm_label": "notification",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "app_models_agenda_php_attribute",
       "label": "Attribute",
       "_origin": "ast",
@@ -7062,6 +7040,17 @@
       "norm_label": "createuser.php",
       "source_file": "app/Filament/Resources/Users/Pages/CreateUser.php",
       "source_location": "L1"
+    },
+    {
+      "id": "app_filament_resources_users_pages_createuser_php_notification",
+      "label": "Notification",
+      "_origin": "ast",
+      "community": 20,
+      "community_name": "Filament\\Notifications\\Notification",
+      "file_type": "code",
+      "norm_label": "notification",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "filament_notifications_notification",
@@ -9275,7 +9264,7 @@
       "label": "ListAgendas.php",
       "_origin": "ast",
       "community": 33,
-      "community_name": "ListAgendas",
+      "community_name": "AgendaResource",
       "file_type": "code",
       "norm_label": "listagendas.php",
       "source_file": "app/Filament/Resources/Agendas/Pages/ListAgendas.php",
@@ -9286,10 +9275,21 @@
       "label": "ListTasks.php",
       "_origin": "ast",
       "community": 33,
-      "community_name": "ListAgendas",
+      "community_name": "AgendaResource",
       "file_type": "code",
       "norm_label": "listtasks.php",
       "source_file": "app/Filament/Resources/Tasks/Pages/ListTasks.php",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_filament_resources_users_pages_listusers",
+      "label": "ListUsers.php",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": "listusers.php",
+      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
       "source_location": "L1"
     },
     {
@@ -9297,9 +9297,20 @@
       "label": "Filament\\Actions\\CreateAction",
       "_origin": "ast",
       "community": 33,
-      "community_name": "ListAgendas",
+      "community_name": "AgendaResource",
       "file_type": "code",
       "norm_label": "filament\\actions\\createaction",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "filament_pages_concerns_exposestabletowidgets",
+      "label": "Filament\\Pages\\Concerns\\ExposesTableToWidgets",
+      "_origin": "ast",
+      "community": 33,
+      "community_name": "AgendaResource",
+      "file_type": "code",
+      "norm_label": "filament\\pages\\concerns\\exposestabletowidgets",
       "source_file": "",
       "source_location": ""
     },
@@ -9308,7 +9319,7 @@
       "label": "Filament\\Resources\\Pages\\ListRecords",
       "_origin": "ast",
       "community": 33,
-      "community_name": "ListAgendas",
+      "community_name": "AgendaResource",
       "file_type": "code",
       "norm_label": "filament\\resources\\pages\\listrecords",
       "source_file": "",
@@ -13526,22 +13537,11 @@
       "source_location": "L1"
     },
     {
-      "id": "app_filament_resources_users_pages_listusers",
-      "label": "ListUsers.php",
-      "_origin": "ast",
-      "community": 84,
-      "community_name": "ListUsers.php",
-      "file_type": "code",
-      "norm_label": "listusers.php",
-      "source_file": "app/Filament/Resources/Users/Pages/ListUsers.php",
-      "source_location": "L1"
-    },
-    {
       "id": "app_filament_resources_users_widgets_userstatsoverview",
       "label": "UserStatsOverview.php",
       "_origin": "ast",
       "community": 84,
-      "community_name": "ListUsers.php",
+      "community_name": "UserStatsOverview",
       "file_type": "code",
       "norm_label": "userstatsoverview.php",
       "source_file": "app/Filament/Resources/Users/Widgets/UserStatsOverview.php",
@@ -13552,29 +13552,18 @@
       "label": "TasksOverdueWidget.php",
       "_origin": "ast",
       "community": 84,
-      "community_name": "ListUsers.php",
+      "community_name": "UserStatsOverview",
       "file_type": "code",
       "norm_label": "tasksoverduewidget.php",
       "source_file": "app/Filament/Widgets/TasksOverdueWidget.php",
       "source_location": "L1"
     },
     {
-      "id": "filament_pages_concerns_exposestabletowidgets",
-      "label": "Filament\\Pages\\Concerns\\ExposesTableToWidgets",
-      "_origin": "ast",
-      "community": 84,
-      "community_name": "ListUsers.php",
-      "file_type": "code",
-      "norm_label": "filament\\pages\\concerns\\exposestabletowidgets",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "filament_widgets_statsoverviewwidget",
       "label": "Filament\\Widgets\\StatsOverviewWidget",
       "_origin": "ast",
       "community": 84,
-      "community_name": "ListUsers.php",
+      "community_name": "UserStatsOverview",
       "file_type": "code",
       "norm_label": "filament\\widgets\\statsoverviewwidget",
       "source_file": "",
@@ -13585,7 +13574,7 @@
       "label": "Filament\\Widgets\\StatsOverviewWidget\\Stat",
       "_origin": "ast",
       "community": 84,
-      "community_name": "ListUsers.php",
+      "community_name": "UserStatsOverview",
       "file_type": "code",
       "norm_label": "filament\\widgets\\statsoverviewwidget\\stat",
       "source_file": "",
@@ -13596,18 +13585,29 @@
       "label": "Illuminate\\Support\\Facades\\Auth",
       "_origin": "ast",
       "community": 84,
-      "community_name": "ListUsers.php",
+      "community_name": "UserStatsOverview",
       "file_type": "code",
       "norm_label": "illuminate\\support\\facades\\auth",
       "source_file": "",
       "source_location": ""
     },
     {
+      "id": "tests_feature_widgets_tasksoverduewidgettest",
+      "label": "TasksOverdueWidgetTest.php",
+      "_origin": "ast",
+      "community": 84,
+      "community_name": "UserStatsOverview",
+      "file_type": "code",
+      "norm_label": "tasksoverduewidgettest.php",
+      "source_file": "tests/Feature/Widgets/TasksOverdueWidgetTest.php",
+      "source_location": "L1"
+    },
+    {
       "id": "tests_feature_widgets_userstatsoverviewtest",
       "label": "UserStatsOverviewTest.php",
       "_origin": "ast",
       "community": 84,
-      "community_name": "ListUsers.php",
+      "community_name": "UserStatsOverview",
       "file_type": "code",
       "norm_label": "userstatsoverviewtest.php",
       "source_file": "tests/Feature/Widgets/UserStatsOverviewTest.php",
@@ -16441,7 +16441,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -19002,7 +19002,7 @@
     },
     {
       "source": "app_filament_resources_users_widgets_latestuserstable",
-      "target": "illuminate_support_arr",
+      "target": "illuminate_database_eloquent_builder",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -19010,6 +19010,18 @@
       "context": "import",
       "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "app_filament_resources_users_widgets_latestuserstable",
+      "target": "illuminate_support_arr",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -24373,7 +24385,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -25244,7 +25256,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -32768,7 +32780,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -33791,7 +33803,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app/Filament/Resources/Users/Widgets/LatestUsersTable.php",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0
     },
     {
@@ -37058,5 +37070,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "66f711aa2d8666b3cb17fe2d2252da5a83b66a0f"
+  "built_at_commit": "f5ccfd64fe7f0e839a66f192ab03891d692f074c"
 }

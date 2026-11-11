@@ -46,7 +46,9 @@ class UsersTable
                 TextColumn::make('full_name')
                     ->label('Nombre Completo')
                     ->searchable(['name', 'last'])
-                    ->sortable()
+                    ->sortable(query: fn (Builder $query, string $direction): Builder => $query
+                        ->orderBy('name', $direction)
+                        ->orderBy('last', $direction))
                     ->toggleable(isToggledHiddenByDefault: true)
                     ->weight('medium'),
 
