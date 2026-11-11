@@ -27,13 +27,29 @@ class RolePolicy
         return $authUser->can('Create:Role');
     }
 
+    /**
+     * Only a super_admin can edit the super_admin role; otherwise anyone with
+     * Update:Role could rewrite its permissions or rename it.
+     */
     public function update(AuthUser $authUser, Role $role): bool
     {
+        if ($role->name === 'super_admin' && ! $authUser->hasRole('super_admin')) {
+            return false;
+        }
+
         return $authUser->can('Update:Role');
     }
 
+    /**
+     * The super_admin role can never be deleted: the application checks it by
+     * name and would be left without anyone able to manage roles.
+     */
     public function delete(AuthUser $authUser, Role $role): bool
     {
+        if ($role->name === 'super_admin') {
+            return false;
+        }
+
         return $authUser->can('Delete:Role');
     }
 

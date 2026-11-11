@@ -74,3 +74,32 @@ test('user without permission cannot perform action (with model)', function (str
     'forceDelete' => ['forceDelete'],
     'replicate' => ['replicate'],
 ]);
+
+test('only a super_admin can update the super_admin role', function () {
+    Permission::create(['name' => 'Update:Role', 'guard_name' => 'web']);
+    $superAdminRole = Role::create(['name' => 'super_admin', 'guard_name' => 'web']);
+
+    $actor = User::factory()->create();
+    $actor->givePermissionTo('Update:Role');
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect((new RolePolicy)->update($actor, $superAdminRole))->toBeFalse()
+        ->and((new RolePolicy)->update($actor, Role::create(['name' => 'editor', 'guard_name' => 'web'])))->toBeTrue();
+
+    $actor->assignRole($superAdminRole);
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect((new RolePolicy)->update($actor->refresh(), $superAdminRole))->toBeTrue();
+});
+
+test('the super_admin role can never be deleted, not even by a super_admin', function () {
+    Permission::create(['name' => 'Delete:Role', 'guard_name' => 'web']);
+    $superAdminRole = Role::create(['name' => 'super_admin', 'guard_name' => 'web']);
+    $superAdminRole->givePermissionTo('Delete:Role');
+
+    $superAdmin = User::factory()->create();
+    $superAdmin->assignRole($superAdminRole);
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect((new RolePolicy)->delete($superAdmin->refresh(), $superAdminRole))->toBeFalse();
+});
