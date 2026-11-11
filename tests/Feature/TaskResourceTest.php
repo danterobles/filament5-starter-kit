@@ -8,6 +8,7 @@ use App\Models\User;
 use Database\Seeders\ShieldSeeder;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\Testing\TestAction;
+use Filament\Forms\Components\Select;
 use Illuminate\Notifications\DatabaseNotification;
 use Livewire\Livewire;
 
@@ -303,6 +304,30 @@ test('a regular user only sees tasks assigned to them in the table', function ()
     Livewire::test(ListTasks::class)
         ->assertCanSeeTableRecords(collect([$ownTask]))
         ->assertCanNotSeeTableRecords(collect([$othersTask]));
+});
+
+test('the assignee selector is hidden for a regular user and visible for a super_admin', function () {
+    $viewer = User::factory()->create();
+    $viewer->givePermissionTo('ViewAny:Task', 'View:Task', 'Create:Task');
+
+    $this->actingAs($viewer);
+    Livewire::test(CreateTask::class)->assertFormFieldIsHidden('user_id');
+
+    $this->actingAs($this->admin);
+    Livewire::test(CreateTask::class)->assertFormFieldIsVisible('user_id');
+});
+
+test('the assignee search returns at most 50 users and finds them by name', function () {
+    User::factory()->count(60)->create(['name' => 'Searchable']);
+    $target = User::factory()->create(['name' => 'Zulema', 'last' => 'Unica']);
+
+    $field = collect(Livewire::test(CreateTask::class)->instance()->getSchema('form')->getFlatComponents())
+        ->first(fn ($component): bool => $component instanceof Select && $component->getName() === 'user_id');
+
+    expect($field)->not->toBeNull()
+        ->and($field->getSearchResults('Searchable'))->toHaveCount(50)
+        ->and($field->getSearchResults('Zulema'))->toHaveKey($target->id)
+        ->and($field->getOptionLabel())->toBeNull();
 });
 
 test('a regular user creating a task cannot assign it to another user', function () {

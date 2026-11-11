@@ -3,6 +3,7 @@
 use App\Models\User;
 use App\Policies\UserPolicy;
 use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 use Spatie\Permission\PermissionRegistrar;
 
 beforeEach(function () {
@@ -29,13 +30,13 @@ test('user with permission can perform action', function (string $method, string
     $user->givePermissionTo($permission);
     app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
-    expect((new UserPolicy)->{$method}($user))->toBeTrue();
+    expect((new UserPolicy)->{$method}($user, User::factory()->create()))->toBeTrue();
 })->with('user_policy_methods');
 
 test('user without permission cannot perform action', function (string $method) {
     $user = User::factory()->create();
 
-    expect((new UserPolicy)->{$method}($user))->toBeFalse();
+    expect((new UserPolicy)->{$method}($user, User::factory()->create()))->toBeFalse();
 })->with([
     'viewAny' => ['viewAny'],
     'view' => ['view'],
@@ -75,4 +76,40 @@ test('a user with Delete:User permission cannot delete their own account', funct
     app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
     expect((new UserPolicy)->delete($actor, $actor))->toBeFalse();
+});
+
+test('a user with Update:User permission cannot update a super_admin unless they are super_admin too', function () {
+    Permission::create(['name' => 'Update:User', 'guard_name' => 'web']);
+    Role::create(['name' => 'super_admin', 'guard_name' => 'web']);
+
+    $actor = User::factory()->create();
+    $actor->givePermissionTo('Update:User');
+    $superAdmin = User::factory()->create();
+    $superAdmin->assignRole('super_admin');
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect((new UserPolicy)->update($actor, $superAdmin))->toBeFalse();
+
+    $actor->assignRole('super_admin');
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect((new UserPolicy)->update($actor->refresh(), $superAdmin))->toBeTrue();
+});
+
+test('a user with Delete:User permission cannot delete a super_admin unless they are super_admin too', function () {
+    Permission::create(['name' => 'Delete:User', 'guard_name' => 'web']);
+    Role::create(['name' => 'super_admin', 'guard_name' => 'web']);
+
+    $actor = User::factory()->create();
+    $actor->givePermissionTo('Delete:User');
+    $superAdmin = User::factory()->create();
+    $superAdmin->assignRole('super_admin');
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect((new UserPolicy)->delete($actor, $superAdmin))->toBeFalse();
+
+    $actor->assignRole('super_admin');
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect((new UserPolicy)->delete($actor->refresh(), $superAdmin))->toBeTrue();
 });

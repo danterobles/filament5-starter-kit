@@ -52,15 +52,23 @@ class TaskForm
 
                                 Select::make('user_id')
                                     ->label('Asignado a')
-                                    ->options(
-                                        fn () => User::query()
-                                            ->orderBy('name')
+                                    ->visible(fn (): bool => (bool) auth()->user()?->hasRole('super_admin'))
+                                    ->searchable()
+                                    ->getSearchResultsUsing(
+                                        fn (string $search): array => User::query()
+                                            ->whereLike('name', "%{$search}%")
+                                            ->orWhereLike('last', "%{$search}%")
+                                            ->orderByFullName()
+                                            ->limit(50)
                                             ->get()
-                                            ->mapWithKeys(fn (User $user) => [
+                                            ->mapWithKeys(fn (User $user): array => [
                                                 $user->id => Str::of($user->full_name)->trim()->toString(),
                                             ])
+                                            ->all()
                                     )
-                                    ->searchable()
+                                    ->getOptionLabelUsing(
+                                        fn (mixed $value): ?string => Str::of(User::find($value)?->full_name ?? '')->trim()->toString() ?: null
+                                    )
                                     ->native(false)
                                     ->placeholder('Sin asignar'),
 

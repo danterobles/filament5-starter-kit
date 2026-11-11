@@ -270,9 +270,9 @@
     "semantic_hash": ""
   },
   "app/Filament/Widgets/AgendaCalendarWidget.php": {
-    "mtime": 1784572875.2527335,
-    "seen": 1790794488.742729,
-    "ast_hash": "ea569efa5c1dcedba3aa51e2f9a726a2",
+    "mtime": 1794433963.8110168,
+    "seen": 1794434024.551997,
+    "ast_hash": "c6eb950a6248c33a7427e65ecf367037",
     "semantic_hash": ""
   },
   "app/Http/Controllers/Controller.php": {
@@ -618,9 +618,9 @@
     "semantic_hash": ""
   },
   "app/Filament/Resources/Tasks/Schemas/TaskForm.php": {
-    "mtime": 1786721158.0159311,
-    "seen": 1790794488.742723,
-    "ast_hash": "e0b99d8c2b5ceda55d240943d681d1a4",
+    "mtime": 1794433963.81158,
+    "seen": 1794434024.55199,
+    "ast_hash": "7c0514130a95c11831e5cd02c36282ad",
     "semantic_hash": ""
   },
   "app/Filament/Resources/Tasks/Pages/EditTask.php": {
@@ -684,9 +684,9 @@
     "semantic_hash": ""
   },
   "tests/Feature/TaskResourceTest.php": {
-    "mtime": 1793042930.3941526,
-    "seen": 1793044100.633695,
-    "ast_hash": "5ed9c124c707c28dbbb61ffca6bb9699",
+    "mtime": 1794434010.181332,
+    "seen": 1794434024.552043,
+    "ast_hash": "c0e12342e6fb8a2c2dbe2845bdc17de2",
     "semantic_hash": ""
   },
   "database/migrations/2026_07_20_174937_create_notifications_table.php": {
@@ -708,9 +708,9 @@
     "semantic_hash": ""
   },
   "app/Policies/UserPolicy.php": {
-    "mtime": 1794429260.6747363,
-    "seen": 1794429321.134221,
-    "ast_hash": "5acbd149d10e9b577e870665ca34db1b",
+    "mtime": 1794433963.8098652,
+    "seen": 1794434024.552005,
+    "ast_hash": "120f417456b46b9fab16580004298ff1",
     "semantic_hash": ""
   },
   "tests/Feature/Policies/AgendaPolicyTest.php": {
@@ -726,9 +726,9 @@
     "semantic_hash": ""
   },
   "tests/Feature/Policies/UserPolicyTest.php": {
-    "mtime": 1786651792.0610583,
-    "seen": 1790794488.742769,
-    "ast_hash": "7678c188142128806aef0052095b235f",
+    "mtime": 1794433963.8104978,
+    "seen": 1794434024.552042,
+    "ast_hash": "ec19c74df6d343971934dab60b987b9a",
     "semantic_hash": ""
   },
   "tests/Feature/DatabaseSeederTest.php": {
@@ -957,6 +957,12 @@
     "mtime": 1794429260.6737108,
     "seen": 1794429321.1342468,
     "ast_hash": "3491bf0058fb2a18f59607458c676632",
+    "semantic_hash": ""
+  },
+  "tests/Feature/Widgets/AgendaCalendarWidgetTest.php": {
+    "mtime": 1794433981.9668434,
+    "seen": 1794434024.552045,
+    "ast_hash": "106174d3c6002f9ed3f51cf361da35fe",
     "semantic_hash": ""
   }
 }

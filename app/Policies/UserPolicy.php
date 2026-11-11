@@ -25,18 +25,27 @@ class UserPolicy
         return $authUser->can('Create:User');
     }
 
-    public function update(AuthUser $authUser): bool
+    /**
+     * Only a super_admin can edit another super_admin, otherwise a user with
+     * Update:User could change their password or email and take over the account.
+     */
+    public function update(AuthUser $authUser, User $model): bool
     {
+        if ($this->isProtectedSuperAdmin($authUser, $model)) {
+            return false;
+        }
+
         return $authUser->can('Update:User');
     }
 
     /**
      * A user can never delete their own account through the admin panel, even
      * with the Delete:User permission, to avoid accidental or malicious self-lockout.
+     * Only a super_admin can delete another super_admin.
      */
     public function delete(AuthUser $authUser, User $model): bool
     {
-        if ($authUser->is($model)) {
+        if ($authUser->is($model) || $this->isProtectedSuperAdmin($authUser, $model)) {
             return false;
         }
 
@@ -76,5 +85,10 @@ class UserPolicy
     public function reorder(AuthUser $authUser): bool
     {
         return $authUser->can('Reorder:User');
+    }
+
+    private function isProtectedSuperAdmin(AuthUser $authUser, User $model): bool
+    {
+        return $model->hasRole('super_admin') && ! $authUser->hasRole('super_admin');
     }
 }

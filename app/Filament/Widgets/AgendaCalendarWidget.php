@@ -9,6 +9,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Components\Grid;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Saade\FilamentFullCalendar\Actions\CreateAction;
 use Saade\FilamentFullCalendar\Actions\DeleteAction;
@@ -23,8 +24,12 @@ class AgendaCalendarWidget extends FullCalendarWidget
     public function fetchEvents(array $info): array
     {
         return Agenda::query()
-            ->where('start_date', '>=', $info['start'])
             ->where('start_date', '<=', $info['end'])
+            ->where(fn (Builder $query): Builder => $query
+                ->where('end_date', '>=', $info['start'])
+                ->orWhere(fn (Builder $query): Builder => $query
+                    ->whereNull('end_date')
+                    ->where('start_date', '>=', $info['start'])))
             ->get()
             ->map(fn (Agenda $agenda) => EventData::make()
                 ->id($agenda->id)
