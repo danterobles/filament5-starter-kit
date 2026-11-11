@@ -156,15 +156,15 @@
     "semantic_hash": ""
   },
   "app/Providers/Filament/AdminPanelProvider.php": {
-    "mtime": 1794435424.6376314,
-    "seen": 1794435678.23233,
-    "ast_hash": "b9871a40866a180c539d67000f28ba4f",
+    "mtime": 1794435824.1458297,
+    "seen": 1794435880.950357,
+    "ast_hash": "883411318d7d8912e4540499fc761d3f",
     "semantic_hash": ""
   },
   "app/Models/User.php": {
-    "mtime": 1794435476.2296305,
-    "seen": 1794435678.232325,
-    "ast_hash": "86894fbde971e99ffe5f87abb3af706b",
+    "mtime": 1794435823.8903024,
+    "seen": 1794435880.950352,
+    "ast_hash": "808c6353ecad400fbf72fccbf64253e9",
     "semantic_hash": ""
   },
   "app/Models/Task.php": {
@@ -210,9 +210,9 @@
     "semantic_hash": ""
   },
   "app/Filament/Resources/Users/Schemas/UserForm.php": {
-    "mtime": 1794435640.1969547,
-    "seen": 1794435678.2323148,
-    "ast_hash": "0ef4207fabbeff8144ff7e6452ece48a",
+    "mtime": 1794435824.2359293,
+    "seen": 1794435880.9503438,
+    "ast_hash": "0c171badf728bd1bb8f19b9e94fcb8b5",
     "semantic_hash": ""
   },
   "app/Filament/Resources/Users/Pages/ListUsers.php": {
@@ -390,15 +390,15 @@
     "semantic_hash": "2bc41f1156dead26b2a3082f9634b041"
   },
   "tests/Feature/UserModelTest.php": {
-    "mtime": 1794435476.2370086,
-    "seen": 1794435678.232366,
-    "ast_hash": "3e80f9ae6ab30abbe8a40e1a27d4e5bb",
+    "mtime": 1794435832.5653863,
+    "seen": 1794435880.950397,
+    "ast_hash": "048a27a6f773d7f7469da250c593ca27",
     "semantic_hash": ""
   },
   "tests/Feature/UserResourceTest.php": {
-    "mtime": 1794435621.929869,
-    "seen": 1794435678.232366,
-    "ast_hash": "055d86d1de65ff37ecbee608c9b9dddb",
+    "mtime": 1794435863.1457534,
+    "seen": 1794435880.950398,
+    "ast_hash": "05ac4c2efbbb6e1d7f3b2c27269cbf21",
     "semantic_hash": ""
   },
   "tests/Feature/ExampleTest.php": {

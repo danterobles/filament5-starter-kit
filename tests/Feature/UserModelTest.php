@@ -3,6 +3,7 @@
 use App\Models\Task;
 use App\Models\User;
 use Filament\Panel;
+use Illuminate\Support\Facades\Storage;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\PermissionRegistrar;
@@ -136,4 +137,11 @@ test('canManage lets a user manage only users whose permissions are a subset of 
         ->and($limited->canManage($nobody))->toBeTrue()
         ->and($limited->canManage($superAdmin))->toBeFalse()
         ->and($superAdmin->canManage($powerful))->toBeTrue();
+});
+
+test('getFilamentAvatarUrl builds the url from the public disk', function () {
+    Storage::fake('public');
+    $user = new User(['avatar_url' => 'avatars/abc123.png']);
+
+    expect($user->getFilamentAvatarUrl())->toBe(Storage::disk('public')->url('avatars/abc123.png'));
 });

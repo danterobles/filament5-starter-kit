@@ -13,6 +13,7 @@ use Filament\Schemas\Schema;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules\Password;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 use Spatie\Permission\Models\Role;
 
 class UserForm
@@ -43,16 +44,10 @@ class UserForm
                                     ->placeholder('Ingrese el apellido'),
                             ]),
 
-                        FileUpload::make('avatar_url')
+                        static::avatarUpload(FileUpload::make('avatar_url'))
                             ->label('Foto de Perfil')
-                            ->image()
-                            ->avatar()
                             ->imageEditor()
                             ->circleCropper()
-                            ->directory('avatars')
-                            ->visibility('private')
-                            ->maxSize(2048)
-                            ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/webp'])
                             ->helperText('Tamaño máximo: 2MB. Formatos: PNG, JPG, WEBP'),
                     ])
                     ->columns(1),
@@ -167,5 +162,24 @@ class UserForm
                     ])
                     ->columns(1),
             ]);
+    }
+
+    /**
+     * Shared avatar upload rules: stored on the public disk under a random file
+     * name, limited to 2MB PNG/JPEG/WEBP images.
+     */
+    public static function avatarUpload(FileUpload $upload): FileUpload
+    {
+        return $upload
+            ->image()
+            ->avatar()
+            ->disk(User::AVATAR_DISK)
+            ->directory('avatars')
+            ->visibility('public')
+            ->maxSize(2048)
+            ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/webp'])
+            ->getUploadedFileNameForStorageUsing(
+                fn (TemporaryUploadedFile $file): string => Str::random(40).'.'.$file->guessExtension()
+            );
     }
 }

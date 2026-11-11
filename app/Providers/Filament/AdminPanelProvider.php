@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Resources\Users\Schemas\UserForm;
 use App\Filament\Widgets\AgendaCalendarWidget;
 use App\Livewire\CustomPersonalInfo;
 use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
@@ -86,7 +87,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentShieldPlugin::make(),
                 BreezyCore::make()
                     ->avatarUploadComponent(
-                        fn (FileUpload $fileUpload) => $fileUpload->disableLabel(),
+                        fn (FileUpload $fileUpload) => UserForm::avatarUpload($fileUpload)->disableLabel(),
                     )
                     ->myProfile(
                         shouldRegisterUserMenu: true,

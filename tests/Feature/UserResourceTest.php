@@ -8,6 +8,9 @@ use Database\Seeders\ShieldSeeder;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\Testing\TestAction;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Livewire\Livewire;
 use Spatie\Permission\Models\Role;
 
@@ -285,4 +288,37 @@ test('the user password must satisfy the default password rules', function () {
         ])
         ->call('create')
         ->assertHasFormErrors(['password']);
+});
+
+test('an uploaded avatar is stored on the public disk under a random file name', function () {
+    Storage::fake('public');
+    $user = User::factory()->create();
+    $user->assignRole(Role::create(['name' => 'avatar_tester', 'guard_name' => 'web']));
+
+    Livewire::test(EditUser::class, ['record' => $user->id])
+        ->fillForm(['avatar_url' => UploadedFile::fake()->image('mi-foto-personal.png')])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    $path = $user->fresh()->avatar_url;
+
+    expect($path)->toStartWith('avatars/')
+        ->and($path)->not->toContain('mi-foto-personal')
+        ->and(Str::of($path)->after('avatars/')->before('.')->length())->toBe(40);
+
+    Storage::disk('public')->assertExists($path);
+    expect(Storage::disk('public')->getVisibility($path))->toBe('public');
+});
+
+test('an avatar that is not an allowed image type is rejected', function () {
+    Storage::fake('public');
+    $user = User::factory()->create();
+    $user->assignRole(Role::create(['name' => 'avatar_tester', 'guard_name' => 'web']));
+
+    Livewire::test(EditUser::class, ['record' => $user->id])
+        ->fillForm(['avatar_url' => UploadedFile::fake()->create('script.svg', 10, 'image/svg+xml')])
+        ->call('save')
+        ->assertHasFormErrors(['avatar_url']);
+
+    expect($user->fresh()->avatar_url)->toBeNull();
 });
