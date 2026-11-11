@@ -6,6 +6,8 @@ use App\Filament\Resources\Users\Pages\ListUsers;
 use App\Models\User;
 use Database\Seeders\ShieldSeeder;
 use Filament\Actions\DeleteAction;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\Testing\TestAction;
 use Livewire\Livewire;
 use Spatie\Permission\Models\Role;
 
@@ -221,4 +223,32 @@ test('table search finds users by name', function () {
         ->searchTable('Búsqueda')
         ->assertCanSeeTableRecords(collect([$target]))
         ->assertCanNotSeeTableRecords(collect([$other]));
+});
+
+test('bulk delete skips super_admins and the acting user when the actor is not a super_admin', function () {
+    $actor = User::factory()->create();
+    $actor->givePermissionTo('ViewAny:User', 'View:User', 'Delete:User', 'DeleteAny:User');
+    $regular = User::factory()->create();
+    $superAdmin = User::factory()->create();
+    $superAdmin->assignRole('super_admin');
+
+    $this->actingAs($actor);
+
+    Livewire::test(ListUsers::class)
+        ->selectTableRecords([$regular->id, $superAdmin->id, $actor->id])
+        ->callAction(TestAction::make(DeleteBulkAction::class)->table()->bulk());
+
+    expect(User::find($regular->id))->toBeNull()
+        ->and(User::find($superAdmin->id))->not->toBeNull()
+        ->and(User::find($actor->id))->not->toBeNull();
+});
+
+test('a super_admin can bulk delete other users', function () {
+    $others = User::factory()->count(2)->create();
+
+    Livewire::test(ListUsers::class)
+        ->selectTableRecords($others->pluck('id')->all())
+        ->callAction(TestAction::make(DeleteBulkAction::class)->table()->bulk());
+
+    expect(User::whereIn('id', $others->pluck('id'))->count())->toBe(0);
 });
