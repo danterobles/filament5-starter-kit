@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Tasks\Pages;
 
 use App\Filament\Resources\Tasks\TaskResource;
+use App\Notifications\TaskAssignedNotification;
 use Filament\Actions\DeleteAction;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\EditRecord;
@@ -41,6 +42,17 @@ class EditTask extends EditRecord
             ->duration(3000)
             ->icon('heroicon-o-check-circle')
             ->send();
+    }
+
+    protected function afterSave(): void
+    {
+        $assignee = $this->record->user;
+
+        if (! $this->record->wasChanged('user_id') || ! $assignee || $assignee->is(auth()->user())) {
+            return;
+        }
+
+        $assignee->notify(new TaskAssignedNotification($this->record));
     }
 
     protected function getRedirectUrl(): string

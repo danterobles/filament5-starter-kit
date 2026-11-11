@@ -258,6 +258,44 @@ test('creating a task with an assigned user sends them a reminder notification',
         ->toBe("Se te asignó la tarea \"{$task->title}\" como recordatorio.");
 });
 
+test('reassigning a task to another user notifies the new assignee only', function () {
+    $previous = User::factory()->create();
+    $newAssignee = User::factory()->create();
+    $task = Task::factory()->for($previous)->create(['title' => 'Revisar contrato']);
+
+    Livewire::test(EditTask::class, ['record' => $task->id])
+        ->fillForm(['user_id' => $newAssignee->id])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($newAssignee->fresh()->unreadNotifications)->toHaveCount(1)
+        ->and($newAssignee->fresh()->unreadNotifications->first()->data['body'])->toContain('Revisar contrato')
+        ->and($previous->fresh()->unreadNotifications)->toHaveCount(0);
+});
+
+test('saving a task without changing its assignee sends no notification', function () {
+    $assignee = User::factory()->create();
+    $task = Task::factory()->for($assignee)->create();
+
+    Livewire::test(EditTask::class, ['record' => $task->id])
+        ->fillForm(['title' => 'Título actualizado'])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($assignee->fresh()->unreadNotifications)->toHaveCount(0);
+});
+
+test('reassigning a task to the editor themselves sends no notification', function () {
+    $task = Task::factory()->for(User::factory()->create())->create();
+
+    Livewire::test(EditTask::class, ['record' => $task->id])
+        ->fillForm(['user_id' => $this->admin->id])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($this->admin->fresh()->unreadNotifications)->toHaveCount(0);
+});
+
 test('creating a task without an assigned user sends no notification', function () {
     Livewire::test(CreateTask::class)
         ->fillForm([

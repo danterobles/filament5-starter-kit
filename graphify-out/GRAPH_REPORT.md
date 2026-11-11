@@ -1,16 +1,16 @@
 # Graph Report - filament5-starter-kit  (2026-11-11)
 
 ## Corpus Check
-- 161 files · ~52,114 words
+- 161 files · ~52,247 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1369 nodes · 1892 edges · 135 communities (108 shown, 27 thin omitted)
+- 1370 nodes · 1894 edges · 136 communities (110 shown, 26 thin omitted)
 - Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 37 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `88683d92`
+- Built from commit: `0112f488`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,16 +26,16 @@
 - Laravel 13 + Filament 5 — Starter Kit
 - Validation & Forms Best Practices
 - ShieldSeeder
-- CreateUser
+- UserResource.php
 - Queue and Job Best Practices
 - Guía de Personalización
 - Quick Reference
 - Illuminate\Database\Eloquent\Model
 - TestCase
-- Filament\Notifications\Notification
+- EditTask
 - Spatie\Permission\Models\Permission
-- EditUser
-- CreateTask
+- CreateUser
+- Filament\Notifications\Notification
 - RolePolicy
 - ServicesConfig
 - Detection Checklist
@@ -48,7 +48,7 @@
 - Security Best Practices
 - devDependencies
 - Board Configuration
-- ListUsers
+- ListAgendas
 - composer.json
 - Changelog
 - AdminPanelProvider
@@ -98,6 +98,7 @@
 - CreateUsersTable Migration
 - UserStatsOverview
 - Skill: laravel-best-practices
+- UserResource
 - Endpoint Tests
 - logging.php
 - UserGrowthChart
@@ -122,7 +123,7 @@
 - Contribuir a este starter kit
 - Reviewing Tests
 - Naming and Structure
-- Illuminate\Support\Str
+- TaskBoard
 - Users Resource (CRUD)
 - Factories and Test Data
 - Testing Best Practices
@@ -166,7 +167,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (135 total, 27 thin omitted)
+## Communities (136 total, 26 thin omitted)
 
 ### Community 0 - "Blade and Views Best Practices"
 Cohesion: 0.29
@@ -192,6 +193,10 @@ Nodes (18): Action with modal form, Artisan, Calling actions, Common mistakes, C
 Cohesion: 0.83
 Nodes (4): Spatie Activity Log, AddBatchUuidColumnToActivityLogTable Migration, AddEventColumnToActivityLogTable Migration, CreateActivityLogTable Migration
 
+### Community 6 - "Agenda"
+Cohesion: 0.14
+Nodes (3): Agenda, AgendaPolicy, Illuminate\Auth\Access\HandlesAuthorization
+
 ### Community 7 - "DatabaseConfig"
 Cohesion: 0.15
 Nodes (13): Filament Shield (RBAC), Filament Shield RBAC, Spatie Laravel Permission, AuthConfig, CacheConfig, DatabaseConfig, FilamentLoggerConfig, FilamentShieldConfig (+5 more)
@@ -206,7 +211,11 @@ Nodes (28): Validation and Forms Best Practices, code:php (public function show(
 
 ### Community 10 - "ShieldSeeder"
 Cohesion: 0.14
-Nodes (7): BezhanSalleh\FilamentShield\Support\Utils, ShieldSeeder, Filament\Actions\Testing\TestAction, Filament\Forms\Components\Select, Illuminate\Notifications\DatabaseNotification, Illuminate\Support\Facades\DB, Livewire\Livewire
+Nodes (5): BezhanSalleh\FilamentShield\Support\Utils, ShieldSeeder, Illuminate\Support\Carbon, Illuminate\Support\Facades\DB, Livewire\Livewire
+
+### Community 11 - "UserResource.php"
+Cohesion: 0.14
+Nodes (11): UsersCluster, AgendaResource, AgendaForm, AgendasTable, TaskForm, UserForm, BackedEnum, Filament\Clusters\Cluster (+3 more)
 
 ### Community 12 - "Queue and Job Best Practices"
 Cohesion: 0.09
@@ -221,24 +230,28 @@ Cohesion: 0.08
 Nodes (23): 10. Routing & Controllers → `rules/routing.md`, 11. HTTP Client → `rules/http-client.md`, 12. Events, Notifications & Mail → `rules/events-notifications.md`, `rules/mail.md`, 13. Error Handling → `rules/error-handling.md`, 14. Task Scheduling → `rules/scheduling.md`, 15. Architecture → `rules/architecture.md`, 16. Migrations → `rules/migrations.md`, 17. Collections → `rules/collections.md` (+15 more)
 
 ### Community 15 - "Illuminate\Database\Eloquent\Model"
-Cohesion: 0.23
-Nodes (5): OwnedByUserScope, Illuminate\Database\Eloquent\Attributes\Fillable, Illuminate\Database\Eloquent\Model, Illuminate\Database\Eloquent\Relations\BelongsTo, Illuminate\Database\Eloquent\Scope
+Cohesion: 0.22
+Nodes (6): OwnedByUserScope, Illuminate\Database\Eloquent\Attributes\Fillable, Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Eloquent\Model, Illuminate\Database\Eloquent\Relations\BelongsTo, Illuminate\Database\Eloquent\Scope
 
 ### Community 16 - "TestCase"
 Cohesion: 0.24
 Nodes (7): Illuminate\Foundation\Testing\LazilyRefreshDatabase, Illuminate\Foundation\Testing\TestCase, ActivityPolicy, RBAC (Roles and Permissions), RolePolicy, ShieldSeeder, TestCase
 
-### Community 17 - "Filament\Notifications\Notification"
-Cohesion: 0.18
-Nodes (7): EditAgenda, Notification, EditTask, Notification, Filament\Actions\DeleteAction, Filament\Notifications\Notification, Filament\Resources\Pages\EditRecord
+### Community 17 - "EditTask"
+Cohesion: 0.15
+Nodes (7): EditAgenda, EditTask, Filament\Actions\DeleteAction, Filament\Actions\Testing\TestAction, Filament\Forms\Components\Select, Filament\Resources\Pages\EditRecord, Illuminate\Notifications\DatabaseNotification
 
 ### Community 18 - "Spatie\Permission\Models\Permission"
-Cohesion: 0.33
+Cohesion: 0.36
 Nodes (3): Spatie\Permission\DefaultTeamResolver, Spatie\Permission\Models\Permission, Spatie\Permission\PermissionRegistrar
 
-### Community 20 - "CreateTask"
+### Community 19 - "CreateUser"
 Cohesion: 0.14
-Nodes (5): CreateAgenda, Notification, CreateTask, Notification, Filament\Resources\Pages\CreateRecord
+Nodes (4): CreateUser, Notification, EditUser, Notification
+
+### Community 20 - "Filament\Notifications\Notification"
+Cohesion: 0.12
+Nodes (8): CreateAgenda, Notification, Notification, CreateTask, Notification, Notification, Filament\Notifications\Notification, Filament\Resources\Pages\CreateRecord
 
 ### Community 23 - "Detection Checklist"
 Cohesion: 0.17
@@ -280,9 +293,9 @@ Nodes (11): concurrently, laravel-vite-plugin, devDependencies, concurrently, la
 Cohesion: 0.14
 Nodes (14): Actions, Board Configuration, Card Schema, code:php (use Filament\Infolists\Components\TextEntry;), code:php (->cardsPerColumn(20)           // Cards loaded initially), code:php (->searchable(['title', 'description'])), code:php (use Filament\Tables\Filters\SelectFilter;), code:php (use Filament\Actions\Action;) (+6 more)
 
-### Community 33 - "ListUsers"
-Cohesion: 0.16
-Nodes (6): ListAgendas, ListTasks, ListUsers, Filament\Actions\CreateAction, Filament\Pages\Concerns\ExposesTableToWidgets, Filament\Resources\Pages\ListRecords
+### Community 33 - "ListAgendas"
+Cohesion: 0.27
+Nodes (4): ListAgendas, ListTasks, Filament\Actions\CreateAction, Filament\Resources\Pages\ListRecords
 
 ### Community 34 - "composer.json"
 Cohesion: 0.15
@@ -349,8 +362,8 @@ Cohesion: 0.22
 Nodes (8): Apply Global Scopes Sparingly, Cast Date and Time Attributes, Define Attribute Casts, Define Precise Relationship Types, Eloquent Best Practices, Keep Application Queries Model-Aware, Use Local Scopes for Reusable Queries, Use `whereBelongsTo()` for Relationship Queries
 
 ### Community 51 - "User"
-Cohesion: 0.15
-Nodes (12): User, Filament\Models\Contracts\FilamentUser, Filament\Models\Contracts\HasAvatar, Filament\Panel, Illuminate\Database\Eloquent\Attributes\Hidden, Illuminate\Database\Eloquent\Attributes\Scope, Illuminate\Database\Eloquent\Factories\HasFactory, Illuminate\Database\Eloquent\Relations\HasMany (+4 more)
+Cohesion: 0.14
+Nodes (11): User, Filament\Models\Contracts\FilamentUser, Filament\Models\Contracts\HasAvatar, Filament\Panel, Illuminate\Database\Eloquent\Attributes\Hidden, Illuminate\Database\Eloquent\Attributes\Scope, Illuminate\Database\Eloquent\Relations\HasMany, Illuminate\Notifications\Notifiable (+3 more)
 
 ### Community 52 - "psr-4"
 Cohesion: 0.40
@@ -404,10 +417,6 @@ Nodes (6): Convention and Style Best Practices, Follow Project Naming Convention
 Cohesion: 0.67
 Nodes (3): AppConfig, FilesystemsConfig, MailConfig
 
-### Community 66 - "ActivityPolicy"
-Cohesion: 0.15
-Nodes (3): ActivityPolicy, Illuminate\Auth\Access\HandlesAuthorization, Spatie\Activitylog\Models\Activity
-
 ### Community 67 - "Configuration Best Practices"
 Cohesion: 0.33
 Nodes (5): Configuration Best Practices, Name Repeated Domain Values, Protect Production Secrets, Read Environment Variables in Configuration Files, Use `App::environment()` for Environment Checks
@@ -421,8 +430,8 @@ Cohesion: 0.67
 Nodes (3): extra, laravel, dont-discover
 
 ### Community 71 - "Illuminate\Database\Seeder"
-Cohesion: 0.38
-Nodes (3): AgendaSeeder, TaskSeeder, Illuminate\Database\Seeder
+Cohesion: 0.20
+Nodes (6): AgendaSeeder, DatabaseSeeder, TaskSeeder, Illuminate\Database\Console\Seeds\WithoutModelEvents, Illuminate\Database\Seeder, Illuminate\Support\Facades\Hash
 
 ### Community 77 - "bootstrap/app.php"
 Cohesion: 0.50
@@ -433,12 +442,16 @@ Cohesion: 0.32
 Nodes (3): AgendaFactory, static, Illuminate\Database\Eloquent\Factories\Factory
 
 ### Community 84 - "UserStatsOverview"
-Cohesion: 0.24
-Nodes (5): UserStatsOverview, TasksOverdueWidget, Filament\Widgets\StatsOverviewWidget, Filament\Widgets\StatsOverviewWidget\Stat, Illuminate\Support\Facades\Auth
+Cohesion: 0.25
+Nodes (6): UserStatsOverview, TasksOverdueWidget, Filament\Widgets\StatsOverviewWidget, Filament\Widgets\StatsOverviewWidget\Stat, Illuminate\Support\Facades\Auth, Illuminate\Support\Facades\Cache
 
 ### Community 85 - "Skill: laravel-best-practices"
 Cohesion: 0.25
 Nodes (8): CLAUDE.md (project instructions), README — Starter Kit, Skill: flowforge-development, Rule: migrations, Rule: routing & controllers, Rule: task scheduling, Skill: laravel-best-practices, Skill: tailwindcss-development
+
+### Community 86 - "UserResource"
+Cohesion: 0.15
+Nodes (3): ListUsers, UserResource, Filament\Pages\Concerns\ExposesTableToWidgets
 
 ### Community 87 - "Endpoint Tests"
 Cohesion: 0.25
@@ -447,10 +460,6 @@ Nodes (7): Endpoint Coverage, Endpoint Tests, How to Write the Test, Tenant Isol
 ### Community 89 - "logging.php"
 Cohesion: 0.40
 Nodes (4): Monolog\Handler\NullHandler, Monolog\Handler\StreamHandler, Monolog\Handler\SyslogUdpHandler, Monolog\Processor\PsrLogMessageProcessor
-
-### Community 91 - "UserGrowthChart"
-Cohesion: 0.21
-Nodes (4): UserGrowthChart, Filament\Widgets\ChartWidget, Illuminate\Support\Carbon, Illuminate\Support\Facades\Cache
 
 ### Community 96 - "Assertions"
 Cohesion: 0.29
@@ -465,8 +474,8 @@ Cohesion: 0.21
 Nodes (7): TaskResource, TaskAssignedNotification, Illuminate\Bus\Queueable, Illuminate\Contracts\Queue\ShouldQueue, Illuminate\Notifications\Messages\MailMessage, Illuminate\Notifications\Notification, Illuminate\Support\Facades\Notification
 
 ### Community 100 - "Filament\Tables\Table"
-Cohesion: 0.05
-Nodes (37): UsersCluster, TaskBoard, AgendaResource, AgendasTable, TasksTable, UsersTable, UserResource, LatestUsersTable (+29 more)
+Cohesion: 0.06
+Nodes (37): ActivityLogResource, ActivityLogsTable, TasksTable, UsersTable, LatestUsersTable, AgendaDoubleSidedTimelineWidget, AgendaTimelineWidget, Devletes\FilamentTimelineView\Tables\Columns\TimelineEntry (+29 more)
 
 ### Community 101 - "Fakes, Mocks, and Determinism"
 Cohesion: 0.29
@@ -481,8 +490,8 @@ Cohesion: 0.29
 Nodes (6): Common Errors, Global Fakes, How to Find a Slow Test, How to Run the Suite in Parallel, Test Environment, Test Suite Performance
 
 ### Community 115 - "AgendaCalendarWidget.php"
-Cohesion: 0.05
-Nodes (35): ActivityLogResource, ActivityLogsTable, AgendaForm, TaskForm, UserForm, AgendaCalendarWidget, CustomPersonalInfo, Filament\Forms (+27 more)
+Cohesion: 0.08
+Nodes (21): AgendaCalendarWidget, CustomPersonalInfo, Filament\Forms, Filament\Forms\Components\ColorPicker, Filament\Forms\Components\DateTimePicker, Filament\Forms\Components\FileUpload, Filament\Forms\Components\Textarea, Filament\Forms\Components\TextInput (+13 more)
 
 ### Community 116 - "Contribuir a este starter kit"
 Cohesion: 0.18
@@ -496,9 +505,9 @@ Nodes (6): Assertions, Coverage, Data and Determinism, Names and Structure, Revi
 Cohesion: 0.33
 Nodes (5): File Layout, Grouping, Naming and Structure, Naming Tests, Test Function
 
-### Community 119 - "Illuminate\Support\Str"
+### Community 119 - "TaskBoard"
 Cohesion: 0.21
-Nodes (5): DatabaseSeeder, Illuminate\Database\Console\Seeds\WithoutModelEvents, Illuminate\Support\Facades\Hash, Illuminate\Support\Str, Pdo\Mysql
+Nodes (4): TaskBoard, Relaticle\Flowforge\Board, Relaticle\Flowforge\BoardPage, Relaticle\Flowforge\Column
 
 ### Community 120 - "Users Resource (CRUD)"
 Cohesion: 0.40
@@ -555,16 +564,16 @@ Nodes (3): keywords, framework, laravel
 ## Knowledge Gaps
 - **501 isolated node(s):** `php`, `Controller`, `$schema`, `name`, `type` (+496 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `User` connect `User` to `Illuminate\Database\Eloquent\Casts\Attribute`, `TaskResource`, `Filament\Tables\Table`, `Illuminate\Foundation\Auth\User`, `ActivityPolicy`, `Illuminate\Database\Seeder`, `ShieldSeeder`, `AgendaFactory`, `Filament\Notifications\Notification`, `TaskFactory`, `EditUser`, `AgendaCalendarWidget.php`, `UserStatsOverview`, `RolePolicy`, `Illuminate\Support\Str`, `Spatie\Permission\Models\Permission`, `UserGrowthChart`?**
-  _High betweenness centrality (0.051) - this node is a cross-community bridge._
-- **Why does `Task` connect `Task` to `TaskResource`, `Filament\Tables\Table`, `Illuminate\Database\Seeder`, `ShieldSeeder`, `Illuminate\Database\Eloquent\Model`, `AgendaFactory`, `Spatie\Permission\Models\Permission`, `User`, `UserStatsOverview`, `RolePolicy`, `Illuminate\Support\Str`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `User` connect `User` to `Illuminate\Database\Eloquent\Casts\Attribute`, `Agenda`, `ShieldSeeder`, `UserResource.php`, `Illuminate\Database\Eloquent\Model`, `EditTask`, `Spatie\Permission\Models\Permission`, `CreateUser`, `RolePolicy`, `ActivityPolicy`, `Illuminate\Foundation\Auth\User`, `Illuminate\Database\Seeder`, `AgendaFactory`, `UserStatsOverview`, `UserGrowthChart`, `TaskResource`, `Filament\Tables\Table`, `TaskFactory`, `AgendaCalendarWidget.php`, `TaskBoard`?**
+  _High betweenness centrality (0.055) - this node is a cross-community bridge._
 - **Why does `Tailwind CSS 4` connect `package.json` to `Filament 5 Starter Kit`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `Filament Admin Panel` connect `Filament Admin Panel` to `composer.json`, `package.json`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **What connects `php`, `Controller`, `$schema` to the rest of the system?**
   _501 weakly-connected nodes found - possible documentation gaps or missing edges._

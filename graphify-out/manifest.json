@@ -624,9 +624,9 @@
     "semantic_hash": ""
   },
   "app/Filament/Resources/Tasks/Pages/EditTask.php": {
-    "mtime": 1786651189.255488,
-    "seen": 1790794488.742722,
-    "ast_hash": "6966584005aced04d7db9138f92c2e4c",
+    "mtime": 1794434144.7788217,
+    "seen": 1794434172.5795982,
+    "ast_hash": "22c3fbb33f01f66883e4f0de67320451",
     "semantic_hash": ""
   },
   "app/Filament/Resources/Tasks/Pages/CreateTask.php": {
@@ -684,9 +684,9 @@
     "semantic_hash": ""
   },
   "tests/Feature/TaskResourceTest.php": {
-    "mtime": 1794434010.181332,
-    "seen": 1794434024.552043,
-    "ast_hash": "c0e12342e6fb8a2c2dbe2845bdc17de2",
+    "mtime": 1794434144.779335,
+    "seen": 1794434172.5796502,
+    "ast_hash": "edcafc675da54f0685024f62552ad941",
     "semantic_hash": ""
   },
   "database/migrations/2026_07_20_174937_create_notifications_table.php": {
@@ -774,9 +774,9 @@
     "semantic_hash": ""
   },
   "app/Notifications/TaskAssignedNotification.php": {
-    "mtime": 1786721158.016809,
-    "seen": 1790794488.7427351,
-    "ast_hash": "6c26bf8046095e78688b665f816ad89c",
+    "mtime": 1794434158.0976439,
+    "seen": 1794434172.579612,
+    "ast_hash": "643a59a7dcd244b078517bc60f179999",
     "semantic_hash": ""
   },
   "database/migrations/2026_08_13_201359_add_index_to_status_on_tasks_table.php": {

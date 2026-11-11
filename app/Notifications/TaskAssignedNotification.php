@@ -17,9 +17,13 @@ class TaskAssignedNotification extends Notification implements ShouldQueue
     use Queueable;
 
     /**
-     * Create a new notification instance.
+     * Create a new notification instance, dispatched only once the surrounding
+     * transaction has committed.
      */
-    public function __construct(public Task $task) {}
+    public function __construct(public Task $task)
+    {
+        $this->afterCommit();
+    }
 
     /**
      * Get the notification's delivery channels.
