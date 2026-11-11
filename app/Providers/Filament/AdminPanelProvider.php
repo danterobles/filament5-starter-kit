@@ -101,7 +101,8 @@ class AdminPanelProvider extends PanelProvider
                     ])
                     ->enableBrowserSessions(condition: true)
                     ->enableTwoFactorAuthentication(
-                        force: false,
+                        force: fn (): bool => config('starterkit.require_super_admin_two_factor')
+                            && (bool) auth()->user()?->hasRole('super_admin'),
                     ),
             ]);
     }

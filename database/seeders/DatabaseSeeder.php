@@ -7,6 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use RuntimeException;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,6 +18,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $email = app()->environment(['local', 'testing'])
+            ? (config('starterkit.admin_seed_email') ?: 'starterkit@mailinator.com')
+            : config('starterkit.admin_seed_email');
+
+        if (blank($email)) {
+            throw new RuntimeException('Set ADMIN_SEED_EMAIL to a mailbox you control before seeding outside local and testing.');
+        }
+
         $this->call(ShieldSeeder::class);
 
         // The fixed "demo" password is only safe for local development and
@@ -32,7 +41,7 @@ class DatabaseSeeder extends Seeder
             'phone' => '+528100000000',
             'password' => Hash::make($password),
             'active' => true,
-            'email' => 'starterkit@mailinator.com',
+            'email' => $email,
         ]);
 
         $admin->assignRole('super_admin');
