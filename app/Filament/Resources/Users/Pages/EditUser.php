@@ -67,8 +67,9 @@ class EditUser extends EditRecord
     }
 
     /**
-     * Applies the role-assignment safeguards before saving: only a super_admin can
-     * assign the super_admin role, and the sole remaining super_admin cannot demote
+     * Applies the role-assignment safeguards before saving: nobody can assign a role
+     * with permissions they do not hold (only a super_admin can assign super_admin),
+     * only a super_admin can change their own role, and the sole remaining super_admin cannot demote
      * themselves, otherwise the application would be left without an administrator
      * capable of managing roles. An empty password is dropped so it is not updated.
      *
@@ -80,7 +81,10 @@ class EditUser extends EditRecord
         $this->selectedRoleId = $data['role_id'] ?? null;
         unset($data['role_id']);
 
-        if (! auth()->user()->canAssignRole($this->selectedRoleId)) {
+        if (
+            ! auth()->user()->canAssignRole($this->selectedRoleId)
+            || ($this->record->is(auth()->user()) && ! auth()->user()->hasRole('super_admin'))
+        ) {
             $this->selectedRoleId = $this->record->roles()->pluck('id')->first();
         }
 

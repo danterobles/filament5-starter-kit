@@ -3,7 +3,9 @@
 use App\Models\Task;
 use App\Models\User;
 use Filament\Panel;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
+use Spatie\Permission\PermissionRegistrar;
 
 test('full_name combines name and last', function () {
     $user = new User(['name' => 'Ana', 'last' => 'López']);
@@ -96,4 +98,42 @@ test('canAssignRole only lets a super_admin assign the super_admin role', functi
         ->and($regular->canAssignRole($superAdminRole->id))->toBeFalse()
         ->and($regular->canAssignRole((string) $superAdminRole->id))->toBeFalse()
         ->and($superAdmin->canAssignRole($superAdminRole->id))->toBeTrue();
+});
+
+test('canAssignRole refuses roles that carry permissions the assigner does not hold', function () {
+    Permission::create(['name' => 'View:User', 'guard_name' => 'web']);
+    Permission::create(['name' => 'Delete:User', 'guard_name' => 'web']);
+    $limited = Role::create(['name' => 'limited', 'guard_name' => 'web']);
+    $limited->givePermissionTo('View:User');
+    $powerful = Role::create(['name' => 'powerful', 'guard_name' => 'web']);
+    $powerful->givePermissionTo('View:User', 'Delete:User');
+
+    $assigner = User::factory()->create();
+    $assigner->givePermissionTo('View:User');
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect($assigner->canAssignRole($limited->id))->toBeTrue()
+        ->and($assigner->canAssignRole($powerful->id))->toBeFalse()
+        ->and($assigner->canAssignRole(999999))->toBeFalse();
+});
+
+test('canManage lets a user manage only users whose permissions are a subset of their own', function () {
+    Permission::create(['name' => 'View:User', 'guard_name' => 'web']);
+    Permission::create(['name' => 'Delete:User', 'guard_name' => 'web']);
+    Role::create(['name' => 'super_admin', 'guard_name' => 'web']);
+
+    $limited = User::factory()->create();
+    $limited->givePermissionTo('View:User');
+    $powerful = User::factory()->create();
+    $powerful->givePermissionTo('View:User', 'Delete:User');
+    $superAdmin = User::factory()->create();
+    $superAdmin->assignRole('super_admin');
+    $nobody = User::factory()->create();
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect($powerful->canManage($limited))->toBeTrue()
+        ->and($limited->canManage($powerful))->toBeFalse()
+        ->and($limited->canManage($nobody))->toBeTrue()
+        ->and($limited->canManage($superAdmin))->toBeFalse()
+        ->and($superAdmin->canManage($powerful))->toBeTrue();
 });

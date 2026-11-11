@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 use Jeffgreco13\FilamentBreezy\Traits\TwoFactorAuthenticatable;
 use Spatie\Permission\Models\Role;
@@ -67,13 +68,49 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
     }
 
     /**
-     * Only a super_admin can assign the super_admin role to a user.
+     * Whether this user may edit or delete the target user. A super_admin can manage
+     * anyone; anyone else can only manage users whose permissions are a subset of
+     * their own, so a limited admin cannot take over a more privileged account.
+     */
+    public function canManage(User $target): bool
+    {
+        if ($this->hasRole('super_admin')) {
+            return true;
+        }
+
+        if ($target->hasRole('super_admin')) {
+            return false;
+        }
+
+        return $this->holdsAllPermissions($target->getAllPermissions()->pluck('name'));
+    }
+
+    /**
+     * Whether this user may assign the given role. Only a super_admin can assign
+     * super_admin, and nobody can hand out permissions they do not hold themselves.
      */
     public function canAssignRole(int|string|null $roleId): bool
     {
-        return $roleId === null
-            || $this->hasRole('super_admin')
-            || Role::find($roleId)?->name !== 'super_admin';
+        if ($roleId === null || $this->hasRole('super_admin')) {
+            return true;
+        }
+
+        $role = Role::find($roleId);
+
+        if ($role === null) {
+            return false;
+        }
+
+        return $role->name !== 'super_admin'
+            && $this->holdsAllPermissions($role->permissions->pluck('name'));
+    }
+
+    /**
+     * @param  Collection<int, string>  $permissionNames
+     */
+    private function holdsAllPermissions(Collection $permissionNames): bool
+    {
+        return $permissionNames->diff($this->getAllPermissions()->pluck('name'))->isEmpty();
     }
 
     public function tasks(): HasMany

@@ -26,12 +26,13 @@ class UserPolicy
     }
 
     /**
-     * Only a super_admin can edit another super_admin, otherwise a user with
-     * Update:User could change their password or email and take over the account.
+     * A user can only edit users they outrank (see User::canManage()); otherwise
+     * someone with Update:User could change the password or email of a more
+     * privileged account and take it over.
      */
     public function update(AuthUser $authUser, User $model): bool
     {
-        if ($this->isProtectedSuperAdmin($authUser, $model)) {
+        if (! $this->canManage($authUser, $model)) {
             return false;
         }
 
@@ -41,11 +42,11 @@ class UserPolicy
     /**
      * A user can never delete their own account through the admin panel, even
      * with the Delete:User permission, to avoid accidental or malicious self-lockout.
-     * Only a super_admin can delete another super_admin.
+     * Nor can they delete users they do not outrank (see User::canManage()).
      */
     public function delete(AuthUser $authUser, User $model): bool
     {
-        if ($authUser->is($model) || $this->isProtectedSuperAdmin($authUser, $model)) {
+        if ($authUser->is($model) || ! $this->canManage($authUser, $model)) {
             return false;
         }
 
@@ -87,8 +88,8 @@ class UserPolicy
         return $authUser->can('Reorder:User');
     }
 
-    private function isProtectedSuperAdmin(AuthUser $authUser, User $model): bool
+    private function canManage(AuthUser $authUser, User $model): bool
     {
-        return $model->hasRole('super_admin') && ! $authUser->hasRole('super_admin');
+        return $authUser instanceof User && $authUser->canManage($model);
     }
 }

@@ -113,3 +113,22 @@ test('a user with Delete:User permission cannot delete a super_admin unless they
 
     expect((new UserPolicy)->delete($actor->refresh(), $superAdmin))->toBeTrue();
 });
+
+test('a user cannot update or delete a user holding permissions they lack themselves', function () {
+    Permission::create(['name' => 'Update:User', 'guard_name' => 'web']);
+    Permission::create(['name' => 'Delete:User', 'guard_name' => 'web']);
+    Permission::create(['name' => 'Create:Role', 'guard_name' => 'web']);
+
+    $actor = User::factory()->create();
+    $actor->givePermissionTo('Update:User', 'Delete:User');
+    $moreCapable = User::factory()->create();
+    $moreCapable->givePermissionTo('Update:User', 'Delete:User', 'Create:Role');
+    $lessCapable = User::factory()->create();
+    $lessCapable->givePermissionTo('Update:User');
+    app()[PermissionRegistrar::class]->forgetCachedPermissions();
+
+    expect((new UserPolicy)->update($actor, $moreCapable))->toBeFalse()
+        ->and((new UserPolicy)->delete($actor, $moreCapable))->toBeFalse()
+        ->and((new UserPolicy)->update($actor, $lessCapable))->toBeTrue()
+        ->and((new UserPolicy)->delete($actor, $lessCapable))->toBeTrue();
+});

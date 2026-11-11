@@ -252,3 +252,22 @@ test('a super_admin can bulk delete other users', function () {
 
     expect(User::whereIn('id', $others->pluck('id'))->count())->toBe(0);
 });
+
+test('a non super_admin cannot change their own role', function () {
+    $editor = Role::create(['name' => 'editor', 'guard_name' => 'web']);
+    $broader = Role::create(['name' => 'broader', 'guard_name' => 'web']);
+    $editor->givePermissionTo('ViewAny:User', 'View:User', 'Update:User');
+    $broader->givePermissionTo('ViewAny:User', 'View:User', 'Update:User');
+
+    $actor = User::factory()->create();
+    $actor->assignRole($editor);
+    $this->actingAs($actor);
+
+    Livewire::test(EditUser::class, ['record' => $actor->id])
+        ->fillForm(['role_id' => $broader->id])
+        ->call('save')
+        ->assertHasNoFormErrors();
+
+    expect($actor->fresh()->hasRole('editor'))->toBeTrue()
+        ->and($actor->fresh()->hasRole('broader'))->toBeFalse();
+});
